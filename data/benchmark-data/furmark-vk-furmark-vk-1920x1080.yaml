@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 21811
-updatedAt: 2026-09-26T09:15:34.408Z
+collectedSamples: 21906
+updatedAt: 2026-09-27T09:07:28.709Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 221
@@ -33,6 +33,8 @@ results:
     value: 70
   - gpuNameRaw: AMD Radeon (TM) RX 480
     value: 55
+  - gpuNameRaw: AMD Radeon 680M (RADV REMBRANDT)
+    value: 25
   - gpuNameRaw: AMD Radeon 740M Graphics
     value: 13
   - gpuNameRaw: AMD Radeon 760M Graphics
@@ -188,7 +190,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600 (RADV NAVI33)
     value: 135
   - gpuNameRaw: AMD Radeon RX 7600 XT
-    value: 142
+    value: 141
   - gpuNameRaw: AMD Radeon RX 7600 XT (RADV NAVI33)
     value: 142
   - gpuNameRaw: AMD Radeon RX 7600M XT
@@ -226,7 +228,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9060 XT
     value: 189
   - gpuNameRaw: AMD Radeon RX 9060 XT (RADV GFX1200)
-    value: 192
+    value: 191
   - gpuNameRaw: AMD Radeon RX 9070
     value: 285
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
@@ -494,7 +496,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 177
   - gpuNameRaw: NVIDIA GeForce RTX 4070
-    value: 209
+    value: 210
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER

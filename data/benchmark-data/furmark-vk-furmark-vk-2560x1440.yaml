@@ -12,13 +12,13 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 10644
-updatedAt: 2026-09-26T09:15:34.409Z
+collectedSamples: 10682
+updatedAt: 2026-09-27T09:07:28.710Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 165
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
-    value: 82
+    value: 81
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 29
   - gpuNameRaw: AMD Radeon 780M Graphics
@@ -126,7 +126,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX
     value: 255
   - gpuNameRaw: AMD Radeon RX 7900 XTX (RADV NAVI31)
-    value: 252
+    value: 256
   - gpuNameRaw: AMD Radeon RX 9060 XT
     value: 138
   - gpuNameRaw: AMD Radeon RX 9060 XT (RADV GFX1200)
@@ -137,6 +137,8 @@ results:
     value: 198
   - gpuNameRaw: AMD Radeon RX 9070 GRE
     value: 139
+  - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
+    value: 179
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 243
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
@@ -256,13 +258,13 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060
     value: 75
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Laptop GPU
-    value: 95
+    value: 94
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 120
   - gpuNameRaw: NVIDIA GeForce RTX 4070
     value: 144
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
-    value: 116
+    value: 115
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
     value: 160
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti
@@ -274,7 +276,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
     value: 165
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
-    value: 253
+    value: 252
   - gpuNameRaw: NVIDIA GeForce RTX 4090
     value: 339
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
@@ -307,6 +309,8 @@ results:
     value: 432
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
     value: 205
+  - gpuNameRaw: NVIDIA RTX A5000
+    value: 111
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition
     value: 490
   - gpuNameRaw: NVIDIA T1200 Laptop GPU
@@ -316,7 +320,7 @@ results:
   - gpuNameRaw: Radeon RX 5500 XT
     value: 46
   - gpuNameRaw: Radeon RX 570 Series
-    value: 35
+    value: 36
   - gpuNameRaw: Radeon RX 580 Series
     value: 42
   - gpuNameRaw: Radeon RX 590 Series

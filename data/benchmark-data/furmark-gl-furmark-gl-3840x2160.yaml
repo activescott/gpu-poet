@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 52470
-updatedAt: 2026-09-26T08:47:28.133Z
+collectedSamples: 52701
+updatedAt: 2026-09-27T08:50:29.738Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -72,7 +72,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 5700 XT 50th Anniversary
     value: 45
   - gpuNameRaw: AMD Radeon RX 580 2048SP
-    value: 18
+    value: 17
   - gpuNameRaw: AMD Radeon RX 6400
     value: 14
   - gpuNameRaw: AMD Radeon RX 6500 XT
@@ -119,7 +119,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 78
   - gpuNameRaw: AMD Radeon RX 7800 XT
-    value: 82
+    value: 83
   - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 ACO DRM 3.64
       6.18.42-valve2-1-neptune-618-gaf6356cf2488)
     value: 85
@@ -160,7 +160,7 @@ results:
     value: 131
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
       6.16.12-valve24.5-1-neptune-616-gb2f7cfe85e45)
-    value: 128
+    value: 129
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
       6.17.7-ba29.fc43.x86_64)
     value: 130
@@ -470,7 +470,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060/PCIe/SSE2
     value: 36
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2
-    value: 42
+    value: 43
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2
@@ -480,7 +480,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070/PCIe/SSE2
     value: 69
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU/PCIe/SSE2
-    value: 83
+    value: 84
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2
     value: 135
   - gpuNameRaw: NVIDIA GeForce RTX 4080/PCIe/SSE2
@@ -514,7 +514,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 165
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
-    value: 235
+    value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D V2/PCIe/SSE2
     value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2

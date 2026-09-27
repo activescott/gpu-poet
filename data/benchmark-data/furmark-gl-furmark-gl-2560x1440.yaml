@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 203460
-updatedAt: 2026-09-26T08:47:28.129Z
+collectedSamples: 204554
+updatedAt: 2026-09-27T08:50:29.734Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -65,7 +65,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.0-ogc4.1.fc44.x86_64)
     value: 71
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.0-ogc6.1.fc44.x86_64)
-    value: 63
+    value: 62
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.1-ogc4.1.fc44.x86_64)
     value: 71
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.2-1-cachyos)
@@ -202,7 +202,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6650M
     value: 67
   - gpuNameRaw: AMD Radeon RX 6700
-    value: 100
+    value: 101
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 115
   - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 ACO DRM 3.64 7.0.0-22-generic)
@@ -303,11 +303,16 @@ results:
     value: 263
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.17.0-35-generic)
     value: 263
+  - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 7.0.0-34-generic)
+    value: 271
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64
       7.0.9-ogc3.2.fc44.x86_64)
     value: 307
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 7.1.8-1-cachyos)
     value: 290
+  - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.65
+      7.2.4-valve1-1-neptune-72-g5ab4af5e2eb9)
+    value: 315
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 LLVM 21.1.8 DRM 3.64
       6.17.7-ba25.fc43.x86_64)
     value: 284
@@ -592,7 +597,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) B580 Graphics
     value: 106
   - gpuNameRaw: Intel(R) Arc(TM) Graphics
-    value: 23
+    value: 22
   - gpuNameRaw: Intel(R) Arc(TM) Pro B50 Graphics
     value: 48
   - gpuNameRaw: Intel(R) Arc(TM) Pro B70 Graphics
@@ -600,7 +605,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) Pro Graphics
     value: 20
   - gpuNameRaw: Intel(R) Graphics
-    value: 14
+    value: 15
   - gpuNameRaw: Intel(R) HD Graphics 520
     value: 3
   - gpuNameRaw: Intel(R) HD Graphics 630
@@ -628,7 +633,7 @@ results:
   - gpuNameRaw: Mesa Intel(R) Arc(tm) A770 Graphics (DG2)
     value: 111
   - gpuNameRaw: Mesa Intel(R) Arc(tm) B570 Graphics (BMG G21)
-    value: 84
+    value: 86
   - gpuNameRaw: Mesa Intel(R) Arc(tm) B580 Graphics (BMG G21)
     value: 104
   - gpuNameRaw: Mesa Intel(R) Arc(tm) Pro B50 Graphics (BMG G21)
@@ -766,17 +771,17 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2
     value: 45
   - gpuNameRaw: NVIDIA GeForce RTX 3050/PCIe/SSE2
-    value: 53
+    value: 52
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
     value: 67
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2
     value: 97
   - gpuNameRaw: NVIDIA GeForce RTX 3060/PCIe/SSE2
-    value: 77
+    value: 76
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Laptop GPU/PCIe/SSE2
     value: 78
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU/PCIe/SSE2
-    value: 84
+    value: 83
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti/PCIe/SSE2
     value: 127
   - gpuNameRaw: NVIDIA GeForce RTX 3070/PCIe/SSE2
@@ -784,7 +789,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 80
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 82
+    value: 83
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 128
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -860,7 +865,7 @@ results:
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 40
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 69
+    value: 68
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
     value: 69
   - gpuNameRaw: NVIDIA RTX 3000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -992,7 +997,7 @@ results:
   - gpuNameRaw: Quadro RTX 3000 with Max-Q Design/PCIe/SSE2
     value: 24
   - gpuNameRaw: Quadro RTX 3000/PCIe/SSE2
-    value: 41
+    value: 42
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 66
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
