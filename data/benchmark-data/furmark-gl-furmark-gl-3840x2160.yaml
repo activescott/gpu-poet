@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 52701
-updatedAt: 2026-09-27T08:50:29.738Z
+collectedSamples: 52981
+updatedAt: 2026-09-28T11:32:43.922Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -129,8 +129,10 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 LLVM 21.1.8 DRM 3.64
       6.18.8-200.fc43.x86_64)
     value: 84
+  - gpuNameRaw: AMD Radeon RX 7800M
+    value: 51
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 104
+    value: 103
   - gpuNameRaw: AMD Radeon RX 7900 XT
     value: 110
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -442,7 +444,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3060/PCIe/SSE2
     value: 41
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Laptop GPU/PCIe/SSE2
-    value: 39
+    value: 38
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU/PCIe/SSE2
     value: 41
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti/PCIe/SSE2
@@ -480,7 +482,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070/PCIe/SSE2
     value: 69
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU/PCIe/SSE2
-    value: 84
+    value: 83
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2
     value: 135
   - gpuNameRaw: NVIDIA GeForce RTX 4080/PCIe/SSE2
@@ -504,7 +506,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Laptop GPU/PCIe/SSE2
     value: 47
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU/PCIe/SSE2
-    value: 66
+    value: 67
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2
     value: 128
   - gpuNameRaw: NVIDIA GeForce RTX 5070/PCIe/SSE2
@@ -614,7 +616,7 @@ results:
   - gpuNameRaw: Quadro P2000 with Max-Q Design/PCIe/SSE2
     value: 8
   - gpuNameRaw: Quadro P2000/PCIe/SSE2
-    value: 8
+    value: 9
   - gpuNameRaw: Quadro P3000/PCIe/SSE2
     value: 16
   - gpuNameRaw: Quadro P3200/PCIe/SSE2
