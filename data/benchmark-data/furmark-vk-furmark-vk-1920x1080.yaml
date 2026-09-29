@@ -12,11 +12,11 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 22075
-updatedAt: 2026-09-28T12:04:49.611Z
+collectedSamples: 22176
+updatedAt: 2026-09-29T10:52:32.717Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
-    value: 221
+    value: 223
   - gpuNameRaw: AMD BC-160
     value: 71
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
@@ -82,7 +82,7 @@ results:
   - gpuNameRaw: AMD Radeon R9 200 / HD 7900 Series (RADV TAHITI)
     value: 48
   - gpuNameRaw: AMD Radeon R9 200 Series
-    value: 49
+    value: 53
   - gpuNameRaw: AMD Radeon R9 200 Series (RADV HAWAII)
     value: 56
   - gpuNameRaw: AMD Radeon RX 460 Graphics (RADV POLARIS11)
@@ -108,7 +108,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 5700
     value: 112
   - gpuNameRaw: AMD Radeon RX 5700 (RADV NAVI10)
-    value: 106
+    value: 102
   - gpuNameRaw: AMD Radeon RX 5700 XT
     value: 127
   - gpuNameRaw: AMD Radeon RX 5700 XT (RADV NAVI10)
@@ -258,7 +258,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) 610M
     value: 8
   - gpuNameRaw: AMD Radeon(TM) 780M
-    value: 27
+    value: 26
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
     value: 137
   - gpuNameRaw: AMD Radeon(TM) 880M Graphics
@@ -300,7 +300,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) 140T GPU (16GB)
     value: 48
   - gpuNameRaw: Intel(R) Arc(TM) 140V GPU (16GB)
-    value: 44
+    value: 43
   - gpuNameRaw: Intel(R) Arc(tm) A310 Graphics (DG2)
     value: 14
   - gpuNameRaw: Intel(R) Arc(TM) A310 LP Graphics
@@ -441,6 +441,8 @@ results:
     value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2070
     value: 109
+  - gpuNameRaw: NVIDIA GeForce RTX 2070 Super
+    value: 34
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER
     value: 144
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design
@@ -496,7 +498,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060
     value: 115
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Laptop GPU
-    value: 134
+    value: 135
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 177
   - gpuNameRaw: NVIDIA GeForce RTX 4070
@@ -518,7 +520,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090
     value: 447
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
-    value: 243
+    value: 248
   - gpuNameRaw: NVIDIA GeForce RTX 5050
     value: 130
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU

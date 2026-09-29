@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 453625
-updatedAt: 2026-09-28T11:32:43.847Z
+collectedSamples: 455626
+updatedAt: 2026-09-29T10:34:53.945Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -275,7 +275,7 @@ results:
   - gpuNameRaw: AMD Radeon 550X
     value: 9
   - gpuNameRaw: AMD Radeon 6700
-    value: 134
+    value: 133
   - gpuNameRaw: AMD Radeon 740M Graphics
     value: 11
   - gpuNameRaw: AMD Radeon 760M Graphics
@@ -472,7 +472,7 @@ results:
   - gpuNameRaw: AMD Radeon R7 240
     value: 6
   - gpuNameRaw: AMD Radeon R7 250 Series
-    value: 6
+    value: 7
   - gpuNameRaw: AMD Radeon R7 350 Series
     value: 12
   - gpuNameRaw: AMD Radeon R7 430
@@ -800,7 +800,7 @@ results:
       6.17.7-ba25.fc43.x86_64)
     value: 211
   - gpuNameRaw: AMD Radeon RX 7800M
-    value: 126
+    value: 125
   - gpuNameRaw: AMD Radeon RX 7900 GRE
     value: 267
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64
@@ -972,7 +972,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) 780M
     value: 27
   - gpuNameRaw: AMD Radeon(TM) 780M Graphics
-    value: 26
+    value: 25
   - gpuNameRaw: AMD Radeon(TM) 8050S Graphics
     value: 83
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
@@ -1014,7 +1014,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 50
   - gpuNameRaw: AMD Radeon(TM) RX 6500 XT
-    value: 84
+    value: 85
   - gpuNameRaw: AMD Radeon(TM) RX 6500M
     value: 51
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
@@ -1177,7 +1177,7 @@ results:
   - gpuNameRaw: GeForce GTS 450/PCIe/SSE2
     value: 10
   - gpuNameRaw: GeForce GTX 1050 Ti with Max-Q Design/PCIe/SSE2
-    value: 28
+    value: 29
   - gpuNameRaw: GeForce GTX 1050 Ti/PCIe/SSE2
     value: 34
   - gpuNameRaw: GeForce GTX 1050/PCIe/SSE2
@@ -1311,7 +1311,7 @@ results:
   - gpuNameRaw: GeForce GTX 960M/PCIe/SSE2
     value: 21
   - gpuNameRaw: GeForce GTX 965M/PCIe/SSE2
-    value: 26
+    value: 25
   - gpuNameRaw: GeForce GTX 970/PCIe/SSE2
     value: 58
   - gpuNameRaw: GeForce GTX 970M/PCIe/SSE2
@@ -1431,7 +1431,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) A730M Graphics
     value: 82
   - gpuNameRaw: Intel(R) Arc(TM) A750 Graphics
-    value: 157
+    value: 156
   - gpuNameRaw: Intel(R) Arc(TM) A770 Graphics
     value: 180
   - gpuNameRaw: Intel(R) Arc(TM) A770M Graphics
@@ -1531,7 +1531,7 @@ results:
   - gpuNameRaw: Mesa Intel(R) Arc(tm) A770 Graphics (DG2)
     value: 171
   - gpuNameRaw: Mesa Intel(R) Arc(tm) B570 Graphics (BMG G21)
-    value: 127
+    value: 128
   - gpuNameRaw: Mesa Intel(R) Arc(tm) B580 Graphics (BMG G21)
     value: 150
   - gpuNameRaw: Mesa Intel(R) Arc(tm) Pro B50 Graphics (BMG G21)
@@ -1821,7 +1821,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2
     value: 54
   - gpuNameRaw: NVIDIA GeForce RTX 3050 A Laptop GPU/PCIe/SSE2
-    value: 71
+    value: 70
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Laptop GPU/PCIe/SSE2
     value: 58
   - gpuNameRaw: NVIDIA GeForce RTX 3050 OEM/PCIe/SSE2
@@ -1849,7 +1849,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 108
+    value: 110
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 160
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -1887,7 +1887,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
     value: 249
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
-    value: 420
+    value: 419
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
     value: 116
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
@@ -1977,7 +1977,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU/PCIe/SSE2
-    value: 106
+    value: 105
   - gpuNameRaw: NVIDIA RTX A4000/PCIe/SSE2
     value: 96
   - gpuNameRaw: NVIDIA RTX A4000H/PCIe/SSE2
@@ -2047,7 +2047,7 @@ results:
   - gpuNameRaw: NVIDIA TITAN RTX/PCIe/SSE2
     value: 194
   - gpuNameRaw: NVIDIA TITAN V/PCIe/SSE2
-    value: 164
+    value: 163
   - gpuNameRaw: NVIDIA TITAN X (Pascal)/PCIe/SSE2
     value: 144
   - gpuNameRaw: NVIDIA TITAN Xp COLLECTORS EDITION/PCIe/SSE2
@@ -2169,7 +2169,7 @@ results:
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 91
   - gpuNameRaw: Quadro RTX 5000 with Max-Q Design/PCIe/SSE2
-    value: 61
+    value: 62
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
     value: 78
   - gpuNameRaw: Quadro RTX 6000/PCIe/SSE2

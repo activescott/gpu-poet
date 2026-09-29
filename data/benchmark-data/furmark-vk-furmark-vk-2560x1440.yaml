@@ -12,13 +12,13 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 10750
-updatedAt: 2026-09-28T12:04:49.612Z
+collectedSamples: 10788
+updatedAt: 2026-09-29T10:52:32.718Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 165
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
-    value: 81
+    value: 82
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 29
   - gpuNameRaw: AMD Radeon 780M Graphics
@@ -88,7 +88,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6900 XT
     value: 179
   - gpuNameRaw: AMD Radeon RX 6900 XT (RADV NAVI21)
-    value: 187
+    value: 196
   - gpuNameRaw: AMD Radeon RX 6950 XT
     value: 193
   - gpuNameRaw: AMD Radeon RX 6950 XT (RADV NAVI21)
@@ -226,11 +226,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Ti Laptop GPU
     value: 46
   - gpuNameRaw: NVIDIA GeForce RTX 3060
-    value: 73
+    value: 74
   - gpuNameRaw: NVIDIA GeForce RTX 3060 (NVK GA106)
     value: 48
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU
-    value: 66
+    value: 67
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti
     value: 98
   - gpuNameRaw: NVIDIA GeForce RTX 3070
@@ -276,11 +276,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
     value: 165
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
-    value: 252
+    value: 253
   - gpuNameRaw: NVIDIA GeForce RTX 4090
     value: 339
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
-    value: 190
+    value: 191
   - gpuNameRaw: NVIDIA GeForce RTX 5050
     value: 84
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU

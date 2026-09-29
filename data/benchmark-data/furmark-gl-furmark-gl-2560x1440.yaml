@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 205730
-updatedAt: 2026-09-28T11:32:43.917Z
+collectedSamples: 206628
+updatedAt: 2026-09-29T10:34:54.011Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -75,7 +75,9 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.4-1.141-cachyos-bc250)
     value: 76
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.4-ogc3.1.fc44.x86_64)
-    value: 72
+    value: 69
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
+    value: 53
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 LLVM 21.1.8 DRM 3.64
       6.16.4-116.bazzite.fc42.x86_64)
     value: 41
@@ -202,7 +204,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6650M
     value: 67
   - gpuNameRaw: AMD Radeon RX 6700
-    value: 101
+    value: 100
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 115
   - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 ACO DRM 3.64 7.0.0-22-generic)
@@ -326,7 +328,7 @@ results:
       6.19.5-200.nobara.fc43.x86_64)
     value: 284
   - gpuNameRaw: AMD Radeon RX 9060
-    value: 116
+    value: 115
   - gpuNameRaw: AMD Radeon RX 9060 XT
     value: 134
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64
@@ -691,7 +693,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
     value: 55
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti with Max-Q Design/PCIe/SSE2
-    value: 27
+    value: 28
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1660/PCIe/SSE2
@@ -827,7 +829,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
     value: 184
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
-    value: 324
+    value: 325
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
     value: 84
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
@@ -913,7 +915,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A4500 Laptop GPU/PCIe/SSE2
     value: 60
   - gpuNameRaw: NVIDIA RTX A4500/PCIe/SSE2
-    value: 98
+    value: 97
   - gpuNameRaw: NVIDIA RTX A5000 Laptop GPU/PCIe/SSE2
     value: 92
   - gpuNameRaw: NVIDIA RTX A5000/PCIe/SSE2
@@ -1011,7 +1013,7 @@ results:
   - gpuNameRaw: Radeon 5
     value: 14
   - gpuNameRaw: Radeon 7
-    value: 16
+    value: 17
   - gpuNameRaw: Radeon Instinct MI60
     value: 97
   - gpuNameRaw: Radeon Pro 555
