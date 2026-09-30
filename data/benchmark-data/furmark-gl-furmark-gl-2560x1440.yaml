@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 206628
-updatedAt: 2026-09-29T10:34:54.011Z
+collectedSamples: 207596
+updatedAt: 2026-09-30T10:33:53.409Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -163,6 +163,9 @@ results:
   - gpuNameRaw: AMD Radeon RX 5700 XT (radeonsi navi10 ACO DRM 3.64
       7.1.3-ogc5.1.fc44.x86_64)
     value: 81
+  - gpuNameRaw: AMD Radeon RX 5700 XT (radeonsi navi10 ACO DRM 3.64
+      7.2.4-ogc3.1.fc44.x86_64)
+    value: 76
   - gpuNameRaw: AMD Radeon RX 5700 XT 50th Anniversary
     value: 88
   - gpuNameRaw: AMD Radeon RX 580 2048SP
@@ -554,6 +557,8 @@ results:
     value: 106
   - gpuNameRaw: GeForce RTX 3070 Laptop GPU/PCIe/SSE2
     value: 63
+  - gpuNameRaw: GeForce RTX 3070/PCIe/SSE2
+    value: 113
   - gpuNameRaw: GeForce RTX 3080/PCIe/SSE2
     value: 141
   - gpuNameRaw: Intel(R) Arc(TM) 130T GPU (12GB)
@@ -859,7 +864,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
     value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
-    value: 395
+    value: 396
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
     value: 121
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
@@ -905,7 +910,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
     value: 46
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU/PCIe/SSE2
-    value: 48
+    value: 41
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
     value: 20
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU/PCIe/SSE2
@@ -939,7 +944,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 500 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 47
   - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell Generation Laptop GPU/PCIe/SSE2
-    value: 166
+    value: 164
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2
     value: 318
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2

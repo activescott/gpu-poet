@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 455626
-updatedAt: 2026-09-29T10:34:53.945Z
+collectedSamples: 457852
+updatedAt: 2026-09-30T10:33:53.338Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -131,7 +131,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.3-ogc3.1.fc44.x86_64)
     value: 120
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.4-ogc3.1.fc44.x86_64)
-    value: 112
+    value: 113
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.5-1.162-cachyos-bore-bc250)
     value: 141
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.5-200.fc44.x86_64)
@@ -140,6 +140,10 @@ results:
     value: 111
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-1-cachyos)
     value: 125
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
+    value: 133
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-1-cachyos)
+    value: 108
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.46-valve1-1-neptune-618-g2e13b4367b17)
     value: 130
@@ -722,7 +726,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6800M
     value: 119
   - gpuNameRaw: AMD Radeon RX 6800S
-    value: 109
+    value: 112
   - gpuNameRaw: AMD Radeon RX 6850M XT
     value: 134
   - gpuNameRaw: AMD Radeon RX 6900 XT
@@ -758,7 +762,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M
     value: 36
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 104
+    value: 102
   - gpuNameRaw: AMD Radeon RX 7600M XT (radeonsi navi33 ACO DRM 3.64 7.2.4-1-cachyos)
     value: 127
   - gpuNameRaw: AMD Radeon RX 7600M XT (radeonsi navi33 LLVM 20.1.2 DRM 3.64
@@ -788,7 +792,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 196
   - gpuNameRaw: AMD Radeon RX 7700S
-    value: 125
+    value: 126
   - gpuNameRaw: AMD Radeon RX 7800 XT
     value: 210
   - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 ACO DRM 3.64
@@ -1189,7 +1193,7 @@ results:
   - gpuNameRaw: GeForce GTX 1060 6GB/PCIe/SSE2
     value: 60
   - gpuNameRaw: GeForce GTX 1060 with Max-Q Design/PCIe/SSE2
-    value: 39
+    value: 40
   - gpuNameRaw: GeForce GTX 1060/PCIe/SSE2
     value: 47
   - gpuNameRaw: GeForce GTX 1070 Ti/PCIe/SSE2
@@ -1249,7 +1253,7 @@ results:
   - gpuNameRaw: GeForce GTX 580/PCIe/SSE2
     value: 27
   - gpuNameRaw: GeForce GTX 650 Ti BOOST/PCIe/SSE2
-    value: 20
+    value: 21
   - gpuNameRaw: GeForce GTX 650 Ti/PCIe/SSE2
     value: 18
   - gpuNameRaw: GeForce GTX 650/PCIe/SSE2
@@ -1279,7 +1283,7 @@ results:
   - gpuNameRaw: GeForce GTX 760 Ti OEM/PCIe/SSE2
     value: 32
   - gpuNameRaw: GeForce GTX 760/PCIe/SSE2
-    value: 33
+    value: 32
   - gpuNameRaw: GeForce GTX 760M/PCIe/SSE2
     value: 13
   - gpuNameRaw: GeForce GTX 765M/PCIe/SSE2
@@ -1607,7 +1611,7 @@ results:
   - gpuNameRaw: NV92
     value: 2
   - gpuNameRaw: NVE4
-    value: 5
+    value: 6
   - gpuNameRaw: NVIDIA CMP 30HX/PCIe/SSE2
     value: 75
   - gpuNameRaw: NVIDIA CMP 40HX/PCIe/SSE2
@@ -1677,7 +1681,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1080 with Max-Q Design/PCIe/SSE2
     value: 74
   - gpuNameRaw: NVIDIA GeForce GTX 1080/PCIe/SSE2
-    value: 100
+    value: 99
   - gpuNameRaw: NVIDIA GeForce GTX 1630/PCIe/SSE2
     value: 32
   - gpuNameRaw: NVIDIA GeForce GTX 1650 SUPER/PCIe/SSE2
@@ -1815,7 +1819,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080 with Max-Q Design/PCIe/SSE2
     value: 72
   - gpuNameRaw: NVIDIA GeForce RTX 2080/PCIe/SSE2
-    value: 150
+    value: 149
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU/PCIe/SSE2
     value: 34
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2
@@ -1849,7 +1853,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 110
+    value: 112
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 160
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -1971,7 +1975,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A2000/PCIe/SSE2
     value: 59
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
-    value: 89
+    value: 91
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU/PCIe/SSE2
     value: 73
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
@@ -1993,7 +1997,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A5000/PCIe/SSE2
     value: 158
   - gpuNameRaw: NVIDIA RTX A5500 Laptop GPU/PCIe/SSE2
-    value: 79
+    value: 78
   - gpuNameRaw: NVIDIA RTX A6000/PCIe/SSE2
     value: 206
   - gpuNameRaw: NVIDIA RTX PRO 1000 Blackwell Generation Laptop GPU/PCIe/SSE2
@@ -2065,13 +2069,15 @@ results:
   - gpuNameRaw: Quadro GP100/PCIe/SSE2
     value: 150
   - gpuNameRaw: Quadro K1000M/PCIe/SSE2
-    value: 4
+    value: 3
   - gpuNameRaw: Quadro K1100M/PCIe/SSE2
     value: 7
   - gpuNameRaw: Quadro K1200/PCIe/SSE2
     value: 17
   - gpuNameRaw: Quadro K2000/PCIe/SSE2
     value: 9
+  - gpuNameRaw: Quadro K2000M/PCIe/SSE2
+    value: 4
   - gpuNameRaw: Quadro K2100M/PCIe/SSE2
     value: 9
   - gpuNameRaw: Quadro K2200/PCIe/SSE2
@@ -2133,7 +2139,7 @@ results:
   - gpuNameRaw: Quadro P2200/PCIe/SSE2
     value: 44
   - gpuNameRaw: Quadro P3000/PCIe/SSE2
-    value: 50
+    value: 49
   - gpuNameRaw: Quadro P3200 with Max-Q Design/PCIe/SSE2
     value: 50
   - gpuNameRaw: Quadro P3200/PCIe/SSE2
@@ -2169,7 +2175,7 @@ results:
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 91
   - gpuNameRaw: Quadro RTX 5000 with Max-Q Design/PCIe/SSE2
-    value: 62
+    value: 63
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
     value: 78
   - gpuNameRaw: Quadro RTX 6000/PCIe/SSE2
@@ -2338,7 +2344,7 @@ results:
   - gpuNameRaw: Tesla V100-PCIE-16GB/PCIe/SSE2
     value: 146
   - gpuNameRaw: Tesla V100-SXM2-16GB/PCIe/SSE2
-    value: 174
+    value: 173
   - gpuNameRaw: Unknown AMD GPU
     value: 131
   - gpuNameRaw: unknown board/PCIe/SSE2
@@ -2347,3 +2353,5 @@ results:
     value: 30
   - gpuNameRaw: zink Vulkan 1.4(NVIDIA GeForce RTX 3060 (NVK GA106) (MESA_NVK))
     value: 4
+  - gpuNameRaw: zink Vulkan 1.4(NVIDIA GeForce RTX 3090 (NVK GA102) (MESA_NVK))
+    value: 10
