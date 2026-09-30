@@ -226,15 +226,23 @@ export async function listGpus(includeTestGpus = false): Promise<Gpu[]> {
     .map((gpu) => parseGpu(gpu))
 }
 
+export async function findGpu(
+  name: string,
+  prisma: PrismaClientWithinTransaction = prismaSingleton,
+): Promise<Gpu | null> {
+  const result = await prisma.gpu.findUnique({ where: { name } })
+  return result ? parseGpu(result) : null
+}
+
 export async function getGpu(
   name: string,
   prisma: PrismaClientWithinTransaction = prismaSingleton,
 ): Promise<Gpu> {
-  const result = await prisma.gpu.findUnique({ where: { name } })
-  if (!result) {
+  const gpu = await findGpu(name, prisma)
+  if (!gpu) {
     throw new Error(`Gpu not found: ${name}`)
   }
-  return parseGpu(result)
+  return gpu
 }
 
 export async function gpuSpecAsPercent(
