@@ -15,7 +15,7 @@
 import { NextRequest, NextResponse } from "next/server"
 import { composeChartImage } from "@/pkgs/server/charts"
 import { getGpuPriceHistoryConfig } from "@/pkgs/server/components/charts"
-import { getGpu } from "@/pkgs/server/db/GpuRepository"
+import { findGpu } from "@/pkgs/server/db/GpuRepository"
 import { createLogger } from "@/lib/logger"
 
 const log = createLogger("api:images:chart:GpuPriceHistoryChart")
@@ -60,7 +60,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
 
   try {
     // Look up GPU to get the label
-    const gpu = await getGpu(gpuSlug)
+    const gpu = await findGpu(gpuSlug)
     if (!gpu) {
       return NextResponse.json(
         { error: `GPU not found: ${gpuSlug}` },
