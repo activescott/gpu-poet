@@ -65,6 +65,12 @@ jobs:
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
+        with:
+          # The self-hosted runner's dind bridge is MTU 1500 inside a 1450 pod
+          # network, so large packets from github.com and deb.debian.org are
+          # dropped and downloads in RUN steps hang forever. The host network
+          # uses the pod's 1450 MTU. See #74.
+          driver-opts: network=host
 
       - name: Generate timestamp tag
         id: timestamp
