@@ -8,6 +8,7 @@ const END_OF_DAY_HOURS = 23
 const END_OF_DAY_MINUTES = 59
 const END_OF_DAY_SECONDS = 59
 const END_OF_DAY_MILLISECONDS = 999
+const MONTH_PAD_LENGTH = 2
 
 // Default threshold for value color determination
 const DEFAULT_VALUE_THRESHOLD = 10
@@ -65,6 +66,16 @@ export function parseDateRange(yearMonth: string): {
     END_OF_DAY_MILLISECONDS,
   )
   return { startDate, endDate }
+}
+
+/**
+ * Returns the YYYY-MM month before the given YYYY-MM month.
+ * e.g., "2026-01" -> "2025-12"
+ */
+export function previousYearMonth(yearMonth: string): string {
+  const prevMonth = new Date(parseDateRange(yearMonth).startDate)
+  prevMonth.setUTCMonth(prevMonth.getUTCMonth() - 1)
+  return `${prevMonth.getUTCFullYear()}-${String(prevMonth.getUTCMonth() + 1).padStart(MONTH_PAD_LENGTH, "0")}`
 }
 
 /**

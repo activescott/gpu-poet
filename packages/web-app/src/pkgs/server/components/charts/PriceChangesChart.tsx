@@ -9,6 +9,7 @@ import {
   DateRange,
   ChartComponentProps,
   parseDateRange,
+  previousYearMonth,
   formatGpuName,
   getValueColor,
   CHART_HASHTAGS,
@@ -22,7 +23,6 @@ interface PriceChangeRow {
 }
 
 const LIMIT_RESULTS_DEFAULT = 5
-const MONTH_PAD_LENGTH = 2
 const MIN_PRICE_THRESHOLD = 100
 
 /**
@@ -42,11 +42,9 @@ async function fetchPriceChangesData(
   }
 
   // Calculate previous month
-  const prevMonth = new Date(currStart)
-  prevMonth.setUTCMonth(prevMonth.getUTCMonth() - 1)
-  const prevYearMonth = `${prevMonth.getUTCFullYear()}-${String(prevMonth.getUTCMonth() + 1).padStart(MONTH_PAD_LENGTH, "0")}`
-  const { startDate: prevStart, endDate: prevEnd } =
-    parseDateRange(prevYearMonth)
+  const { startDate: prevStart, endDate: prevEnd } = parseDateRange(
+    previousYearMonth(dateRange.to),
+  )
 
   // Temporal correctness: "active during window" uses createdAt+archivedAt, NOT cachedAt.
   // See getHistoricalPriceData for the full rationale.
