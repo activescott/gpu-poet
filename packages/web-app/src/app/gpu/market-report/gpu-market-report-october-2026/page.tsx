@@ -56,17 +56,18 @@ export default async function October2026Report(): Promise<ReactNode> {
     <ReportLayout metadata={reportMetadata}>
       <div className="lead mb-5">
         <p>
-          Last month I said the used RTX 30 series was the one corner of the
-          market still getting cheaper. September undid that. The{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3090">RTX 3090</Link> jumped
-          38% to $1,207 and the{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3070">RTX 3070</Link> rose
-          24%, both to their highest prices in six months. It was not just them:
-          of the 81 GPUs with listings in both August and September, 59 got more
-          expensive and 17 got cheaper. RTX 50 rose for a second straight month,
-          and new cards on Amazon rose faster than used ones. All prices here
-          are best-deal pricing across eBay and Amazon (the average of the 3
-          cheapest listings).
+          Prices rose almost everywhere in September. Of the 81 GPUs with
+          listings in both August and September, 59 got more expensive and 17
+          got cheaper. RTX 50 led it for a second month: the{" "}
+          <Link href="/gpu/shop/nvidia-geforce-rtx-5090">RTX 5090</Link>&apos;s
+          best resale deal is $4,795, up 23% from August and 2.4 times its
+          $1,999 MSRP, and new cards on Amazon rose faster than resale on five
+          of six models. The used{" "}
+          <Link href="/gpu/shop/nvidia-geforce-rtx-3090">RTX 3090</Link> looks
+          like the month&apos;s big mover at +38%, but most of that is one
+          seller&apos;s cheap batch in August, which I break down below. All
+          prices here are best-deal pricing across eBay and Amazon (the average
+          of the 3 cheapest listings).
         </p>
       </div>
 
@@ -75,7 +76,7 @@ export default async function October2026Report(): Promise<ReactNode> {
           Last month I told you to check resale before buying an RTX 50 card
           new. September made that advice stronger. Here is September best-deal
           pricing next to what the same card cost new on Amazon in September and
-          August, all from our own data:
+          August, all from our own data for each calendar month:
         </p>
         <div className="table-responsive mb-4">
           <table className="table table-sm">
@@ -94,7 +95,7 @@ export default async function October2026Report(): Promise<ReactNode> {
                   <Link href="/gpu/shop/nvidia-geforce-rtx-5090">RTX 5090</Link>
                 </td>
                 <td className="text-end">$1,999</td>
-                <td className="text-end">$4,058</td>
+                <td className="text-end">$4,795</td>
                 <td className="text-end">$5,258</td>
                 <td className="text-end">$4,262</td>
               </tr>
@@ -153,11 +154,13 @@ export default async function October2026Report(): Promise<ReactNode> {
         <p className="mb-4">
           New on Amazon rose on all six, and on five of them faster than resale
           did. The 5070 Ti is the clearest case: up 33% new against 5% used. The
-          5090 rose about a quarter either way, and its best resale deal is now
-          more than twice MSRP. One caveat: Amazon does not tell me a
+          5090 rose 23% either way. Treat the September new column loosely:
+          there were fewer Amazon listings than in August, and the 5060 Ti
+          figure rests on three of them. Amazon also does not tell me a
           listing&apos;s condition, so a used offer sold under a new card&apos;s
-          title can land in that column. Read it as what the featured offer on
-          Amazon cost, which is usually new.
+          title can land in that column. And none of this includes retail
+          stores. A Micro Center or Best Buy restock at MSRP beats every price
+          in this table, so check them before you pay either column.
         </p>
         <div className="alert alert-warning mt-3">
           <strong>What I&apos;d do:</strong> same as last month, check resale{" "}
@@ -167,9 +170,9 @@ export default async function October2026Report(): Promise<ReactNode> {
         <ScalperPremiumChart dateRange={dateRange} />
         <p className="mt-3">
           Against MSRP the{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-5090">5090</Link> is now 103%
-          over sticker, up from 63% in August. The chart shows the six largest
-          premiums, so the one card missing is the{" "}
+          <Link href="/gpu/shop/nvidia-geforce-rtx-5090">5090</Link> is now 140%
+          over sticker on resale, up from 95% in August. The chart shows the six
+          largest premiums, so the one card missing is the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-5070">5070</Link> at $557, 1%
           over its $549 MSRP. That makes it the only RTX 50 card still within a
           few percent of list price.
@@ -180,15 +183,15 @@ export default async function October2026Report(): Promise<ReactNode> {
         <p className="mb-4">
           The{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3060-ti">RTX 3060 Ti</Link>{" "}
-          still leads at $1.19/FPS, though it rose 14% and now costs more than
-          it did in July. The next two cards are 8GB as well, so the one I would
+          still leads at $1.19/FPS, though it rose 11% and now costs more than
+          it did in July. The next two cards are 8GB as well. The one I would
           look at is the{" "}
-          <Link href="/gpu/shop/amd-radeon-rx-7700-xt">RX 7700 XT</Link>: 12GB,
-          21 cents more per frame, and one of the few cards that got cheaper in
-          September. For about $15 more, the{" "}
-          <Link href="/gpu/shop/amd-radeon-rx-6800-xt">RX 6800 XT</Link> gets
-          you 16GB. If you plan to keep the card a couple of years, that is the
-          one I would buy.
+          <Link href="/gpu/shop/amd-radeon-rx-6800">RX 6800</Link>: 16GB for
+          about $95 more, and cheaper than the 12GB{" "}
+          <Link href="/gpu/shop/amd-radeon-rx-7700-xt">RX 7700 XT</Link>. The{" "}
+          <Link href="/gpu/shop/amd-radeon-rx-6800-xt">RX 6800 XT</Link> is
+          about $50 more again for roughly 19% more frames. If you plan to keep
+          the card a couple of years, the 6800 is the one I would buy.
         </p>
         <DollarsPerFpsChart dateRange={dateRange} />
         <div className="alert alert-info mt-3">
@@ -203,15 +206,14 @@ export default async function October2026Report(): Promise<ReactNode> {
 
       <ChartSection title="4K Gaming Best Bang for Your Buck in October 2026">
         <p className="mb-4">
-          Same trap as last month, now with two cards in it. The{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3070-ti">RTX 3070 Ti</Link>{" "}
-          and <Link href="/gpu/shop/amd-radeon-rx-7600">RX 7600</Link> lead on
-          cost per frame, but both are 8GB cards that only rank here because
+          Same trap as last month, with a different card in it. The{" "}
+          <Link href="/gpu/shop/amd-radeon-rx-7600">RX 7600</Link> leads on cost
+          per frame, but it is an 8GB card that only ranks here because
           Counter-Strike 2 barely touches memory at 4K. Modern AAA games with
           textures up will not be so kind. The{" "}
-          <Link href="/gpu/shop/amd-radeon-rx-7900-xt">RX 7900 XT</Link> sits a
-          few cents behind them with 20GB, and 37% below its original MSRP. If
-          you are buying for 4K, that is still where I would put the money.
+          <Link href="/gpu/shop/amd-radeon-rx-7900-xt">RX 7900 XT</Link> is four
+          cents behind it with 20GB, and 37% below its original MSRP. If you are
+          buying for 4K, that is still where I would put the money.
         </p>
         <DollarsPerFps4kChart dateRange={dateRange} />
         <div className="alert alert-info mt-3">
@@ -231,7 +233,7 @@ export default async function October2026Report(): Promise<ReactNode> {
           catch: far less of the open source AI stack assumes OneAPI than
           assumes CUDA. Last month&apos;s cheap CUDA pick, the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3070">RTX 3070</Link>, rose
-          24% and slipped behind the{" "}
+          27% and slipped behind the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3080">RTX 3080</Link>, which
           has 2GB more memory. The first 16GB card is the{" "}
           <Link href="/gpu/shop/amd-radeon-rx-9070-xt">RX 9070 XT</Link> at
@@ -256,7 +258,7 @@ export default async function October2026Report(): Promise<ReactNode> {
           cores: a cheap experiment, not a training rig. The practical pick is
           still the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-4080">RTX 4080</Link>, even
-          after an 11% rise. Last month I pointed to the{" "}
+          after a 9% rise. Last month I pointed to the{" "}
           <Link href="/gpu/shop/nvidia-a30">A30</Link> for 24GB. It rose 31%,
           and the{" "}
           <Link href="/gpu/shop/amd-radeon-rx-7900-xtx">RX 7900 XTX</Link> now
@@ -275,19 +277,18 @@ export default async function October2026Report(): Promise<ReactNode> {
         </div>
       </ChartSection>
 
-      <ChartSection title="August's Used RTX 30 Dip Was Only a Dip">
+      <ChartSection title="The RTX 3090's 38% Jump Was Mostly One Seller">
         <p className="mb-4">
-          A month ago this looked like a trend. Now it looks like one cheap
-          month. The{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3090">RTX 3090</Link> and{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3070">RTX 3070</Link> both
-          finished September at their highest best-deal price in six months,
-          while the{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3060-ti">3060 Ti</Link> and{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3080">3080</Link> recovered
-          but stayed below April. My guess for the 3090 is memory: it is the
-          cheapest GeForce card with 24GB, which is what local AI buyers want.
-          If you were waiting on a used 3090, August was the window.
+          On the chart the{" "}
+          <Link href="/gpu/shop/nvidia-geforce-rtx-3090">RTX 3090</Link> jumps
+          38% from August to September. Most of that is August. One seller
+          listed seven HP OEM 3090s for a single day, four of them at $840 to
+          $990, and those set August&apos;s best deal. Against the rest of
+          August&apos;s listings, September&apos;s $1,207 is up about 10%. It is
+          still the 3090&apos;s highest best deal in six months, and the{" "}
+          <Link href="/gpu/shop/nvidia-geforce-rtx-3070">RTX 3070</Link> is at
+          its six-month high too. If you want a used 3090, I would not wait for
+          another August: it took one seller clearing stock to make it.
         </p>
         <PriceHistoryChart
           dateRange={dateRange}
@@ -303,30 +304,34 @@ export default async function October2026Report(): Promise<ReactNode> {
       <ChartSection title="Other Notes">
         <ul className="mb-4">
           <li className="mb-2">
-            <strong>A correction on the H200.</strong> Last month I wrote that
-            the <Link href="/gpu/shop/nvidia-h200-nvl">H200 NVL</Link> had
-            undercut the{" "}
-            <Link href="/gpu/shop/nvidia-h100-pcie">H100 PCIe</Link>. That
+            <strong>Two corrections to last month.</strong> I wrote that the{" "}
+            <Link href="/gpu/shop/nvidia-h200-nvl">H200 NVL</Link> had undercut
+            the <Link href="/gpu/shop/nvidia-h100-pcie">H100 PCIe</Link>. That
             rested on one $15,500 listing, sold as new and sealed under a title
             that said &quot;pair&quot;, which I should have caught. Without it
-            the H200 was still the pricier card in August, and in September it
-            is about $36.3K against $29.2K for the H100. The three cheapest H200
-            listings in September were all qualification samples (QS in the
-            title), which is worth knowing before you pay datacenter prices for
-            one.
+            the two cost about the same in August, near $27K, and in September
+            the H200 is about $36.3K against $29.2K for the H100. The five
+            cheapest H200 listings in September were all qualification samples
+            (QS in the title), which is worth knowing before you pay datacenter
+            prices for one. I also put the{" "}
+            <Link href="/gpu/shop/nvidia-geforce-rtx-5090">RTX 5090</Link> at
+            63% over MSRP in August. That rested on two listings I should have
+            caught: a $2,399 Founders Edition from a seller with three feedback,
+            up for one day, and a $3,580 &quot;brand new&quot; card from a
+            seller with one feedback. Without them, August was 95%.
           </li>
           <li className="mb-2">
             <strong>
-              The deepest discounts are still old flagships, and they are
-              shrinking slowly.
+              Among former flagships, the deepest discounts are shrinking
+              slowly.
             </strong>{" "}
             Against original MSRP the{" "}
             <Link href="/gpu/shop/nvidia-geforce-rtx-3080-ti">RTX 3080 Ti</Link>{" "}
-            is 62% below at $450, the{" "}
+            is 62% below at $453, the{" "}
             <Link href="/gpu/shop/amd-radeon-rx-6950-xt">RX 6950 XT</Link> is
             62% below at $418, and the{" "}
             <Link href="/gpu/shop/amd-radeon-rx-6900-xt">RX 6900 XT</Link> is
-            60% below at $400. All three rose a little in September, by 4%, 1%,
+            60% below at $400. All three rose a little in September, by 5%, 1%,
             and 2%.
           </li>
         </ul>
