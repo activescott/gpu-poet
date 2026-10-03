@@ -12,6 +12,7 @@
 import type { DateRange } from "@/pkgs/server/components/charts"
 
 // Import metadata from each report's metadata file (not page.tsx, which Next.js restricts exports on)
+import { reportMetadata as october2026 } from "../gpu-market-report-october-2026/metadata"
 import { reportMetadata as september2026 } from "../gpu-market-report-september-2026/metadata"
 import { reportMetadata as august2026 } from "../gpu-market-report-august-2026/metadata"
 import { reportMetadata as july2026 } from "../gpu-market-report-july-2026/metadata"
@@ -40,6 +41,7 @@ export interface MarketReportMetadata {
  * All market reports, newest first.
  */
 const reports: MarketReportMetadata[] = [
+  october2026,
   september2026,
   august2026,
   july2026,

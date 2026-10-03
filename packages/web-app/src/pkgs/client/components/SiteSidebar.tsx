@@ -105,7 +105,7 @@ const navSections: NavSection[] = [
     items: [
       {
         label: "Market Reports",
-        href: "/gpu/market-report/gpu-market-report-september-2026",
+        href: "/gpu/market-report/gpu-market-report-october-2026",
         icon: "graph-up",
       },
     ],
