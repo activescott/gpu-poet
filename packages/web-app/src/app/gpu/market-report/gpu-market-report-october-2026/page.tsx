@@ -308,7 +308,7 @@ export default async function October2026Report(): Promise<ReactNode> {
 
       <ChartSection title="Other Notes">
         <ul className="mb-4">
-          <li className="mb-2">
+          <li className="mb-2" id="corrections">
             <strong>Corrections to the last two reports.</strong> Some of the
             listings I removed this month were also in July and August, so a few
             charts on the August and September reports have changed since I
