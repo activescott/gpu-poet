@@ -44,8 +44,8 @@ async function fetchBestDealsData(
       JOIN gpu g ON g.name = l."gpuName"
       WHERE l."exclude" = false
         AND l."source" IN ('ebay', 'amazon')
-        AND l."createdAt" <= ${endDate}::timestamp
-        AND (l."archivedAt" IS NULL OR l."archivedAt" >= ${startDate})
+        AND l."createdAt" <= (${endDate} AT TIME ZONE 'UTC')
+        AND (l."archivedAt" IS NULL OR l."archivedAt" >= (${startDate} AT TIME ZONE 'UTC'))
         AND g.category = 'gaming'
         AND l."gpuName" NOT LIKE 'nvidia-geforce-rtx-50%'
       -- Pick the cheapest price observed for each listing during the window
