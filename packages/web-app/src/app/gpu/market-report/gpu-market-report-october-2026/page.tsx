@@ -206,7 +206,9 @@ export default async function October2026Report(): Promise<ReactNode> {
 
       <ChartSection title="4K Gaming Best Bang for Your Buck in October 2026">
         <p className="mb-4">
-          Same trap as last month, with a different card in it. The{" "}
+          Same trap as last month, when the 10GB{" "}
+          <Link href="/gpu/shop/nvidia-geforce-rtx-3080">RTX 3080</Link> topped
+          this chart (see the corrections at the end). This month the{" "}
           <Link href="/gpu/shop/amd-radeon-rx-7600">RX 7600</Link> leads on cost
           per frame, but it is an 8GB card that only ranks here because
           Counter-Strike 2 barely touches memory at 4K. Modern AAA games with
@@ -304,7 +306,10 @@ export default async function October2026Report(): Promise<ReactNode> {
       <ChartSection title="Other Notes">
         <ul className="mb-4">
           <li className="mb-2">
-            <strong>Two corrections to last month.</strong> I wrote that the{" "}
+            <strong>Corrections to the last two reports.</strong> Some of the
+            listings I removed this month were also in July and August, so a few
+            charts on the August and September reports have changed since I
+            wrote them. I wrote last month that the{" "}
             <Link href="/gpu/shop/nvidia-h200-nvl">H200 NVL</Link> had undercut
             the <Link href="/gpu/shop/nvidia-h100-pcie">H100 PCIe</Link>. That
             rested on one $15,500 listing, sold as new and sealed under a title
@@ -318,7 +323,23 @@ export default async function October2026Report(): Promise<ReactNode> {
             63% over MSRP in August. That rested on two listings I should have
             caught: a $2,399 Founders Edition from a seller with three feedback,
             up for one day, and a $3,580 &quot;brand new&quot; card from a
-            seller with one feedback. Without them, August was 95%.
+            seller with one feedback. Without them, August was 95%: the best
+            deal was $3,897 rather than $3,254, up 23% from July rather than
+            13%, and resale beat new on Amazon by $365 rather than $1,008. That
+            Founders Edition was also listed on July 31, so the August
+            report&apos;s $2,873 for the 5090 is $3,173 without it, 59% over
+            MSRP and up 3% from June rather than down 6%.
+          </li>
+          <li className="mb-2">
+            <strong>Last month&apos;s gaming charts changed too.</strong> Two
+            August listings with a failed fan or port came out. Without them the{" "}
+            <Link href="/gpu/shop/nvidia-geforce-rtx-3060-ti">RTX 3060 Ti</Link>{" "}
+            still leads 1440p, at $1.07/FPS rather than $1.05. On 4K the{" "}
+            <Link href="/gpu/shop/nvidia-geforce-rtx-3070-ti">RTX 3070 Ti</Link>{" "}
+            falls from first to $2.50, behind the{" "}
+            <Link href="/gpu/shop/nvidia-geforce-rtx-3080">RTX 3080</Link> at
+            $2.44 and the RX 7900 XT at $2.47. The 3080 is a 10GB card in the
+            same trap, so the advice stands: the 7900 XT was the 4K card to buy.
           </li>
           <li className="mb-2">
             <strong>
