@@ -1,7 +1,7 @@
 import { GpuSpecKey, GpuSpecKeys } from "@/pkgs/isomorphic/model/specs"
 import { Gpu, extractBrandName } from "@/pkgs/isomorphic/model"
 import {
-  getGpu,
+  findGpu,
   gpuSpecAsPercent,
   getAllMetricDefinitions,
   calculateAllGpuPercentilesForMetric,
@@ -101,26 +101,28 @@ export async function generateMetadata(props: CompareParams) {
   // Check for canonical URL normalization
   const { normalized, url } = normalizeComparisonUrl(gpu1Slug, gpu2Slug)
 
-  try {
-    const [gpu1, gpu2] = await Promise.all([getGpu(gpu1Slug), getGpu(gpu2Slug)])
-
-    return {
-      title: `${gpu1.label} vs ${gpu2.label} - GPU Comparison | GPU Poet`,
-      description: `Compare ${gpu1.label} and ${gpu2.label} specs, gaming benchmarks, and prices. Find out which GPU is better for gaming and AI/ML workloads.`,
-      alternates: {
-        canonical: `https://gpupoet.com${normalized ? url : `/gpu/compare/${gpu1Slug}/vs/${gpu2Slug}`}`,
-      },
-    }
-  } catch {
+  const [gpu1, gpu2] = await Promise.all([findGpu(gpu1Slug), findGpu(gpu2Slug)])
+  if (!gpu1 || !gpu2) {
     return {
       title: "GPU Comparison | GPU Poet",
       description: "Compare two GPUs side-by-side.",
     }
   }
+
+  return {
+    title: `${gpu1.label} vs ${gpu2.label} - GPU Comparison | GPU Poet`,
+    description: `Compare ${gpu1.label} and ${gpu2.label} specs, gaming benchmarks, and prices. Find out which GPU is better for gaming and AI/ML workloads.`,
+    alternates: {
+      canonical: `https://gpupoet.com${normalized ? url : `/gpu/compare/${gpu1Slug}/vs/${gpu2Slug}`}`,
+    },
+  }
 }
 
 async function fetchGpuData(gpuSlug: string) {
-  const gpu = await getGpu(gpuSlug)
+  const gpu = await findGpu(gpuSlug)
+  if (!gpu) {
+    notFound()
+  }
 
   // Fetch spec percentiles
   const specPercentileEntries = await Promise.all(
@@ -201,15 +203,10 @@ export default async function ComparePage(props: CompareParams) {
   }
 
   // Fetch GPU data in parallel
-  let gpu1Data, gpu2Data
-  try {
-    ;[gpu1Data, gpu2Data] = await Promise.all([
-      fetchGpuData(gpu1Slug),
-      fetchGpuData(gpu2Slug),
-    ])
-  } catch {
-    notFound()
-  }
+  const [gpu1Data, gpu2Data] = await Promise.all([
+    fetchGpuData(gpu1Slug),
+    fetchGpuData(gpu2Slug),
+  ])
 
   const { gpu1Benchmarks, gpu2Benchmarks, benchmarkData } =
     await fetchBenchmarkData(gpu1Data.gpu.name, gpu2Data.gpu.name)
