@@ -58,7 +58,7 @@ export default async function October2026Report(): Promise<ReactNode> {
         <p>
           Prices rose almost everywhere in September. Of the 81 GPUs with
           listings in both August and September, 59 got more expensive and 17
-          got cheaper. RTX 50 led it for a second month: the{" "}
+          got cheaper. Every RTX 50 card rose for a second month: the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-5090">RTX 5090</Link>&apos;s
           best resale deal is $4,795, up 23% from August and 2.4 times its
           $1,999 MSRP, and new cards on Amazon rose faster than resale on five
