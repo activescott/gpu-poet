@@ -190,8 +190,11 @@ export default async function October2026Report(): Promise<ReactNode> {
           about $95 more, and cheaper than the 12GB{" "}
           <Link href="/gpu/shop/amd-radeon-rx-7700-xt">RX 7700 XT</Link>. The{" "}
           <Link href="/gpu/shop/amd-radeon-rx-6800-xt">RX 6800 XT</Link> is
-          about $50 more again for roughly 19% more frames. If you plan to keep
-          the card a couple of years, the 6800 is the one I would buy.
+          about $50 more again for roughly 19% more frames. Both it and the{" "}
+          <Link href="/gpu/shop/amd-radeon-rx-7800-xt">RX 7800 XT</Link> rank
+          above the 6800 on the chart, but only by two or three cents per frame,
+          and the 6800 is the cheapest 16GB gaming card. If you plan to keep the
+          card a couple of years, it is the one I would buy.
         </p>
         <DollarsPerFpsChart dateRange={dateRange} />
         <div className="alert alert-info mt-3">
