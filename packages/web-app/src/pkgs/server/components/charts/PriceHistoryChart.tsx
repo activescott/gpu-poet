@@ -49,15 +49,15 @@ async function fetchPriceHistoryData(
   gpus: string[] = DEFAULT_GPUS,
 ): Promise<MonthlyPriceRow[]> {
   const [year, month] = dateRange.to.split("-").map(Number)
-  const endDate = new Date(year, month, 0) // Last day of target month
-  const startDate = new Date(year, month - MONTHS_TO_SHOW, 1)
+  const endDate = new Date(Date.UTC(year, month, 0)) // Last day of target month
+  const startDate = new Date(Date.UTC(year, month - MONTHS_TO_SHOW, 1))
 
   // Temporal correctness: per-month "active at some point during this month" uses
   // createdAt + archivedAt (immutable per row), NOT cachedAt (overwritten on refresh).
   // See getHistoricalPriceData for the full rationale.
   const result = await prismaSingleton.$queryRaw<MonthlyPriceRow[]>`
     WITH months AS (
-      SELECT DATE_TRUNC('month', generate_series(${startDate}::timestamp, ${endDate}::timestamp, '1 month'::interval)) AS month_date
+      SELECT DATE_TRUNC('month', generate_series((${startDate} AT TIME ZONE 'UTC'), (${endDate} AT TIME ZONE 'UTC'), '1 month'::interval)) AS month_date
     ),
     active_per_month AS (
       -- For each (month, itemId), pick the listing's lowest observed price while

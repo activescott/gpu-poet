@@ -36,8 +36,8 @@ async function fetchDollarsPerFpsData(
       FROM "Listing" l
       WHERE l."exclude" = false
         AND l."source" IN ('ebay', 'amazon')
-        AND l."createdAt" <= ${endDate}::timestamp
-        AND (l."archivedAt" IS NULL OR l."archivedAt" >= ${startDate})
+        AND l."createdAt" <= (${endDate} AT TIME ZONE 'UTC')
+        AND (l."archivedAt" IS NULL OR l."archivedAt" >= (${startDate} AT TIME ZONE 'UTC'))
       ORDER BY l."itemId", l."priceValue"::float ASC
     ),
     ranked AS (

@@ -43,8 +43,8 @@ async function fetchPriceChangesData(
 
   // Calculate previous month
   const prevMonth = new Date(currStart)
-  prevMonth.setMonth(prevMonth.getMonth() - 1)
-  const prevYearMonth = `${prevMonth.getFullYear()}-${String(prevMonth.getMonth() + 1).padStart(MONTH_PAD_LENGTH, "0")}`
+  prevMonth.setUTCMonth(prevMonth.getUTCMonth() - 1)
+  const prevYearMonth = `${prevMonth.getUTCFullYear()}-${String(prevMonth.getUTCMonth() + 1).padStart(MONTH_PAD_LENGTH, "0")}`
   const { startDate: prevStart, endDate: prevEnd } =
     parseDateRange(prevYearMonth)
 
@@ -56,8 +56,8 @@ async function fetchPriceChangesData(
       FROM "Listing" l
       WHERE l."exclude" = false
         AND l."source" IN ('ebay', 'amazon')
-        AND l."createdAt" <= ${currEnd}::timestamp
-        AND (l."archivedAt" IS NULL OR l."archivedAt" >= ${currStart})
+        AND l."createdAt" <= (${currEnd} AT TIME ZONE 'UTC')
+        AND (l."archivedAt" IS NULL OR l."archivedAt" >= (${currStart} AT TIME ZONE 'UTC'))
       ORDER BY l."itemId", l."priceValue"::float ASC
     ),
     curr_ranked AS (
@@ -74,8 +74,8 @@ async function fetchPriceChangesData(
       FROM "Listing" l
       WHERE l."exclude" = false
         AND l."source" IN ('ebay', 'amazon')
-        AND l."createdAt" <= ${prevEnd}::timestamp
-        AND (l."archivedAt" IS NULL OR l."archivedAt" >= ${prevStart})
+        AND l."createdAt" <= (${prevEnd} AT TIME ZONE 'UTC')
+        AND (l."archivedAt" IS NULL OR l."archivedAt" >= (${prevStart} AT TIME ZONE 'UTC'))
       ORDER BY l."itemId", l."priceValue"::float ASC
     ),
     prev_ranked AS (

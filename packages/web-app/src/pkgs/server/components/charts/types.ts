@@ -46,16 +46,19 @@ export const CHART_HASHTAGS: Record<string, string[]> = {
 }
 
 /**
- * Parses a YYYY-MM string into start and end dates for that month.
+ * Parses a YYYY-MM string into start and end dates for that month, in UTC.
+ * Listing timestamps are stored as UTC without a time zone, and Prisma sends a
+ * Date as timestamptz, so queries must compare with `AT TIME ZONE 'UTC'`.
+ * A `::timestamp` cast converts in the DB session time zone instead.
  */
 export function parseDateRange(yearMonth: string): {
   startDate: Date
   endDate: Date
 } {
   const [year, month] = yearMonth.split("-").map(Number)
-  const startDate = new Date(year, month - 1, 1)
-  const endDate = new Date(year, month, 0) // Last day of month
-  endDate.setHours(
+  const startDate = new Date(Date.UTC(year, month - 1, 1))
+  const endDate = new Date(Date.UTC(year, month, 0)) // Last day of month
+  endDate.setUTCHours(
     END_OF_DAY_HOURS,
     END_OF_DAY_MINUTES,
     END_OF_DAY_SECONDS,
