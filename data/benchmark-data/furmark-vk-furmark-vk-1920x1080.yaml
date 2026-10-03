@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 22494
-updatedAt: 2026-10-02T09:21:30.633Z
+collectedSamples: 22602
+updatedAt: 2026-10-03T09:13:45.323Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -42,7 +42,7 @@ results:
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 28
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
-    value: 27
+    value: 26
   - gpuNameRaw: AMD Radeon AI PRO R9700
     value: 323
   - gpuNameRaw: AMD Radeon Graphics
@@ -204,7 +204,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7650 GRE
     value: 142
   - gpuNameRaw: AMD Radeon RX 7700 XT
-    value: 192
+    value: 191
   - gpuNameRaw: AMD Radeon RX 7700 XT (RADV NAVI32)
     value: 199
   - gpuNameRaw: AMD Radeon RX 7700S
@@ -218,7 +218,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
     value: 295
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 279
+    value: 280
   - gpuNameRaw: AMD Radeon RX 7900 XT (RADV NAVI31)
     value: 330
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -232,7 +232,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9060 XT
     value: 189
   - gpuNameRaw: AMD Radeon RX 9060 XT (RADV GFX1200)
-    value: 191
+    value: 192
   - gpuNameRaw: AMD Radeon RX 9070
     value: 285
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
@@ -250,7 +250,7 @@ results:
   - gpuNameRaw: AMD Radeon RX6500 XT
     value: 77
   - gpuNameRaw: AMD Radeon Vega 11 Graphics (RADV RAVEN)
-    value: 10
+    value: 11
   - gpuNameRaw: AMD Radeon Vega 8 Graphics (RADV RAVEN)
     value: 8
   - gpuNameRaw: AMD Radeon VII
@@ -494,7 +494,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3090
     value: 198
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti
-    value: 251
+    value: 253
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU
     value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 4060
@@ -566,9 +566,9 @@ results:
   - gpuNameRaw: NVIDIA RTX A2000 12GB
     value: 54
   - gpuNameRaw: NVIDIA RTX A2000 Laptop GPU
-    value: 43
+    value: 44
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU
-    value: 80
+    value: 79
   - gpuNameRaw: NVIDIA RTX A4000
     value: 100
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU

@@ -1,7 +1,7 @@
 import { createLogger } from "@/lib/logger"
 import { Suspense, type JSX } from "react"
 import { ShopListingsWithFilters } from "./ShopListingsWithFilters"
-import { getGpu } from "@/pkgs/server/db/GpuRepository"
+import { findGpu } from "@/pkgs/server/db/GpuRepository"
 import {
   Gpu,
   type GpuMetricKey,
@@ -18,6 +18,7 @@ import {
   GpuPriceStats,
 } from "@/pkgs/server/db/ListingRepository"
 import Link from "next/link"
+import { notFound } from "next/navigation"
 
 const log = createLogger("gpu:shop:gpuSlug")
 
@@ -178,7 +179,10 @@ export async function generateMetadata(props: GpuParams) {
   const params = await props.params
   const { gpuSlug } = params
   log.debug({ gpuSlug }, "generateStaticMetadata for gpu")
-  const gpu = await getGpu(gpuSlug)
+  const gpu = await findGpu(gpuSlug)
+  if (!gpu) {
+    notFound()
+  }
   const stats = await getPriceStats(gpuSlug)
   const { title, description } = buildShopCopy(gpu, stats)
 
@@ -199,7 +203,10 @@ export default async function Page(props: GpuParams) {
   const { gpuSlug } = params
   const { sortBy } = searchParams
   log.info(`Fetching cached listings for gpu ${gpuSlug} ...`)
-  const gpu: Gpu = await getGpu(gpuSlug)
+  const gpu = await findGpu(gpuSlug)
+  if (!gpu) {
+    notFound()
+  }
   const stats = await getPriceStats(gpuSlug)
   const allListings = await listActiveListingsForGpus([gpuSlug])
   log.info(
