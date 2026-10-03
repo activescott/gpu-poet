@@ -6,7 +6,7 @@ import {
   PERCENTILE_ENTRY_TIER,
 } from "@/pkgs/isomorphic/model/tiers"
 import {
-  getGpu as getGpuWithoutCache,
+  findGpu as findGpuWithoutCache,
   gpuSpecAsPercent,
   getAllMetricDefinitions,
   calculateAllGpuPercentilesForMetric,
@@ -19,13 +19,14 @@ import {
 import { GpuPriceHistoryChart } from "@/pkgs/server/components/charts"
 import { createLogger } from "@/lib/logger"
 import { memoize } from "lodash"
+import { notFound } from "next/navigation"
 
 // revalidate the data at most every hour:
 export const revalidate = 3600
 
 const log = createLogger("learn:gpuSlug")
 
-const getGpu = memoize(getGpuWithoutCache)
+const findGpu = memoize(findGpuWithoutCache)
 
 /**
  * Formats manufacturer identifier type to human-readable label for JSON-LD.
@@ -292,7 +293,10 @@ export async function generateMetadata(props: GpuParams) {
   const params = await props.params
   const { gpuSlug } = params
   log.debug({ gpuSlug }, "generateStaticMetadata for gpu")
-  const gpu = await getGpu(gpuSlug)
+  const gpu = await findGpu(gpuSlug)
+  if (!gpu) {
+    notFound()
+  }
 
   const title = `${gpu.label} ${gpu.memoryCapacityGB}GB Specs, Benchmarks & Pricing`
   const description = `${gpu.label} specifications, gaming benchmarks, and price comparisons. Find the best deals on this GPU.`
@@ -327,7 +331,10 @@ export async function generateMetadata(props: GpuParams) {
 export default async function Page(props: GpuParams) {
   const params = await props.params
   const { gpuSlug } = params
-  const gpu = await getGpu(gpuSlug)
+  const gpu = await findGpu(gpuSlug)
+  if (!gpu) {
+    notFound()
+  }
   const mapPercentages = new Map<GpuSpecKey, number>()
 
   for (const key of GpuSpecKeys) {
