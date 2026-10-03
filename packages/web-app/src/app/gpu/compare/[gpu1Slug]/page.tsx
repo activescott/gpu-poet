@@ -6,7 +6,7 @@
  *
  * The user can then select a second GPU to compare.
  */
-import { listGpus, getGpu } from "@/pkgs/server/db/GpuRepository"
+import { listGpus, findGpu } from "@/pkgs/server/db/GpuRepository"
 import { GpuCompareLanding } from "@/pkgs/client/components/GpuCompareLanding"
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
@@ -23,7 +23,7 @@ export async function generateMetadata({
   params,
 }: PageProps): Promise<Metadata> {
   const { gpu1Slug } = await params
-  const gpu = await getGpu(gpu1Slug)
+  const gpu = await findGpu(gpu1Slug)
 
   if (!gpu) {
     return {
@@ -41,7 +41,7 @@ export default async function CompareWithGpuPage({ params }: PageProps) {
   const { gpu1Slug } = await params
 
   // Validate the GPU exists
-  const gpu = await getGpu(gpu1Slug)
+  const gpu = await findGpu(gpu1Slug)
   if (!gpu) {
     notFound()
   }
