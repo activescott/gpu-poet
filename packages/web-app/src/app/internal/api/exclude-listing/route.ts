@@ -30,14 +30,21 @@ export async function POST(request: Request) {
       )
     }
 
-    await excludeListingForDataQuality(itemId, reason)
+    const updatedCount = await excludeListingForDataQuality(itemId, reason)
+
+    if (updatedCount === 0) {
+      return NextResponse.json(
+        { error: `No listing found with itemId: ${itemId}` },
+        { status: 404 },
+      )
+    }
 
     log.info(
       { excludedBy },
       `Manually excluded listing ${itemId} with reason: ${reason}`,
     )
 
-    return NextResponse.json({ success: true, itemId, reason })
+    return NextResponse.json({ success: true, itemId, reason, updatedCount })
   } catch (error) {
     log.error({ err: error }, "Error excluding listing")
     return NextResponse.json(

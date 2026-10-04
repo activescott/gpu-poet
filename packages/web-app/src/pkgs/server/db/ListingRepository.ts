@@ -1189,19 +1189,23 @@ export async function getListingVersionHistory(
  * Unlike archive, excluded listings are omitted from ALL queries including historical.
  * The listing is preserved for potential ML training to detect similar issues.
  *
+ * Applies to every row for this itemId, archived or not — historical reports
+ * read archived rows too, so an exclusion that only touched the active row
+ * would leave a data-quality issue in the historical data.
+ *
  * @param itemId - The eBay item ID of the listing to exclude
  * @param reason - The reason for exclusion (see EXCLUDE_REASONS in listing.ts)
  * @param prisma - Prisma client
+ * @returns The number of rows updated
  */
 export async function excludeListingForDataQuality(
   itemId: string,
   reason: string,
   prisma: PrismaClientWithinTransaction = prismaSingleton,
-): Promise<void> {
-  await prisma.listing.updateMany({
+): Promise<number> {
+  const { count } = await prisma.listing.updateMany({
     where: {
       itemId,
-      archived: false,
     },
     data: {
       exclude: true,
@@ -1209,6 +1213,7 @@ export async function excludeListingForDataQuality(
     },
   })
   log.info(`Excluded listing ${itemId} for data quality issue: ${reason}`)
+  return count
 }
 
 /**
