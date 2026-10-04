@@ -85,6 +85,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build Docker image 🐳
+        # Normally 6-12 minutes. `npm ci` inside the build has stalled with no
+        # network traffic until cancelled (up to the 6h job limit); fail fast
+        # instead. See #74.
+        timeout-minutes: 20
         uses: docker/build-push-action@v5
         with:
           context: .
