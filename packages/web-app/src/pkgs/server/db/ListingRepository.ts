@@ -1189,7 +1189,7 @@ export async function getListingVersionHistory(
  * Unlike archive, excluded listings are omitted from ALL queries including historical.
  * The listing is preserved for potential ML training to detect similar issues.
  *
- * Applies to every row for this itemId, archived or not — historical reports
+ * Applies to every row for this itemId, archived or not. Historical reports
  * read archived rows too, so an exclusion that only touched the active row
  * would leave a data-quality issue in the historical data.
  *
