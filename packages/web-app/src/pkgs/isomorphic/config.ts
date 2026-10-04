@@ -41,6 +41,10 @@ export const SERVER_CONFIG = {
     returnOrThrow("ADMIN_USERNAME", process.env.ADMIN_USERNAME),
   ADMIN_PASSWORD: (): string =>
     returnOrThrow("ADMIN_PASSWORD", process.env.ADMIN_PASSWORD),
+  // Optional: a second credential limited to POST /internal/api/exclude-listing.
+  // Unset (either value) disables it; see middleware.ts.
+  EXCLUDER_USERNAME: (): string | undefined => process.env.EXCLUDER_USERNAME,
+  EXCLUDER_PASSWORD: (): string | undefined => process.env.EXCLUDER_PASSWORD,
   MAX_LISTINGS_TO_CACHE_PER_GPU: (): number => 100,
   AMAZON_SEARCHER_URL: (): string =>
     process.env.AMAZON_SEARCHER_URL || "http://amazon-searcher:3001",

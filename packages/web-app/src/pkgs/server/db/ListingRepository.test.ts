@@ -1,8 +1,48 @@
 import {
+  excludeListingForDataQuality,
   getLatestListingDate,
   getPriceStats,
   topNListingsByCostPerformance,
 } from "./ListingRepository"
+import { PrismaClientWithinTransaction } from "./db"
+
+function mockPrisma(count: number) {
+  return {
+    listing: {
+      updateMany: jest.fn().mockResolvedValue({ count }),
+    },
+  } as unknown as PrismaClientWithinTransaction
+}
+
+describe("excludeListingForDataQuality", () => {
+  it("excludes all rows for the itemId regardless of archived status", async () => {
+    const prisma = mockPrisma(2)
+
+    const count = await excludeListingForDataQuality(
+      "item-123",
+      "backplate",
+      prisma,
+    )
+
+    expect(prisma.listing.updateMany).toHaveBeenCalledWith({
+      where: { itemId: "item-123" },
+      data: { exclude: true, excludeReason: "backplate" },
+    })
+    expect(count).toBe(2)
+  })
+
+  it("returns 0 when no listing matches the itemId", async () => {
+    const prisma = mockPrisma(0)
+
+    const count = await excludeListingForDataQuality(
+      "missing-item",
+      "backplate",
+      prisma,
+    )
+
+    expect(count).toBe(0)
+  })
+})
 
 describe("getPriceStats", () => {
   it.skip("should return a number", async () => {

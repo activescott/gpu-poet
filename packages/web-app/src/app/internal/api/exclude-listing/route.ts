@@ -2,12 +2,14 @@ import { NextResponse } from "next/server"
 import { excludeListingForDataQuality } from "@/pkgs/server/db/ListingRepository"
 import { EXCLUDE_REASONS } from "@/pkgs/isomorphic/model/listing"
 import { createLogger } from "@/lib/logger"
+import { AUTH_USER_HEADER } from "@/middleware"
 
 const log = createLogger("internal:api:exclude-listing")
 
 const validReasons = new Set(Object.values(EXCLUDE_REASONS))
 
 export async function POST(request: Request) {
+  const excludedBy = request.headers.get(AUTH_USER_HEADER) ?? "unknown"
   try {
     const body = await request.json()
     const { itemId, reason } = body
@@ -28,11 +30,21 @@ export async function POST(request: Request) {
       )
     }
 
-    await excludeListingForDataQuality(itemId, reason)
+    const updatedCount = await excludeListingForDataQuality(itemId, reason)
 
-    log.info(`Manually excluded listing ${itemId} with reason: ${reason}`)
+    if (updatedCount === 0) {
+      return NextResponse.json(
+        { error: `No listing found with itemId: ${itemId}` },
+        { status: 404 },
+      )
+    }
 
-    return NextResponse.json({ success: true, itemId, reason })
+    log.info(
+      { excludedBy },
+      `Manually excluded listing ${itemId} with reason: ${reason}`,
+    )
+
+    return NextResponse.json({ success: true, itemId, reason, updatedCount })
   } catch (error) {
     log.error({ err: error }, "Error excluding listing")
     return NextResponse.json(
