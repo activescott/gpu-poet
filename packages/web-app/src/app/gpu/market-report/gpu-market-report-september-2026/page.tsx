@@ -54,6 +54,16 @@ export default async function September2026Report(): Promise<ReactNode> {
 
   return (
     <ReportLayout metadata={reportMetadata}>
+      <div className="alert alert-secondary mb-5">
+        <strong>Editor&apos;s note:</strong> Some of the listings behind this
+        report&apos;s charts were later excluded for data quality, which changed
+        the numbers below. See the{" "}
+        <Link href="/gpu/market-report/gpu-market-report-october-2026#corrections">
+          corrections in the October 2026 report
+        </Link>{" "}
+        for what changed.
+      </div>
+
       <div className="lead mb-5">
         <p>
           Last month I wrote that the RTX 50{" "}
