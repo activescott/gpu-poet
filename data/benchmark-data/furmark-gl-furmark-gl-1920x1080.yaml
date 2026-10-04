@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 464431
-updatedAt: 2026-10-03T08:53:29.811Z
+collectedSamples: 466754
+updatedAt: 2026-10-04T09:08:28.319Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -131,7 +131,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.3-ogc3.1.fc44.x86_64)
     value: 120
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.4-ogc3.1.fc44.x86_64)
-    value: 113
+    value: 114
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.5-1.162-cachyos-bore-bc250)
     value: 141
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.5-200.fc44.x86_64)
@@ -144,6 +144,8 @@ results:
     value: 133
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-1-cachyos)
     value: 100
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-2-cachyos)
+    value: 114
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.46-valve1-1-neptune-618-g2e13b4367b17)
     value: 130
@@ -190,6 +192,8 @@ results:
     value: 69
   - gpuNameRaw: AMD FirePro M5100
     value: 12
+  - gpuNameRaw: AMD FirePro M6100
+    value: 19
   - gpuNameRaw: AMD FirePro V4900 (FireGL V) Graphics Adapter
     value: 9
   - gpuNameRaw: AMD FirePro W2100
@@ -831,7 +835,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.19.10-arch1-1)
     value: 391
   - gpuNameRaw: AMD Radeon RX 9060
-    value: 168
+    value: 167
   - gpuNameRaw: AMD Radeon RX 9060 XT
     value: 191
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64 6.17.0-22-generic)
@@ -864,7 +868,7 @@ results:
     value: 205
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64
       7.2.3-ogc3.1.fc44.x86_64)
-    value: 173
+    value: 174
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 LLVM 21.1.8 DRM 3.64
       6.17.0-14-generic)
     value: 190
@@ -1078,7 +1082,7 @@ results:
   - gpuNameRaw: ASUS R9 280 Series
     value: 46
   - gpuNameRaw: ASUS Radeon RX 470 Series
-    value: 42
+    value: 43
   - gpuNameRaw: ATI FirePro V (FireGL V) Graphics Adapter
     value: 9
   - gpuNameRaw: ATI FirePro V4800 (FireGL) Graphics Adapter
@@ -1260,7 +1264,7 @@ results:
   - gpuNameRaw: GeForce GTX 580/PCIe/SSE2
     value: 27
   - gpuNameRaw: GeForce GTX 650 Ti BOOST/PCIe/SSE2
-    value: 21
+    value: 20
   - gpuNameRaw: GeForce GTX 650 Ti/PCIe/SSE2
     value: 18
   - gpuNameRaw: GeForce GTX 650/PCIe/SSE2
@@ -1552,7 +1556,7 @@ results:
   - gpuNameRaw: Mesa Intel(R) Graphics (ADL-N)
     value: 4
   - gpuNameRaw: Mesa Intel(R) Graphics (ARL)
-    value: 9
+    value: 10
   - gpuNameRaw: Mesa Intel(R) Graphics (MTL)
     value: 13
   - gpuNameRaw: Mesa Intel(R) Graphics (RPL-P)
@@ -1824,7 +1828,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Ti/PCIe/SSE2
     value: 167
   - gpuNameRaw: NVIDIA GeForce RTX 2080 with Max-Q Design/PCIe/SSE2
-    value: 73
+    value: 74
   - gpuNameRaw: NVIDIA GeForce RTX 2080/PCIe/SSE2
     value: 149
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU/PCIe/SSE2
@@ -1858,7 +1862,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070/PCIe/SSE2
     value: 154
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
-    value: 111
+    value: 110
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
     value: 108
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
@@ -1918,7 +1922,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070/PCIe/SSE2
     value: 281
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU/PCIe/SSE2
-    value: 231
+    value: 230
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 361
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
@@ -1984,7 +1988,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
     value: 91
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU/PCIe/SSE2
-    value: 72
+    value: 73
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU/PCIe/SSE2
@@ -2198,7 +2202,7 @@ results:
   - gpuNameRaw: Quadro T2000 with Max-Q Design/PCIe/SSE2
     value: 35
   - gpuNameRaw: Quadro T2000/PCIe/SSE2
-    value: 38
+    value: 37
   - gpuNameRaw: Radeon (TM) 520
     value: 7
   - gpuNameRaw: Radeon (TM) Pro WX 4100
@@ -2345,7 +2349,7 @@ results:
   - gpuNameRaw: Tesla M40/PCIe/SSE2
     value: 73
   - gpuNameRaw: Tesla P100-PCIE-16GB/PCIe/SSE2
-    value: 142
+    value: 145
   - gpuNameRaw: Tesla P4/PCIe/SSE2
     value: 56
   - gpuNameRaw: Tesla P40/PCIe/SSE2

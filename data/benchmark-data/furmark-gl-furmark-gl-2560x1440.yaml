@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 210600
-updatedAt: 2026-10-03T08:53:29.831Z
+collectedSamples: 211643
+updatedAt: 2026-10-04T09:08:28.340Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -78,6 +78,9 @@ results:
     value: 69
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
     value: 53
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
+      6.18.50-valve2-1-neptune-618-gc7289a96b14d)
+    value: 70
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 LLVM 21.1.8 DRM 3.64
       6.16.4-116.bazzite.fc42.x86_64)
     value: 41
@@ -91,6 +94,8 @@ results:
     value: 52
   - gpuNameRaw: AMD Radeon (TM) Graphics
     value: 9
+  - gpuNameRaw: AMD Radeon (TM) R7 360 Series
+    value: 16
   - gpuNameRaw: AMD Radeon (TM) R9 200 Series
     value: 17
   - gpuNameRaw: AMD Radeon (TM) R9 370 Series
@@ -430,7 +435,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.2.6-1-cachyos)
     value: 268
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.2.8-2-cachyos)
-    value: 272
+    value: 267
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 LLVM 20.1.2 DRM 3.64
       7.0.0-28-generic)
     value: 257
@@ -709,6 +714,8 @@ results:
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1660/PCIe/SSE2
     value: 41
+  - gpuNameRaw: NVIDIA GeForce GTX 650 Ti BOOST/PCIe/SSE2
+    value: 13
   - gpuNameRaw: NVIDIA GeForce GTX 650 Ti/PCIe/SSE2
     value: 11
   - gpuNameRaw: NVIDIA GeForce GTX 660 Ti/PCIe/SSE2
@@ -730,7 +737,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 780/PCIe/SSE2
     value: 37
   - gpuNameRaw: NVIDIA GeForce GTX 950/PCIe/SSE2
-    value: 18
+    value: 19
   - gpuNameRaw: NVIDIA GeForce GTX 960/PCIe/SSE2
     value: 23
   - gpuNameRaw: NVIDIA GeForce GTX 970/PCIe/SSE2
@@ -784,7 +791,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2
     value: 45
   - gpuNameRaw: NVIDIA GeForce RTX 3050/PCIe/SSE2
-    value: 52
+    value: 53
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
     value: 67
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2
@@ -812,7 +819,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3090/PCIe/SSE2
     value: 144
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU/PCIe/SSE2
-    value: 74
+    value: 75
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Laptop GPU/PCIe/SSE2
     value: 99
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti/PCIe/SSE2
@@ -842,7 +849,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
     value: 325
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
-    value: 84
+    value: 83
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
     value: 87
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2
