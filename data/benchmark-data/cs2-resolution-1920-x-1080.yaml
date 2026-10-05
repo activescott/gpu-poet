@@ -17,7 +17,7 @@ profileVersion: 1.0.x
 publicResultsSince: 2024-02-17
 latestDataAsOf: 2025-07-17
 collectedSamples: 209
-updatedAt: 2026-10-04T07:59:30.633Z
+updatedAt: 2026-10-05T09:23:58.051Z
 results:
   - gpuNameRaw: AMD Radeon 8060S
     value: 177

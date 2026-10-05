@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 22706
-updatedAt: 2026-10-04T09:29:41.944Z
+collectedSamples: 22804
+updatedAt: 2026-10-05T11:08:10.730Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -44,7 +44,7 @@ results:
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
     value: 26
   - gpuNameRaw: AMD Radeon AI PRO R9700
-    value: 323
+    value: 324
   - gpuNameRaw: AMD Radeon Graphics
     value: 24
   - gpuNameRaw: AMD Radeon Graphics (RADV GFX1013)
@@ -69,6 +69,8 @@ results:
     value: 89
   - gpuNameRaw: AMD Radeon Pro VII
     value: 121
+  - gpuNameRaw: AMD Radeon Pro VII (RADV VEGA20)
+    value: 131
   - gpuNameRaw: AMD Radeon Pro W5700
     value: 111
   - gpuNameRaw: AMD Radeon Pro WX 2100
@@ -134,7 +136,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500 XT (RADV NAVI24)
     value: 73
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 98
+    value: 99
   - gpuNameRaw: AMD Radeon RX 6600 (RADV NAVI23)
     value: 98
   - gpuNameRaw: AMD Radeon RX 6600 XT
@@ -218,7 +220,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
     value: 295
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 280
+    value: 281
   - gpuNameRaw: AMD Radeon RX 7900 XT (RADV NAVI31)
     value: 330
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -272,7 +274,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 44
   - gpuNameRaw: AMD Radeon(TM) RX 6500M
-    value: 63
+    value: 59
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
     value: 60
   - gpuNameRaw: AMD Radeon(TM) RX Vega 10 Graphics
@@ -462,7 +464,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU
     value: 32
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU
-    value: 55
+    value: 56
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Laptop GPU
     value: 59
   - gpuNameRaw: NVIDIA GeForce RTX 3050 OEM
@@ -504,7 +506,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 177
   - gpuNameRaw: NVIDIA GeForce RTX 4070
-    value: 210
+    value: 209
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
@@ -518,7 +520,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
     value: 217
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
-    value: 360
+    value: 361
   - gpuNameRaw: NVIDIA GeForce RTX 4090
     value: 447
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
@@ -536,11 +538,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070
     value: 291
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Laptop GPU
-    value: 157
+    value: 158
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti
     value: 302
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
-    value: 189
+    value: 190
   - gpuNameRaw: NVIDIA GeForce RTX 5080
     value: 390
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
@@ -552,7 +554,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
     value: 317
   - gpuNameRaw: NVIDIA P104-100
-    value: 54
+    value: 59
   - gpuNameRaw: NVIDIA P106-100
     value: 55
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU
