@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 54672
-updatedAt: 2026-10-05T10:44:03.338Z
+collectedSamples: 54915
+updatedAt: 2026-10-06T09:59:33.949Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -99,7 +99,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 59
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
-    value: 45
+    value: 46
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
     value: 58
   - gpuNameRaw: AMD Radeon RX 6750 XT
@@ -166,7 +166,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.2.6-pikaos)
     value: 114
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 97
+    value: 96
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 131
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
@@ -243,6 +243,8 @@ results:
     value: 3
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
     value: 53
+  - gpuNameRaw: AMD Radeon(TM) 880M Graphics
+    value: 10
   - gpuNameRaw: AMD Radeon(TM) 890M Graphics
     value: 8
   - gpuNameRaw: AMD Radeon(TM) Graphics
@@ -494,7 +496,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2
-    value: 103
+    value: 104
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2
     value: 112
   - gpuNameRaw: NVIDIA GeForce RTX 4070/PCIe/SSE2
@@ -508,7 +510,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 D/PCIe/SSE2
     value: 180
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
-    value: 100
+    value: 99
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
     value: 193
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
@@ -545,6 +547,8 @@ results:
     value: 241
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
     value: 77
+  - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
+    value: 24
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 20
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
@@ -639,6 +643,8 @@ results:
     value: 8
   - gpuNameRaw: Quadro P2000/PCIe/SSE2
     value: 8
+  - gpuNameRaw: Quadro P2200/PCIe/SSE2
+    value: 13
   - gpuNameRaw: Quadro P3000/PCIe/SSE2
     value: 16
   - gpuNameRaw: Quadro P3200/PCIe/SSE2
