@@ -17,7 +17,7 @@ profileVersion: 1.0.x
 publicResultsSince: 2023-05-12
 latestDataAsOf: 2026-05-27
 collectedSamples: 308
-updatedAt: 2026-10-06T08:59:28.340Z
+updatedAt: 2026-10-07T10:10:31.051Z
 results:
   - gpuNameRaw: AMD Radeon Pro W7700
     value: 311

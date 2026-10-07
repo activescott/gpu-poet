@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 22891
-updatedAt: 2026-10-06T10:24:13.115Z
+collectedSamples: 22994
+updatedAt: 2026-10-07T11:17:43.328Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -92,7 +92,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 460 Graphics (RADV POLARIS11)
     value: 18
   - gpuNameRaw: AMD Radeon RX 470 Graphics (RADV POLARIS10)
-    value: 49
+    value: 44
   - gpuNameRaw: AMD Radeon RX 480 Graphics (RADV POLARIS10)
     value: 51
   - gpuNameRaw: AMD Radeon RX 550 / 550 Series (RADV POLARIS12)
@@ -184,7 +184,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6850M XT
     value: 120
   - gpuNameRaw: AMD Radeon RX 6900 XT
-    value: 254
+    value: 256
   - gpuNameRaw: AMD Radeon RX 6950 XT
     value: 249
   - gpuNameRaw: AMD Radeon RX 6950 XT (RADV NAVI21)
@@ -400,7 +400,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060 5GB
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB
-    value: 63
+    value: 62
   - gpuNameRaw: NVIDIA GeForce GTX 1070
     value: 84
   - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti
@@ -482,7 +482,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070
     value: 171
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Laptop GPU
-    value: 118
+    value: 117
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti
     value: 194
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU
@@ -534,7 +534,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5060
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU
-    value: 143
+    value: 142
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Ti
     value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5070
@@ -550,7 +550,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
     value: 225
   - gpuNameRaw: NVIDIA GeForce RTX 5090
-    value: 573
+    value: 572
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2
     value: 559
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
@@ -576,7 +576,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A4000
     value: 100
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU
-    value: 101
+    value: 100
   - gpuNameRaw: NVIDIA RTX A5000
     value: 164
   - gpuNameRaw: NVIDIA RTX A5000 Laptop GPU

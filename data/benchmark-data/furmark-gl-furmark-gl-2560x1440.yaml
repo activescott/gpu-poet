@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 213594
-updatedAt: 2026-10-06T09:59:33.942Z
+collectedSamples: 214624
+updatedAt: 2026-10-07T10:58:36.139Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -436,6 +436,9 @@ results:
       7.2.0-202.nobara.fc44.x86_64)
     value: 249
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
+      7.2.3-ogc3.1.fc44.x86_64)
+    value: 238
+  - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
       7.2.4-ogc3.1.fc44.x86_64)
     value: 221
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.2.6-1-cachyos)
@@ -492,7 +495,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
     value: 8
   - gpuNameRaw: AMD Radeon(TM) Vega 8 Graphics
-    value: 5
+    value: 4
   - gpuNameRaw: AMD Steam Machine (radeonsi navi33 ACO DRM 3.64
       6.16.12-valve24.5-1-neptune-616-gb2f7cfe85e45)
     value: 77
@@ -639,7 +642,7 @@ results:
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
     value: 8
   - gpuNameRaw: Intel(R) UHD Graphics
-    value: 8
+    value: 9
   - gpuNameRaw: Intel(R) UHD Graphics 620
     value: 3
   - gpuNameRaw: Intel(R) UHD Graphics 630
@@ -751,7 +754,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 970/PCIe/SSE2
     value: 36
   - gpuNameRaw: NVIDIA GeForce GTX 980 Ti/PCIe/SSE2
-    value: 57
+    value: 56
   - gpuNameRaw: NVIDIA GeForce GTX 980/PCIe/SSE2
     value: 42
   - gpuNameRaw: NVIDIA GeForce GTX TITAN X/PCIe/SSE2
@@ -775,7 +778,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: NVIDIA GeForce RTX 2070/PCIe/SSE2
-    value: 82
+    value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super with Max-Q Design/PCIe/SSE2
     value: 70
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super/PCIe/SSE2
@@ -885,7 +888,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
     value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
-    value: 396
+    value: 395
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
     value: 121
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
@@ -937,7 +940,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU/PCIe/SSE2
     value: 71
   - gpuNameRaw: NVIDIA RTX A4000/PCIe/SSE2
-    value: 67
+    value: 66
   - gpuNameRaw: NVIDIA RTX A4500 Laptop GPU/PCIe/SSE2
     value: 60
   - gpuNameRaw: NVIDIA RTX A4500/PCIe/SSE2

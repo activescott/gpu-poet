@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 471257
-updatedAt: 2026-10-06T09:59:33.909Z
+collectedSamples: 473584
+updatedAt: 2026-10-07T10:58:36.118Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -70,6 +70,8 @@ results:
     value: 112
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.0.12-1-cachyos)
     value: 126
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.0.9-1-cachyos-BC250-40CU)
+    value: 136
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.0.9-1-cachyos)
     value: 116
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.0.9-200.nobara.fc43.x86_64)
@@ -141,7 +143,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-1-cachyos)
     value: 125
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
-    value: 133
+    value: 124
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-1-cachyos)
     value: 100
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-2-cachyos)
@@ -295,7 +297,7 @@ results:
   - gpuNameRaw: AMD Radeon 760M Graphics (radeonsi phoenix ACO DRM 3.64 6.17.0-23-generic)
     value: 24
   - gpuNameRaw: AMD Radeon 780M
-    value: 15
+    value: 16
   - gpuNameRaw: AMD Radeon 780M (radeonsi phoenix LLVM 19.1.7 DRM 3.61 6.12.74deb131-amd64)
     value: 27
   - gpuNameRaw: AMD Radeon 780M Graphics
@@ -371,7 +373,7 @@ results:
   - gpuNameRaw: AMD Radeon HD 6570
     value: 5
   - gpuNameRaw: AMD Radeon HD 6670
-    value: 9
+    value: 8
   - gpuNameRaw: AMD Radeon HD 6700 Series
     value: 12
   - gpuNameRaw: AMD Radeon HD 6700M Series
@@ -640,7 +642,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 590 Series (radeonsi polaris10 ACO DRM 3.64 6.19.8-pikaos)
     value: 70
   - gpuNameRaw: AMD Radeon RX 6300
-    value: 23
+    value: 24
   - gpuNameRaw: AMD Radeon RX 640
     value: 21
   - gpuNameRaw: AMD Radeon RX 640 Series
@@ -676,9 +678,9 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 LLVM 21.1.8 DRM 3.64 6.18.4-1-MANJARO)
     value: 117
   - gpuNameRaw: AMD Radeon RX 6600 LE
-    value: 106
+    value: 105
   - gpuNameRaw: AMD Radeon RX 6600 XT
-    value: 142
+    value: 143
   - gpuNameRaw: AMD Radeon RX 6600 XT (radeonsi navi23 ACO DRM 3.64 7.1.7-zen1-1-zen)
     value: 140
   - gpuNameRaw: AMD Radeon RX 6600 XT (radeonsi navi23 LLVM 20.1.2 DRM 3.64
@@ -719,7 +721,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700S
     value: 101
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
-    value: 145
+    value: 144
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
     value: 168
   - gpuNameRaw: AMD Radeon RX 6750 XT
@@ -997,7 +999,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
     value: 123
   - gpuNameRaw: AMD Radeon(TM) 840M Graphics
-    value: 21
+    value: 22
   - gpuNameRaw: AMD Radeon(TM) 860M Graphics
     value: 26
   - gpuNameRaw: AMD Radeon(TM) 880M Graphics
@@ -1117,6 +1119,8 @@ results:
     value: 4
   - gpuNameRaw: GeForce 810M/PCIe/SSE2
     value: 3
+  - gpuNameRaw: GeForce 820M/PCIe/SSE2
+    value: 4
   - gpuNameRaw: GeForce 830M/PCIe/SSE2
     value: 6
   - gpuNameRaw: GeForce 840M/PCIe/SSE2
@@ -1619,6 +1623,8 @@ results:
     value: 3
   - gpuNameRaw: NV124
     value: 6
+  - gpuNameRaw: NV132
+    value: 10
   - gpuNameRaw: NV134
     value: 7
   - gpuNameRaw: NV136
@@ -1636,7 +1642,7 @@ results:
   - gpuNameRaw: NVIDIA CMP 50HX/PCIe/SSE2
     value: 27
   - gpuNameRaw: NVIDIA CMP 90HX/PCIe/SSE2
-    value: 65
+    value: 35
   - gpuNameRaw: NVIDIA GeForce 840M/PCIe/SSE2
     value: 6
   - gpuNameRaw: NVIDIA GeForce 920M/PCIe/SSE2
@@ -1800,7 +1806,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce MX350/PCIe/SSE2
     value: 15
   - gpuNameRaw: NVIDIA GeForce MX450/PCIe/SSE2
-    value: 21
+    value: 20
   - gpuNameRaw: NVIDIA GeForce MX550/PCIe/SSE2
     value: 23
   - gpuNameRaw: NVIDIA GeForce MX570 A/PCIe/SSE2
@@ -1898,7 +1904,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070/PCIe/SSE2
     value: 204
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU/PCIe/SSE2
-    value: 211
+    value: 212
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2
     value: 345
   - gpuNameRaw: NVIDIA GeForce RTX 4080/PCIe/SSE2
@@ -1908,7 +1914,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
     value: 249
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
-    value: 419
+    value: 420
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
     value: 117
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
@@ -2028,7 +2034,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 176
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU/PCIe/SSE2
-    value: 207
+    value: 208
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell SFF Edition/PCIe/SSE2
     value: 142
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell/PCIe/SSE2
@@ -2052,7 +2058,7 @@ results:
   - gpuNameRaw: NVIDIA T1000/PCIe/SSE2
     value: 38
   - gpuNameRaw: NVIDIA T1200 Laptop GPU/PCIe/SSE2
-    value: 38
+    value: 37
   - gpuNameRaw: NVIDIA T400 4GB/PCIe/SSE2
     value: 19
   - gpuNameRaw: NVIDIA T400/PCIe/SSE2
@@ -2198,7 +2204,7 @@ results:
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
     value: 78
   - gpuNameRaw: Quadro RTX 6000/PCIe/SSE2
-    value: 178
+    value: 176
   - gpuNameRaw: Quadro RTX 8000/PCIe/SSE2
     value: 174
   - gpuNameRaw: Quadro T1000 with Max-Q Design/PCIe/SSE2
@@ -2212,7 +2218,7 @@ results:
   - gpuNameRaw: Radeon (TM) 520
     value: 7
   - gpuNameRaw: Radeon (TM) Pro WX 4100
-    value: 20
+    value: 21
   - gpuNameRaw: Radeon (TM) Pro WX 4130 Graphics
     value: 18
   - gpuNameRaw: Radeon (TM) Pro WX 4150 Graphics
@@ -2275,7 +2281,7 @@ results:
   - gpuNameRaw: Radeon Pro WX 3100
     value: 7
   - gpuNameRaw: Radeon RX 470 Series
-    value: 51
+    value: 50
   - gpuNameRaw: Radeon RX 5300M
     value: 51
   - gpuNameRaw: Radeon RX 550
@@ -2315,7 +2321,7 @@ results:
   - gpuNameRaw: Radeon RX Vega M GH Graphics
     value: 47
   - gpuNameRaw: Radeon RX Vega M GL Graphics
-    value: 28
+    value: 24
   - gpuNameRaw: Radeon RX480
     value: 49
   - gpuNameRaw: Radeon RX550/550 Series
