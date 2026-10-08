@@ -8,6 +8,7 @@ import {
   GpuMetricKeys,
   extractBrandName,
 } from "@/pkgs/isomorphic/model"
+import { msrpNote } from "@/pkgs/isomorphic/model/gpu"
 import type { SortKey } from "@/pkgs/client/components/SortPanel"
 import { chain } from "irritable-iterable"
 import { ISOMORPHIC_CONFIG } from "@/pkgs/isomorphic/config"
@@ -55,10 +56,13 @@ function compareToMsrp(
  * expensive-looking number is in fact the market floor — without it a $2,917
  * "from" price reads as us being overpriced next to results quoting a $1,599
  * MSRP.
+ *
+ * Estimated MSRPs are left out: a description cannot carry the footnote that
+ * explains them.
  */
 function msrpClause(gpu: Gpu, lowestPrice: number): string {
   const comparison = compareToMsrp(gpu, lowestPrice)
-  if (!comparison) {
+  if (!comparison || msrpNote(gpu)) {
     return ""
   }
   const direction = comparison.isUnderMsrp ? "under" : "over"
@@ -276,31 +280,39 @@ function ShopLead({
   }
 
   const msrp = compareToMsrp(gpu, stats.minPrice)
+  const estimatedMsrpNote = msrp === null ? null : msrpNote(gpu)
 
   return (
-    <p className="lead mb-4">
-      The cheapest {gpu.label} listed right now is {formatUsd(stats.minPrice)}
-      {msrp !== null && (
-        <>
-          , {formatUsd(msrp.difference)} {msrp.isUnderMsrp ? "under" : "over"}{" "}
-          its {formatUsd(msrp.msrp)} launch MSRP
-        </>
+    <>
+      <p className="lead mb-4">
+        The cheapest {gpu.label} listed right now is {formatUsd(stats.minPrice)}
+        {msrp !== null && (
+          <>
+            , {formatUsd(msrp.difference)} {msrp.isUnderMsrp ? "under" : "over"}{" "}
+            its {formatUsd(msrp.msrp)}
+            {estimatedMsrpNote ? "" : " launch"} MSRP
+            {estimatedMsrpNote && <sup>†</sup>}
+          </>
+        )}
+        . {stats.activeListingCount} listings are active, averaging{" "}
+        {formatUsd(stats.avgPrice)}.
+        {stats.usedMinPrice !== null && (
+          <>
+            {" "}
+            {stats.usedListingCount} are used or refurbished, starting around{" "}
+            {formatUsd(stats.usedMinPrice)}; {stats.newListingCount} are new.
+          </>
+        )}{" "}
+        Accessory, box-only, for-parts, and suspected-scam listings are removed
+        before they reach this page, so the lowest price above is a whole card
+        you can actually buy — not a $99 backplate. Prices are live asking
+        prices from eBay and Amazon, refreshed every 30 minutes, not sold
+        prices. For specs and benchmarks, see the {specsLink}.
+      </p>
+      {estimatedMsrpNote && (
+        <p className="small text-muted">† {estimatedMsrpNote}</p>
       )}
-      . {stats.activeListingCount} listings are active, averaging{" "}
-      {formatUsd(stats.avgPrice)}.
-      {stats.usedMinPrice !== null && (
-        <>
-          {" "}
-          {stats.usedListingCount} are used or refurbished, starting around{" "}
-          {formatUsd(stats.usedMinPrice)}; {stats.newListingCount} are new.
-        </>
-      )}{" "}
-      Accessory, box-only, for-parts, and suspected-scam listings are removed
-      before they reach this page, so the lowest price above is a whole card you
-      can actually buy — not a $99 backplate. Prices are live asking prices from
-      eBay and Amazon, refreshed every 30 minutes, not sold prices. For specs
-      and benchmarks, see the {specsLink}.
-    </p>
+    </>
   )
 }
 
