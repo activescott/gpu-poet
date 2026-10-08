@@ -19,7 +19,7 @@ profileVersion: 1.6.x
 publicResultsSince: 2022-01-21
 latestDataAsOf: 2024-12-07
 collectedSamples: 147
-updatedAt: 2026-10-08T10:03:11.329Z
+updatedAt: 2026-10-08T15:55:27.949Z
 results:
   - gpuNameRaw: AMD Radeon RX 6800
     value: 20
