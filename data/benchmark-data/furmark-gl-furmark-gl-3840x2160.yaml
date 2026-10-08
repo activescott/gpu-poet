@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 55173
-updatedAt: 2026-10-07T10:58:36.143Z
+collectedSamples: 55384
+updatedAt: 2026-10-08T10:39:37.345Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -46,6 +46,9 @@ results:
     value: 8
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 8
+  - gpuNameRaw: AMD Radeon 8060S Graphics (radeonsi strix_halo ACO DRM 3.64
+      7.2.8-200.fc44.x86_64)
+    value: 53
   - gpuNameRaw: AMD Radeon AI PRO R9700
     value: 124
   - gpuNameRaw: AMD Radeon Graphics (radeonsi gfx1013 ACO DRM 3.61 6.12.96deb13-rt-amd64)
@@ -122,7 +125,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600 XT
     value: 52
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 43
+    value: 42
   - gpuNameRaw: AMD Radeon RX 7650 GRE
     value: 46
   - gpuNameRaw: AMD Radeon RX 7700 XT
@@ -246,7 +249,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) 880M Graphics
     value: 10
   - gpuNameRaw: AMD Radeon(TM) 890M Graphics
-    value: 8
+    value: 9
   - gpuNameRaw: AMD Radeon(TM) Graphics
     value: 4
   - gpuNameRaw: AMD Radeon(TM) RX 6400
@@ -401,6 +404,8 @@ results:
     value: 10
   - gpuNameRaw: NVIDIA GeForce GTX 770/PCIe/SSE2
     value: 13
+  - gpuNameRaw: NVIDIA GeForce GTX 780/PCIe/SSE2
+    value: 17
   - gpuNameRaw: NVIDIA GeForce GTX 950/PCIe/SSE2
     value: 10
   - gpuNameRaw: NVIDIA GeForce GTX 960/PCIe/SSE2
@@ -510,7 +515,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 D/PCIe/SSE2
     value: 180
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
-    value: 99
+    value: 98
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
     value: 193
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2

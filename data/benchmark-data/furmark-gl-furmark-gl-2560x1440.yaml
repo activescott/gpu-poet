@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 214624
-updatedAt: 2026-10-07T10:58:36.139Z
+collectedSamples: 215556
+updatedAt: 2026-10-08T10:39:37.340Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -78,6 +78,8 @@ results:
     value: 69
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
     value: 53
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-ogc5.1.fc44.x86_64)
+    value: 57
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 70
@@ -226,7 +228,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700S
     value: 66
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
-    value: 96
+    value: 95
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
     value: 113
   - gpuNameRaw: AMD Radeon RX 6750 XT
@@ -638,7 +640,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics
     value: 6
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
-    value: 12
+    value: 11
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
     value: 8
   - gpuNameRaw: Intel(R) UHD Graphics
@@ -896,7 +898,7 @@ results:
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 41
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 69
+    value: 70
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
     value: 69
   - gpuNameRaw: NVIDIA RTX 3000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -954,7 +956,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A6000/PCIe/SSE2
     value: 128
   - gpuNameRaw: NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU/PCIe/SSE2
-    value: 76
+    value: 75
   - gpuNameRaw: NVIDIA RTX PRO 2000 Blackwell/PCIe/SSE2
     value: 85
   - gpuNameRaw: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU/PCIe/SSE2
@@ -1028,7 +1030,7 @@ results:
   - gpuNameRaw: Quadro RTX 3000 with Max-Q Design/PCIe/SSE2
     value: 24
   - gpuNameRaw: Quadro RTX 3000/PCIe/SSE2
-    value: 41
+    value: 42
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 66
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
