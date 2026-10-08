@@ -301,7 +301,7 @@ export default async function Page(props: CurrentPriceParams) {
           <p className="text-muted mb-2">
             {extractBrandName(gpu.label)} graphics card
             {releaseYear ? ` released in ${releaseYear}` : ""}
-            {gpu.msrpUSD && (
+            {gpu.msrpUSD != null && gpu.msrpUSD > 0 && (
               <>
                 {` with an MSRP of $${gpu.msrpUSD.toLocaleString()}`}
                 {estimatedMsrpNote && <sup>†</sup>}
@@ -312,7 +312,7 @@ export default async function Page(props: CurrentPriceParams) {
               View full {gpu.label} specifications and benchmarks →
             </Link>
           </p>
-          {gpu.msrpUSD && estimatedMsrpNote && (
+          {gpu.msrpUSD != null && gpu.msrpUSD > 0 && estimatedMsrpNote && (
             <p className="small text-muted mb-2">† {estimatedMsrpNote}</p>
           )}
           {/*

@@ -84,7 +84,7 @@ export function GpuQuickInfo({ gpu }: GpuQuickInfoProps): JSX.Element {
           : {gpu.supportedCUDAComputeCapability ?? "n/a"}{" "}
         </li>
       </ul>
-      {estimatedMsrpNote && (
+      {gpu.msrpUSD && estimatedMsrpNote && (
         <p className="small text-muted">† {estimatedMsrpNote}</p>
       )}
     </>

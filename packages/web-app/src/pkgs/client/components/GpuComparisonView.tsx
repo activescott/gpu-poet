@@ -336,9 +336,6 @@ function PricingInfo({
           {estimatedMsrpNote && <sup>†</sup>}
         </p>
       )}
-      {gpu.msrpUSD && estimatedMsrpNote && (
-        <p className="mb-0 mt-1 small text-muted">† {estimatedMsrpNote}</p>
-      )}
     </div>
   )
 }
