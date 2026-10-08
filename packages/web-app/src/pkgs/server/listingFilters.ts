@@ -143,15 +143,8 @@ const nonGpuKeywords = [
   "SMX",
   // I've seen some cards in china that read "neutered 4GB" apparently indicating that the card has been modified to have less memory than it originally had:
   "neutered",
-  // e.g. "PowerColor Fighter AMD Radeon RX 7800 XT 16GB GDDR6 Box Only" which only includes the box but has all other specs
-  "Box Only",
-  // e.g. "Original GIGABYTE Empty box package for AMD radeon RX 7800 XT 16GB"
-  "empty box",
   // e.g. "For Nvidia Tesla P4 8GB M4 4GB T4 16GB L4 24GB A2 GPU Card graphics Cooling fan"
   "Cooling fan",
-  // e.g. "MSI NVIDIA GeForce RTX 4090 SUPRIM 24GB GDDR6X Liquid Cooler Block Only"
-  "Block Only",
-  "card only",
   // e.g. "OEM Backplate For EVGA NVIDIA GeForce RTX 3060 XC 12GB Gaming Card" - $4.99 accessory
   "Backplate For",
   // Sellers sometimes list non-working cards with normal conditionId but flag "PARTS ONLY" / "for parts" in the title
@@ -159,7 +152,42 @@ const nonGpuKeywords = [
   "for parts",
 ].map((word) => word.toLowerCase())
 
+// Keywords that always mean the listing is just the empty box/cooler block, no card included.
+const boxOnlyKeywords = [
+  // e.g. "PowerColor Fighter AMD Radeon RX 7800 XT 16GB GDDR6 Box Only" which only includes the box but has all other specs
+  "box only",
+  // e.g. "Original GIGABYTE Empty box package for AMD radeon RX 7800 XT 16GB"
+  "empty box",
+  // e.g. "MSI NVIDIA GeForce RTX 4090 SUPRIM 24GB GDDR6X Liquid Cooler Block Only"
+  "block only",
+  "card only",
+]
+
+// Sellers often skip "only" altogether and just end the title with "box", usually preceded by a color
+// or generic descriptor (e.g. "...RTX 5060 Ti 16GB...White BOX", gpu-poet#91). Real listings that mention
+// a box in passing use a preposition before it instead ("new in box", "open box", "with original box"),
+// so a title that *ends* with a bare "box" and isn't one of those legitimate phrases is box-only.
+const legitBoxMentionPattern =
+  /\b(?:in|with)\s+(?:the\s+)?(?:original\s+)?box\b|\bopen\s+box\b/i
+const trailingBoxPattern = /\bbox\b\s*[!"'*.-]*$/i
+
+export function isBoxOnlyTitle(title: string): boolean {
+  const lower = title.toLowerCase()
+  if (boxOnlyKeywords.some((keyword) => lower.includes(keyword))) {
+    return true
+  }
+  return trailingBoxPattern.test(lower) && !legitBoxMentionPattern.test(lower)
+}
+
 function gpuAccessoryFilter(item: Listing, logFn: LogFn): boolean {
+  if (isBoxOnlyTitle(item.title)) {
+    logFn(
+      "item %s rejected by gpuAccessoryFilter: box-only title. Title: %s",
+      item.itemId,
+      item.title,
+    )
+    return false
+  }
   const matched = nonGpuKeywords.find((keyword) =>
     item.title.toLowerCase().includes(keyword),
   )

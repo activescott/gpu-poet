@@ -89,6 +89,10 @@ mkdir -p packages/web-app/prisma/migrations/YYYYMMDDHHMMSS_migration_name
 echo 'ALTER TABLE "TableName" ADD COLUMN "columnName" TYPE;' > packages/web-app/prisma/migrations/YYYYMMDDHHMMSS_migration_name/migration.sql
 ```
 
+## Listing Filters
+
+`packages/web-app/src/pkgs/server/listingFilters.ts` has drawn several rounds of literal-keyword patches for box-only listings (titles for an empty retail box, no card). Prefer fixing the general shape of a title pattern (e.g. `isBoxOnlyTitle`'s trailing-"box" regex) over adding one more exact-phrase keyword — each keyword-only fix has caught just that one reported title and missed the next phrasing. `listings/cleanup.ts` re-runs `createFilterForGpu` over active listings on a schedule, so a filter fix clears already-stored bad listings on its own; no backfill script needed.
+
 ## Amazon Searcher Testing
 
 The amazon-searcher microservice runs in the local kind cluster alongside the main app. Code lives in `packages/amazon-searcher/`. Oxylabs proxy credentials go in `k8s/overlays/dev/.env.dev.app` (see `.env.dev.app.example`).

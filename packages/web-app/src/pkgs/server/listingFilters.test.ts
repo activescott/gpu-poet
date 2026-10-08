@@ -118,6 +118,59 @@ it("should filter out box-only items", async () => {
   expect(filtered).toHaveLength(1)
 })
 
+it("should filter out box-only listings that end with a bare 'box' (gpu-poet#91)", async () => {
+  const gpu = await loadGpuFromYaml("amd-radeon-rx-7800-xt.yaml")
+
+  const listings: AsyncIterable<Listing> = arrayToAsyncIterable([
+    // INVALID: reported in #91 as "RTX 5060 Ti ... White BOX" - no "only", just a color + bare "box"
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 White BOX",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // INVALID: same pattern, different color, lowercase
+    {
+      title: "amd radeon rx 7800 xt 16gb black box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // VALID: real card, "new in box" describes condition, not the listing's contents
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 New In Box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // VALID: real card, "open box" is a standard eBay condition
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 Open Box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // VALID: real card, box is something it comes with
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 with Original Box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // HACK cast for test purposes
+  ] as unknown as Listing[])
+
+  const filtered = await chainAsync(listings)
+    .filter(createFilterForGpu(gpu))
+    .collect()
+
+  expect(filtered.map((l) => l.title)).toEqual([
+    "AMD Radeon RX 7800 XT 16GB GDDR6 New In Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Open Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 with Original Box",
+  ])
+})
+
 it("should reject listings where GPU name only matches inside a part number", async () => {
   const gpu = await loadGpuFromYaml("nvidia-t4.yaml")
 
