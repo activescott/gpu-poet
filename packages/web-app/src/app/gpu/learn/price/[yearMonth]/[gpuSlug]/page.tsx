@@ -2,6 +2,7 @@ import { notFound } from "next/navigation"
 import Link from "next/link"
 import { memoize } from "lodash"
 import { Gpu, extractBrandName } from "@/pkgs/isomorphic/model"
+import { msrpNote } from "@/pkgs/isomorphic/model/gpu"
 import {
   parseYearMonthSlug,
   getCurrentYearMonth,
@@ -274,6 +275,7 @@ export default async function Page(props: CurrentPriceParams) {
   }
   const annotationDate = new Date(target.year, target.month - 1, 1)
   const releaseYear = extractReleaseYear(gpu)
+  const estimatedMsrpNote = msrpNote(gpu)
   const structuredData = buildStructuredData(
     gpu,
     target,
@@ -299,14 +301,20 @@ export default async function Page(props: CurrentPriceParams) {
           <p className="text-muted mb-2">
             {extractBrandName(gpu.label)} graphics card
             {releaseYear ? ` released in ${releaseYear}` : ""}
-            {gpu.msrpUSD
-              ? ` with an MSRP of $${gpu.msrpUSD.toLocaleString()}`
-              : ""}
+            {gpu.msrpUSD && (
+              <>
+                {` with an MSRP of $${gpu.msrpUSD.toLocaleString()}`}
+                {estimatedMsrpNote && <sup>†</sup>}
+              </>
+            )}
             .{" "}
             <Link href={`/gpu/learn/card/${gpu.name}`}>
               View full {gpu.label} specifications and benchmarks →
             </Link>
           </p>
+          {gpu.msrpUSD && estimatedMsrpNote && (
+            <p className="small text-muted mb-2">† {estimatedMsrpNote}</p>
+          )}
           {/*
             Every elapsed month has a near-duplicate page per GPU, and Google
             picks among them on generic queries: in September 2026 the query

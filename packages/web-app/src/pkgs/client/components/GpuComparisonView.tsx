@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { Gpu } from "@/pkgs/isomorphic/model"
+import { msrpNote } from "@/pkgs/isomorphic/model/gpu"
 import {
   GpuSpecKey,
   GpuSpecKeys,
@@ -294,6 +295,7 @@ function PricingInfo({
   gpu: Gpu
   priceStats: PriceStats
 }): JSX.Element {
+  const estimatedMsrpNote = msrpNote(gpu)
   return (
     <div className="mb-3">
       <h4 className="h6 mb-2">
@@ -331,7 +333,11 @@ function PricingInfo({
       {gpu.msrpUSD && (
         <p className="mb-0 mt-2 small text-muted">
           MSRP: ${gpu.msrpUSD.toLocaleString()}
+          {estimatedMsrpNote && <sup>†</sup>}
         </p>
+      )}
+      {gpu.msrpUSD && estimatedMsrpNote && (
+        <p className="mb-0 mt-1 small text-muted">† {estimatedMsrpNote}</p>
       )}
     </div>
   )

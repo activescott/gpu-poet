@@ -77,6 +77,15 @@ export function parseGpu(data: unknown): Gpu {
 }
 
 /**
+ * Returns the note explaining an estimated MSRP (the first note starting
+ * "Estimated MSRP"), or null when the GPU's MSRP is not an estimate. Callers
+ * show it as a footnote wherever the MSRP is displayed.
+ */
+export function msrpNote(gpu: Pick<Gpu, "notes">): string | null {
+  return gpu.notes.find((note) => note.startsWith("Estimated MSRP")) ?? null
+}
+
+/**
  * Extracts the brand name from a GPU label for use as a Schema.org Brand
  * (e.g. "NVIDIA GeForce RTX 4090" -> "NVIDIA"), normalizing the casing of the
  * three vendors whose labels are not already title-cased.
