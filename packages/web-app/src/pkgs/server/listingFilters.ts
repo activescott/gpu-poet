@@ -165,10 +165,17 @@ const boxOnlyKeywords = [
 
 // Sellers often skip "only" altogether and just end the title with "box", usually preceded by a color
 // or generic descriptor (e.g. "...RTX 5060 Ti 16GB...White BOX", gpu-poet#91). Real listings that mention
-// a box in passing use a preposition before it instead ("new in box", "open box", "with original box"),
-// so a title that *ends* with a bare "box" and isn't one of those legitimate phrases is box-only.
-const legitBoxMentionPattern =
-  /\b(?:in|with)\s+(?:the\s+)?(?:original\s+)?box\b|\bopen\s+box\b/i
+// a box in passing instead use an inclusion preposition ("in", "with", "w/") and/or a packaging-condition
+// descriptor ("retail", "original", "factory sealed", "open") before it, so a title that *ends* with a
+// bare "box" and doesn't match one of those legitimate shapes is box-only.
+const packagingDescriptor =
+  "(?:factory\\s+sealed|retail|original|sealed|unopened|oem)"
+const legitBoxMentionPattern = new RegExp(
+  `\\b(?:in|with|w\\/?)\\s*(?:the\\s+)?(?:${packagingDescriptor}\\s+)?box\\b` +
+    `|\\b${packagingDescriptor}\\s+box\\b` +
+    `|\\bopen[\\s-]?box\\b`,
+  "i",
+)
 const trailingBoxPattern = /\bbox\b\s*[!"'*.-]*$/i
 
 export function isBoxOnlyTitle(title: string): boolean {

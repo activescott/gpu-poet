@@ -171,6 +171,42 @@ it("should filter out box-only listings that end with a bare 'box' (gpu-poet#91)
   ])
 })
 
+it("should not filter out real listings whose packaging phrasing wasn't in the first pass (gpu-poet#92)", async () => {
+  const gpu = await loadGpuFromYaml("amd-radeon-rx-7800-xt.yaml")
+
+  const validTitles = [
+    // VALID: hyphenated "Open-Box"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 New Open-Box",
+    // VALID: preposition with an adjective between it and "box"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 in Retail Box",
+    // VALID: "w/" abbreviation for "with"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 w/ Original Box",
+    // VALID: "w/" with no space before "Box"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 w/Box",
+    // VALID: packaging descriptor with no preposition at all
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Factory Sealed Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Retail Box",
+    // VALID: "Xbox" ends in the letters "box" but isn't a box mention at all
+    "AMD Radeon RX 7800 XT 16GB GDDR6 bundled with Xbox",
+  ]
+
+  const listings: AsyncIterable<Listing> = arrayToAsyncIterable(
+    validTitles.map((title) => ({
+      title,
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+      // HACK cast for test purposes
+    })) as unknown as Listing[],
+  )
+
+  const filtered = await chainAsync(listings)
+    .filter(createFilterForGpu(gpu))
+    .collect()
+
+  expect(filtered.map((l) => l.title)).toEqual(validTitles)
+})
+
 it("should reject listings where GPU name only matches inside a part number", async () => {
   const gpu = await loadGpuFromYaml("nvidia-t4.yaml")
 
