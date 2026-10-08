@@ -163,27 +163,23 @@ const boxOnlyKeywords = [
   "card only",
 ]
 
-// Sellers often skip "only" altogether and just end the title with "box", usually preceded by a color
-// or generic descriptor (e.g. "...RTX 5060 Ti 16GB...White BOX", gpu-poet#91). Real listings that mention
-// a box in passing instead use an inclusion preposition ("in", "with", "w/") and/or a packaging-condition
-// descriptor ("retail", "original", "factory sealed", "open") before it, so a title that *ends* with a
-// bare "box" and doesn't match one of those legitimate shapes is box-only.
-const packagingDescriptor =
-  "(?:factory\\s+sealed|retail|original|sealed|unopened|oem)"
-const legitBoxMentionPattern = new RegExp(
-  `\\b(?:in|with|w\\/?)\\s*(?:the\\s+)?(?:${packagingDescriptor}\\s+)?box\\b` +
-    `|\\b${packagingDescriptor}\\s+box\\b` +
-    `|\\bopen[\\s-]?box\\b`,
-  "i",
-)
-const trailingBoxPattern = /\bbox\b\s*[!"'*.-]*$/i
+// Sellers who ship only the box sometimes skip "only" and describe the box itself instead
+// (e.g. "...RTX 5060 Ti 16GB...White BOX", gpu-poet#91). But a trailing "box" on its own is not
+// a reliable signal: real cards end titles with "box" too ("Retail Box", "w/Box", "No Box",
+// "Brand New Box"), and each attempt to allowlist the legitimate phrasings just missed the next
+// one (gpu-poet#92). Narrow the trailing match to the one shape actually reported - a color
+// naming the box, not the card - rather than trying to list every legitimate phrasing: a
+// box-only listing that slips through still shows a telltale low price, while a real card
+// rejected here disappears from the site with nothing to point at it.
+const trailingBoxOnlyPattern =
+  /\b(?:white|black|brown|empty)\s+box\s*[!"'*.-]*$/i
 
 export function isBoxOnlyTitle(title: string): boolean {
   const lower = title.toLowerCase()
   if (boxOnlyKeywords.some((keyword) => lower.includes(keyword))) {
     return true
   }
-  return trailingBoxPattern.test(lower) && !legitBoxMentionPattern.test(lower)
+  return trailingBoxOnlyPattern.test(lower)
 }
 
 function gpuAccessoryFilter(item: Listing, logFn: LogFn): boolean {

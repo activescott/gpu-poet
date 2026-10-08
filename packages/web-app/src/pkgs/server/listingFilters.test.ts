@@ -188,6 +188,17 @@ it("should not filter out real listings whose packaging phrasing wasn't in the f
     "AMD Radeon RX 7800 XT 16GB GDDR6 Retail Box",
     // VALID: "Xbox" ends in the letters "box" but isn't a box mention at all
     "AMD Radeon RX 7800 XT 16GB GDDR6 bundled with Xbox",
+    // VALID: negation - card ships without its box, re-review of gpu-poet#92
+    "AMD Radeon RX 7800 XT 16GB GDDR6 No Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Without Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 w/o Box",
+    // VALID: condition/packaging descriptor in front of "box" that isn't on the packaging-descriptor list
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Brand New Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Full Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Original Packaging Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Retail Packaging Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Original Accessories Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Used, Tested, Box",
   ]
 
   const listings: AsyncIterable<Listing> = arrayToAsyncIterable(
