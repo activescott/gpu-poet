@@ -5,7 +5,7 @@ category: gaming
 msrpUSD: 599
 tensorCoreCount: 224
 fp32TFLOPS: 35.48
-fp16TFLOPS: 141.93
+fp16TFLOPS: 283.84
 int8TOPS: 283.86
 fp8TFLOPS: 283.86
 memoryCapacityGB: 12
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2024-01-17"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 4070 SUPER is a high-performance graphics card released in January 2024,
@@ -169,11 +169,10 @@ references:
 
 notes:
   - MSRP of $599 USD sourced from NVIDIA's official announcement. A Founders Edition was available at this price, matching the original RTX 4070's launch price while offering significantly better performance.
-  - fp16TFLOPS of 141.93 represents "Peak FP16 Tensor TFLOPS with FP16 Accumulate" using the "with sparsity" metric. Dense performance is 70.96 TFLOPS, sparse is 141.93 TFLOPS. Following the same pattern as other Ada GPUs, NVIDIA publishes the sparse performance.
+  - 'fp16TFLOPS of 283.84 is FP16 Tensor Core throughput (FP16 accumulate) with 2:4 structured sparsity, 8 × the FP32 vector figure. NVIDIA''s RTX 4070 family page gives 568 AI TOPS (FP8 with sparsity), and GeForce Ada runs FP16-accumulate Tensor math at half the FP8 rate: 568 / 2 = 284. Dense FP16 Tensor is 141.92 TFLOPS.'
   - 'int8TOPS of 283.86 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 567.71 TOPS ÷ 2 per NVIDIA Ada architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 567.71 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 283.86 represents non-sparse (dense) FP8 performance. NVIDIA''s Ada Lovelace 4th-generation Tensor Cores process FP8 and INT8 at identical per-clock throughput (both are 8-bit formats) per the NVIDIA Ada GPU Architecture whitepaper; this equal-rate relationship is confirmed by official NVIDIA per-SKU datasheets (e.g. RTX 4090, L40, L40S, L4 all publish identical FP8 and INT8 dense/sparse figures). Dense FP8 = dense INT8 = 283.86 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - Ada Lovelace has no FP4 hardware path (FP4 tensor core support was introduced in Blackwell) — fp4TFLOPS is left null and is a confirmed hardware negative, not a research gap, so it is not added to unverifiedSpecs.
-  - fp32TFLOPS calculated as 7,168 CUDA cores × 2.475 GHz boost clock × 4 ops/cycle = 70.96 TFLOPS standard or 35.48 TFLOPS for non-tensor operations. The "4 ops/cycle" comes from Ada Lovelace's dual-issue FP32 capability where each SM can execute 2 FP32 operations on the dedicated FP32 pipeline plus 2 more FP32 operations on the INT32/FP32 shared pipeline, totaling 4 FP32 ops per cycle under optimal conditions.
   - Power based on what NVIDIA refers to as "TGP (Total Graphics Power)".
   - The RTX 4070 SUPER uses the AD104-350 variant of the AD104 chip with 56 of 60 streaming multiprocessors enabled.
   - Memory bandwidth calculated as 192-bit interface × 21 Gbps = 504 GB/s.
@@ -185,3 +184,4 @@ notes:
   - Third-party product identifiers sourced from official manufacturer websites (ASUS, MSI, Gigabyte, Zotac, Palit, Colorful) and retail listings (Amazon, Newegg, Micro Center).
   - EVGA does not manufacture RTX 4070 SUPER cards as they exited the GPU market in September 2022 before the RTX 40 series launch.
   - Gainward RTX 4070 SUPER models (Panther OC, Ghost) exist but specific part numbers were not available from search results.
+  - 'fp32TFLOPS of 35.48 is TF32 Tensor Core throughput without sparsity. It equals FP32 vector (CUDA core) throughput, computed as 7,168 CUDA cores × 2 × 2.475 GHz boost = 35.48 TFLOPS. On GeForce Ada, dense TF32 runs at the FP32 vector rate, as Tables 3 to 6 of NVIDIA''s RTX Blackwell whitepaper show (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf).'

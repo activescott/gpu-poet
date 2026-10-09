@@ -4,7 +4,7 @@ label: NVIDIA RTX A5000
 category: workstation
 msrpUSD: 2250
 tensorCoreCount: 256
-fp32TFLOPS: 27.77
+fp32TFLOPS: 55.6
 fp16TFLOPS: 222.2
 int8TOPS: 222.2
 memoryCapacityGB: 24
@@ -19,7 +19,7 @@ supportedHardwareOperations:
   - BF16
 supportedCUDAComputeCapability: 8.6
 releaseDate: "2021-04-12"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA RTX A5000 GPU is a high-end graphics card designed for
   demanding applications, including machine learning and advanced rendering. It
@@ -101,3 +101,4 @@ notes:
   - 'Phase 5 audit (2026-09-02): gpuArchitecture normalized from lowercase ''ampere'' to canonical ''Ampere'' capitalization per the canonical table in .claude/agents/gpu-researcher.md.'
   - 'Phase 5 audit (2026-09-02): FP64 removed from supportedHardwareOperations. The RTX A5000 uses the GA102 die (confirmed in the summary above: "NVIDIA''s GA102 GPU architecture"), not GA100. Per an NVIDIA staff reply on this exact GPU''s NVIDIA Developer Forums thread, ''The Tensor core units in the GA102 chip architecture do not contain the FP64 path that is present in e.g. the Tensor core units in the A100 GPU'' (https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056). Canonical Ampere baseline (TF32, BF16, FP16, INT8, INT4) applied per .claude/agents/gpu-researcher.md; FP64 Tensor Core support is reserved for GA100-based SKUs (A100, A30) only.'
   - 'fp8TFLOPS and fp4TFLOPS are left null (field omitted) and not added to unverifiedSpecs — this is a confirmed hardware negative, not a research gap. The RTX A5000''s Ampere 3rd-generation Tensor Cores predate both FP8 (introduced in Ada Lovelace/Hopper) and FP4 (introduced in Blackwell) tensor formats, per the canonical architecture table in .claude/agents/gpu-researcher.md.'
+  - 'fp32TFLOPS of 55.6 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 222.2 TFLOPS Tensor figure (FP16 with sparsity) in NVIDIA''s RTX A5000 datasheet / 4 = 55.55, since professional Ampere Tensor Cores run FP16 with sparsity at 4 × dense TF32. FP32 vector (CUDA core) throughput is 27.8 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

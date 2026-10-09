@@ -4,7 +4,7 @@ label: NVIDIA RTX PRO 2000 Blackwell
 category: workstation
 msrpUSD: 849
 tensorCoreCount: 136
-fp32TFLOPS: 17.0
+fp32TFLOPS: 34
 fp16TFLOPS: 136.25
 int8TOPS: 136.25
 fp4TFLOPS: 272.5
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2025-08-11"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -80,7 +80,7 @@ references:
   - https://blogs.nvidia.com/blog/blackwell-ai-acceleration-workstation-rtx-pro/
 
 notes:
-  - 'FP32 TFLOPS of 17.0 sourced directly from the NVIDIA RTX PRO 2000 Blackwell official datasheet (nvidia.com), representing single-precision CUDA core FP32 performance. Consistent with 4,352 CUDA cores x 1,957 MHz boost clock x 2 ops/cycle / 1000 = 17.03 TFLOPS.'
+  - 'FP32 vector (CUDA core) throughput of 17.0 TFLOPS sourced directly from the NVIDIA RTX PRO 2000 Blackwell official datasheet (nvidia.com), representing single-precision CUDA core FP32 performance. Consistent with 4,352 CUDA cores x 1,957 MHz boost clock x 2 ops/cycle / 1000 = 17.03 TFLOPS.'
   - 'AI TOPS of 545 is the ''AI TOPS'' figure from the NVIDIA official datasheet, representing theoretical FP4 TOPS with 2:4 sparsity (confirmed by the RTX PRO 4000 Blackwell datasheet footnote: ''Theoretical FP4 TOPS using the sparsity feature'').'
   - 'int8TOPS of 136.25 represents non-sparse (dense) INT8 performance, derived from FP4 sparse TOPS: 545 (FP4 sparse) / 4 = 136.25 (INT8 dense). Derivation: FP4 sparse = 2x INT8 sparse = 4x INT8 dense per Blackwell 5th-gen tensor core architecture. Dense value used for consistent cross-vendor comparison.'
   - 'fp16TFLOPS of 136.25 represents Peak FP16 Tensor TFLOPS with sparsity, derived from FP4 sparse TOPS using the Blackwell tensor core ratio (FP16 sparse = FP4 sparse / 4): 545 / 4 = 136.25 TFLOPS. This ratio is consistent with the RTX 5070 where FP16 sparse = 246.9 TFLOPS (from nvidia-geforce-rtx-5070.yaml, sourced from Blackwell GPU architecture whitepaper Table 6). The NVIDIA datasheet does not publish FP16 separately for this workstation card.'
@@ -95,4 +95,5 @@ notes:
   - 'No external power connector required; 70W TDP supplied entirely via PCIe slot. Same power envelope as predecessor RTX 2000 Ada Generation (also 70W).'
   - 'fp4TFLOPS of 272.5 represents non-sparse (dense) FP4 performance, derived from the official NVIDIA AI TOPS figure of 545 (FP4 sparse, per the NVIDIA official datasheet) ÷ 2. Dense value used for consistent cross-vendor comparison.'
   - 'NOT FOUND: fp8TFLOPS — the official NVIDIA RTX PRO 2000 Blackwell datasheet and product page (URLs in references) publish only AI TOPS (FP4 sparse), Single-Precision Performance (FP32), and RT Core Performance — no standalone FP8 TFLOPS row, unlike the RTX PRO 4500/6000 Server Editions which do publish one. Left null rather than guessed from the INT8 dense value.'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 17.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). RTX PRO 2000 is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added either. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 17.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). RTX PRO 2000 is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added either. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 34 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 545 AI TOPS (FP4 with sparsity) on NVIDIA''s RTX PRO 2000 page / 16 = 34.06, since professional Blackwell Tensor Cores run FP4 with sparsity at 16 × dense TF32. FP32 vector (CUDA core) throughput is 17.0 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

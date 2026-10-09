@@ -4,8 +4,8 @@ label: NVIDIA A40
 category: datacenter
 msrpUSD: 27500
 tensorCoreCount: 336
-fp32TFLOPS: 37.4
-fp16TFLOPS: 37.4
+fp32TFLOPS: 74.8
+fp16TFLOPS: 299.4
 int8TOPS: 299.3
 memoryCapacityGB: 48
 memoryBandwidthGBs: 696
@@ -19,7 +19,7 @@ supportedHardwareOperations:
   - BF16
 supportedCUDAComputeCapability: 8.6
 releaseDate: "2020-10-05"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA A40, launched in October 2020 with part number
   900-2G133-0000-000, is a professional-grade GPU built on the GA102 processor.
@@ -105,6 +105,7 @@ references:
   - https://www.advantech.com/en-us/products/8d6a8886-b57e-493f-87c8-6f1e02d0608a/sky-tesl-a40-48p/mod_458ee4c5-1c38-4ed7-80e6-b246c54d373f
   - https://www.ebay.com/p/17053130735
   - https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056
+  - https://images.nvidia.com/content/Solutions/data-center/a40/nvidia-a40-datasheet.pdf
 
 notes:
   - "Estimated MSRP of $27,500 USD for the NVIDIA A40 based on OEM list prices. NVIDIA does not publish official MSRP for data center GPUs. OEM list prices corroborated by 2 independent sources: Cisco UCSC-GPU-A40 has list price of $27,561.22 per Hummingbird Networks, and Lenovo ThinkSystem A40 (4X67A72593) is listed at €26,526.32 (~$28,500 USD) per Redcorp. Note: Current market/resale prices (~$5,500) are significantly lower due to depreciation but do not reflect original launch list pricing."
@@ -126,3 +127,5 @@ notes:
   - 'Phase 5 audit (2026-09-02): gpuArchitecture normalized from lowercase ''ampere'' to canonical ''Ampere'' capitalization per the canonical table in .claude/agents/gpu-researcher.md.'
   - 'Phase 5 audit (2026-09-02): FP64 removed from supportedHardwareOperations. The A40 uses the GA102 die (confirmed in the summary above: "built on the GA102 processor"), not GA100. Per an NVIDIA staff reply on NVIDIA Developer Forums, ''The Tensor core units in the GA102 chip architecture do not contain the FP64 path that is present in e.g. the Tensor core units in the A100 GPU'' (https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056). Canonical Ampere baseline (TF32, BF16, FP16, INT8, INT4) applied per gpu-researcher.md; FP64 Tensor Core support is reserved for GA100-based SKUs (A100, A30) only.'
   - 'fp8TFLOPS and fp4TFLOPS are left null (field omitted) and not added to unverifiedSpecs — this is a confirmed hardware negative, not a research gap. The A40''s Ampere 3rd-generation Tensor Cores predate both FP8 (introduced in Ada Lovelace/Hopper) and FP4 (introduced in Blackwell) tensor formats, per the canonical architecture table in .claude/agents/gpu-researcher.md.'
+  - 'fp32TFLOPS of 74.8 is TF32 Tensor Core throughput without sparsity, per the NVIDIA A40 datasheet (nvidia-a40-datasheet.pdf). FP32 vector (CUDA core) throughput is 37.4 TFLOPS.'
+  - 'fp16TFLOPS of 299.4 is FP16 Tensor Core throughput with 2:4 structured sparsity per the NVIDIA A40 datasheet. Dense FP16 Tensor is 149.7 TFLOPS.'

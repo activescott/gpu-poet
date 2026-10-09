@@ -5,7 +5,7 @@ category: datacenter
 msrpUSD: 15000
 tensorCoreCount: 432
 fp32TFLOPS: 156
-fp16TFLOPS: 312
+fp16TFLOPS: 624
 int8TOPS: 624
 memoryCapacityGB: 80
 memoryBandwidthGBs: 1935
@@ -20,7 +20,7 @@ supportedHardwareOperations:
   - BF16
 supportedCUDAComputeCapability: 8
 releaseDate: "2021-06-28"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: Board Number
@@ -129,9 +129,9 @@ references:
   - https://www.expresscomputersystems.com/products/cisco-nvidia-tesla-a100-80gb-dw-ucsc-gpu-a100-80
   - https://www.advantech.com/en-us/products/8d6a8886-b57e-493f-87c8-6f1e02d0608a/sky-tesl-a100-80p/mod_7af76fc9-a36d-4e4b-8ab8-b91d0248507a
   - https://devicehunt.com/view/type/pci/vendor/10DE/device/20B5
+  - https://www.nvidia.com/content/dam/en-zz/Solutions/Data-Center/a100/pdf/nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf
 notes:
-  - "fp32TFLOPS: NOTE: This is the Tensor Core FP32 performance, not the CUDA
-    FP32 performance. The A40 for example doesn't have such a spec (only CUDA)."
+  - 'fp32TFLOPS of 156 is TF32 Tensor Core throughput without sparsity, per the NVIDIA A100 datasheet (nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf), which lists TF32 Tensor Core as 156 dense and 312 with sparsity. FP32 vector (CUDA core) throughput is 19.5 TFLOPS.'
   - "Estimated MSRP of $15,000 USD for the A100 PCIe 80GB based on launch-time market pricing. NVIDIA does not publish official MSRP for data center GPUs. Sources from around the 2020-2021 launch period cite A100 40GB PCIe at ~$10,000-$12,000 and 80GB PCIe at ~$15,000-$20,000. Note: A100 pricing varies significantly by form factor (PCIe vs SXM) and memory size (40GB vs 80GB). SXM variants are typically more expensive than PCIe. Sources: CNBC, Modal.com, LoveChip, Wikipedia."
   - "Board Number P1001 SKU 200 sourced from TechPowerUp GPU Database."
   - "NVIDIA part number 900-21001-0020-100 (non-CEC version) is the primary NVPN for A100 PCIe 80GB. Part number scheme: 900-21001-XXXX-1XX indicates non-CEC (without secondary root of trust), while 900-21001-XXXX-0XX indicates CEC variant (with secondary root of trust). Sources: harddiskdirect.com, acmemicro.com, bitworks.io."
@@ -146,3 +146,4 @@ notes:
   - 'Phase 5 audit (2026-09-02): gpuArchitecture normalized from lowercase ''ampere'' to canonical ''Ampere'' capitalization per the canonical table in .claude/agents/gpu-researcher.md.'
   - 'Phase 5 audit (2026-09-02): supportedHardwareOperations reviewed against the canonical Ampere baseline in .claude/agents/gpu-researcher.md (TF32, BF16, FP16, INT8, INT4) — file already matched. FP64 is retained because the A100 is GA100-based (confirmed by PCI Device ID 20B5 = GA100 per the Device Hunt reference above), and per NVIDIA''s A100 architecture whitepaper the GA100 die''s 3rd-gen Tensor Cores add a dedicated FP64 Tensor Core path not present on GA10x consumer/professional dies. No change made to the array.'
   - 'fp8TFLOPS and fp4TFLOPS are left null (field omitted) and not added to unverifiedSpecs — this is a confirmed hardware negative, not a research gap. The A100''s Ampere 3rd-generation Tensor Cores predate both FP8 (introduced in Ada Lovelace/Hopper) and FP4 (introduced in Blackwell) tensor formats, per the canonical architecture table in .claude/agents/gpu-researcher.md.'
+  - 'fp16TFLOPS of 624 is FP16 Tensor Core throughput with 2:4 structured sparsity, as the NVIDIA A100 datasheet (nvidia-a100-datasheet-us-nvidia-1758950-r4-web.pdf) publishes it: "312 | 624*", footnoted "With sparsity".'

@@ -4,8 +4,8 @@ label: NVIDIA A30
 category: datacenter
 msrpUSD: 4599
 tensorCoreCount: 224
-fp32TFLOPS: 165
-fp16TFLOPS: 165
+fp32TFLOPS: 82
+fp16TFLOPS: 330
 int8TOPS: 330
 memoryCapacityGB: 24
 memoryBandwidthGBs: 933.3
@@ -20,7 +20,7 @@ supportedHardwareOperations:
   - BF16
 supportedCUDAComputeCapability: 8
 releaseDate: "2021-04-12"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA A30, launched on April 12th, 2021 with part number
   900-21001-0040-100, is a professional-grade accelerator geared towards machine
@@ -108,11 +108,8 @@ references:
   - https://www.serversupply.com/GPU/HBM2/24GB/NVIDIA/900-21001-0040-000_395416.htm
 
 notes:
-  - 'fp32TFLOPS: NOTE: This is the Tensor Core FP32 performance, not the CUDA
-    FP32 performance. Noted in the data sheet as "NVIDIA A30 delivers 165
-    teraFLOPS (TFLOPS) of TF32 deep learning performance."'
-  - "fp16TFLOPS: NOTE: This is the Tensor Core FP16 performance, not the CUDA
-    FP16 performance."
+  - 'fp32TFLOPS of 82 is TF32 Tensor Core throughput without sparsity, per NVIDIA''s A30 page (nvidia.com/en-us/data-center/products/a30-gpu/). The datasheet''s headline "165 teraFLOPS (TFLOPS) of TF32 deep learning performance" is the figure with sparsity. FP32 vector (CUDA core) throughput is 10.3 TFLOPS.'
+  - 'fp16TFLOPS of 330 is FP16 Tensor Core throughput with 2:4 structured sparsity, as NVIDIA''s A30 page (nvidia.com/en-us/data-center/products/a30-gpu/) publishes it: 165 dense and 330 with sparsity.'
   - MSRP of $4,599 USD verified from 3 sources - Cyfuture Cloud cites Thinkmate offering the NVIDIA A30 GPU at $4,599.00, Amazon lists the PNY NVIDIA A30 Module 24GB at $5,199.00, and router-switch.com notes the retail price hovers between $3,500-$5,000 depending on supplier and availability.
   - "NVIDIA part number 900-21001-0040-000 sourced from multiple vendor listings including Acmemicro and Exxact for the Tensor Core A30 24GB HBM2 Dual Slot PCIe 4.0 GPU Card with Passive Cooling"
   - "NVIDIA part number 900-21001-0040-100 sourced from multiple vendor listings for the NVIDIA A30 GPU Non-CEC 24GB variant"

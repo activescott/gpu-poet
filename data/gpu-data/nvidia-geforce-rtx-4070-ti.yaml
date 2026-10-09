@@ -4,7 +4,7 @@ label: NVIDIA Geforce RTX 4070 Ti
 category: gaming
 msrpUSD: 799
 tensorCoreCount: 240
-fp32TFLOPS: 80.2
+fp32TFLOPS: 40.1
 fp16TFLOPS: 320.8
 int8TOPS: 320.7
 fp8TFLOPS: 320.7
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2023-01-05"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 4070 Ti is a graphics card released in 2022,
@@ -115,3 +115,4 @@ notes:
   - "Gigabyte model numbers sourced from official Gigabyte product pages and TechPowerUp - GV-N407TEAGLE-OC-12GD (Eagle OC) and GV-N407TGAMING OC-12GD (Gaming OC)."
   - "PNY part number VCG4070T12TFXXPB1-O sourced from TechPowerUp GPU Database and official PNY product page for the XLR8 Gaming VERTO EPIC-X RGB Triple Fan variant."
   - "Zotac part numbers sourced from official Zotac product pages - ZT-D40710D-10P (Trinity standard) and ZT-D40710J-10P (Trinity OC)."
+  - 'fp32TFLOPS of 40.1 is TF32 Tensor Core throughput without sparsity. It equals FP32 vector (CUDA core) throughput, computed as 7,680 CUDA cores × 2 × 2.61 GHz boost = 40.1 TFLOPS. Table 5 of NVIDIA''s RTX Blackwell whitepaper lists the RTX 4070 Ti TF32 as 40.1 dense and 80.2 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). On GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate.'

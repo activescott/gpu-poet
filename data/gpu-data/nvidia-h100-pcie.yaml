@@ -4,7 +4,7 @@ label: NVIDIA H100 PCIe
 category: datacenter
 msrpUSD: 99696
 tensorCoreCount: 456
-fp32TFLOPS: 756
+fp32TFLOPS: 378
 fp16TFLOPS: 1513
 int8TOPS: 1513
 fp8TFLOPS: 1513
@@ -22,7 +22,7 @@ supportedHardwareOperations:
   - FP8
 supportedCUDAComputeCapability: 9
 releaseDate: "2022-10-01"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA H100 PCIe 80GB is a professional graphics card designed
   primarily for machine learning and high-performance computing applications.
@@ -145,13 +145,13 @@ references:
   - https://e4company.com/wp-content/uploads/nvidia-h100-datasheet-nvidia-us-2287922-web-sep22-partner-r6.pdf
 
 notes:
-  - "fp32TFLOPS: NOTE: FP32 Tensor Core"
+  - 'fp32TFLOPS of 378 is TF32 Tensor Core throughput without sparsity: half the 756 TFLOPS sparse TF32 figure NVIDIA published for the H100 PCIe in its H100 datasheet (sep22 r6, e4company.com mirror in references). The current nvidia.com/en-us/data-center/h100/ page lists only SXM and NVL, and 378 has not been re-read from a vendor source since. FP32 vector (CUDA core) throughput is 51.2 TFLOPS.'
   - "fp16TFLOPS: NOTE: FP16 Tensor Core"
   - 'int8TOPS of 1513 represents non-sparse (dense) INT8 Tensor Core performance, derived from sparse INT8 of 3026 TOPS ÷ 2 per NVIDIA Hopper architecture datasheet. With 2:4 structured sparsity, INT8 performance is 3026 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 1513 represents non-sparse (dense) FP8 Tensor Core performance, derived from sparse FP8 Tensor Core of 3,026 TFLOPS ÷ 2, per the NVIDIA H100 Tensor Core GPU Datasheet (mirrored at e4company.com/wp-content/uploads/nvidia-h100-datasheet-nvidia-us-2287922-web-sep22-partner-r6.pdf, which lists "FP8 Tensor Core 3,026 TFLOPS*" for H100 PCIe with the footnote indicating 2:4 structured sparsity). This matches int8TOPS exactly (1513), consistent with the H100/H200 datasheets showing identical peak throughput for FP8 Tensor Core and INT8 Tensor Core on Hopper. Dense value used for consistent cross-vendor comparison.'
   - 'fp4TFLOPS is null: Hopper predates FP4 support, which was introduced in Blackwell. Confirmed hardware negative per the NVIDIA Hopper architecture datasheet, which lists no FP4 Tensor Core row (resources.nvidia.com/en-us-tensor-core/nvidia-tensor-core-gpu-datasheet). Not added to unverifiedSpecs since this is a confirmed negative, not a data gap.'
   - 'supportedHardwareOperations re-verified 2026-09-02 against the canonical Hopper baseline (FP64, TF32, BF16, FP16, FP8, INT8) documented in .claude/agents/gpu-researcher.md, sourced from the NVIDIA H100 Tensor Core GPU Datasheet. No FP32 or INT4 tensor-core row exists per the GEMM-only definition of this field (plain FP32 CUDA-core throughput is a separate, non-tensor spec). No changes were required for this file; it already matched the canonical set.'
-  - "Estimated MSRP of $99,696 USD for H100 80GB PCIe based on OEM list prices (current, not 2022 launch). NVIDIA does not publish an MSRP for data center GPUs. This is the Cisco list price (GPL) for UCSC-GPU-H100-80=, and the only OEM list price found. Lenovo and HPE figures seen (for example Lenovo 4X67A82257, HPE R9S41C) are reseller selling prices, not list prices, so they are not used. This is a current list price rather than a 2022 launch price; the only launch-time price found is the GDEP Advance pre-order in April 2022 at ¥4,745,950 (about $36,550). Pricing varies by form factor (PCIe vs SXM) and memory size."
+  - "Estimated MSRP of $99,696 USD, based on an OEM list price. NVIDIA does not publish an MSRP for data center GPUs. This is the Cisco list price (GPL) for UCSC-GPU-H100-80=, and the only OEM list price found. Lenovo and HPE figures seen (for example Lenovo 4X67A82257, HPE R9S41C) are reseller selling prices, not list prices, so they are not used. This is a current list price rather than a 2022 launch price; the only launch-time price found is the GDEP Advance pre-order in April 2022 at ¥4,745,950 (about $36,550). Pricing varies by form factor (PCIe vs SXM) and memory size."
   - "releaseDate of 2022-10-01 is month-level: NVIDIA announced the H100 on 2022-03-22 for availability from the third quarter, its March 2023 release says H100 began shipping in fall 2022, and the 2022-09-20 Hopper in Full Production release (nvidianews.nvidia.com/news/nvidia-hopper-in-full-production) names October as when partners roll out the first systems. The exact shipping day is unconfirmed. 2023-03-21 is the H100 NVL announcement date, not the PCIe card."
   - "Manufacturer identifiers sourced from NVIDIA official documentation and OEM product listings. Primary NVPN 900-21010-0000-000 confirmed across multiple resellers. Product SKU P1010 SKU 200 and alternate NVPN 699-21010-0200-xxx found in NVIDIA product briefs and OEM documentation."
   - "Third-party product identifiers sourced from official OEM websites and authorized reseller listings. Dell part numbers (DGP4C, DP44G, 900-21010-0100-030-DELL) from ITCreations and Express Computer Systems. HPE part number (R9S41C) from HPE official product catalog. HP part number (P54751-001) from ITCreations. PNY SKUs (NVH100TCGPU-KIT, XNVH100TCGPU-KIT-RETAIL) from Central Computer and ITCreations. Supermicro OEM part numbers (GPU-NVH100-80, GPU-NVH800-80, 699-21010-0200-600) from Ahead-IT and Renewtech. Lenovo part number (4X67A82257) from Lenovo Press and ServerProven. Cisco part numbers (UCSC-GPU-H100, UCSC-GPU-H100-80, UCSC-GPU-H100-80=, UCSX-GPU-H100-80) from Provantage, Connection, and Express Computer Systems."

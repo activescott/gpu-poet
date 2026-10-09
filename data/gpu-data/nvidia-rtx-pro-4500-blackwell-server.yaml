@@ -4,7 +4,7 @@ label: NVIDIA RTX PRO 4500 Blackwell Server Edition
 category: datacenter
 msrpUSD: 4053
 tensorCoreCount: 328
-fp32TFLOPS: 51.0
+fp32TFLOPS: 101.5
 fp16TFLOPS: 406.0
 int8TOPS: 405.5
 fp8TFLOPS: 405.5
@@ -22,7 +22,7 @@ supportedHardwareOperations:
   - INT8
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2026-03-17"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -86,7 +86,7 @@ references:
   - https://www.supermicro.com/en/accelerators/nvidia/supermicro-rtx-pro-bse
 
 notes:
-  - 'FP32 TFLOPS of 51.0 sourced directly from NVIDIA official product page (nvidia.com/en-us/data-center/rtx-pro-4500-blackwell-server-edition/) and confirmed by Lenovo ThinkSystem product guide (lenovopress.lenovo.com/lp2391). Same value as the RTX PRO 4500 Workstation Edition because both use the same GB203 die with 10,496 CUDA cores at the same boost clock.'
+  - 'FP32 vector (CUDA core) throughput of 51.0 TFLOPS sourced directly from NVIDIA official product page (nvidia.com/en-us/data-center/rtx-pro-4500-blackwell-server-edition/) and confirmed by Lenovo ThinkSystem product guide (lenovopress.lenovo.com/lp2391). Same value as the RTX PRO 4500 Workstation Edition because both use the same GB203 die with 10,496 CUDA cores at the same boost clock.'
   - 'fp16TFLOPS of 406.0 is the FP16/BF16 Tensor Core TFLOPS (with 2:4 structured sparsity) sourced directly from NVIDIA official product page and Lenovo ThinkSystem product guide. The NVIDIA official page lists "FP16 / BF16 Tensor Core TFLOPS: 406 TFLOPS." Dense FP16 Tensor = 406 / 2 = 203 TFLOPS.'
   - 'int8TOPS of 405.5 represents non-sparse (dense) INT8 performance, derived from sparse FP8 TOPS: 811 (FP8 sparse) / 2 = 405.5 TOPS. In the Blackwell 5th-gen tensor core architecture, INT8 sparse performance equals FP8 sparse performance; dividing by 2 gives the dense (non-sparsity) INT8 value. Source: NVIDIA official product page lists FP8 = 811 TFLOPS. Dense value used for consistent cross-vendor comparison. Note: the sibling RTX PRO 4500 Workstation Edition uses int8TOPS = 404.25, derived as FP4/4 = 1617/4 from the PNY workstation datasheet; the small difference (405.5 vs 404.25) reflects rounding differences between the two source documents for essentially the same silicon.'
   - 'Memory bandwidth of 800 GB/s per NVIDIA official product page and Lenovo ThinkSystem product guide. This is lower than the workstation variant (896 GB/s) because the server edition uses 25 Gbps GDDR7 memory versus 28 Gbps on the workstation. Calculation: 256 bits / 8 bytes × 25,000 MHz × 2 (DDR) / 1,000 = 800 GB/s. Exxactcorp.com and CDW product page for 900-2G147-0000-000 incorrectly list 896 GB/s (reflecting workstation bandwidth); the NVIDIA official product page is authoritative and shows 800 GB/s, confirmed by Lenovo product guide and Videocardz search snippet noting "lower memory bandwidth" for the server edition.'
@@ -104,4 +104,5 @@ notes:
   - 'Estimated MSRP of $4,053 USD based on launch-time market pricing. NVIDIA does not publish official MSRP for data center GPUs. CDW lists PNY SKU NVRTXPRO4500TCGPU-KIT at $4,052.99 (cdw.com/product/9133423). The NVIDIA-branded OEM variant (900-2G147-0000-000) is listed as quote-only at CDW (product/9077550). This GPU is primarily sold through server OEM channels (Lenovo ThinkSystem SR665 V3, HPE ProLiant, Supermicro) without published standalone pricing.'
   - 'fp8TFLOPS of 405.5 represents non-sparse (dense) FP8 performance, derived from the already-cited FP8 sparse figure of 811 TFLOPS (per the NVIDIA official product page) ÷ 2. With 2:4 structured sparsity, FP8 performance is 811 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp4TFLOPS of 811 represents non-sparse (dense) FP4 performance. NVIDIA''s official product page (URL in references) publishes FP4 sparse as "1.6 PFLOPS" in the summary copy but does not print a precise numeric FP4 row in the specs table fetched for this audit; the precise figure is derived from the already-cited FP8 sparse value of 811 TFLOPS using the Blackwell 5th-gen tensor core convention that FP4 sparse = 2x FP8 sparse (halving bit width doubles throughput): FP4 sparse = 811 x 2 = 1,622 TFLOPS (≈1.6 PFLOPS, consistent with the summary copy); dense = 1,622 / 2 = 811 TFLOPS. This derivation chain is corroborated by the same 4x-INT8-dense relationship used throughout the Blackwell RTX PRO family (405.5 dense INT8 x 4 = 1,622).'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 51.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). Although this SKU''s category is "datacenter," it is a professional/workstation-derived GB203 server card, not a B100/B200-class datacenter Blackwell GPU, so per gpu-researcher.md''s explicit guidance no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 51.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). Although this SKU''s category is "datacenter," it is a professional/workstation-derived GB203 server card, not a B100/B200-class datacenter Blackwell GPU, so per gpu-researcher.md''s explicit guidance no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 101.5 is TF32 Tensor Core throughput without sparsity, half the 203 TFLOPS TF32 Tensor Core figure on NVIDIA''s RTX PRO 4500 Server page (nvidia.com/en-us/data-center/rtx-pro-4500-blackwell-server-edition/). The page lists it alongside FP16 406, FP8 811 and FP4 1.6 PFLOPS, all with sparsity, and 203 is half of 406, so 203 is the sparse TF32 figure. FP32 vector (CUDA core) throughput is 51.0 TFLOPS.'

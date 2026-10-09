@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 215870
-updatedAt: 2026-10-08T17:09:19.006Z
+collectedSamples: 216519
+updatedAt: 2026-10-09T11:39:26.718Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -79,7 +79,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
     value: 53
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-ogc5.1.fc44.x86_64)
-    value: 57
+    value: 60
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 70
@@ -230,7 +230,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
     value: 95
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
-    value: 113
+    value: 112
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 125
   - gpuNameRaw: AMD Radeon RX 6750 XT (radeonsi navi22 ACO DRM 3.64
@@ -722,7 +722,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
     value: 55
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti with Max-Q Design/PCIe/SSE2
-    value: 28
+    value: 29
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1660/PCIe/SSE2
@@ -944,7 +944,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A4000/PCIe/SSE2
     value: 66
   - gpuNameRaw: NVIDIA RTX A4500 Laptop GPU/PCIe/SSE2
-    value: 60
+    value: 62
   - gpuNameRaw: NVIDIA RTX A4500/PCIe/SSE2
     value: 98
   - gpuNameRaw: NVIDIA RTX A5000 Laptop GPU/PCIe/SSE2

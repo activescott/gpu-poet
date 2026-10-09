@@ -4,7 +4,7 @@ label: NVIDIA Geforce RTX 4070
 category: gaming
 msrpUSD: 599
 tensorCoreCount: 184
-fp32TFLOPS: 58.2
+fp32TFLOPS: 29.1
 fp16TFLOPS: 233.2
 int8TOPS: 233.2
 fp8TFLOPS: 233.2
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2023-04-13"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 4070 is a graphics card released in 2022,
@@ -118,3 +118,4 @@ notes:
   - Zotac ZT-D40700E-10M and ZT-D40700H-10M model numbers sourced from official Zotac product pages and Amazon listings
   - Palit NED4070H19K9-1043A part number sourced from TechPowerUp GPU Database and official Palit product page
   - EVGA did not produce any RTX 4070 models as they exited the GPU market in September 2022, before the RTX 40 series launched
+  - 'fp32TFLOPS of 29.1 is TF32 Tensor Core throughput without sparsity. It equals FP32 vector (CUDA core) throughput, computed as 5,888 CUDA cores × 2 × 2.475 GHz boost = 29.1 TFLOPS. Table 6 of NVIDIA''s RTX Blackwell whitepaper lists the RTX 4070 TF32 as 29.1 dense and 58.2 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). On GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate.'

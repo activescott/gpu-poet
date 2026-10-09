@@ -4,7 +4,7 @@ label: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition
 category: workstation
 msrpUSD: 10999
 tensorCoreCount: 752
-fp32TFLOPS: 110.0
+fp32TFLOPS: 219.5
 fp16TFLOPS: 877.75
 int8TOPS: 877.75
 fp4TFLOPS: 1755.5
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2025-03-18"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -85,9 +85,10 @@ references:
   - https://www.bhphotovideo.com/c/product/1895189-REG/nvidia_900_5g153_2200_000_rtx_pro_6000_blackwell.html
   - https://www.bhphotovideo.com/c/product/1898469-REG/pny_vcnrtxpro6000bq_pb_nvidia_rtx_pro_6000.html
   - https://www.newegg.com/nvidia-900-5g153-2200-000-rtx-pro-6000-96gb-graphics-card/p/N82E16814132105
+  - https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf
 
 notes:
-  - 'FP32 TFLOPS of 110.0 sourced directly from the official NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition datasheet (workstation-datasheet-blackwell-rtx-pro-6000-max-q-nvidia-3519233.pdf) and confirmed by the NVIDIA product page (nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-max-q/). Footnote states "Peak rates based on GPU Boost Clock." Sanity check: 24,064 CUDA cores x 2,280 MHz boost x 2 ops/cycle / 1,000,000 = 109.7 TFLOPS, consistent with the official 110 TFLOPS. The boost clock of ~2,280 MHz is approximately 87% of the Workstation Edition''s 2,617 MHz boost, matching the 110/125 = 88% FP32 ratio.'
+  - 'FP32 vector (CUDA core) throughput of 110.0 TFLOPS sourced directly from the official NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition datasheet (workstation-datasheet-blackwell-rtx-pro-6000-max-q-nvidia-3519233.pdf) and confirmed by the NVIDIA product page (nvidia.com/en-us/products/workstations/professional-desktop-gpus/rtx-pro-6000-max-q/). Footnote states "Peak rates based on GPU Boost Clock." Sanity check: 24,064 CUDA cores x 2,280 MHz boost x 2 ops/cycle / 1,000,000 = 109.7 TFLOPS, consistent with the official 110 TFLOPS. The boost clock of ~2,280 MHz is approximately 87% of the Workstation Edition''s 2,617 MHz boost, matching the 110/125 = 88% FP32 ratio.'
   - 'AI TOPS of 3,511 sourced directly from the official NVIDIA datasheet (footnotes: "Peak rates based on GPU Boost Clock" and "Effective FP4 TOPS with sparsity") and confirmed by the NVIDIA product page showing 3,511 AI TOPS. The Newegg OEM listing (N82E16814132105) also confirms 3,511 AI TOPS. PNY product page erroneously lists 1,500 TOPS; the official NVIDIA datasheet value of 3,511 is used. Ratio check: 3,511 Max-Q / 4,000 Workstation = 87.8%, matching the FP32 clock ratio of 110/125 = 88.0%, confirming internal consistency. The datasheet''s specifications table lists only "AI TOPS," "Single-Precision Performance," and "RT Core Performance" — no separate FP8/FP16/INT8 rows are published for this specific card.'
   - 'int8TOPS of 877.75 represents non-sparse (dense) INT8 performance, derived from FP4 sparse TOPS: 3,511 (FP4 sparse) / 4 = 877.75 TOPS. Derivation: FP4 sparse = 2x INT8 sparse = 4x INT8 dense per Blackwell 5th-gen tensor core architecture. Dense value used for consistent cross-vendor comparison.'
   - 'fp16TFLOPS of 877.75 is FP16 Tensor Core throughput with 2:4 structured sparsity, derived from FP4 sparse TOPS using the Blackwell tensor core ratio (FP16 sparse = FP4 sparse / 4): 3,511 / 4 = 877.75 TFLOPS. Dense FP16 Tensor = 877.75 / 2 = 438.875 TFLOPS. The official NVIDIA datasheet for the Max-Q does not publish FP16 Tensor performance separately. Derived per project policy: fp16TFLOPS = AI TOPS / 4.'
@@ -102,4 +103,5 @@ notes:
   - 'Estimated MSRP of $10,999 USD based on retail listing price. NVIDIA does not publish an official MSRP for professional workstation GPUs. Newegg lists PNY VCNRTXPRO6000BQ-PB at $10,999 (listing N82E16888884003, confirmed June 2026). B&H Photo lists the same PNY card (product 1898469-REG) at $10,999 (confirmed June 2026). Dell lists the 490-BLDL as a BTO component at $8,959.99 (confirmed June 2026); the Dell BTO price is typically lower than standalone retail. The $10,999 retail price is used as it represents the standalone card market price. Note: current market pricing reflects post-launch supply and demand conditions.'
   - 'fp4TFLOPS of 1755.5 represents non-sparse (dense) FP4 performance, derived from the already-cited AI TOPS figure of 3,511 (FP4 sparse, per the official NVIDIA datasheet) ÷ 2. Dense value used for consistent cross-vendor comparison.'
   - 'NOT FOUND: fp8TFLOPS — the official NVIDIA RTX PRO 6000 Blackwell Max-Q datasheet specifications table (URL in references) publishes only AI TOPS (FP4 sparse), Single-Precision Performance (FP32), and RT Core Performance — no standalone FP8 TFLOPS row, unlike the RTX PRO 4500/6000 Server Editions which do publish one on their data-center product pages. Left null rather than guessed from the INT8 dense value.'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 110.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 110.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 219.5 is TF32 Tensor Core throughput without sparsity, per Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf), which lists the Max-Q at 219.5 TFLOPS dense TF32 and 109.7 TFLOPS FP32 vector; the datasheet rounds FP32 to 110.'

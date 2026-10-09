@@ -10,7 +10,7 @@ fp4TFLOPS: 494
 maxTDPWatts: 250
 memoryBandwidthGBs: 672
 tensorCoreCount: 192
-fp32TFLOPS: 61.8
+fp32TFLOPS: 30.9
 fp16TFLOPS: 246.9
 
 gpuArchitecture: blackwell
@@ -25,7 +25,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.8
 releaseDate: "2025-03-05"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -148,7 +148,7 @@ notes:
   - Blackwell GB205 is the chip (GB205-300-A1 GPU die variant).
   - fp16TFLOPS is "Peak FP16 Tensor TFLOPS with FP16 Accumulate" (246.9 with sparsity) as published in the Blackwell GPU architecture whitepaper Table 6.
   - 'int8TOPS of 246.95 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 493.9 TOPS ÷ 2 per NVIDIA Blackwell architecture whitepaper Table 6. With 2:4 structured sparsity, INT8 performance is 493.9 TOPS. Dense value used for consistent cross-vendor comparison.'
-  - fp32TFLOPS is "Peak TF32 Tensor TFLOPS" (61.7 with sparsity, rounded to 61.8) as published in the Blackwell GPU architecture pdf Table 6.
+  - 'fp32TFLOPS of 30.9 is TF32 Tensor Core throughput without sparsity. Table 6 of NVIDIA''s RTX Blackwell whitepaper lists the RTX 5070 TF32 as 30.9 dense and 61.7 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). It equals FP32 vector (CUDA core) throughput: on GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate.'
   - MSRP of $549 USD sourced from nvidia.com official product page (https://www.nvidia.com/en-us/geforce/graphics-cards/50-series/rtx-5070-family/).
   - NVIDIA Founders Edition is available for this model with NVPN 900-1G146-2570-000.
   - Board variants include PG146 and PG147 based on available documentation.

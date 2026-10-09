@@ -4,7 +4,7 @@ label: NVIDIA L4
 category: datacenter
 msrpUSD: 7000
 tensorCoreCount: 240
-fp32TFLOPS: 120
+fp32TFLOPS: 60
 fp16TFLOPS: 242
 int8TOPS: 242.5
 fp8TFLOPS: 242.5
@@ -20,7 +20,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2023-03-21"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA L4 GPU was introduced in March 2023 with part number
   900-2G193-0000-000. It, along with the L40 are the NVIDIA Ada Lovelace
@@ -131,3 +131,4 @@ notes:
   - "Cisco part numbers UCSC-GPU-L4 (C-Series) and UCSX-GPU-L4= (X-Series) sourced from Cisco official datasheet at https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/nvidia-l4-gpu.pdf"
   - "PNY part numbers NVL4TCGPU-KIT (low-profile) and NVL4TCGPUATX-KIT (full-height) sourced from https://www.pny.com/nvidia-l4 and verified via multiple retailers"
   - "Supermicro part number GPU-NVL4 sourced from https://store.supermicro.com/supermicro-nvidia-ada-l4-24gb-gddr6-pcie-4-0-graphics-card.html"
+  - 'fp32TFLOPS of 60 is TF32 Tensor Core throughput without sparsity, per NVIDIA''s L4 page (nvidia.com/en-us/data-center/l4/), which lists 120 TFLOPS with sparsity. FP32 vector (CUDA core) throughput is 30.3 TFLOPS.'

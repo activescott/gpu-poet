@@ -5,7 +5,7 @@ category: gaming
 msrpUSD: 299
 tensorCoreCount: 120
 fp32TFLOPS: 19.18
-fp16TFLOPS: 76.71
+fp16TFLOPS: 153.5
 int8TOPS: 153.42
 fp4TFLOPS: 307
 memoryCapacityGB: 8
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.8
 releaseDate: "2025-05-01"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 5060 is an entry-level graphics card released in 2025,
@@ -91,9 +91,9 @@ references:
   - https://www.tomshardware.com/pc-components/gpus/nvidia-geforce-rtx-5060-ti-and-5060-graphics-card-roundup-every-announced-card-from-every-aib-partner
 
 notes:
-  - fp16TFLOPS of 76.71 represents "Peak FP16 Tensor TFLOPS with FP16 Accumulate" using the "with sparsity" metric. Dense performance is 38.35 TFLOPS, sparse is 76.71 TFLOPS. Following the same pattern as other Blackwell GPUs, NVIDIA publishes the sparse performance.
+  - 'fp16TFLOPS of 153.5 is FP16 Tensor Core throughput (FP16 accumulate) with 2:4 structured sparsity, derived as AI TOPS ÷ 4 (614 ÷ 4), the rule used for every GeForce Blackwell file. Dense FP16 Tensor is 76.75 TFLOPS.'
   - 'int8TOPS of 153.42 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 306.83 TOPS ÷ 2 per NVIDIA Blackwell architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 306.83 TOPS. Dense value used for consistent cross-vendor comparison.'
-  - fp32TFLOPS of 19.18 represents the peak TF32 tensor TFLOPS performance as published for Blackwell architecture GPUs.
+  - 'fp32TFLOPS of 19.18 is FP32 vector (CUDA core) throughput, which on GeForce Blackwell equals TF32 Tensor Core throughput without sparsity. On GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate. NVIDIA''s RTX Blackwell whitepaper lists dense/sparse TF32 of 35.6/71.2 for the RTX 3090, 82.6/165.2 for the RTX 4090 and 104.8/209.5 for the RTX 5090, read from a search-result excerpt of the whitepaper rather than the PDF itself (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf).'
   - Power based on what NVIDIA refers to as "TGP (Total Graphics Power)".
   - The RTX 5060 uses the GB206 chip with 3,840 CUDA cores across 30 streaming multiprocessors.
   - Memory bandwidth calculated as 128-bit interface × 28 Gbps = 448 GB/s.

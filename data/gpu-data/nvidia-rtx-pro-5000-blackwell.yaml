@@ -4,7 +4,7 @@ label: NVIDIA RTX PRO 5000 Blackwell
 category: workstation
 msrpUSD: 4199
 tensorCoreCount: 440
-fp32TFLOPS: 65.0
+fp32TFLOPS: 130
 fp16TFLOPS: 516.0
 int8TOPS: 516.0
 fp4TFLOPS: 1032
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2025-03-18"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -98,7 +98,7 @@ references:
   - https://www.pny.com/file%20library/company/support/product%20brochures/nvidia%20rtx/english/nvidia-rtx-pro-5000-blackwell.pdf
 
 notes:
-  - 'FP32 TFLOPS of 65.0 sourced from the official NVIDIA RTX PRO 5000 Blackwell datasheet (openzeka mirror of GTC25 Spring 2025 PDF) and confirmed by the wccftech article citing official specs (65 TFLOPS FP32 / 196 TFLOPS RT). hmc-tech.com calculates 73.69 TFLOPS using a boost clock of 2,617 MHz (14,080 × 2617 × 2 / 1,000,000), and technical.city reports 66.94 TFLOPS. The official NVIDIA datasheet value of 65 TFLOPS is used as the authoritative figure; the discrepancy reflects that NVIDIA workstation cards apply a thermal/power-headroom clock target lower than the rated peak boost, consistent with the RTX PRO 4500 (51 TFLOPS official vs. computed ~50.5 TFLOPS).'
+  - 'FP32 vector (CUDA core) throughput of 65.0 TFLOPS sourced from the official NVIDIA RTX PRO 5000 Blackwell datasheet (openzeka mirror of GTC25 Spring 2025 PDF) and confirmed by the wccftech article citing official specs (65 TFLOPS FP32 / 196 TFLOPS RT). hmc-tech.com calculates 73.69 TFLOPS using a boost clock of 2,617 MHz (14,080 × 2617 × 2 / 1,000,000), and technical.city reports 66.94 TFLOPS. The official NVIDIA datasheet value of 65 TFLOPS is used as the authoritative figure; the discrepancy reflects that NVIDIA workstation cards apply a thermal/power-headroom clock target lower than the rated peak boost, consistent with the RTX PRO 4500 (51 TFLOPS official vs. computed ~50.5 TFLOPS).'
   - 'AI TOPS of 2,064 sourced from the Newegg product listing (N82E16814985049) for the PNY VCNRTXPRO5000B-PB and confirmed by the wccftech article specifications table for the 48GB variant. This value represents theoretical FP4 TOPS with sparsity (FP4 sparse), consistent with the footnote in the PNY 72GB datasheet which states "Effective FP4 TOPS with sparsity." Note: the radargit review also cites 2,064 TOPS for the 48GB variant; the wccftech article additionally notes a value of 2,142 TOPS in one table (likely reflecting a later revision or the 72GB variant). The 2,064 figure is used as the primary value based on Newegg listing and multiple corroborating sources.'
   - 'int8TOPS of 516 represents non-sparse (dense) INT8 performance, derived from FP4 sparse TOPS: 2,064 (FP4 sparse) / 4 = 516 TOPS. Derivation: FP4 sparse = 2x INT8 sparse = 4x INT8 dense per Blackwell 5th-gen tensor core architecture. Dense value used for consistent cross-vendor comparison. Sanity check: 516 TOPS / 65 TFLOPS FP32 = 7.9:1 ratio, consistent with RTX 5090 (838 TOPS INT8 dense / 105 TFLOPS FP32 = 8:1).'
   - 'fp16TFLOPS of 516.0 is FP16 Tensor Core throughput with 2:4 structured sparsity, derived from FP4 sparse TOPS using the Blackwell tensor core ratio (FP16 sparse = FP4 sparse / 4): 2,064 / 4 = 516 TFLOPS. Dense FP16 Tensor = 516 / 2 = 258 TFLOPS. The official NVIDIA datasheet for this workstation card does not publish FP16 Tensor performance separately.'
@@ -115,4 +115,5 @@ notes:
   - 'PNY retail SKU VCNRTXPRO5000B-PB and bulk SKU VCNRTXPRO5000B-BLK confirmed from PNY product page (pny.com). Dell part number 490-BLQB confirmed from dell.com official product page. HP part number B11F1AA confirmed from redcorp.com product listing. Lenovo part number 4X61T68168 confirmed from lenovo.com (Ireland) product page for the 48GB GDDR7 variant.'
   - 'fp4TFLOPS of 1032 represents non-sparse (dense) FP4 performance, derived from the already-cited AI TOPS figure of 2,064 (FP4 sparse, per Newegg listing and wccftech article) ÷ 2. Dense value used for consistent cross-vendor comparison.'
   - 'NOT FOUND: fp8TFLOPS — the official NVIDIA RTX PRO 5000 Blackwell datasheets and product page (URLs in references) publish only AI TOPS (FP4 sparse), Single-Precision Performance (FP32), and RT Core Performance — no standalone FP8 TFLOPS row, unlike the RTX PRO 4500/6000 Server Editions which do publish one. Left null rather than guessed from the INT8 dense value.'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 65.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 65.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 130 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 2,064 AI TOPS (FP4 with sparsity) NVIDIA publishes for the RTX PRO 5000 / 16 = 129, since professional Blackwell Tensor Cores run FP4 with sparsity at 16 × dense TF32. The stored 130 is 2 × the FP32 vector figure, within 1% of that. FP32 vector (CUDA core) throughput is 65.0 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

@@ -4,8 +4,8 @@ label: NVIDIA A10
 category: datacenter
 msrpUSD: 2800
 tensorCoreCount: 288
-fp32TFLOPS: 31.2
-fp16TFLOPS: 125
+fp32TFLOPS: 62.5
+fp16TFLOPS: 250
 int8TOPS: 250
 memoryCapacityGB: 24
 memoryBandwidthGBs: 600
@@ -19,7 +19,7 @@ supportedHardwareOperations:
   - BF16
 supportedCUDAComputeCapability: 8.6
 releaseDate: "2021-04-12"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA A10 (part number 900-2G133-0020-000) is a high-performance
   GPU designed for professional applications, including machine learning and AI.
@@ -106,7 +106,7 @@ references:
   - https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056
 
 notes:
-  - "fp16TFLOPS: NOTE: FP16 Tensor Core"
+  - 'fp16TFLOPS of 250 is FP16 Tensor Core throughput with 2:4 structured sparsity, as NVIDIA''s A10 page (nvidia.com/en-us/data-center/products/a10-gpu/) publishes it: 125 dense and 250 with sparsity.'
   - "int8TOPS: NOTE: INT8 Tensor Core"
   - "Estimated MSRP of $2,800 USD for the NVIDIA A10 based on launch-time market pricing. NVIDIA does not publish official MSRP for data center GPUs. Estimate from NextPlatform article (April 2021) discussing the A10 launch. Corroborated by Newegg listing showing current market pricing around $3,299."
   - "NVIDIA part number 900-2G133-0020-000 sourced from NVIDIA official documentation and multiple vendor listings including serversupply.com"
@@ -124,3 +124,4 @@ notes:
   - 'Phase 5 audit (2026-09-02): gpuArchitecture normalized from lowercase ''ampere'' to canonical ''Ampere'' capitalization per the canonical table in .claude/agents/gpu-researcher.md.'
   - 'Phase 5 audit (2026-09-02): FP64 removed from supportedHardwareOperations. The A10 uses the GA102 die (confirmed in the summary above), not GA100. Per an NVIDIA staff reply on NVIDIA Developer Forums, ''The Tensor core units in the GA102 chip architecture do not contain the FP64 path that is present in e.g. the Tensor core units in the A100 GPU'' (https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056). Canonical Ampere baseline (TF32, BF16, FP16, INT8, INT4) applied per gpu-researcher.md; FP64 Tensor Core support is reserved for GA100-based SKUs (A100, A30) only.'
   - 'fp8TFLOPS and fp4TFLOPS are left null (field omitted) and not added to unverifiedSpecs — this is a confirmed hardware negative, not a research gap. The A10''s Ampere 3rd-generation Tensor Cores predate both FP8 (introduced in Ada Lovelace/Hopper) and FP4 (introduced in Blackwell) tensor formats, per the canonical architecture table in .claude/agents/gpu-researcher.md.'
+  - 'fp32TFLOPS of 62.5 is TF32 Tensor Core throughput without sparsity, per NVIDIA''s A10 page (nvidia.com/en-us/data-center/products/a10-gpu/). FP32 vector (CUDA core) throughput is 31.2 TFLOPS.'

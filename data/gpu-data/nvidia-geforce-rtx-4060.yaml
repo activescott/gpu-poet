@@ -5,7 +5,7 @@ category: gaming
 msrpUSD: 299
 tensorCoreCount: 96
 fp32TFLOPS: 15.11
-fp16TFLOPS: 60.46
+fp16TFLOPS: 120.88
 int8TOPS: 120.92
 fp8TFLOPS: 120.92
 memoryCapacityGB: 8
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2023-06-29"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 4060 is a mainstream graphics card released in June 2023,
@@ -170,11 +170,10 @@ references:
 
 notes:
   - MSRP of $299 USD verified from multiple sources including NVIDIA's official announcement and press release. Note that no Founders Edition was released for the RTX 4060 (only the RTX 4060 Ti received a Founders Edition). The $299 MSRP applies to AIB partner models.
-  - fp16TFLOPS of 60.46 represents "Peak FP16 Tensor TFLOPS with FP16 Accumulate" using the "with sparsity" metric. Dense performance is 30.23 TFLOPS, sparse is 60.46 TFLOPS. Following the same pattern as other Ada GPUs, NVIDIA publishes the sparse performance.
+  - 'fp16TFLOPS of 120.88 is FP16 Tensor Core throughput (FP16 accumulate) with 2:4 structured sparsity, 8 × the FP32 vector figure. NVIDIA''s RTX 4060 page gives 242 AI TOPS (FP8 with sparsity), and GeForce Ada runs FP16-accumulate Tensor math at half the FP8 rate: 242 / 2 = 121. Dense FP16 Tensor is 60.44 TFLOPS.'
   - 'int8TOPS of 120.92 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 241.83 TOPS ÷ 2 per NVIDIA Ada architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 241.83 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 120.92 represents non-sparse (dense) FP8 performance. NVIDIA''s Ada Lovelace 4th-generation Tensor Cores process FP8 and INT8 at identical per-clock throughput (both are 8-bit formats) per the NVIDIA Ada GPU Architecture whitepaper; NVIDIA officially confirms this equal-rate relationship for Ada SKUs with published datasheets (e.g. RTX 4090: 1,321 TFLOPS FP8 with sparsity per NVIDIA specs, matching 1,321.2 TOPS INT8 with sparsity; L40/L40S/L4 official datasheets show identical FP8/INT8 dense and sparse figures). Dense FP8 = dense INT8 = 120.92 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - Ada Lovelace has no FP4 hardware path (FP4 tensor core support was introduced in Blackwell) — fp4TFLOPS is left null and is a confirmed hardware negative, not a research gap, so it is not added to unverifiedSpecs.
-  - fp32TFLOPS calculated as 3,072 CUDA cores × 2.46 GHz boost clock × 4 ops/cycle = 30.23 TFLOPS standard or 15.11 TFLOPS for non-tensor operations. The "4 ops/cycle" comes from Ada Lovelace's dual-issue FP32 capability where each SM can execute 2 FP32 operations on the dedicated FP32 pipeline plus 2 more FP32 operations on the INT32/FP32 shared pipeline, totaling 4 FP32 ops per cycle under optimal conditions.
   - Power based on what NVIDIA refers to as "TGP (Total Graphics Power)".
   - The RTX 4060 uses the AD107-400 variant of the AD107 chip with 24 streaming multiprocessors enabled.
   - Memory bandwidth calculated as 128-bit interface × 17 Gbps = 272 GB/s.
@@ -184,3 +183,4 @@ notes:
   - No NVIDIA Founders Edition was produced for the RTX 4060, hence no NVIDIA NVPN part number exists for this model. All RTX 4060 cards are manufactured by AIB partners (ASUS, MSI, Gigabyte, etc.).
   - Third-party product information sourced from official manufacturer websites and TechPowerUp GPU Database. EVGA does not manufacture RTX 4060 cards as they exited the GPU market in September 2022 before the RTX 40 series launch.
   - GALAX and KFA2 are the same company with regional branding differences (GALAX in Asia/Americas, KFA2 in Europe), hence they share the same part number 46NSL8MD9NXK for the 1-Click OC 2X V2 model.
+  - 'fp32TFLOPS of 15.11 is TF32 Tensor Core throughput without sparsity. It equals FP32 vector (CUDA core) throughput, computed as 3,072 CUDA cores × 2 × 2.46 GHz boost = 15.11 TFLOPS. On GeForce Ada, dense TF32 runs at the FP32 vector rate, as Tables 3 to 6 of NVIDIA''s RTX Blackwell whitepaper show (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf).'

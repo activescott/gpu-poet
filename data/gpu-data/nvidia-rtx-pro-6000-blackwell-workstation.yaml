@@ -4,8 +4,8 @@ label: NVIDIA RTX PRO 6000 Blackwell Workstation Edition
 category: workstation
 msrpUSD: 8565
 tensorCoreCount: 752
-fp32TFLOPS: 125.0
-fp16TFLOPS: 1000.0
+fp32TFLOPS: 251.9
+fp16TFLOPS: 1007.6
 int8TOPS: 1000.0
 fp4TFLOPS: 2000
 memoryCapacityGB: 96
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2025-03-18"
-lastModified: "2026-09-09T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -87,12 +87,13 @@ references:
   - https://www.serversupply.com/GPU/GDDR7/96GB/NVIDIA/900-5G144-2200-000_409294.htm
   - https://marketplace.nvidia.com/en-us/enterprise/laptops-workstations/nvidia-rtx-pro-6000-blackwell-workstation-edition/
   - https://www.tomshardware.com/pc-components/gpus/nvidia-doubles-rtx-pro-6000-blackwells-msrp-to-a-staggering-usd16-000-96gb-card-started-pre-orders-below-usd8-000-last-year
+  - https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf
 
 notes:
-  - 'FP32 TFLOPS of 125.0 is the peak single-precision performance published in the official NVIDIA RTX PRO 6000 Blackwell Workstation Edition datasheet (workstation-blackwell-rtx-pro-6000-workstation-edition-nvidia-us-3519208-web.pdf, footnote: "Peak rates based on GPU Boost Clock"). Confirmed by CG Channel article (125 TFLOPs) and TweakTown article (125 TFLOPS). Sanity check: 24,064 CUDA cores x 2,617 MHz boost x 2 ops/cycle / 1,000,000 = 125.96 TFLOPS, consistent with the official 125 TFLOPS figure.'
+  - 'FP32 vector (CUDA core) throughput of 125.0 TFLOPS is the peak single-precision performance published in the official NVIDIA RTX PRO 6000 Blackwell Workstation Edition datasheet (workstation-blackwell-rtx-pro-6000-workstation-edition-nvidia-us-3519208-web.pdf, footnote: "Peak rates based on GPU Boost Clock"). Confirmed by CG Channel article (125 TFLOPs) and TweakTown article (125 TFLOPS). Sanity check: 24,064 CUDA cores x 2,617 MHz boost x 2 ops/cycle / 1,000,000 = 125.96 TFLOPS, consistent with the official 125 TFLOPS figure.'
   - 'AI TOPS of 4,000 sourced from the official NVIDIA RTX PRO 6000 Blackwell Workstation Edition datasheet and confirmed by the NVIDIA product page. Per datasheet footnotes: "Peak rates based on GPU Boost Clock. Effective FP4 TOPS with sparsity." This represents FP4 sparse theoretical peak performance. The datasheet''s specifications table lists only "AI TOPS," "Single-Precision Performance," and "RT Core Performance" — no separate FP8/FP16/INT8 rows are published for this specific card.'
   - 'int8TOPS of 1,000.0 represents non-sparse (dense) INT8 performance, derived from FP4 sparse TOPS: 4,000 (FP4 sparse) / 4 = 1,000 TOPS. Derivation: FP4 sparse = 2x INT8 sparse = 4x INT8 dense per Blackwell 5th-gen tensor core architecture. Dense value used for consistent cross-vendor comparison. Sanity check: 1,000 TOPS / 125 TFLOPS FP32 = 8:1 ratio, consistent with RTX PRO 5000 Blackwell (516 TOPS INT8 dense / 65 TFLOPS FP32 = 7.9:1).'
-  - 'fp16TFLOPS of 1,000.0 is FP16 Tensor Core throughput with 2:4 structured sparsity, derived from FP4 sparse TOPS using the Blackwell tensor core ratio (FP16 sparse = FP4 sparse / 4): 4,000 / 4 = 1,000 TFLOPS. Dense FP16 Tensor = 1,000 / 2 = 500 TFLOPS. The official NVIDIA datasheet for this workstation card does not publish FP16 Tensor performance separately.'
+  - 'fp16TFLOPS of 1,007.6 is FP16 Tensor Core throughput with 2:4 structured sparsity, per Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf). Dense FP16 Tensor is half, 503.8 TFLOPS. The datasheet does not publish FP16 Tensor separately; 4,000 FP4 sparse TOPS / 4 gives 1,000.'
   - 'Memory bandwidth of 1,792 GB/s confirmed by official NVIDIA datasheet and product page. Arithmetic check: 512-bit bus x 28 Gbps / 8 = 512 / 8 x 28,000 = 1,792 GB/s. Consistent with 96 GB GDDR7 configuration using dual-sided memory modules (48 GB per side).'
   - 'CUDA core count of 24,064 confirmed by official NVIDIA datasheet, CG Channel article, Tom''s Hardware article, and serversupply.com listing. This corresponds to 188 streaming multiprocessors (24,064 / 128 cores per SM = 188 SMs). The GB202 die has 192 SMs at full theoretical configuration; the RTX PRO 6000 uses 188 of 192 SMs enabled (97.9% utilization), more than the consumer GeForce RTX 5090 which uses 170 of 192 SMs (21,760 CUDA cores).'
   - 'Tensor core count of 752 confirmed by serversupply.com listing (citing official NVIDIA specs: "752 NVIDIA Tensor Cores"), Tom''s Hardware article, and gpus.net specifications. Matches SM count: 188 SMs x 4 tensor cores per SM = 752 tensor cores. RT core count of 188 (one per SM, 4th generation) confirmed by same sources.'
@@ -106,5 +107,6 @@ notes:
   - 'PNY retail SKU VCNRTXPRO6000B-PB confirmed from Dell.com product page (AD368558, listing manufacturer part VCNRTXPRO6000B-PB). PNY bulk SKU VCNRTXPRO6000B-SB confirmed from gpus.net vendor listing. Dell part number AD368558 confirmed from dell.com official product page for the 600W Workstation Edition. HP part number B11F0AA confirmed from gpus.net vendor listing (HP price: $11,520).'
   - 'fp4TFLOPS of 2000 represents non-sparse (dense) FP4 performance, derived from the already-cited AI TOPS figure of 4,000 (FP4 sparse, per the official NVIDIA datasheet) ÷ 2. Dense value used for consistent cross-vendor comparison. Matches the fp4TFLOPS value published on the sibling RTX PRO 6000 Blackwell Server Edition, which uses the same GB202 die and boost-clock-based ratios.'
   - 'NOT FOUND: fp8TFLOPS — the official NVIDIA RTX PRO 6000 Blackwell Workstation Edition datasheet specifications table (URL in references) publishes only AI TOPS (FP4 sparse), Single-Precision Performance (FP32), and RT Core Performance — no standalone FP8 TFLOPS row, unlike the sibling RTX PRO 6000 Blackwell Server Edition which does publish one (FP8 = 2 PFLOPS) on its official data-center product page. Left null rather than guessed from the INT8 dense value.'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 125.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 125.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
   - 'As of August 2026, NVIDIA''s US Marketplace lists the RTX PRO 6000 Blackwell Workstation Edition at $16,000, up from $13,250 in June 2026 and the $8,565 launch-time retailer price. Reported by Tom''s Hardware on August 12, 2026 and corroborated by direct observation of the Marketplace product page (both URLs in references). This is a revised store price, not a new launch MSRP, so msrpUSD remains 8565.'
+  - 'fp32TFLOPS of 251.9 is TF32 Tensor Core throughput without sparsity, per Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf), which lists the Workstation Edition at 251.9 TFLOPS dense TF32 and 126.0 TFLOPS FP32 vector; the datasheet rounds FP32 to 125.'

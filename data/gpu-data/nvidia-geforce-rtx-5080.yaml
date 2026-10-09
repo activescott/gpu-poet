@@ -10,7 +10,7 @@ fp4TFLOPS: 900.5
 maxTDPWatts: 360
 memoryBandwidthGBs: 960
 tensorCoreCount: 336
-fp32TFLOPS: 112.6
+fp32TFLOPS: 56.3
 fp16TFLOPS: 450.2
 
 gpuArchitecture: blackwell
@@ -25,7 +25,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.8
 releaseDate: "2025-01-30"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: product_sku
@@ -147,7 +147,7 @@ notes:
   - Blackwell GB203 is the chip
   - fp16TFLOPS is "Peak FP16 Tensor TFLOPS with FP16 Accumulate" as that's what NVIDIA publishes.
   - 'int8TOPS of 450.2 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 900.4 TOPS ÷ 2 per NVIDIA Blackwell architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 900.4 TOPS. Dense value used for consistent cross-vendor comparison.'
-  - fp32TFLOPS is "Peak TF32 Tensor TFLOPS1" as published in the blackwell gpu architecture pdf.
+  - 'fp32TFLOPS of 56.3 is TF32 Tensor Core throughput without sparsity. Table 4 of NVIDIA''s RTX Blackwell whitepaper lists the RTX 5080 TF32 as 56.3 dense and 112.6 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). It equals FP32 vector (CUDA core) throughput: on GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate.'
   - MSRP of $999 USD for the Founders Edition sourced from nvidia.com official press release (https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics).
   - Manufacturer identifiers sourced from VideoCardz.com and TechPowerUp GPU Database, which report the RTX 5080 uses PG144/147 SKU 45 board and GB203-400-A1 GPU die. Founders Edition NVPN (900-1G144-2545-000) sourced from PCPartPicker and Best Buy retail listings.
   - Third-party products represent major AIB partners (ASUS, MSI, Gigabyte, PNY, Zotac, Palit, Gainward). Model numbers sourced from manufacturer websites, retail listings (Best Buy, Micro Center, Newegg), and TechPowerUp GPU Database. Note that EVGA exited the graphics card business in 2022 and does not produce RTX 5080 cards.

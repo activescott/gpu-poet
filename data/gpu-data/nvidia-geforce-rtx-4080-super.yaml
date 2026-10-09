@@ -4,7 +4,7 @@ label: NVIDIA GeForce RTX 4080 SUPER
 category: gaming
 msrpUSD: 999
 tensorCoreCount: 320
-fp32TFLOPS: 104.45
+fp32TFLOPS: 52.2
 fp16TFLOPS: 418.79
 int8TOPS: 417.79
 fp8TFLOPS: 417.79
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2024-01-31"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 4080 SUPER is a graphics card released in January 2024,
@@ -174,7 +174,7 @@ notes:
   - 'int8TOPS of 417.79 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 835.58 TOPS ÷ 2 per NVIDIA Ada architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 835.58 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 417.79 represents non-sparse (dense) FP8 performance. NVIDIA''s Ada Lovelace 4th-generation Tensor Cores process FP8 and INT8 at identical per-clock throughput (both are 8-bit formats) per the NVIDIA Ada GPU Architecture whitepaper; this equal-rate relationship is confirmed by official NVIDIA per-SKU datasheets (e.g. RTX 4090, L40, L40S, L4 all publish identical FP8 and INT8 dense/sparse figures). Dense FP8 = dense INT8 = 417.79 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - Ada Lovelace has no FP4 hardware path (FP4 tensor core support was introduced in Blackwell) — fp4TFLOPS is left null and is a confirmed hardware negative, not a research gap, so it is not added to unverifiedSpecs.
-  - fp32TFLOPS calculated as 10,240 CUDA cores × 2.55 GHz boost clock × 4 ops/cycle = 104.448 TFLOPS. The "4 ops/cycle" comes from Ada Lovelace's dual-issue FP32 capability where each SM can execute 2 FP32 operations on the dedicated FP32 pipeline plus 2 more FP32 operations on the INT32/FP32 shared pipeline, totaling 4 FP32 ops per cycle under optimal conditions.
+  - 'fp32TFLOPS of 52.2 is TF32 Tensor Core throughput without sparsity. It equals FP32 vector (CUDA core) throughput, computed as 10,240 CUDA cores × 2 × 2.55 GHz boost = 52.2 TFLOPS; NVIDIA''s RTX 4080 family page gives 52 shader TFLOPS. With sparsity TF32 is 104.4 TFLOPS. On GeForce Ada, dense TF32 runs at the FP32 vector rate, as Tables 3 to 6 of NVIDIA''s RTX Blackwell whitepaper show, for example the RTX 4080 at 48.7 (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf).'
   - Power based on what NVIDIA refers to as "TGP (Total Graphics Power)"
   - The RTX 4080 SUPER uses the fully enabled AD103 chip (all 80 SMs), whereas the original RTX 4080 uses 76 of 80 SMs
   - Memory bandwidth calculated as 256-bit interface × 23 Gbps = 736 GB/s

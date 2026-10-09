@@ -4,7 +4,7 @@ label: NVIDIA B200 SXM
 category: datacenter
 msrpUSD: 35000
 tensorCoreCount: 576
-fp32TFLOPS: 2200
+fp32TFLOPS: 1125
 fp16TFLOPS: 4500
 int8TOPS: 4500
 fp8TFLOPS: 4500
@@ -23,7 +23,7 @@ supportedHardwareOperations:
   - FP64
 supportedCUDAComputeCapability: 10.0
 releaseDate: "2024-11-01"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: >-
   The NVIDIA B200 is the flagship Blackwell-architecture datacenter GPU
@@ -96,7 +96,7 @@ references:
   - https://epoch.ai/data-insights/b200-cost-breakdown
 
 notes:
-  - 'fp32TFLOPS of 2200 represents Peak TF32 Tensor Core performance with 2:4 structured sparsity, per the official NVIDIA B200 datasheet (nor-tech.com mirror). The Lenovo HGX B200 product guide (lp2226.pdf) explicitly lists TF32 Tensor Core as "1.1 / 2.2 PFLOPS" (dense without sparsity / sparse with sparsity). The 2200 TFLOPS sparse value is stored here to match NVIDIA''s "Peak TF32 Tensor TFLOPS with sparsity" published figure and the convention used for other Blackwell datacenter GPUs. Note: CUDA core FP32 (non-tensor) performance is approximately 75 TFLOPS per Flopper.io spec sheet. Unlike the H200 SXM (which stored CUDA core FP32 of 67 TFLOPS), this file uses TF32 sparse following NVIDIA''s primary published B200 figure. This is a known inconsistency between H200 and B200 files.'
+  - 'fp32TFLOPS of 1125 is TF32 Tensor Core throughput without sparsity. NVIDIA''s HGX page (nvidia.com/en-us/data-center/hgx/) lists HGX B200 TF32 Tensor Core as 18 PFLOPS for 8 GPUs, footnoted "Specification in Sparse. Dense is ½ sparse spec shown", which is 1125 TFLOPS dense per GPU. The Lenovo HGX B200 product guide (lp2226.pdf) rounds it to "1.1 / 2.2 PFLOPS" (dense / sparse). FP32 vector (CUDA core) throughput is 75 TFLOPS per GPU; the HGX page lists 600 TFLOPS for 8 GPUs.'
   - 'fp16TFLOPS of 4500 represents FP16/BF16 Tensor Core performance with 2:4 structured sparsity per NVIDIA Blackwell datacenter convention. The Lenovo HGX B200 product guide (lp2226.pdf) explicitly lists FP16/BF16 Tensor Core as "2.25 / 4.5 PFLOPS" (dense / sparse). Sparse value of 4500 TFLOPS is stored here consistent with the NVIDIA datacenter GPU convention used for H200 SXM. Dense (non-sparse) FP16/BF16 Tensor Core performance is 2250 TFLOPS.'
   - 'int8TOPS of 4500 represents non-sparse (dense) INT8 Tensor Core performance per the official NVIDIA B200 datasheet (nor-tech.com). The datasheet explicitly states "Specifications in sparse | dense" with "Dense is one-half of the sparse specification." The Lenovo HGX B200 product guide (lp2226.pdf) lists INT8 Tensor Core as "4.5 / 9 TOPS" (dense / sparse). INT8 sparse performance is 9000 TOPS; dense = 9000 / 2 = 4500 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'FP64 Tensor Core performance is 37 TFLOPS per the Lenovo HGX B200 product guide (lp2226.pdf), which matches the NVIDIA B200 HGX datasheet column (nor-tech.com mirror). Note: some third-party sources (CUDO Compute) report 40 TFLOPS which matches the GB200 NVL variant; the HGX B200-specific figure of 37 TFLOPS from the Lenovo product guide is used here. FP64 does not benefit from 2:4 structured sparsity.'
@@ -113,4 +113,4 @@ notes:
   - 'thirdPartyProducts: Lenovo SR680a V3 and SR780a V3 confirmed as NVIDIA-certified HGX B200 systems per NVIDIA Certified Systems documentation (docs.nvidia.com/certification-programs). Supermicro SYS-822GS-NBRT (air-cooled 8U) and SYS-422GA-NBRT-LCC (liquid-cooled 4U) confirmed from NVIDIA Certified Systems documentation and servethehome.com OCP 2024 coverage. Note: the liquid-cooled model is SYS-422GA-NBRT-LCC (confirmed by servethehome.com and NVIDIA Certified Systems); an earlier draft incorrectly listed SYS-422GS-NBRT-LCC. Dell PowerEdge XE9780 confirmed as NVIDIA-certified HGX B200 system. Dell XE9780 is the B200-era successor to the XE9680 (H100/H200 platform).'
   - 'fp8TFLOPS of 4500 represents non-sparse (dense) FP8 performance per the Lenovo HGX B200 product guide (lp2226.pdf), which lists FP8 Tensor Core as "4.5 / 9 PFLOPS" (dense / sparse). With 2:4 structured sparsity, FP8 performance is 9000 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp4TFLOPS of 9000 represents non-sparse (dense) FP4 performance per the Lenovo HGX B200 product guide (lp2226.pdf), which lists FP4 Tensor Core as "9 / 18 PFLOPS" (dense / sparse). Dense value used for consistent cross-vendor comparison.'
-  - 'supportedHardwareOperations: FP32 removed per the locked GEMM-only definition (2026-09) — the 2200 fp32TFLOPS figure stored on this file is Peak TF32 Tensor TFLOPS with sparsity (a reduced-precision tensor format), not a literal FP32 Tensor Core row; TF32 alone represents the tensor-accelerated near-FP32 path. FP64 retained because datacenter Blackwell B100/B200 have a documented 37 TFLOPS FP64 Tensor Core path per the Lenovo HGX B200 product guide, per gpu-researcher.md''s canonical Blackwell table. Array now matches the canonical datacenter Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8, FP64.'
+  - 'supportedHardwareOperations: FP32 removed per the locked GEMM-only definition (2026-09) — the fp32TFLOPS figure stored on this file is Peak TF32 Tensor TFLOPS (a reduced-precision tensor format), not a literal FP32 Tensor Core row; TF32 alone represents the tensor-accelerated near-FP32 path. FP64 retained because datacenter Blackwell B100/B200 have a documented 37 TFLOPS FP64 Tensor Core path per the Lenovo HGX B200 product guide, per gpu-researcher.md''s canonical Blackwell table. Array now matches the canonical datacenter Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8, FP64.'

@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 23125
-updatedAt: 2026-10-08T18:09:22.018Z
+collectedSamples: 23203
+updatedAt: 2026-10-09T12:03:04.610Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -30,7 +30,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 46
   - gpuNameRaw: AMD Radeon (TM) R9 390 Series
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon (TM) RX 480
     value: 55
   - gpuNameRaw: AMD Radeon 680M (RADV REMBRANDT)
@@ -134,7 +134,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500 XT
     value: 82
   - gpuNameRaw: AMD Radeon RX 6500 XT (RADV NAVI24)
-    value: 73
+    value: 72
   - gpuNameRaw: AMD Radeon RX 6600
     value: 98
   - gpuNameRaw: AMD Radeon RX 6600 (RADV NAVI23)
@@ -226,7 +226,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX
     value: 344
   - gpuNameRaw: AMD Radeon RX 7900 XTX (RADV NAVI31)
-    value: 417
+    value: 413
   - gpuNameRaw: AMD Radeon RX 9060
     value: 171
   - gpuNameRaw: AMD Radeon RX 9060 (RADV GFX1200)
@@ -265,6 +265,8 @@ results:
     value: 26
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
     value: 137
+  - gpuNameRaw: AMD Radeon(TM) 840M Graphics
+    value: 21
   - gpuNameRaw: AMD Radeon(TM) 880M Graphics
     value: 36
   - gpuNameRaw: AMD Radeon(TM) 890M Graphics
@@ -546,7 +548,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
     value: 190
   - gpuNameRaw: NVIDIA GeForce RTX 5080
-    value: 390
+    value: 391
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
     value: 225
   - gpuNameRaw: NVIDIA GeForce RTX 5090
@@ -587,6 +589,8 @@ results:
     value: 105
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition
     value: 569
+  - gpuNameRaw: NVIDIA T1000 8GB
+    value: 35
   - gpuNameRaw: NVIDIA T1200 Laptop GPU
     value: 38
   - gpuNameRaw: NVIDIA TITAN RTX

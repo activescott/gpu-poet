@@ -4,7 +4,7 @@ label: NVIDIA H200 SXM
 category: datacenter
 msrpUSD: 40000
 tensorCoreCount: 528
-fp32TFLOPS: 67
+fp32TFLOPS: 494.5
 fp16TFLOPS: 1979
 int8TOPS: 1979
 fp8TFLOPS: 1979
@@ -22,7 +22,7 @@ supportedHardwareOperations:
   - FP8
 supportedCUDAComputeCapability: 9
 releaseDate: "2024-11-18"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: >-
   The NVIDIA H200 SXM is a datacenter GPU accelerator built on the
@@ -84,7 +84,7 @@ references:
   - https://www.cisco.com/c/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/mlperf-ucs-c885a-h100-h200-wp.html
 
 notes:
-  - 'fp32TFLOPS of 67 represents FP32 CUDA core (non-tensor) performance per the NVIDIA H200 datasheet at nor-tech.com. The H200 SXM uses the same GH100 die as the H100 SXM; FP32 CUDA core performance is unchanged at 67 TFLOPS.'
+  - 'fp32TFLOPS of 494.5 is TF32 Tensor Core throughput without sparsity. NVIDIA''s H200 page (nvidia.com/en-us/data-center/h200/) publishes TF32 only with sparsity, 989 TFLOPS for SXM, footnoted only "With sparsity"; 494.5 is half of it, and the GH100 whitepaper gives 494.7. FP32 vector (CUDA core) throughput is 67 TFLOPS per the NVIDIA H200 datasheet (nor-tech.com mirror), unchanged from the H100 SXM.'
   - 'fp16TFLOPS of 1979 represents FP16 Tensor Core performance with 2:4 structured sparsity per the NVIDIA H200 datasheet. NVIDIA convention for datacenter GPUs publishes the sparsity-accelerated FP16 Tensor Core value. Without sparsity, FP16 Tensor Core performance is 989 TFLOPS (1979 / 2). Dense value is 989 TFLOPS. Sparse value of 1979 TFLOPS used here per NVIDIA datacenter GPU convention consistent with H100 SXM specifications.'
   - 'int8TOPS of 1979 represents non-sparse (dense) INT8 Tensor Core performance, derived from sparse INT8 of 3958 TOPS / 2 per the NVIDIA H200 datasheet (nor-tech.com). The datasheet footnote indicates that tensor-core values shown are with 2:4 structured sparsity. With sparsity, INT8 performance is 3958 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'TF32 Tensor Core performance with sparsity is 989 TFLOPS per the NVIDIA H200 datasheet. Without sparsity, TF32 is approximately 494.5 TFLOPS.'
