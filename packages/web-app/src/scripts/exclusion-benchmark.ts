@@ -3,6 +3,11 @@ import {
   loadDataset,
   loadLabelReview,
 } from "../pkgs/server/exclusionBenchmark/dataset"
+import {
+  PriceRank,
+  rankPositivesByPrice,
+  summarizePriceRanks,
+} from "../pkgs/server/exclusionBenchmark/priceRank"
 import { createRulesClassifier } from "../pkgs/server/exclusionBenchmark/rulesClassifier"
 import {
   score,
@@ -15,6 +20,9 @@ import {
 //   LOG_LEVEL=silent npx tsx src/scripts/exclusion-benchmark.ts
 
 const PERCENT = 100
+// A proposed gate would only pay to check the cheapest few listings per GPU.
+const PRICE_GATE_TOP_N = 5
+const PRICE_GATE_MEDIAN_FRACTION = 0.5
 const pct = (n: number) => `${(n * PERCENT).toFixed(1)}%`
 const cell = (s: string | null | undefined) => (s ?? "").replaceAll("|", "\\|")
 
@@ -26,6 +34,23 @@ function table(rows: ScoredListing[], withReview = false): string {
     ...rows.map(
       ({ listing, verdict, review }) =>
         `| ${cell(listing.itemId)} | ${listing.gpuName} | ${listing.priceValue} | ${listing.label} | ${cell(listing.excludeReason)} | ${verdict.exclude ? `exclude (${verdict.reason})` : "keep"} | ${cell(listing.title)} |${review ? ` ${cell(review.note)} |` : ""}`,
+    ),
+    "",
+  ].join("\n")
+}
+
+function priceRankTable(ranks: PriceRank[]): string {
+  const sorted = ranks.toSorted(
+    (a, b) =>
+      (a.ratioToMedian ?? Number.POSITIVE_INFINITY) -
+      (b.ratioToMedian ?? Number.POSITIVE_INFINITY),
+  )
+  return [
+    "| itemId | gpu | price | rank | live listings | live median | price / median | production reason | title |",
+    "|---|---|---|---|---|---|---|---|---|",
+    ...sorted.map(
+      ({ listing, rank, liveCount, medianPrice, ratioToMedian }) =>
+        `| ${cell(listing.itemId)} | ${listing.gpuName} | ${listing.priceValue} | ${rank ?? "n/a"} | ${liveCount} | ${medianPrice ?? "n/a"} | ${ratioToMedian === null ? "n/a" : pct(ratioToMedian)} | ${cell(listing.excludeReason)} | ${cell(listing.title)} |`,
     ),
     "",
   ].join("\n")
@@ -60,6 +85,13 @@ async function main() {
   }))
   const reviewed = score(relabeled, verdicts)
 
+  const priceRanks = rankPositivesByPrice(dataset.listings)
+  const priceSummary = summarizePriceRanks(
+    priceRanks,
+    PRICE_GATE_TOP_N,
+    PRICE_GATE_MEDIAN_FRACTION,
+  )
+
   console.log(`# Exclusion benchmark: ${classifier.name}
 
 Dataset exported ${dataset.exportedAt}: ${result.positives} excluded listings (positives), ${result.negatives} live listings (negatives). ${reviews.length} listings are flagged as suspected label errors.
@@ -79,6 +111,16 @@ ${Object.entries(result.byReason)
   .map(([reason, r]) => `| ${reason} | ${r.caught} | ${r.positives} |`)
   .join("\n")}
 
+## Price of excluded listings against live listings
+
+Each positive ranked among today's live listings of the same GPU (1 is the cheapest), since the fixture has no prices from the time of exclusion. ${priceSummary.positives - priceSummary.ranked} positives have no live listings for their GPU and are not ranked.
+
+| | |
+|---|---|
+| in the cheapest ${PRICE_GATE_TOP_N} | ${priceSummary.inTop} of ${priceSummary.ranked} ranked |
+| under ${pct(PRICE_GATE_MEDIAN_FRACTION)} of the live median | ${priceSummary.underMedianFraction} of ${priceSummary.ranked} ranked |
+
+${priceRankTable(priceRanks)}
 ## False rejects (live listings the rules reject)
 
 ${table(result.falseRejects)}
