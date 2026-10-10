@@ -1,0 +1,445 @@
+{
+  "exportedAt": "2026-10-10T19:42:00.072Z",
+  "gpus": [
+    {
+      "name": "amd-instinct-mi300x",
+      "label": "AMD Instinct MI300X",
+      "memoryCapacityGB": 192
+    },
+    {
+      "name": "amd-instinct-mi350p",
+      "label": "AMD Instinct MI350P",
+      "memoryCapacityGB": 144
+    },
+    {
+      "name": "amd-radeon-ai-pro-r9700",
+      "label": "AMD Radeon AI PRO R9700",
+      "memoryCapacityGB": 32
+    },
+    {
+      "name": "amd-radeon-pro-w7500",
+      "label": "AMD Radeon Pro W7500",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-pro-w7600",
+      "label": "AMD Radeon Pro W7600",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-pro-w7700",
+      "label": "AMD Radeon Pro W7700",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-pro-w7900",
+      "label": "AMD Radeon Pro W7900",
+      "memoryCapacityGB": 48
+    },
+    {
+      "name": "amd-radeon-rx-580x",
+      "label": "AMD Radeon RX 580X",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-590",
+      "label": "AMD Radeon RX 590",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-6500-xt",
+      "label": "AMD Radeon RX 6500 XT",
+      "memoryCapacityGB": 4
+    },
+    {
+      "name": "amd-radeon-rx-6600",
+      "label": "AMD Radeon RX 6600",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-6600-xt",
+      "label": "AMD Radeon RX 6600 XT",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-6650-xt",
+      "label": "AMD Radeon RX 6650 XT",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-6700-xt",
+      "label": "AMD Radeon RX 6700 XT",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "amd-radeon-rx-6750-gre",
+      "label": "AMD Radeon RX 6750 GRE 12GB",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "amd-radeon-rx-6750-xt",
+      "label": "AMD Radeon RX 6750 XT",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "amd-radeon-rx-6800",
+      "label": "AMD Radeon RX 6800",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-6800-xt",
+      "label": "AMD Radeon RX 6800 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-6900-xt",
+      "label": "AMD Radeon RX 6900 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-6950-xt",
+      "label": "AMD Radeon RX 6950 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-7600",
+      "label": "AMD Radeon RX 7600",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-7600-xt",
+      "label": "AMD Radeon RX 7600 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-7700s",
+      "label": "AMD Radeon RX 7700S",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-7700-xt",
+      "label": "AMD Radeon RX 7700 XT",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "amd-radeon-rx-7800-xt",
+      "label": "AMD Radeon RX 7800 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-7900-gre",
+      "label": "AMD Radeon RX 7900 GRE",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-7900-xt",
+      "label": "AMD Radeon RX 7900 XT",
+      "memoryCapacityGB": 20
+    },
+    {
+      "name": "amd-radeon-rx-7900-xtx",
+      "label": "AMD Radeon RX 7900 XTX",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "amd-radeon-rx-9060",
+      "label": "AMD Radeon RX 9060",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "amd-radeon-rx-9060-xt",
+      "label": "AMD Radeon RX 9060 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-9070",
+      "label": "AMD Radeon RX 9070",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "amd-radeon-rx-9070-gre",
+      "label": "AMD Radeon RX 9070 GRE",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "amd-radeon-rx-9070-xt",
+      "label": "AMD Radeon RX 9070 XT",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "intel-arc-b570",
+      "label": "Intel Arc B570",
+      "memoryCapacityGB": 10
+    },
+    {
+      "name": "intel-arc-b580",
+      "label": "Intel Arc B580",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "intel-arc-pro-b50",
+      "label": "Intel Arc Pro B50",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "intel-arc-pro-b60",
+      "label": "Intel Arc Pro B60",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "intel-arc-pro-b65",
+      "label": "Intel Arc Pro B65",
+      "memoryCapacityGB": 32
+    },
+    {
+      "name": "intel-arc-pro-b70",
+      "label": "Intel Arc Pro B70",
+      "memoryCapacityGB": 32
+    },
+    {
+      "name": "nvidia-a10",
+      "label": "NVIDIA A10",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-a100-pcie",
+      "label": "NVIDIA A100 PCIe 80GB",
+      "memoryCapacityGB": 80
+    },
+    {
+      "name": "nvidia-a30",
+      "label": "NVIDIA A30",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-a40",
+      "label": "NVIDIA A40",
+      "memoryCapacityGB": 48
+    },
+    {
+      "name": "nvidia-geforce-rtx-3060",
+      "label": "NVIDIA GeForce RTX 3060",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "nvidia-geforce-rtx-3060-ti",
+      "label": "NVIDIA GeForce RTX 3060 Ti",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-3070",
+      "label": "NVIDIA GeForce RTX 3070",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-3070-ti",
+      "label": "NVIDIA GeForce RTX 3070 Ti",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-3080",
+      "label": "NVIDIA GeForce RTX 3080",
+      "memoryCapacityGB": 10
+    },
+    {
+      "name": "nvidia-geforce-rtx-3080-ti",
+      "label": "NVIDIA GeForce RTX 3080 Ti",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "nvidia-geforce-rtx-3090",
+      "label": "NVIDIA GeForce RTX 3090",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-geforce-rtx-3090-ti",
+      "label": "NVIDIA GeForce RTX 3090 Ti",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-geforce-rtx-4060",
+      "label": "NVIDIA GeForce RTX 4060",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-4060-ti",
+      "label": "NVIDIA GeForce RTX 4060 Ti",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-4070",
+      "label": "NVIDIA Geforce RTX 4070",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "nvidia-geforce-rtx-4070-super",
+      "label": "NVIDIA GeForce RTX 4070 SUPER",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "nvidia-geforce-rtx-4070-ti",
+      "label": "NVIDIA Geforce RTX 4070 Ti",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "nvidia-geforce-rtx-4070-ti-super",
+      "label": "NVIDIA GeForce RTX 4070 Ti SUPER",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-geforce-rtx-4080",
+      "label": "NVIDIA Geforce RTX 4080",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-geforce-rtx-4080-super",
+      "label": "NVIDIA GeForce RTX 4080 SUPER",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-geforce-rtx-4090",
+      "label": "NVIDIA Geforce RTX 4090",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-geforce-rtx-5050",
+      "label": "NVIDIA GeForce RTX 5050",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-5060",
+      "label": "NVIDIA GeForce RTX 5060",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-geforce-rtx-5060-ti",
+      "label": "NVIDIA GeForce RTX 5060 Ti",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-geforce-rtx-5070",
+      "label": "NVIDIA GeForce RTX 5070",
+      "memoryCapacityGB": 12
+    },
+    {
+      "name": "nvidia-geforce-rtx-5070-ti",
+      "label": "NVIDIA GeForce RTX 5070 Ti",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-geforce-rtx-5080",
+      "label": "NVIDIA GeForce RTX 5080",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-geforce-rtx-5090",
+      "label": "NVIDIA GeForce RTX 5090",
+      "memoryCapacityGB": 32
+    },
+    {
+      "name": "nvidia-h100-pcie",
+      "label": "NVIDIA H100 PCIe",
+      "memoryCapacityGB": 80
+    },
+    {
+      "name": "nvidia-h200-nvl",
+      "label": "NVIDIA H200 NVL",
+      "memoryCapacityGB": 141
+    },
+    {
+      "name": "nvidia-l4",
+      "label": "NVIDIA L4",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-l40",
+      "label": "NVIDIA L40",
+      "memoryCapacityGB": 48
+    },
+    {
+      "name": "nvidia-l40s",
+      "label": "NVIDIA L40S",
+      "memoryCapacityGB": 48
+    },
+    {
+      "name": "nvidia-rtx-2000-ada-generation",
+      "label": "NVIDIA RTX 2000 Ada Generation",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-rtx-4000-ada-generation",
+      "label": "NVIDIA RTX 4000 Ada Generation",
+      "memoryCapacityGB": 20
+    },
+    {
+      "name": "nvidia-rtx-6000-ada-generation",
+      "label": "NVIDIA RTX 6000 Ada Generation",
+      "memoryCapacityGB": 48
+    },
+    {
+      "name": "nvidia-rtx-a1000",
+      "label": "NVIDIA RTX A1000",
+      "memoryCapacityGB": 8
+    },
+    {
+      "name": "nvidia-rtx-a5000",
+      "label": "NVIDIA RTX A5000",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-rtx-pro-2000-blackwell",
+      "label": "NVIDIA RTX PRO 2000 Blackwell",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-rtx-pro-4000-blackwell",
+      "label": "NVIDIA RTX PRO 4000 Blackwell",
+      "memoryCapacityGB": 24
+    },
+    {
+      "name": "nvidia-rtx-pro-4500-blackwell-server",
+      "label": "NVIDIA RTX PRO 4500 Blackwell Server Edition",
+      "memoryCapacityGB": 32
+    },
+    {
+      "name": "nvidia-rtx-pro-5000-blackwell",
+      "label": "NVIDIA RTX PRO 5000 Blackwell",
+      "memoryCapacityGB": 48
+    },
+    {
+      "name": "nvidia-rtx-pro-6000-blackwell-max-q",
+      "label": "NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition",
+      "memoryCapacityGB": 96
+    },
+    {
+      "name": "nvidia-rtx-pro-6000-blackwell-server",
+      "label": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+      "memoryCapacityGB": 96
+    },
+    {
+      "name": "nvidia-rtx-pro-6000-blackwell-workstation",
+      "label": "NVIDIA RTX PRO 6000 Blackwell Workstation Edition",
+      "memoryCapacityGB": 96
+    },
+    {
+      "name": "nvidia-t4",
+      "label": "NVIDIA T4",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-tesla-p100",
+      "label": "NVIDIA Tesla P100",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-tesla-v100-16gb",
+      "label": "NVIDIA Tesla V100 16GB",
+      "memoryCapacityGB": 16
+    },
+    {
+      "name": "nvidia-tesla-v100-32gb",
+      "label": "NVIDIA Tesla V100 32GB",
+      "memoryCapacityGB": 32
+    }
+  ]
+}

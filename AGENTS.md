@@ -65,6 +65,10 @@ gh run list --repo activescott/gpu-poet --limit 3
 
 The `MetricDefinition` table stores all metric metadata and the `gpuField` column maps URL slugs to TypeScript GPU model field names. This allows adding new metrics without code changes to routes or components.
 
+## Listing Exclusion Benchmark
+
+Before changing the rules in `packages/web-app/src/pkgs/server/listingFilters.ts`, score them with `LOG_LEVEL=silent npx tsx src/scripts/exclusion-benchmark.ts` from `packages/web-app`, and again after, and put both sets of numbers in the PR. The fixture in `src/pkgs/server/exclusionBenchmark/` is production's excluded listings (positives) and live listings (negatives). Every live listing has already passed the current rules, so false rejects only appear once you change a rule. Refresh the fixture with `src/scripts/export-exclusion-benchmark.ts` against a read-only prod role. Suspected label errors go in `labelReview.json`, never as edits to `listings.jsonl`.
+
 ## Working with Data Files
 
 ### News Articles
