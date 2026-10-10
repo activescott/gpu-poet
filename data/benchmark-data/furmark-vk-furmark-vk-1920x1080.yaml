@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 23203
-updatedAt: 2026-10-09T12:03:04.610Z
+collectedSamples: 23285
+updatedAt: 2026-10-10T10:41:28.319Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -126,7 +126,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 580 Series (RADV POLARIS10)
     value: 60
   - gpuNameRaw: AMD Radeon RX 590 Series (RADV POLARIS10)
-    value: 62
+    value: 61
   - gpuNameRaw: AMD Radeon RX 6400
     value: 49
   - gpuNameRaw: AMD Radeon RX 6400 (RADV NAVI24)
@@ -148,7 +148,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600M (RADV NAVI23)
     value: 96
   - gpuNameRaw: AMD Radeon RX 6650 XT
-    value: 131
+    value: 132
   - gpuNameRaw: AMD Radeon RX 6650 XT (RADV NAVI23)
     value: 129
   - gpuNameRaw: AMD Radeon RX 6650M (RADV NAVI23)
@@ -241,6 +241,8 @@ results:
     value: 294
   - gpuNameRaw: AMD Radeon RX 9070 GRE
     value: 246
+  - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
+    value: 245
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 339
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
@@ -488,7 +490,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti
     value: 194
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU
-    value: 100
+    value: 103
   - gpuNameRaw: NVIDIA GeForce RTX 3080
     value: 139
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
@@ -510,7 +512,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 177
   - gpuNameRaw: NVIDIA GeForce RTX 4070
-    value: 209
+    value: 210
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
@@ -548,7 +550,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
     value: 190
   - gpuNameRaw: NVIDIA GeForce RTX 5080
-    value: 391
+    value: 390
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
     value: 225
   - gpuNameRaw: NVIDIA GeForce RTX 5090
@@ -637,6 +639,8 @@ results:
     value: 27
   - gpuNameRaw: Radeon RX 560 XT
     value: 53
+  - gpuNameRaw: Radeon RX 560X
+    value: 25
   - gpuNameRaw: Radeon RX 560X Series
     value: 25
   - gpuNameRaw: Radeon RX 570 Series
