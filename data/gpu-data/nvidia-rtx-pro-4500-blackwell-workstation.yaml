@@ -4,7 +4,7 @@ label: NVIDIA RTX PRO 4500 Blackwell Workstation Edition
 category: workstation
 msrpUSD: 3199
 tensorCoreCount: 328
-fp32TFLOPS: 51.0
+fp32TFLOPS: 102
 fp16TFLOPS: 404.25
 int8TOPS: 404.25
 fp4TFLOPS: 808.5
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2025-03-18"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -84,7 +84,7 @@ references:
   - https://www.techpowerup.com/gpu-specs/rtx-pro-4500-blackwell-workstation.c4278
 
 notes:
-  - 'FP32 TFLOPS of 51.0 sourced directly from the PNY official datasheet for the RTX PRO 4500 Blackwell Workstation Edition (pny.com), footnote 1 states it is based on GPU Boost clock. This is consistent with 10,496 CUDA cores at the TechPowerUp-reported 2407 MHz boost clock: 10,496 × 2407 × 2 / 1,000,000 ≈ 50.53 TFLOPS ≈ 51 TFLOPS. CG Channel reported 39.6 TFLOPS in their March 2025 announcement article; the PNY datasheet is more authoritative and the 51 TFLOPS figure is consistent with the known boost clock.'
+  - 'FP32 vector (CUDA core) throughput of 51.0 TFLOPS sourced directly from the PNY official datasheet for the RTX PRO 4500 Blackwell Workstation Edition (pny.com), footnote 1 states it is based on GPU Boost clock. This is consistent with 10,496 CUDA cores at the TechPowerUp-reported 2407 MHz boost clock: 10,496 × 2407 × 2 / 1,000,000 ≈ 50.53 TFLOPS ≈ 51 TFLOPS. CG Channel reported 39.6 TFLOPS in their March 2025 announcement article; the PNY datasheet is more authoritative and the 51 TFLOPS figure is consistent with the known boost clock.'
   - 'AI TOPS of 1,617 is from the PNY official datasheet footnotes, labeled as theoretical FP4 TOPS using the sparsity feature (footnote 2 confirms sparsity is applied). This follows the same convention as the RTX PRO 4000 Blackwell where "AI TOPS" = FP4 sparse.'
   - 'int8TOPS of 404.25 represents non-sparse (dense) INT8 performance, derived from FP4 sparse TOPS: 1,617 (FP4 sparse) / 4 = 404.25 TOPS. Derivation: FP4 sparse = 2x INT8 sparse = 4x INT8 dense per Blackwell 5th-gen tensor core architecture. Dense value used for consistent cross-vendor comparison.'
   - 'fp16TFLOPS of 404.25 is FP16 Tensor Core throughput with 2:4 structured sparsity, derived from FP4 sparse TOPS using the Blackwell tensor core ratio (FP16 sparse = FP4 sparse / 4): 1,617 / 4 = 404.25 TFLOPS. Dense FP16 Tensor = 404.25 / 2 = 202.125 TFLOPS. The NVIDIA product page does not publish FP16 separately for this workstation card.'
@@ -100,4 +100,5 @@ notes:
   - 'PNY SKU VCNRTXPRO4500B-PB confirmed from Newegg product listing (N82E16814985048). Dell part number 490-BLPL confirmed from dell.com official product page (multiple regional URLs). HP part number B11F2AA confirmed from hp.com GB product page and multiple reseller listings (redcorp.com, provantage.com, gpus.net).'
   - 'fp4TFLOPS of 808.5 represents non-sparse (dense) FP4 performance, derived from the already-cited AI TOPS figure of 1,617 (FP4 sparse, per the PNY official datasheet) ÷ 2. Dense value used for consistent cross-vendor comparison.'
   - 'NOT FOUND: fp8TFLOPS — the official NVIDIA RTX PRO 4500 Blackwell Workstation Edition product page and PNY datasheet (URLs in references) publish only AI TOPS (FP4 sparse), Single-Precision Performance (FP32), and RT Core Performance — no standalone FP8 TFLOPS row, unlike the sibling RTX PRO 4500 Blackwell Server Edition which does publish one on its official data-center product page. Left null rather than guessed from the INT8 dense value.'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 51.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 51.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). This is a workstation (not B100/B200-class datacenter) SKU, so no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 102 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 1,617 AI TOPS (FP4 with sparsity) in the PNY datasheet / 16 = 101.1, since professional Blackwell Tensor Cores run FP4 with sparsity at 16 × dense TF32. The stored 102 is 2 × the FP32 vector figure, within 1% of that. The Server Edition, on the same GB203 die with the same 51 TFLOPS FP32 vector rate, lists 203 TFLOPS sparse TF32 (101.5 dense). FP32 vector (CUDA core) throughput is 51.0 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

@@ -4,7 +4,7 @@ label: NVIDIA RTX A1000
 category: workstation
 msrpUSD: 365
 tensorCoreCount: 72
-fp32TFLOPS: 6.74
+fp32TFLOPS: 13.5
 fp16TFLOPS: 53.8
 int8TOPS: 53.9
 memoryCapacityGB: 8
@@ -19,7 +19,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.6
 releaseDate: "2024-04-16"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -75,7 +75,7 @@ references:
   - https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056
 
 notes:
-  - FP32 TFLOPS of 6.74 sourced from NVIDIA official product page and Lenovo Press documentation.
+  - 'FP32 vector (CUDA core) throughput of 6.74 TFLOPS sourced from NVIDIA official product page and Lenovo Press documentation.'
   - FP16 TFLOPS of 53.8 represents peak tensor performance with sparsity from NVIDIA product page.
   - 'int8TOPS of 53.9 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 107.8 TOPS ÷ 2 per NVIDIA Ampere architecture. With 2:4 structured sparsity, INT8 performance is 107.8 TOPS. Dense value used for consistent cross-vendor comparison.'
   - Memory bandwidth calculated as 128-bit × 12 Gbps ÷ 8 = 192 GB/s.
@@ -87,3 +87,4 @@ notes:
   - 'Phase 5 audit (2026-09-02): gpuArchitecture normalized from lowercase ''ampere'' to canonical ''Ampere'' capitalization per the canonical table in .claude/agents/gpu-researcher.md.'
   - 'Phase 5 audit (2026-09-02): FP32 and FP64 removed from supportedHardwareOperations. FP32 is executed on CUDA/shader ALUs, not accelerated through a standalone Tensor Core path on Ampere (only the TF32 reduced-precision format is Tensor Core-accelerated) — FP32 continues to be reported separately via the fp32TFLOPS field. FP64 removed because the RTX A1000 uses the GA107 chip (confirmed in the summary above), a smaller die than GA102 and not GA100-based; per an NVIDIA staff reply on NVIDIA Developer Forums, ''The Tensor core units in the GA102 chip architecture do not contain the FP64 path that is present in e.g. the Tensor core units in the A100 GPU'' (https://forums.developer.nvidia.com/t/what-is-the-fp64-rpeak-value-for-a5000/196056) — the same reasoning extends to the smaller GA107 die, which shares the same 3rd-gen Tensor Core design as GA102/GA104/GA106. Canonical Ampere baseline (TF32, BF16, FP16, INT8, INT4) applied per gpu-researcher.md; FP64 Tensor Core support is reserved for GA100-based SKUs (A100, A30) only.'
   - 'fp8TFLOPS and fp4TFLOPS are left null (field omitted) and not added to unverifiedSpecs — this is a confirmed hardware negative, not a research gap. The RTX A1000''s Ampere 3rd-generation Tensor Cores predate both FP8 (introduced in Ada Lovelace/Hopper) and FP4 (introduced in Blackwell) tensor formats, per the canonical architecture table in .claude/agents/gpu-researcher.md.'
+  - 'fp32TFLOPS of 13.5 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 53.8 TFLOPS Tensor figure (FP16 with sparsity) on NVIDIA''s RTX A1000 page / 4 = 13.45, since professional Ampere Tensor Cores run FP16 with sparsity at 4 × dense TF32. FP32 vector (CUDA core) throughput is 6.74 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

@@ -5,7 +5,7 @@ category: datacenter
 msrpUSD: 45000
 tensorCoreCount: 568
 fp32TFLOPS: 183
-fp16TFLOPS: 362
+fp16TFLOPS: 733
 int8TOPS: 733
 fp8TFLOPS: 733
 memoryCapacityGB: 48
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2023-08-08"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA L40S GPU was introduced in August 2023 (part number
   900-2g133-0080-000). It is the successor to the NVIDIA L40 (part number
@@ -103,10 +103,8 @@ references:
   - https://www.serversupply.com/GPU/GDDR6/48GB/NVIDIA/900-2G133-0180-030_414977.htm
 
 notes:
-  - "fp32TFLOPS: MUCH higher compared to the L40 @ 90.5 per
-    https://images.nvidia.com/content/Solutions/data-center/vgpu-L40-datasheet.\
-    pdf"
-  - "fp16TFLOPS: L40 is 181.05"
+  - 'fp32TFLOPS of 183 is TF32 Tensor Core throughput without sparsity, per NVIDIA''s L40S page (nvidia.com/en-us/data-center/l40s/), which lists TF32 as 183 dense and 366 with sparsity. FP32 vector (CUDA core) throughput is 91.6 TFLOPS.'
+  - 'fp16TFLOPS of 733 is FP16 Tensor Core throughput with 2:4 structured sparsity, as NVIDIA''s L40S page (nvidia.com/en-us/data-center/l40s/) publishes it, footnoted "With Sparsity". NVIDIA lists dense FP16 Tensor as 362.05 TFLOPS, so the published sparse figure is not exactly 2 × dense (724.1).'
   - 'int8TOPS of 733 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 1466 TOPS ÷ 2 per NVIDIA Ada architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 1466 TOPS. Dense value used for consistent cross-vendor comparison. Source: Lenovo Press (lenovopress.lenovo.com/lp1812) and Exxact Corp comparison.'
   - 'fp8TFLOPS of 733 represents non-sparse (dense) FP8 performance. Per NVIDIA''s official L40S datasheet, the FP8 Tensor Core row and INT8 Tensor Core row publish identical dense/sparse figures (733 TFLOPS/TOPS dense, 1,466 with sparsity) — NVIDIA''s Ada Lovelace 4th-generation Tensor Cores process FP8 and INT8 at identical per-clock throughput since both are 8-bit formats. Dense FP8 = dense INT8 = 733 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - Ada Lovelace has no FP4 hardware path (FP4 tensor core support was introduced in Blackwell) — fp4TFLOPS is left null and is a confirmed hardware negative, not a research gap, so it is not added to unverifiedSpecs.

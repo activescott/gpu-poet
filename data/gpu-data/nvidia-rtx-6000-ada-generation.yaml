@@ -4,7 +4,7 @@ label: NVIDIA RTX 6000 Ada Generation
 category: workstation
 msrpUSD: 6800
 tensorCoreCount: 568
-fp32TFLOPS: 91.1
+fp32TFLOPS: 182.1
 fp16TFLOPS: 728.5
 int8TOPS: 728.5
 fp8TFLOPS: 728.5
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2022-12-03"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -68,9 +68,10 @@ references:
   - https://www.leadtek.com/eng/products/workstation_graphics(2)/NVIDIA_RTX_6000_Ada_Generation(40949)/detail
   - https://nvidianews.nvidia.com/news/nvidias-new-ada-lovelace-rtx-gpu-arrives-for-designers-and-creators
   - https://lenovopress.lenovo.com/lp1940-thinksystem-nvidia-rtx-6000-ada-48gb-pcie-active-gpu
+  - https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf
 
 notes:
-  - FP32 TFLOPS of 91.1 is the official peak single-precision performance published by NVIDIA.
+  - 'FP32 vector (CUDA core) throughput of 91.1 TFLOPS is the official peak single-precision performance published by NVIDIA.'
   - FP16 TFLOPS of 728.5 represents Peak Sparse Tensor Core performance (derived as half of FP8 Sparse performance). This metric is selected to align with the card's workstation AI capabilities; standard CUDA Core FP16 performance is 91.1 TFLOPS.
   - 'int8TOPS of 728.5 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 1457 TOPS ÷ 2 per NVIDIA Ada Lovelace architecture. With 2:4 structured sparsity, INT8 performance is 1457 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 728.5 represents non-sparse (dense) FP8 performance, derived from the peak FP8 tensor performance of 1,457 TFLOPS with sparsity (implied by this file''s pre-existing fp16TFLOPS note, "FP16 TFLOPS represents ... half of FP8 Sparse performance") ÷ 2. NVIDIA''s Ada Lovelace 4th-generation Tensor Cores process FP8 and INT8 at identical per-clock throughput (both are 8-bit formats), so dense FP8 (728.5) numerically equals dense INT8 (728.5). Dense value used for consistent cross-vendor comparison.'
@@ -82,3 +83,4 @@ notes:
   - MSRP of $6,800 USD from NVIDIA official page, confirmed by multiple sources at launch.
   - Release date December 3, 2022 confirmed by multiple sources. Announced September 20, 2022.
   - 'supportedHardwareOperations corrected during the 2026-09-02 Phase 5 audit to remove FP32 and FP64: per the canonical Ada Lovelace supportedHardwareOperations table (locked precision-filters plan definition, "hardware-accelerated matrix/tensor-core path support only"), FP32 is not a standalone Ada Tensor Core format — it only appears as plain shader/CUDA-core ALU throughput or as the TF32 reduced-precision tensor proxy — and no Ada SKU (including the RTX 6000 Ada) has a documented FP64 Tensor Core path (unlike datacenter Ampere/Blackwell); the NVIDIA Ada GPU Architecture whitepaper does not mention an FP64 Tensor Core row anywhere. Canonical set is FP8, FP16, BF16, TF32, INT8, INT4, uniform across all Ada SKUs (GeForce, professional, and datacenter).'
+  - 'fp32TFLOPS of 182.1 is TF32 Tensor Core throughput without sparsity, per Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf), which lists the RTX 6000 Ada at 182.1 TFLOPS dense TF32 and 91.1 TFLOPS FP32 vector.'

@@ -4,7 +4,7 @@ label: NVIDIA B100 SXM
 category: datacenter
 msrpUSD: 32000
 tensorCoreCount: 576
-fp32TFLOPS: 60
+fp32TFLOPS: 875
 fp16TFLOPS: 3500
 int8TOPS: 3500
 fp8TFLOPS: 3500
@@ -23,7 +23,7 @@ supportedHardwareOperations:
   - FP64
 supportedCUDAComputeCapability: 10.0
 releaseDate: "2024-11-01"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: >-
   The NVIDIA B100 is a Blackwell-architecture datacenter GPU accelerator built
@@ -78,7 +78,7 @@ references:
   - https://www.servethehome.com/unique-inventec-p8000ig6-8x-nvidia-b100-system-shown-at-gtc-2024/
 
 notes:
-  - 'fp32TFLOPS of 60 represents FP32 CUDA core (non-tensor) performance per Flopper.io spec sheet and confirmed via Symmatrix HGX B100 8-GPU system total of 480 TFLOPS / 8 = 60 TFLOPS per GPU. This follows the same convention used for H200 SXM (CUDA core FP32, not TF32 tensor core).'
+  - 'fp32TFLOPS of 875 is TF32 Tensor Core throughput without sparsity. Derived as half the 1,750 TFLOPS sparse TF32 figure; see the TF32 note below (Flopper.io, a third-party spec sheet, not an NVIDIA page). FP32 vector (CUDA core) throughput is 60 TFLOPS per Flopper.io and the Symmatrix HGX B100 8-GPU system total of 480 TFLOPS / 8.'
   - 'fp16TFLOPS of 3500 represents FP16/BF16 Tensor Core performance with 2:4 structured sparsity per NVIDIA Blackwell datacenter convention. Dense (non-sparse) FP16/BF16 performance is 1750 TFLOPS, confirmed by SemiAnalysis Blackwell performance analysis and Flopper.io B100 spec sheet. The official NVIDIA B200 datasheet (nor-tech.com) explicitly states "Specifications in sparse | dense" with dense = half of sparse, confirming that the well-known 1.75 PFLOPS FP16 figure is dense and 3.5 PFLOPS is sparse. Note: some third-party sources (Viperatech, Exxact) label 1.75 PFLOPS as "dense tensor" without distinguishing the 2:4 sparsity convention, which is consistent with this interpretation. Sparse value of 3500 TFLOPS used here per NVIDIA datacenter GPU convention consistent with H200 SXM specifications.'
   - 'int8TOPS of 3500 represents non-sparse (dense) INT8 Tensor Core performance. For Blackwell architecture, INT8 dense = FP8 dense (both share the same 5th-generation Tensor Core path). FP8 dense = 3500 TFLOPS = 3.5 PFLOPS, confirmed by Viperatech product page (labeled as dense FP8/INT8 = 3.5 P(FL)OPS) and cross-validated against the official NVIDIA B200 datasheet (B200 INT8 sparse = 10 POPS; dense = 5 POPS; B100 at 700W vs B200 at 1000W TDP ratio gives B100 INT8 dense = approximately 3500 TOPS). With 2:4 structured sparsity, INT8 sparse performance is 7000 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'FP64 Tensor Core dense performance is 30 TFLOPS per Viperatech product page, CUDO Compute analysis, and Symmatrix 8-GPU system total (240 TFLOPS / 8 = 30 TFLOPS per GPU). FP64 does not benefit from 2:4 structured sparsity.'
@@ -93,4 +93,4 @@ notes:
   - 'thirdPartyProducts: Dell PowerEdge XE9680 for B100 confirmed from Dell GTC announcement blog post. Inventec P8000IG6 confirmed shown with 8x B100 at GTC 2024 per ServeTheHome article. Supermicro announced HGX B100 8-GPU system support via press release but no verified Supermicro model number specific to B100 was found in documentation; it is omitted per the critical validation rule against unverified identifiers. Lenovo and HPE part numbers for HGX B100 products were not found in publicly available documentation during research.'
   - 'fp8TFLOPS of 3500 represents non-sparse (dense) FP8 performance per Viperatech product page (labeled dense FP8/INT8 = 3.5 P(FL)OPS), matching the already-sourced int8TOPS dense value under the Blackwell convention that INT8 dense = FP8 dense (same 5th-generation Tensor Core path, same 8-bit width). With 2:4 structured sparsity, FP8 performance is 7000 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp4TFLOPS of 7000 represents non-sparse (dense) FP4 performance, derived from Symmatrix HGX B100 8-GPU system totals (112 PFLOPS sparse FP4 / 8 GPUs = 14 PFLOPS per GPU sparse; dense = 14,000 / 2 = 7,000 TFLOPS). Confirmed by Viperatech listing FP4 dense = 7 PFLOPS. Dense value used for consistent cross-vendor comparison.'
-  - 'supportedHardwareOperations: FP32 removed per the locked GEMM-only definition (2026-09) — B100''s 60 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, not a Tensor Core-accelerated format; only TF32 is the tensor-accelerated near-FP32 path. FP64 retained because datacenter Blackwell B100/B200 have a documented FP64 Tensor Core path (30 TFLOPS dense per Viperatech, Symmatrix, and CUDO Compute) distinct from the non-tensor FP64 rate, per gpu-researcher.md''s canonical Blackwell table. Array now matches the canonical datacenter Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8, FP64.'
+  - 'supportedHardwareOperations: FP32 removed per the locked GEMM-only definition (2026-09) — B100''s 60 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, not a Tensor Core-accelerated format; only TF32 is the tensor-accelerated near-FP32 path. FP64 retained because datacenter Blackwell B100/B200 have a documented FP64 Tensor Core path (30 TFLOPS dense per Viperatech, Symmatrix, and CUDO Compute) distinct from the non-tensor FP64 rate, per gpu-researcher.md''s canonical Blackwell table. Array now matches the canonical datacenter Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8, FP64.'

@@ -4,7 +4,7 @@ label: NVIDIA RTX 4000 Ada Generation
 category: workstation
 msrpUSD: 1250
 tensorCoreCount: 192
-fp32TFLOPS: 26.7
+fp32TFLOPS: 53.4
 fp16TFLOPS: 213.8
 int8TOPS: 213.8
 fp8TFLOPS: 213.8
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2023-08-09"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -107,7 +107,7 @@ references:
   - https://devicehunt.com/view/type/pci/vendor/10DE/device/27B0
 
 notes:
-  - FP32 TFLOPS of 26.7 calculated as 6,144 CUDA cores × 2.175 GHz boost clock × 2 ops/cycle ÷ 1000 = 26.73 TFLOPS (rounded to 26.7 as published by NVIDIA).
+  - 'FP32 vector (CUDA core) throughput of 26.7 TFLOPS calculated as 6,144 CUDA cores × 2.175 GHz boost clock × 2 ops/cycle ÷ 1000 = 26.73 TFLOPS (rounded to 26.7 as published by NVIDIA).'
   - Tensor performance of 427.6 TFLOPS represents peak FP8 tensor performance with sparsity, as published by NVIDIA and confirmed across multiple official sources including Leadtek and NVIDIA product pages.
   - FP16 TFLOPS of 213.8 is calculated based on the Ada Lovelace tensor core architecture where FP16 with sparsity delivers approximately half the performance of FP8 with sparsity (427.6 TFLOPS ÷ 2 = 213.8 TFLOPS).
   - 'int8TOPS of 213.8 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 427.6 TOPS ÷ 2 per NVIDIA Ada Lovelace architecture. With 2:4 structured sparsity, INT8 performance is 427.6 TOPS. Dense value used for consistent cross-vendor comparison.'
@@ -129,3 +129,4 @@ notes:
   - Supermicro part number GPU-NVQRTX4000-ADA-SFF for the SFF variant. Source from Senetic UK.
   - Multiple NVIDIA part number variants exist for different OEM configurations and form factors. The base part number format is 900-5G190-XXXX-XXX with different suffixes indicating specific SKU configurations.
   - 'supportedHardwareOperations corrected during the 2026-09-02 Phase 5 audit to remove FP32: per the canonical Ada Lovelace supportedHardwareOperations table (locked precision-filters plan definition, "hardware-accelerated matrix/tensor-core path support only"), FP32 is not a standalone Ada Tensor Core format — it only appears as plain shader/CUDA-core ALU throughput or as the TF32 reduced-precision tensor proxy. Canonical set is FP8, FP16, BF16, TF32, INT8, INT4, uniform across all Ada SKUs (GeForce, professional, and datacenter) per the NVIDIA Ada GPU Architecture whitepaper.'
+  - 'fp32TFLOPS of 53.4 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 427.6 TFLOPS Tensor figure (FP8 with sparsity) on NVIDIA''s RTX 4000 Ada page / 8 = 53.45, since professional Ada Tensor Cores run FP8 with sparsity at 8 × dense TF32. FP32 vector (CUDA core) throughput is 26.7 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

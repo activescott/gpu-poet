@@ -4,7 +4,7 @@ label: NVIDIA H200 NVL
 category: datacenter
 msrpUSD: 34500
 tensorCoreCount: 528
-fp32TFLOPS: 60
+fp32TFLOPS: 417.5
 fp16TFLOPS: 1671
 int8TOPS: 1671
 fp8TFLOPS: 1671
@@ -22,7 +22,7 @@ supportedHardwareOperations:
   - FP8
 supportedCUDAComputeCapability: 9
 releaseDate: "2024-11-18"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: >-
   The NVIDIA H200 NVL is a PCIe form-factor datacenter GPU accelerator built on
@@ -98,7 +98,7 @@ references:
   - https://www.insight.com/en_US/shop/product/CAI-GPU-H200-NVL/cisco%20systems/CAI-GPU-H200-NVL/NVIDIA-H200-NVL-GPU-computing-processor-NVIDIA-H200-NVL-Tensor-Core-141-GB-HBM3-Dualslot-PCIe-50-x16-600-W/
 
 notes:
-  - 'fp32TFLOPS of 60 represents FP32 CUDA core (non-tensor) performance per the NVIDIA H200 datasheet (openzeka.com/wp-content/uploads/2024/11/h200-gpu-datasheet.pdf, which is the SC24 edition of the H200 datasheet). This is lower than the H200 SXM (67 TFLOPS) due to lower GPU boost clock at the 600W PCIe thermal envelope vs. 700W SXM configuration.'
+  - 'fp32TFLOPS of 417.5 is TF32 Tensor Core throughput without sparsity. NVIDIA''s H200 page (nvidia.com/en-us/data-center/h200/) publishes TF32 only with sparsity, 835 TFLOPS for NVL, footnoted only "With sparsity"; 417.5 is half of it, and the Lenovo H200 NVL product guide gives about 418 dense. FP32 vector (CUDA core) throughput is 60 TFLOPS per the NVIDIA H200 SC24 datasheet (openzeka.com mirror), lower than the SXM''s 67 because of the 600 W PCIe power limit.'
   - 'fp16TFLOPS of 1671 represents FP16 Tensor Core performance with 2:4 structured sparsity per the NVIDIA H200 SC24 datasheet. NVIDIA convention for datacenter GPUs publishes the sparsity-accelerated Tensor Core value. Without sparsity, FP16 Tensor Core performance is approximately 835-836 TFLOPS per the Lenovo H200 NVL product guide (lenovopress.lenovo.com/lp1944.pdf). The sparse value of 1671 TFLOPS is used here per NVIDIA datacenter GPU convention, consistent with H100 SXM and H200 SXM specifications in this database.'
   - 'int8TOPS of 1671 represents non-sparse (dense) INT8 Tensor Core performance, derived from sparse INT8 of 3341 TOPS / 2 per the NVIDIA H200 SC24 datasheet. The datasheet footnote indicates tensor-core values are with 2:4 structured sparsity. Dense value used for consistent cross-vendor comparison. Note: the Lenovo H200 NVL product guide (lenovopress.lenovo.com/lp1944.pdf) lists the NVL INT8 dense value as 1,570 TOPS, which does not follow 2x sparsity arithmetic (1570 x 2 = 3140, not 3341). NVIDIA does not publish a separate dense INT8 value; 3341 / 2 = 1671 is used here per database convention, consistent with how other Hopper GPUs in this database are specified.'
   - 'TF32 Tensor Core performance with sparsity is 835 TFLOPS per the NVIDIA H200 SC24 datasheet. Without sparsity, TF32 is approximately 418 TFLOPS per the Lenovo H200 NVL product guide.'

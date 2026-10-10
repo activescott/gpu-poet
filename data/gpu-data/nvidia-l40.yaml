@@ -5,7 +5,7 @@ category: datacenter
 msrpUSD: 31000
 tensorCoreCount: 568
 fp32TFLOPS: 90.5
-fp16TFLOPS: 181.05
+fp16TFLOPS: 362.1
 int8TOPS: 362
 fp8TFLOPS: 362
 memoryCapacityGB: 48
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2022-10-13"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: The NVIDIA L40 GPU was introduced in September 2022 with part number
   900-2G133-0010-000. It is based on the AD102 chip from the Ada Lovelace
@@ -91,10 +91,8 @@ references:
   - https://www.cisco.com/c/dam/en/us/products/collateral/servers-unified-computing/ucs-c-series-rack-servers/nvidia-l40-gpu.pdf
   - https://lenovopress.lenovo.com/lp0768-thinksystem-thinkagile-gpu-summary
 notes:
-  - "fp32TFLOPS: the L40 @ 90.5 per
-    https://images.nvidia.com/content/Solutions/data-center/vgpu-L40-datasheet.\
-    pdf"
-  - "fp16TFLOPS: L40 is 181.05"
+  - 'fp32TFLOPS of 90.5 is TF32 Tensor Core throughput without sparsity, per the NVIDIA L40 datasheet (https://images.nvidia.com/content/Solutions/data-center/vgpu-L40-datasheet.pdf), which lists TF32 Tensor Core as 90.5 dense and 181 with sparsity. FP32 vector (CUDA core) throughput is also 90.5 TFLOPS: unlike other professional Ada parts, the L40 runs dense TF32 at the FP32 vector rate.'
+  - 'fp16TFLOPS of 362.1 is FP16 Tensor Core throughput with 2:4 structured sparsity, as the NVIDIA L40 datasheet publishes it: 181.05 dense and 362.1 with sparsity.'
   - "int8TOPS: L40 was 362 according to
     https://images.nvidia.com/aem-dam/Solutions/Data-Center/l4/nvidia-ada-gpu-a\
     rchitecture-whitepaper-v2.1.pdf"

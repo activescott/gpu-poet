@@ -10,7 +10,7 @@ fp4TFLOPS: 1676
 maxTDPWatts: 575
 memoryBandwidthGBs: 1792
 tensorCoreCount: 680
-fp32TFLOPS: 209.5
+fp32TFLOPS: 104.8
 fp16TFLOPS: 838
 
 gpuArchitecture: blackwell
@@ -25,7 +25,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.8
 releaseDate: "2025-01-30"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 5090 was the first GeForce RTX 50 series product that was launched using the GB202 GPU.
@@ -147,7 +147,7 @@ notes:
   - Blackwell GB203 is the chip
   - fp16TFLOPS is "Peak FP16 Tensor TFLOPS with FP16 Accumulate" as that's what NVIDIA publishes.
   - 'int8TOPS of 838 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 1676 TOPS ÷ 2 per NVIDIA Blackwell architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 1676 TOPS. Dense value used for consistent cross-vendor comparison.'
-  - fp32TFLOPS is "Peak TF32 Tensor TFLOPS1" as published in the blackwell gpu architecture pdf.
+  - 'fp32TFLOPS of 104.8 is TF32 Tensor Core throughput without sparsity. Table 3 of NVIDIA''s RTX Blackwell whitepaper lists 104.8 dense and 209.5 with sparsity (footnote "Effective TOPS / TFLOPS using the Sparsity Feature"); FP32 vector (CUDA core) throughput is also 104.8 (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf).'
   - MSRP of $1,999 USD for the Founders Edition sourced from nvidia.com official press release (https://nvidianews.nvidia.com/news/nvidia-blackwell-geforce-rtx-50-series-opens-new-world-of-ai-computer-graphics).
   - "Manufacturer identifiers: Board ID PG145 with SKU 30 confirmed from TechPowerUp and VideoCardz. NVPN (NVIDIA Part Number) 900-1G144-2530-000 for Founders Edition confirmed from Best Buy and Newegg. GPU variant is GB202-300-A1, the cut-down version of the full GB202 die featuring 170 out of 192 SMs enabled (21,760 CUDA cores)."
   - "Third-party products: Part numbers and model numbers sourced from official manufacturer websites and authorized retailers. ASUS offers ROG Astral (ROG-ASTRAL-RTX5090-O32G-GAMING), ROG Matrix Platinum 30th Anniversary Edition (ROG-MATRIX-RTX5090-P32G-30TH), and TUF Gaming (TUF-RTX5090-32G-GAMING) variants. MSI lineup includes SUPRIM SOC, GAMING TRIO OC, VANGUARD SOC, VENTUS 3X OC, SUPRIM LIQUID SOC, and VANGUARD SOC LAUNCH EDITION. Gigabyte uses GV-N5090 prefix for GAMING OC (GV-N5090GAMING-OC-32GD), WINDFORCE OC (GV-N5090WF3OC-32GD), and AORUS MASTER (GV-N5090AORUS-M-32GD). PNY uses VCG509032 prefix with variants for standard (VCG509032TFXPB1), overclocked (VCG509032TFXPB1-O), ARGB (VCG509032TFXXPB1), and ARGB OC (VCG509032TFXXPB1-O). Zotac uses ZT-B50900 prefix for SOLID OC (ZT-B50900J-10P), SOLID non-OC (ZT-B50900D-10P), and SOLID OC White Edition (ZT-B50900Q-10P)."

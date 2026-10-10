@@ -5,7 +5,7 @@ category: gaming
 msrpUSD: 249
 tensorCoreCount: 80
 fp32TFLOPS: 13.17
-fp16TFLOPS: 52.68
+fp16TFLOPS: 105.25
 int8TOPS: 105.25
 fp4TFLOPS: 210.5
 memoryCapacityGB: 8
@@ -23,7 +23,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.8
 releaseDate: "2025-07-01"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 5050 is an entry-level graphics card released on July 1, 2025,
@@ -76,7 +76,7 @@ references:
 
 notes:
   - 'fp32TFLOPS of 13.17 is calculated from the reference boost clock of 2.572 GHz and 2,560 CUDA cores using the Blackwell formula: 2 × 2560 CUDA cores × 2.572 GHz = 13.17 TFLOPS. NVIDIA does not publish an explicit FP32 TFLOPS figure for the RTX 5050 on its product page. Multiple AIB spec pages (ASUS, Gigabyte, MSI, Zotac) confirm the 2,572 MHz reference boost clock and 2,560 CUDA cores.'
-  - 'fp16TFLOPS of 52.68 represents "Peak FP16 Tensor TFLOPS with FP16 Accumulate" using the "with sparsity" metric, derived as 4 × FP32 TFLOPS (13.17 × 4 = 52.68). This follows the same ratio observed in RTX 5060 (fp32=19.18, fp16=76.71, ratio 4.0) and RTX 5060 Ti (fp32=23.70, fp16=94.81, ratio 4.0). Dense FP16 tensor performance would be 26.34 TFLOPS.'
+  - 'fp16TFLOPS of 105.25 is FP16 Tensor Core throughput (FP16 accumulate) with 2:4 structured sparsity, derived as AI TOPS ÷ 4 (421 ÷ 4), the rule used for every GeForce Blackwell file. Dense FP16 Tensor is 52.63 TFLOPS.'
   - 'int8TOPS of 105.25 represents non-sparse (dense) INT8 performance, derived from the 421 AI TOPS figure cited by NVIDIA (per Zotac product page and Tom''s Hardware, and confirmed on the official nvidia.com GeForce compare page). Per NVIDIA Blackwell architecture notes: AI TOPS = FP4 sparse = 4× INT8 dense, so INT8 dense = 421 ÷ 4 = 105.25 TOPS. Secondary cross-check via 8× FP32 ratio (13.17 × 8 = 105.36 TOPS) confirms the value within rounding. Dense value used for consistent cross-vendor comparison. With 2:4 structured sparsity, INT8 performance is approximately 210.5 TOPS.'
   - 'Memory bandwidth of 320 GB/s calculated from 20 Gbps memory speed × 128-bit bus ÷ 8 = 320 GB/s. Confirmed by MSI spec page (20 Gbps), Gigabyte spec page (20 Gbps), and ASUS techspec page (20 Gbps). Wikipedia GeForce RTX 50 series also cites 320 GB/s.'
   - 'The RTX 5050 uses the GB207 die (confirmed by wccftech GPU roundup and multiple spec sources). It has 16.9 billion transistors on TSMC 4N process per Wikipedia GeForce RTX 50 series article.'
@@ -90,3 +90,4 @@ notes:
   - 'fp4TFLOPS of 210.5 represents non-sparse (dense) FP4 performance, derived from the official NVIDIA AI TOPS figure of 421 (FP4 sparse, per nvidia.com/en-us/geforce/graphics-cards/compare/ and Zotac product page) ÷ 2. Dense value used for consistent cross-vendor comparison.'
   - 'NOT FOUND: fp8TFLOPS — NVIDIA does not publish a standalone dense or sparse FP8 TFLOPS figure for consumer GeForce Blackwell cards; searched the NVIDIA RTX Blackwell architecture whitepaper and the official RTX 5050/compare pages (URLs in references), which list only AI TOPS (FP4 sparse), Single-Precision performance, and RT Core performance. Left null rather than guessed from the INT8 dense value.'
   - 'supportedHardwareOperations: INT4 removed per the locked GEMM-only definition (2026-09) — neither the consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table); the array now matches the canonical consumer Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 13.17 is FP32 vector (CUDA core) throughput, which on GeForce Blackwell equals TF32 Tensor Core throughput without sparsity. On GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate. NVIDIA''s RTX Blackwell whitepaper lists dense/sparse TF32 of 35.6/71.2 for the RTX 3090, 82.6/165.2 for the RTX 4090 and 104.8/209.5 for the RTX 5090, read from a search-result excerpt of the whitepaper rather than the PDF itself (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf).'

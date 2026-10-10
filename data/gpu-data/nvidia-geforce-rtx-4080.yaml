@@ -4,8 +4,8 @@ label: NVIDIA Geforce RTX 4080
 category: gaming
 msrpUSD: 1199
 tensorCoreCount: 304
-fp32TFLOPS: 97.4
-fp16TFLOPS: 398.8
+fp32TFLOPS: 48.7
+fp16TFLOPS: 389.8
 int8TOPS: 389.91
 fp8TFLOPS: 389.91
 memoryCapacityGB: 16
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2022-11-16"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: |
   The NVIDIA GeForce RTX 4080 is a graphics card released in 2022,
@@ -144,8 +144,8 @@ references:
 
 notes:
   - MSRP of $1199 USD sourced from NVIDIA's official announcement. A Founders Edition was available at this price. The RTX 4080 was later replaced by the RTX 4080 SUPER at $999, representing a significant price reduction.
-  - fp32TFLOPS calculated as 9,728 CUDA cores × 2.505 GHz boost clock × 4 ops/cycle = 97.48 TFLOPS. The "4 ops/cycle" comes from Ada Lovelace's dual-issue FP32 capability where each SM can execute 2 FP32 operations on the dedicated FP32 pipeline plus 2 more FP32 operations on the INT32/FP32 shared pipeline, totaling 4 FP32 ops per cycle under optimal conditions.
-  - fp16TFLOPS is "Peak FP16 Tensor TFLOPS with FP16 Accumulate" as that's what NVIDIA publishes. Using the "with sparsity" metric.
+  - 'fp32TFLOPS of 48.7 is TF32 Tensor Core throughput without sparsity. It equals FP32 vector (CUDA core) throughput, computed as 9,728 CUDA cores × 2 × 2.505 GHz boost = 48.7 TFLOPS. Table 4 of NVIDIA''s RTX Blackwell whitepaper lists the RTX 4080 TF32 as 48.7 dense and 97.4 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). On GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate.'
+  - 'fp16TFLOPS of 389.8 is FP16 Tensor Core throughput (FP16 accumulate) with 2:4 structured sparsity, per Table 4 of NVIDIA''s RTX Blackwell whitepaper, which lists 194.9 dense and 389.8 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). NVIDIA''s RTX 4080 page gives 780 AI TOPS (FP8 with sparsity), half of which is 390.'
   - 'int8TOPS of 389.91 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 779.82 TOPS ÷ 2 per NVIDIA Ada architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 779.82 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 389.91 represents non-sparse (dense) FP8 performance. NVIDIA''s Ada Lovelace 4th-generation Tensor Cores process FP8 and INT8 at identical per-clock throughput (both are 8-bit formats) per the NVIDIA Ada GPU Architecture whitepaper; this equal-rate relationship is confirmed by official NVIDIA per-SKU datasheets (e.g. RTX 4090, L40, L40S, L4 all publish identical FP8 and INT8 dense/sparse figures). Dense FP8 = dense INT8 = 389.91 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - Ada Lovelace has no FP4 hardware path (FP4 tensor core support was introduced in Blackwell) — fp4TFLOPS is left null and is a confirmed hardware negative, not a research gap, so it is not added to unverifiedSpecs.

@@ -4,7 +4,7 @@ label: AMD Instinct MI325X
 category: datacenter
 msrpUSD: null
 tensorCoreCount: 1216
-fp32TFLOPS: 163.4
+fp32TFLOPS: 653.7
 fp16TFLOPS: 2614.9
 int8TOPS: 2614.9
 fp8TFLOPS: 2614.9
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - BF16
   - FP8
 releaseDate: "2024-10-10"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: >-
   The AMD Instinct MI325X is AMD's Q4 2024 refresh of the MI300X, launched on
@@ -79,7 +79,7 @@ references:
   - https://www.wiredzone.com/shop/product/10032305-amd-100-300000108h-instinct-mi325x-gpu-graphics-processing-unit-256gb-hbm3e-memory-air-cooling-ac-instinct-mi300-series-15002
 
 notes:
-  - 'fp32TFLOPS of 163.4 represents peak FP32 vector performance per AMD official product page (amd.com/en/products/accelerators/instinct/mi300/mi325x.html). AMD also lists FP32 matrix and FP64 matrix performance at 163.4 TFLOPS. Note: FP32 vector equals FP64 matrix on CDNA 3 due to architecture design.'
+  - 'fp32TFLOPS of 653.7 is TF32 Tensor Core throughput without sparsity. AMD''s product page (amd.com/en/products/accelerators/instinct/mi300/mi325x.html) lists TF32 matrix as 653.7 dense and 1307.4 with sparsity. FP32 vector throughput is 163.4 TFLOPS, the same as FP32 matrix and FP64 matrix.'
   - 'fp16TFLOPS of 2614.9 represents peak FP16 matrix performance with 2:4 structured sparsity per AMD official product page. Dense (non-sparse) FP16 matrix performance is 1307.4 TFLOPS (1.30 PFLOPs per AMD page). Sparse value used to maintain consistency with MI300X sibling file and agent policy (FP16 Matrix SPARSE).'
   - 'int8TOPS of 2614.9 represents non-sparse (dense) INT8 matrix performance per AMD official product page (listed as "Peak INT8 Performance: 2.6 POPs"). With 2:4 structured sparsity, INT8 performance is 5229.8 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 2614.9 represents non-sparse (dense) FP8 matrix performance per AMD official product page (E5M2 and E4M3 formats), identical to the MI300X sibling since the MI325X uses the same CDNA 3 compute silicon. With 2:4 structured sparsity, FP8 performance is 5229.8 TFLOPS. Dense value used for consistent cross-vendor comparison. Field added 2026-09-02 during the Phase 5 precision-filters audit; the underlying 2614.9 dense figure was already documented in this file''s "Additional precision performance" note but had not previously been populated into the fp8TFLOPS schema field.'

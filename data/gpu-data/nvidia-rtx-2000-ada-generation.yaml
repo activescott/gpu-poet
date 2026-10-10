@@ -4,7 +4,7 @@ label: NVIDIA RTX 2000 Ada Generation
 category: workstation
 msrpUSD: 625
 tensorCoreCount: 88
-fp32TFLOPS: 12.0
+fp32TFLOPS: 24
 fp16TFLOPS: 95.9
 int8TOPS: 95.95
 fp8TFLOPS: 95.95
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - INT4
 supportedCUDAComputeCapability: 8.9
 releaseDate: "2024-02-12"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -60,7 +60,7 @@ references:
   - https://images.nvidia.com/aem-dam/en-zz/Solutions/technologies/NVIDIA-ADA-GPU-PROVIZ-Architecture-Whitepaper_1.1.pdf
 
 notes:
-  - FP32 TFLOPS of 12.0 sourced from NVIDIA official product page and confirmed by PNY product page.
+  - 'FP32 vector (CUDA core) throughput of 12.0 TFLOPS sourced from NVIDIA official product page and confirmed by PNY product page.'
   - Tensor performance of 191.9 TFLOPS represents peak FP8 tensor performance with sparsity.
   - FP16 TFLOPS of 95.9 represents Peak Sparse Tensor Core performance (calculated as half of FP8 Sparse performance). This metric is selected to align with the card's workstation AI capabilities.
   - 'int8TOPS of 95.95 represents non-sparse (dense) INT8 performance, derived from sparse INT8 of 191.9 TOPS ÷ 2 per NVIDIA Ada Lovelace architecture. With 2:4 structured sparsity, INT8 performance is 191.9 TOPS. Dense value used for consistent cross-vendor comparison.'
@@ -72,3 +72,4 @@ notes:
   - TDP is 70W, no external power connector required.
   - MSRP of $625 USD positions it as the entry-level model in the Ada workstation lineup.
   - 'supportedHardwareOperations corrected during the 2026-09-02 Phase 5 audit to remove FP32: per the canonical Ada Lovelace supportedHardwareOperations table (locked precision-filters plan definition, "hardware-accelerated matrix/tensor-core path support only"), FP32 is not a standalone Ada Tensor Core format — it only appears as plain shader/CUDA-core ALU throughput or as the TF32 reduced-precision tensor proxy. Canonical set is FP8, FP16, BF16, TF32, INT8, INT4, uniform across all Ada SKUs (GeForce, professional, and datacenter) per the NVIDIA Ada GPU Architecture whitepaper.'
+  - 'fp32TFLOPS of 24 is TF32 Tensor Core throughput without sparsity. NVIDIA does not publish a dense TF32 figure for this card. Derived as the 191.9 TFLOPS Tensor figure (FP8 with sparsity) on NVIDIA''s RTX 2000 Ada page / 8 = 23.99, since professional Ada Tensor Cores run FP8 with sparsity at 8 × dense TF32. FP32 vector (CUDA core) throughput is 12.0 TFLOPS; professional parts other than the L40 run dense TF32 at 2 × FP32 vector, as Table 4 of NVIDIA''s RTX PRO Blackwell architecture whitepaper shows for the RTX A6000 (77.4 vs 38.7), RTX 6000 Ada (182.1 vs 91.1) and RTX PRO 6000 Workstation (251.9 vs 126.0) (https://www.nvidia.com/content/dam/en-zz/Solutions/design-visualization/quadro-product-literature/pdf/NVIDIA-RTX-Blackwell-PRO-GPU-Architecture-v1_1.pdf).'

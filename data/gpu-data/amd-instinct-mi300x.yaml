@@ -4,7 +4,7 @@ label: AMD Instinct MI300X
 category: datacenter
 msrpUSD: 15000
 tensorCoreCount: 1216
-fp32TFLOPS: 163.4
+fp32TFLOPS: 653.7
 fp16TFLOPS: 2614.9
 int8TOPS: 2614.9
 fp8TFLOPS: 2614.9
@@ -21,7 +21,7 @@ supportedHardwareOperations:
   - BF16
   - FP8
 releaseDate: "2023-12-06"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 summary: >-
   The AMD Instinct MI300X is AMD's flagship AI and HPC datacenter accelerator,
@@ -75,7 +75,7 @@ references:
   - https://sourceability.com/post/amd-unveils-mi300x-ai-chip-with-192gb-memory-and-high-efficiency-for-large-language-models
 
 notes:
-  - 'fp32TFLOPS of 163.4 represents peak FP32 vector performance per AMD official datasheet and confirmed by Lenovo Press LP1943. AMD also lists FP64 matrix and FP32 matrix performance at 163.4 TFLOPS. Note: FP32 vector performance equals FP64 matrix performance on CDNA 3 due to architecture design choices.'
+  - 'fp32TFLOPS of 653.7 is TF32 Tensor Core throughput without sparsity. AMD''s datasheet lists TF32 matrix as 653.7 dense and 1307.4 with sparsity. FP32 vector throughput is 163.4 TFLOPS, the same as FP32 matrix and FP64 matrix, per the AMD datasheet and Lenovo Press LP1943.'
   - 'fp16TFLOPS of 2614.9 represents peak FP16 matrix performance with 2:4 structured sparsity per AMD official datasheet. Dense (non-sparse) FP16 matrix performance is 1307.4 TFLOPS. Sparse value used here to maintain consistency with NVIDIA convention (NVIDIA fp16TFLOPS field also uses sparse tensor core values).'
   - 'int8TOPS of 2614.9 represents non-sparse (dense) INT8 matrix performance per AMD official datasheet and Lenovo Press LP1943. With 2:4 structured sparsity, INT8 performance is 5229.8 TOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp8TFLOPS of 2614.9 represents non-sparse (dense) FP8 matrix performance per AMD official datasheet (E5M2 and E4M3 formats). With 2:4 structured sparsity, FP8 performance is 5229.8 TFLOPS. Dense value used for consistent cross-vendor comparison. Field added 2026-09-02 during the Phase 5 precision-filters audit; the underlying 2614.9 dense figure was already documented in this file''s "Additional precision performance" note but had not previously been populated into the fp8TFLOPS schema field.'

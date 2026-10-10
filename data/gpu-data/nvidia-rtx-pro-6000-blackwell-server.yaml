@@ -4,7 +4,7 @@ label: NVIDIA RTX PRO 6000 Blackwell Server Edition
 category: datacenter
 msrpUSD: 13825
 tensorCoreCount: 752
-fp32TFLOPS: 120.0
+fp32TFLOPS: 234
 fp16TFLOPS: 1000.0
 int8TOPS: 1000.0
 fp8TFLOPS: 1000
@@ -22,7 +22,7 @@ supportedHardwareOperations:
   - INT8
 supportedCUDAComputeCapability: 12.0
 releaseDate: "2025-03-18"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers:
   - type: nvpn
@@ -87,7 +87,7 @@ references:
   - https://developer.nvidia.com/cuda-gpus
 
 notes:
-  - 'FP32 TFLOPS of 120.0 sourced from the official NVIDIA RTX PRO 6000 Blackwell Server Edition product page (nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/) and independently confirmed by the Lenovo ThinkSystem Product Guide (lenovopress.lenovo.com/lp2263) and the PNY datasheet (pny.com/en-eu/file library/professional/datasheet/data center cards/pny-nvidia-rtx-pro-6000-blackwell-server-edition-datasheet.pdf). This is 5 TFLOPS lower than the Workstation Edition (125 TFLOPS), consistent with the lower memory clock speed producing a lower boost clock configuration.'
+  - 'FP32 vector (CUDA core) throughput of 120.0 TFLOPS sourced from the official NVIDIA RTX PRO 6000 Blackwell Server Edition product page (nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/) and independently confirmed by the Lenovo ThinkSystem Product Guide (lenovopress.lenovo.com/lp2263) and the PNY datasheet (pny.com/en-eu/file library/professional/datasheet/data center cards/pny-nvidia-rtx-pro-6000-blackwell-server-edition-datasheet.pdf). This is 5 TFLOPS lower than the Workstation Edition (125 TFLOPS), consistent with the lower memory clock speed producing a lower boost clock configuration.'
   - 'AI performance of 4 PFLOPS (FP4 sparse) sourced from the official NVIDIA product page and confirmed by the Lenovo ThinkSystem Product Guide. The NVIDIA product page also lists: FP8 = 2 PFLOPS, FP16/BF16 = 1 PFLOP, TF32 = 234 TFLOPS. Per the user-brief policy: "AI TOPS" on Blackwell product pages = FP4 sparse.'
   - 'int8TOPS of 1000.0 represents non-sparse (dense) INT8 performance, derived from FP4 sparse TOPS: 4,000 (FP4 sparse) / 4 = 1,000 TOPS. Derivation chain: FP4 sparse = 2x INT8 sparse = 4x INT8 dense, per Blackwell 5th-generation tensor core architecture. Dense value used for consistent cross-vendor comparison.'
   - 'fp16TFLOPS of 1000.0 is the FP16 sparse Tensor Core value, derived from the official NVIDIA product page figure (FP16/BF16 = 1 PFLOP = 1,000 TFLOPS with sparsity). This is the FP16 Tensor sparse throughput used as fp16TFLOPS per project policy. Dense FP16 Tensor = 500 TFLOPS.'
@@ -103,4 +103,5 @@ notes:
   - 'Estimated MSRP of $13,825 USD based on CDW list price for NVRTXPRO6000TCGPU-KIT ($13,824.99 per CDW product page 8426124). NVIDIA does not publish an official MSRP for data center or professional server GPUs. The CDW list price is the primary commercial channel price in the US for the distribution/kit variant. Note: Lenovo ThinkSystem (4X67B09287) and HPE (S6A73C) OEM versions do not publish list prices publicly and are quoted on request. UK pricing via servero.co.uk for TCSRTX6000PROSE-PB is £6,236.58 ex-VAT, which at mid-2025 exchange rates would be approximately $8,000-9,000 USD, suggesting the CDW kit price includes distribution margin. Single-source CDW pricing is used pending additional US market sources.'
   - 'fp8TFLOPS of 1000 represents non-sparse (dense) FP8 performance, derived from the already-cited FP8 sparse figure of 2 PFLOPS = 2000 TFLOPS (per the official NVIDIA product page) ÷ 2. With 2:4 structured sparsity, FP8 performance is 2000 TFLOPS. Dense value used for consistent cross-vendor comparison.'
   - 'fp4TFLOPS of 2000 represents non-sparse (dense) FP4 performance, derived from the already-cited AI performance figure of 4 PFLOPS = 4000 TFLOPS (FP4 sparse, per the official NVIDIA product page) ÷ 2. Dense value used for consistent cross-vendor comparison.'
-  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 120.0 TFLOPS fp32TFLOPS figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). Although this SKU''s category is "datacenter," it is a professional/workstation-derived GB202 server card, not a B100/B200-class datacenter Blackwell GPU, so per gpu-researcher.md''s explicit guidance no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'supportedHardwareOperations: FP32 and INT4 removed per the locked GEMM-only definition (2026-09) — the 120.0 TFLOPS FP32 vector figure is plain CUDA-core (non-tensor) throughput, and neither consumer nor datacenter Blackwell documentation lists INT4 Tensor Core support (dropped starting with Blackwell per gpu-researcher.md''s canonical Blackwell table). Although this SKU''s category is "datacenter," it is a professional/workstation-derived GB202 server card, not a B100/B200-class datacenter Blackwell GPU, so per gpu-researcher.md''s explicit guidance no FP64 is added. The array now matches the canonical consumer/professional Blackwell baseline of FP4, FP8, FP16, BF16, TF32, INT8.'
+  - 'fp32TFLOPS of 234 is TF32 Tensor Core throughput without sparsity, per NVIDIA''s RTX PRO 6000 Blackwell Server Edition page (nvidia.com/en-us/data-center/rtx-pro-6000-blackwell-server-edition/), which lists TF32 as 234 TFLOPS. FP32 vector (CUDA core) throughput is 120 TFLOPS.'

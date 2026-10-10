@@ -8,13 +8,16 @@ The private `gpu-poet-data` repo at `../gpu-poet-data/` contains agents and skil
 
 ## Data Sync from gpu-poet-data
 
-GPU specs, model specs, and benchmark data are authored in the private `gpu-poet-data` repo and synced here for deployment. The data files under `data/` in this repo should NOT be edited directly — they are overwritten by the sync script.
+GPU specs, model specs, and benchmark data are authored in the private `gpu-poet-data` repo. Its `sync-to-gpu-poet.yaml` workflow rsyncs `data/benchmark-data`, `data/gpu-data` and `data/model-data` into this repo's `main` daily at 06:00 UTC, and the push triggers `build.yaml`, which builds and deploys the site. The rsync uses `--delete`, so edits to those directories here are overwritten.
 
-**To deploy data changes:**
-1. Make and commit changes in `gpu-poet-data`
-2. Run `gpu-poet-data/scripts/copy-to-gpu-poet.sh` to sync files to this repo's `data/` directory
-3. Commit and push the synced files here — the push triggers GitHub Actions (`build.yaml`) which builds and deploys the site
-4. Verify the build completes: `gh run list --repo activescott/gpu-poet --limit 3`
+Agents never copy or commit those data files here, and never open a gpu-poet PR for a data fix. Fix the data in `gpu-poet-data`, merge it there, and the next sync ships it. To ship a merged fix sooner:
+
+```bash
+gh workflow run sync-to-gpu-poet.yaml --repo activescott/gpu-poet-data
+gh run list --repo activescott/gpu-poet --limit 3
+```
+
+`data/metric-definitions/` is not covered by the workflow. For changes there, run `gpu-poet-data/scripts/copy-to-gpu-poet.sh`, then commit and push the synced files here.
 
 ## Important Instructions
 

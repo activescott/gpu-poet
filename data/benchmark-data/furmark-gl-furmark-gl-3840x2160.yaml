@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 55384
-updatedAt: 2026-10-08T10:39:37.345Z
+collectedSamples: 55801
+updatedAt: 2026-10-10T10:02:50.331Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -32,7 +32,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.4-ogc3.1.fc44.x86_64)
     value: 34
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-1.212-cachyos-bc250)
-    value: 35
+    value: 39
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       7.2.4-valve1-1-neptune-72-g5ab4af5e2eb9)
     value: 34
@@ -122,10 +122,13 @@ results:
     value: 105
   - gpuNameRaw: AMD Radeon RX 7600
     value: 50
+  - gpuNameRaw: AMD Radeon RX 7600 (radeonsi navi33 ACO DRM 3.65
+      6.18.50-valve2-1-neptune-618-gc7289a96b14d)
+    value: 43
   - gpuNameRaw: AMD Radeon RX 7600 XT
     value: 52
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 42
+    value: 40
   - gpuNameRaw: AMD Radeon RX 7650 GRE
     value: 46
   - gpuNameRaw: AMD Radeon RX 7700 XT
@@ -135,6 +138,8 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 ACO DRM 3.64
       6.18.42-valve2-1-neptune-618-gaf6356cf2488)
     value: 85
+  - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 ACO DRM 3.64 7.2.9-x64v3-xanmod1)
+    value: 91
   - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 LLVM 21.1.6 DRM 3.64
       6.18.9-2-cachyos)
     value: 78
@@ -144,7 +149,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800M
     value: 51
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 104
+    value: 105
   - gpuNameRaw: AMD Radeon RX 7900 XT
     value: 110
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -152,7 +157,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.19.10-1-cachyos)
     value: 129
   - gpuNameRaw: AMD Radeon RX 9060 XT
-    value: 65
+    value: 66
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64
       6.16.12-valve24.5-1-neptune-616-gb2f7cfe85e45)
     value: 63
@@ -485,7 +490,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
     value: 70
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti/PCIe/SSE2
-    value: 91
+    value: 90
   - gpuNameRaw: NVIDIA GeForce RTX 3090/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU/PCIe/SSE2
@@ -563,7 +568,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 3500 Ada Generation Laptop GPU/PCIe/SSE2
     value: 67
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 64
+    value: 66
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation/PCIe/SSE2
     value: 58
   - gpuNameRaw: NVIDIA RTX 4500 Ada Generation/PCIe/SSE2
@@ -677,7 +682,7 @@ results:
   - gpuNameRaw: Quadro T1000 with Max-Q Design/PCIe/SSE2
     value: 12
   - gpuNameRaw: Quadro T1000/PCIe/SSE2
-    value: 13
+    value: 12
   - gpuNameRaw: Quadro T2000 with Max-Q Design/PCIe/SSE2
     value: 11
   - gpuNameRaw: Quadro T2000/PCIe/SSE2

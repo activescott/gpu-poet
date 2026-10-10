@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 23091
-updatedAt: 2026-10-08T11:00:07.515Z
+collectedSamples: 23285
+updatedAt: 2026-10-10T10:41:28.319Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -30,7 +30,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 46
   - gpuNameRaw: AMD Radeon (TM) R9 390 Series
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon (TM) RX 480
     value: 55
   - gpuNameRaw: AMD Radeon 680M (RADV REMBRANDT)
@@ -42,7 +42,7 @@ results:
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 28
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
-    value: 26
+    value: 27
   - gpuNameRaw: AMD Radeon AI PRO R9700
     value: 324
   - gpuNameRaw: AMD Radeon Graphics
@@ -126,7 +126,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 580 Series (RADV POLARIS10)
     value: 60
   - gpuNameRaw: AMD Radeon RX 590 Series (RADV POLARIS10)
-    value: 62
+    value: 61
   - gpuNameRaw: AMD Radeon RX 6400
     value: 49
   - gpuNameRaw: AMD Radeon RX 6400 (RADV NAVI24)
@@ -134,7 +134,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500 XT
     value: 82
   - gpuNameRaw: AMD Radeon RX 6500 XT (RADV NAVI24)
-    value: 73
+    value: 72
   - gpuNameRaw: AMD Radeon RX 6600
     value: 98
   - gpuNameRaw: AMD Radeon RX 6600 (RADV NAVI23)
@@ -148,7 +148,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600M (RADV NAVI23)
     value: 96
   - gpuNameRaw: AMD Radeon RX 6650 XT
-    value: 131
+    value: 132
   - gpuNameRaw: AMD Radeon RX 6650 XT (RADV NAVI23)
     value: 129
   - gpuNameRaw: AMD Radeon RX 6650M (RADV NAVI23)
@@ -226,7 +226,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX
     value: 344
   - gpuNameRaw: AMD Radeon RX 7900 XTX (RADV NAVI31)
-    value: 417
+    value: 413
   - gpuNameRaw: AMD Radeon RX 9060
     value: 171
   - gpuNameRaw: AMD Radeon RX 9060 (RADV GFX1200)
@@ -241,6 +241,8 @@ results:
     value: 294
   - gpuNameRaw: AMD Radeon RX 9070 GRE
     value: 246
+  - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
+    value: 245
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 339
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
@@ -265,6 +267,8 @@ results:
     value: 26
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
     value: 137
+  - gpuNameRaw: AMD Radeon(TM) 840M Graphics
+    value: 21
   - gpuNameRaw: AMD Radeon(TM) 880M Graphics
     value: 36
   - gpuNameRaw: AMD Radeon(TM) 890M Graphics
@@ -400,7 +404,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060 5GB
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB
-    value: 62
+    value: 63
   - gpuNameRaw: NVIDIA GeForce GTX 1070
     value: 84
   - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti
@@ -486,7 +490,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti
     value: 194
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU
-    value: 100
+    value: 103
   - gpuNameRaw: NVIDIA GeForce RTX 3080
     value: 139
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
@@ -508,7 +512,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 177
   - gpuNameRaw: NVIDIA GeForce RTX 4070
-    value: 209
+    value: 210
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
@@ -587,6 +591,8 @@ results:
     value: 105
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition
     value: 569
+  - gpuNameRaw: NVIDIA T1000 8GB
+    value: 35
   - gpuNameRaw: NVIDIA T1200 Laptop GPU
     value: 38
   - gpuNameRaw: NVIDIA TITAN RTX
@@ -596,7 +602,7 @@ results:
   - gpuNameRaw: Quadro RTX 3000
     value: 57
   - gpuNameRaw: Quadro RTX 4000
-    value: 84
+    value: 87
   - gpuNameRaw: Quadro RTX 4000 with Max-Q Design
     value: 76
   - gpuNameRaw: Quadro RTX 5000
@@ -633,6 +639,8 @@ results:
     value: 27
   - gpuNameRaw: Radeon RX 560 XT
     value: 53
+  - gpuNameRaw: Radeon RX 560X
+    value: 25
   - gpuNameRaw: Radeon RX 560X Series
     value: 25
   - gpuNameRaw: Radeon RX 570 Series

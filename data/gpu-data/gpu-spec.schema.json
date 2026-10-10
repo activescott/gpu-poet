@@ -45,32 +45,32 @@
     },
     "tensorCoreCount": {
       "type": ["number", "null"],
-      "description": "Number of tensor cores or AI accelerators (null if not applicable)",
+      "description": "Number of matrix units: NVIDIA Tensor Cores, AMD AI Accelerators (RDNA 3 and later) or Matrix Cores (CDNA), Intel XMX engines. Null or omitted where the part has no matrix unit (NVIDIA Pascal and older, GTX 16-series, AMD RDNA 2 and GCN).",
       "minimum": 0
     },
     "fp32TFLOPS": {
       "type": "number",
-      "description": "32-bit floating-point performance in TFLOPS",
+      "description": "FP32-class throughput a training or inference workload gets, in TFLOPS. Where the part has a hardware TF32 matrix path, this is TF32 Tensor Core (NVIDIA Ampere and later) or TF32 Matrix (AMD CDNA 3) throughput without sparsity. Otherwise it is FP32 vector throughput (CUDA cores, stream processors, Xe vector engines), as on NVIDIA Volta and older, AMD RDNA and GCN, Intel Xe2, and AMD CDNA 4, whose TF32 is software-emulated. NVIDIA GeForce runs dense TF32 at the FP32 vector rate; professional and datacenter Ampere, Ada and Blackwell run it at 2x, except the L40, which runs it at 1x (90.5 TF32 and 90.5 FP32 vector per its datasheet); A100/A30 and Hopper run it at 7x to 8x. Where a professional part publishes no dense TF32 figure, derive it as the published sparse FP16, FP8 or FP4 Tensor figure divided by 4 (Ampere), 8 (Ada) or 16 (Blackwell), and say so in the notes. Never the sparse TF32 figure. The notes must give the other figure (FP32 vector, or TF32 dense) and its source; scripts/validate-specs.ts checks the other metrics' ratios to this one per architecture.",
       "minimum": 0
     },
     "fp16TFLOPS": {
       "type": "number",
-      "description": "16-bit floating-point performance in TFLOPS",
+      "description": "FP16 throughput on the highest-rate path the hardware has, in TFLOPS. NVIDIA Volta and later: FP16 Tensor Core with 2:4 structured sparsity, as NVIDIA publishes it (for GeForce, the FP16-accumulate figure; for consumer Blackwell, which publishes only AI TOPS, AI TOPS / 4); Volta and Turing have no sparsity, so their dense figure. NVIDIA Pascal and older: FP16 vector (P100 is 2x FP32). AMD RDNA 3 and RDNA 4: FP16 Matrix (WMMA) without sparsity, as AMD publishes it, never the FP16 Vector figure. AMD RDNA 2 and GCN: packed FP16 vector (2x FP32 where Rapid Packed Math exists, otherwise 1x). Intel Arc: FP16 XMX as Intel publishes it. NVIDIA sparse versus AMD RDNA dense is a deliberate asymmetry (2026-06-03): each vendor's headline figure is kept, and RDNA 3 has no hardware sparsity. Use int8TOPS for a like-for-like comparison.",
       "minimum": 0
     },
     "int8TOPS": {
       "type": ["number", "null"],
-      "description": "8-bit integer non-sparse (dense) performance in TOPS. For GPUs with 2:4 structured sparsity (e.g. NVIDIA Ampere+), use the dense value without sparsity for fair cross-vendor comparison. Sparse performance is typically 2x dense. Null if not applicable.",
+      "description": "INT8 throughput on the highest-rate path the hardware has (Tensor Core, Matrix Core, WMMA, XMX; the DP4A ALU instruction on Volta), without sparsity, in TOPS, for every vendor. NVIDIA Ampere and later publish the 2:4 sparse figure as the headline; store half of it. NVIDIA Volta and Turing, AMD and Intel publish dense figures. Null if the part has no INT8 rate.",
       "minimum": 0
     },
     "fp8TFLOPS": {
       "type": ["number", "null"],
-      "description": "8-bit floating-point non-sparse (dense) matrix/tensor performance in TFLOPS, unconditionally dense for both NVIDIA and AMD. For GPUs with 2:4 structured sparsity, use the dense value without sparsity for fair cross-vendor comparison. Sparse performance is typically 2x dense. Null if not applicable.",
+      "description": "FP8 matrix/tensor throughput without sparsity, in TFLOPS, for every vendor (no NVIDIA/AMD asymmetry here). Where only the sparse figure is published, store half of it. Null where the hardware has no FP8 matrix path (NVIDIA Ampere and older, AMD RDNA 3 and older, Intel Xe2), or where no source was found, in which case list it in unverifiedSpecs.",
       "minimum": 0
     },
     "fp4TFLOPS": {
       "type": ["number", "null"],
-      "description": "4-bit floating-point non-sparse (dense) matrix/tensor performance in TFLOPS, unconditionally dense for both NVIDIA and AMD. NVIDIA consumer Blackwell product pages publish only sparse 'AI TOPS' figures; derive the dense value as AI TOPS ÷ 2. Null if not applicable.",
+      "description": "FP4 matrix/tensor throughput without sparsity, in TFLOPS, for every vendor. NVIDIA consumer Blackwell publishes only sparse AI TOPS; store AI TOPS / 2. AMD CDNA 4 publishes a single MXFP4 rate, stored as dense. Null where the hardware has no FP4 path (everything before NVIDIA Blackwell and AMD CDNA 4), or where no source was found, in which case list it in unverifiedSpecs.",
       "minimum": 0
     },
     "memoryCapacityGB": {
@@ -80,12 +80,12 @@
     },
     "memoryBandwidthGBs": {
       "type": "number",
-      "description": "Memory bandwidth in GB/s",
+      "description": "Peak memory bandwidth in GB/s (decimal gigabytes per second) as the manufacturer publishes it for the card's VRAM. Excludes cache bandwidth and AMD's Infinity Cache 'effective bandwidth'. For multi-die parts, the total for the package.",
       "minimum": 0
     },
     "maxTDPWatts": {
       "type": "number",
-      "description": "Maximum thermal design power in watts",
+      "description": "Maximum board power in watts as the manufacturer publishes it: NVIDIA's Total Graphics Power or Max Power Consumption, AMD's Total Board Power, Intel's Total Board Power. For a configurable part, the highest configuration the manufacturer lists.",
       "minimum": 0
     },
     "gpuArchitecture": {

@@ -10,7 +10,7 @@ fp4TFLOPS: 703
 maxTDPWatts: 300
 memoryBandwidthGBs: 896
 tensorCoreCount: 280
-fp32TFLOPS: 87.9
+fp32TFLOPS: 43.9
 fp16TFLOPS: 351.5
 
 gpuArchitecture: blackwell
@@ -25,7 +25,7 @@ unverifiedSpecs:
   - fp8TFLOPS
 supportedCUDAComputeCapability: 12.8
 releaseDate: "2025-02-20"
-lastModified: "2026-09-02T00:00:00Z"
+lastModified: "2026-10-09T00:00:00Z"
 
 manufacturerIdentifiers: []
 
@@ -209,7 +209,7 @@ notes:
   - Blackwell GB203-300 is the GPU variant with 70 SMs enabled (vs 84 SMs in GB203-400 for RTX 5080)
   - 'fp16TFLOPS of 351.5 represents Peak FP16 Tensor TFLOPS with FP16 Accumulate using 2:4 structured sparsity, per NVIDIA Blackwell architecture whitepaper. Without sparsity the value is 175.8 TFLOPS. Sparse value is used to match NVIDIA''s published specifications.'
   - 'int8TOPS of 351.5 represents non-sparse (dense) INT8 performance per NVIDIA Blackwell architecture whitepaper. With 2:4 structured sparsity, INT8 performance is 703 TOPS. Dense value used for consistent cross-vendor comparison.'
-  - 'fp32TFLOPS of 87.9 is "Peak TF32 Tensor TFLOPS" with sparsity per NVIDIA Blackwell architecture whitepaper. Without sparsity the value is 43.9 TFLOPS. Non-tensor FP32 CUDA core performance is also 43.9 TFLOPS.'
+  - 'fp32TFLOPS of 43.9 is TF32 Tensor Core throughput without sparsity. Table 5 of NVIDIA''s RTX Blackwell whitepaper lists the RTX 5070 Ti TF32 as 43.9 dense and 87.9 with sparsity (https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf). It equals FP32 vector (CUDA core) throughput: on GeForce Ampere, Ada and Blackwell, dense TF32 runs at the FP32 vector rate.'
   - 'tensorCoreCount of 280 (5th-generation Tensor Cores) confirmed from NVIDIA Blackwell whitepaper and IGN review. RTX 5070 Ti has 70 SMs × 4 Tensor Cores per SM = 280 Tensor Cores.'
   - 'maxTDPWatts changed from 360W to 300W based on NVIDIA Blackwell whitepaper (TGP = 300W). The 360W figure in earlier sources may have been an error or confusion with RTX 5080''s 360W TDP.'
   - 'memoryBandwidthGBs of 896 per NVIDIA Blackwell whitepaper (16 GB GDDR7, 256-bit interface, 28 Gbps effective).'
