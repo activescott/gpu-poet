@@ -118,6 +118,106 @@ it("should filter out box-only items", async () => {
   expect(filtered).toHaveLength(1)
 })
 
+it("should filter out box-only listings that end with a bare 'box' (gpu-poet#91)", async () => {
+  const gpu = await loadGpuFromYaml("amd-radeon-rx-7800-xt.yaml")
+
+  const listings: AsyncIterable<Listing> = arrayToAsyncIterable([
+    // INVALID: reported in #91 as "RTX 5060 Ti ... White BOX" - no "only", just a color + bare "box"
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 White BOX",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // INVALID: same pattern, different color, lowercase
+    {
+      title: "amd radeon rx 7800 xt 16gb black box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // VALID: real card, "new in box" describes condition, not the listing's contents
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 New In Box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // VALID: real card, "open box" is a standard eBay condition
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 Open Box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // VALID: real card, box is something it comes with
+    {
+      title: "AMD Radeon RX 7800 XT 16GB GDDR6 with Original Box",
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+    },
+    // HACK cast for test purposes
+  ] as unknown as Listing[])
+
+  const filtered = await chainAsync(listings)
+    .filter(createFilterForGpu(gpu))
+    .collect()
+
+  expect(filtered.map((l) => l.title)).toEqual([
+    "AMD Radeon RX 7800 XT 16GB GDDR6 New In Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Open Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 with Original Box",
+  ])
+})
+
+it("should not filter out real listings whose packaging phrasing wasn't in the first pass (gpu-poet#92)", async () => {
+  const gpu = await loadGpuFromYaml("amd-radeon-rx-7800-xt.yaml")
+
+  const validTitles = [
+    // VALID: hyphenated "Open-Box"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 New Open-Box",
+    // VALID: preposition with an adjective between it and "box"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 in Retail Box",
+    // VALID: "w/" abbreviation for "with"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 w/ Original Box",
+    // VALID: "w/" with no space before "Box"
+    "AMD Radeon RX 7800 XT 16GB GDDR6 w/Box",
+    // VALID: packaging descriptor with no preposition at all
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Factory Sealed Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Retail Box",
+    // VALID: "Xbox" ends in the letters "box" but isn't a box mention at all
+    "AMD Radeon RX 7800 XT 16GB GDDR6 bundled with Xbox",
+    // VALID: negation - card ships without its box, re-review of gpu-poet#92
+    "AMD Radeon RX 7800 XT 16GB GDDR6 No Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Without Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 w/o Box",
+    // VALID: condition/packaging descriptor in front of "box" that isn't on the packaging-descriptor list
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Brand New Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Full Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Original Packaging Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Retail Packaging Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Original Accessories Box",
+    "AMD Radeon RX 7800 XT 16GB GDDR6 Used, Tested, Box",
+  ]
+
+  const listings: AsyncIterable<Listing> = arrayToAsyncIterable(
+    validTitles.map((title) => ({
+      title,
+      itemAffiliateWebUrl: "https://example.com",
+      buyingOptions: ["FIXED_PRICE"],
+      sellerFeedbackPercentage: "100",
+      // HACK cast for test purposes
+    })) as unknown as Listing[],
+  )
+
+  const filtered = await chainAsync(listings)
+    .filter(createFilterForGpu(gpu))
+    .collect()
+
+  expect(filtered.map((l) => l.title)).toEqual(validTitles)
+})
+
 it("should reject listings where GPU name only matches inside a part number", async () => {
   const gpu = await loadGpuFromYaml("nvidia-t4.yaml")
 

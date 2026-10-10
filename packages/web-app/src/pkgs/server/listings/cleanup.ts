@@ -10,7 +10,11 @@ import {
   withRetry,
   shouldRetryPrismaTransaction,
 } from "@/pkgs/isomorphic/retry"
-import { createFilterForGpu, sellerFeedbackFilter } from "../listingFilters"
+import {
+  createFilterForGpu,
+  isBoxOnlyTitle,
+  sellerFeedbackFilter,
+} from "../listingFilters"
 import { EXCLUDE_REASONS, ExcludeReason } from "@/pkgs/isomorphic/model"
 
 const log = createLogger("shop:cleanup")
@@ -184,8 +188,7 @@ function detectExcludeReason(listing: CachedListing): ExcludeReason {
   }
 
   // Check for box-only listings
-  const boxOnlyKeywords = ["box only", "empty box", "block only", "card only"]
-  if (boxOnlyKeywords.some((kw) => titleLower.includes(kw))) {
+  if (isBoxOnlyTitle(listing.title)) {
     return EXCLUDE_REASONS.BOX_ONLY
   }
 
