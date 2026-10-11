@@ -34,11 +34,11 @@ summary: The NVIDIA H100 PCIe 80GB is a professional graphics card designed
   learning operations. The Hopper architecture, as seen in the H100 and H200
   GPUs, introduces several technological innovations aimed at enhancing
   performance in AI training and inference. These GPUs are distinguished by
-  their massive transistor count and advanced memory technologies, like HBM3 and
-  HBM2e, supporting up to 80 GB of memory. The H100 supports HBM2e memory, while
-  the H200 supports the faster HBM3 memory system, which can deliver up to 3
+  their massive transistor count and advanced memory technologies, like HBM3e
+  and HBM2e, supporting up to 80 GB of memory. The H100 supports HBM2e memory, while
+  the H200 supports the faster HBM3e memory system, which can deliver up to 3
   TB/s, a significant increase over the previous generation's capabilities. A
-  common nvidia part number for this card is 900-21010-000-000.
+  common nvidia part number for this card is 900-21010-0000-000.
 
 manufacturerIdentifiers:
   - type: nvpn
