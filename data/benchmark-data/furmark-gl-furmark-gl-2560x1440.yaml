@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 219899
-updatedAt: 2026-10-12T11:58:20.014Z
+collectedSamples: 220879
+updatedAt: 2026-10-13T11:56:58.207Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -79,7 +79,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
     value: 53
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-ogc5.1.fc44.x86_64)
-    value: 60
+    value: 62
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 70
@@ -232,7 +232,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
     value: 95
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
-    value: 113
+    value: 112
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 125
   - gpuNameRaw: AMD Radeon RX 6750 XT (radeonsi navi22 ACO DRM 3.64
@@ -377,6 +377,9 @@ results:
     value: 140
   - gpuNameRaw: AMD Radeon RX 9070
     value: 195
+  - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64
+      6.16.12-valve24.5-1-neptune-616-gb2f7cfe85e45)
+    value: 209
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.0-28-generic)
     value: 190
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12)
@@ -411,6 +414,8 @@ results:
     value: 232
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.0-31-generic)
     value: 241
+  - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.0-38-generic)
+    value: 232
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.10-2-cachyos)
     value: 278
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
@@ -503,7 +508,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6650M
     value: 63
   - gpuNameRaw: AMD Radeon(TM) RX 6650M XT
-    value: 78
+    value: 80
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
     value: 8
   - gpuNameRaw: AMD Radeon(TM) Vega 8 Graphics
@@ -652,7 +657,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics
     value: 6
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
-    value: 11
+    value: 12
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
     value: 8
   - gpuNameRaw: Intel(R) UHD Graphics
@@ -786,9 +791,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2
     value: 43
   - gpuNameRaw: NVIDIA GeForce RTX 2060/PCIe/SSE2
-    value: 72
+    value: 71
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
-    value: 59
+    value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
     value: 98
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
@@ -800,7 +805,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super/PCIe/SSE2
     value: 87
   - gpuNameRaw: NVIDIA GeForce RTX 2080 SUPER/PCIe/SSE2
-    value: 106
+    value: 107
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Ti/PCIe/SSE2
     value: 120
   - gpuNameRaw: NVIDIA GeForce RTX 2080 with Max-Q Design/PCIe/SSE2
@@ -834,7 +839,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070/PCIe/SSE2
     value: 112
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
-    value: 80
+    value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
     value: 82
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
@@ -990,7 +995,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2
     value: 460
   - gpuNameRaw: NVIDIA RTX Spark N1X (6144-core Blackwell RTX GPU)/PCIe
-    value: 75
+    value: 80
   - gpuNameRaw: NVIDIA T1000 8GB/PCIe/SSE2
     value: 26
   - gpuNameRaw: NVIDIA T1000/PCIe/SSE2
@@ -1058,7 +1063,7 @@ results:
   - gpuNameRaw: Radeon 5
     value: 14
   - gpuNameRaw: Radeon 7
-    value: 17
+    value: 16
   - gpuNameRaw: Radeon Instinct MI60
     value: 97
   - gpuNameRaw: Radeon Pro 555
