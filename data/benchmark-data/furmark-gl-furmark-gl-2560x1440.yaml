@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 220879
-updatedAt: 2026-10-13T11:56:58.207Z
+collectedSamples: 221807
+updatedAt: 2026-10-14T09:59:07.521Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -113,7 +113,7 @@ results:
   - gpuNameRaw: AMD Radeon 740M Graphics
     value: 11
   - gpuNameRaw: AMD Radeon 760M Graphics
-    value: 13
+    value: 11
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 17
   - gpuNameRaw: AMD Radeon AI PRO R9700
@@ -191,10 +191,12 @@ results:
     value: 25
   - gpuNameRaw: AMD Radeon RX 6500 XT
     value: 52
+  - gpuNameRaw: AMD Radeon RX 6500M
+    value: 26
   - gpuNameRaw: AMD Radeon RX 6500XT
     value: 42
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 62
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 7.0.10-201.fc44.x86_64)
@@ -349,7 +351,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9060
     value: 115
   - gpuNameRaw: AMD Radeon RX 9060 XT
-    value: 134
+    value: 133
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64
       6.17.7-ba29.fc43.x86_64)
     value: 129
@@ -566,6 +568,8 @@ results:
     value: 28
   - gpuNameRaw: GeForce GTX 780 Ti/PCIe/SSE2
     value: 41
+  - gpuNameRaw: GeForce GTX 780/PCIe/SSE2
+    value: 34
   - gpuNameRaw: GeForce GTX 960/PCIe/SSE2
     value: 24
   - gpuNameRaw: GeForce GTX 970/PCIe/SSE2
@@ -791,7 +795,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2
     value: 43
   - gpuNameRaw: NVIDIA GeForce RTX 2060/PCIe/SSE2
-    value: 71
+    value: 72
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
     value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
@@ -799,7 +803,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: NVIDIA GeForce RTX 2070/PCIe/SSE2
-    value: 81
+    value: 82
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super with Max-Q Design/PCIe/SSE2
     value: 70
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super/PCIe/SSE2
@@ -905,11 +909,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
     value: 390
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
-    value: 392
+    value: 393
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
     value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
-    value: 395
+    value: 396
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
     value: 121
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
