@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=./news-article.schema.json
+id: gpu1015oct2026rtx
+slug: rtx-spark-windows-laptops
+title: "NVIDIA RTX Spark (N1X) Launches in Windows-on-Arm Laptops"
+content: |
+  Nvidia's RTX Spark (N1X) superchip is now shipping in Windows-on-Arm laptops, led by Microsoft's [Surface Laptop Ultra](https://www.notebookcheck.net/Microsoft-Surface-Laptop-Ultra-debuts-with-RTX-Spark-128-GB-unified-memory-and-2-599-starting-price.1418420.0.html), a 15-inch model starting at $2,599.
+
+  N1X pairs an Arm CPU with a Blackwell GPU over a shared pool of memory, the same lineage as the desktop DGX Spark. The flagship configuration, per [PCMag's spec breakdown](https://www.pcmag.com/news/nvidia-rtx-spark-everything-you-need-to-know-before-our-first-tests), has 6,144 CUDA cores; a step-down chip drops to 5,120. Unified memory ranges from 16GB to 128GB depending on configuration, shared over a bus rated at up to 300 GB/s, and NVIDIA puts peak FP4 compute at 1 petaflop.
+
+  [Tom's Hardware's review](https://www.tomshardware.com/laptops/we-test-the-rtx-spark-superchip-in-microsofts-surface-laptop-ultra-nvidias-windows-on-arm-platform-impresses-in-local-ai-but-gaming-isnt-its-strong-suit), published ahead of the October 16 on-sale date, lands on a clear tradeoff: strong local AI performance, gaming isn't the strength. [HotHardware's review](https://hothardware.com/reviews/nvidia-rtx-spark-platform-review) is also out now as a second take.
+
+  I'm not adding a row for RTX Spark laptops to GPU Poet's tables, since the chip only ships inside a laptop with no standalone card price. If you want to read more about unified-memory systems like this one, I cover them in the [AI Workstations guide](/gpu/learn/ai/use-case/gpu-cpu-combos).
+
+  Chips like this that combine a CPU and GPU on one package are a different animal from the discrete cards GPU Poet usually tracks, and I'm not sure yet how much readers want to see them covered here. If you'd like GPU Poet to track more of these APU/GPU+CPU combos, let me know on the [contact page](/contact).
+status: PUBLISHED
+tags:
+  - nvidia
+  - ai
+  - laptops
+authorFullName: "Scott Willeke"
+createdAt: "2026-10-15T23:00:00Z"
+updatedAt: "2026-10-16T12:00:00Z"
+publishedAt: "2026-10-15T23:00:00Z"
