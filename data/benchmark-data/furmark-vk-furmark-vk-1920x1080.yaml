@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 23746
-updatedAt: 2026-10-15T09:38:54.924Z
+collectedSamples: 23866
+updatedAt: 2026-10-16T10:13:34.644Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 222
@@ -106,7 +106,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 5600 OEM
     value: 88
   - gpuNameRaw: AMD Radeon RX 5600 XT
-    value: 99
+    value: 98
   - gpuNameRaw: AMD Radeon RX 5600 XT (RADV NAVI10)
     value: 99
   - gpuNameRaw: AMD Radeon RX 570 Series (RADV POLARIS10)
@@ -150,7 +150,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600M (RADV NAVI23)
     value: 96
   - gpuNameRaw: AMD Radeon RX 6650 XT
-    value: 132
+    value: 131
   - gpuNameRaw: AMD Radeon RX 6650 XT (RADV NAVI23)
     value: 129
   - gpuNameRaw: AMD Radeon RX 6650M (RADV NAVI23)
@@ -162,7 +162,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 154
   - gpuNameRaw: AMD Radeon RX 6700 XT (RADV NAVI22)
-    value: 164
+    value: 165
   - gpuNameRaw: AMD Radeon RX 6700M
     value: 100
   - gpuNameRaw: AMD Radeon RX 6700S
@@ -170,7 +170,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
     value: 139
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
-    value: 147
+    value: 148
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 161
   - gpuNameRaw: AMD Radeon RX 6750 XT (RADV NAVI22)
@@ -200,7 +200,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600 XT
     value: 140
   - gpuNameRaw: AMD Radeon RX 7600 XT (RADV NAVI33)
-    value: 142
+    value: 140
   - gpuNameRaw: AMD Radeon RX 7600M XT
     value: 113
   - gpuNameRaw: AMD Radeon RX 7600M XT (RADV NAVI33)
@@ -248,7 +248,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
     value: 245
   - gpuNameRaw: AMD Radeon RX 9070 XT
-    value: 339
+    value: 338
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
     value: 353
   - gpuNameRaw: AMD Radeon RX Vega (RADV VEGA10)
@@ -258,7 +258,7 @@ results:
   - gpuNameRaw: AMD Radeon RX6500 XT
     value: 77
   - gpuNameRaw: AMD Radeon Vega 11 Graphics (RADV RAVEN)
-    value: 11
+    value: 13
   - gpuNameRaw: AMD Radeon Vega 8 Graphics (RADV RAVEN)
     value: 8
   - gpuNameRaw: AMD Radeon VII
@@ -408,7 +408,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060 5GB
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB
-    value: 63
+    value: 62
   - gpuNameRaw: NVIDIA GeForce GTX 1070
     value: 84
   - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti
@@ -437,6 +437,8 @@ results:
     value: 19
   - gpuNameRaw: NVIDIA GeForce GTX 950
     value: 25
+  - gpuNameRaw: NVIDIA GeForce GTX 950M
+    value: 12
   - gpuNameRaw: NVIDIA GeForce GTX 960
     value: 34
   - gpuNameRaw: NVIDIA GeForce GTX 980
@@ -474,7 +476,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU
     value: 32
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU
-    value: 56
+    value: 55
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Laptop GPU
     value: 59
   - gpuNameRaw: NVIDIA GeForce RTX 3050 OEM
@@ -484,7 +486,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3060
     value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU
-    value: 93
+    value: 94
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti
     value: 143
   - gpuNameRaw: NVIDIA GeForce RTX 3070
@@ -558,7 +560,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
     value: 225
   - gpuNameRaw: NVIDIA GeForce RTX 5090
-    value: 573
+    value: 572
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2
     value: 559
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
@@ -612,7 +614,7 @@ results:
   - gpuNameRaw: Quadro RTX 5000
     value: 119
   - gpuNameRaw: Quadro T1000
-    value: 38
+    value: 37
   - gpuNameRaw: Quadro T2000
     value: 38
   - gpuNameRaw: Quadro T2000 with Max-Q Design
