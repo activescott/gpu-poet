@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 57344
-updatedAt: 2026-10-16T09:50:08.635Z
+collectedSamples: 57569
+updatedAt: 2026-10-17T08:03:36.130Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -104,7 +104,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 59
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
-    value: 46
+    value: 47
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
     value: 58
   - gpuNameRaw: AMD Radeon RX 6750 XT
@@ -121,7 +121,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6900 XT (radeonsi navi21 ACO DRM 3.64 7.0.0-34-generic)
     value: 98
   - gpuNameRaw: AMD Radeon RX 6950 XT
-    value: 105
+    value: 104
   - gpuNameRaw: AMD Radeon RX 7600
     value: 49
   - gpuNameRaw: AMD Radeon RX 7600 (radeonsi navi33 ACO DRM 3.65
@@ -182,6 +182,9 @@ results:
     value: 106
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.2.6-pikaos)
     value: 114
+  - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.65
+      6.18.50-valve2-1-neptune-618-gc7289a96b14d)
+    value: 97
   - gpuNameRaw: AMD Radeon RX 9070 GRE
     value: 96
   - gpuNameRaw: AMD Radeon RX 9070 XT
@@ -345,7 +348,7 @@ results:
   - gpuNameRaw: Intel(R) Graphics
     value: 7
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
-    value: 6
+    value: 5
   - gpuNameRaw: Intel(R) UHD Graphics
     value: 4
   - gpuNameRaw: Intel(R) UHD Graphics 620
@@ -539,7 +542,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
     value: 193
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
-    value: 32
+    value: 38
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
     value: 33
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2
@@ -647,7 +650,7 @@ results:
   - gpuNameRaw: NVIDIA T600 Laptop GPU/PCIe/SSE2
     value: 10
   - gpuNameRaw: NVIDIA TITAN RTX/PCIe/SSE2
-    value: 72
+    value: 71
   - gpuNameRaw: NVIDIA TITAN V/PCIe/SSE2
     value: 63
   - gpuNameRaw: NVIDIA TITAN X (Pascal)/PCIe/SSE2

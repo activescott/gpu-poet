@@ -12,15 +12,15 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 23866
-updatedAt: 2026-10-16T10:13:34.644Z
+collectedSamples: 23983
+updatedAt: 2026-10-17T08:23:04.420Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 222
   - gpuNameRaw: AMD BC-160
     value: 71
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
-    value: 119
+    value: 120
   - gpuNameRaw: AMD Custom GPU 0405 (RADV VANGOGH)
     value: 18
   - gpuNameRaw: AMD Liverpool (PlayStation 4) (RADV LIVERPOOL)
@@ -138,7 +138,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500 XT (RADV NAVI24)
     value: 72
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 98
+    value: 99
   - gpuNameRaw: AMD Radeon RX 6600 (RADV NAVI23)
     value: 99
   - gpuNameRaw: AMD Radeon RX 6600 XT
@@ -150,7 +150,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600M (RADV NAVI23)
     value: 96
   - gpuNameRaw: AMD Radeon RX 6650 XT
-    value: 131
+    value: 132
   - gpuNameRaw: AMD Radeon RX 6650 XT (RADV NAVI23)
     value: 129
   - gpuNameRaw: AMD Radeon RX 6650M (RADV NAVI23)
@@ -204,7 +204,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M XT
     value: 113
   - gpuNameRaw: AMD Radeon RX 7600M XT (RADV NAVI33)
-    value: 124
+    value: 123
   - gpuNameRaw: AMD Radeon RX 7600S
     value: 100
   - gpuNameRaw: AMD Radeon RX 7650 GRE
@@ -232,7 +232,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX (RADV NAVI31)
     value: 413
   - gpuNameRaw: AMD Radeon RX 9060
-    value: 171
+    value: 170
   - gpuNameRaw: AMD Radeon RX 9060 (RADV GFX1200)
     value: 169
   - gpuNameRaw: AMD Radeon RX 9060 XT
@@ -370,7 +370,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics (ADL GT2)
     value: 16
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics (TGL GT2)
-    value: 11
+    value: 10
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
     value: 6
   - gpuNameRaw: Intel(R) UHD Graphics
@@ -393,6 +393,8 @@ results:
     value: 74
   - gpuNameRaw: NVIDIA CMP 40HX
     value: 105
+  - gpuNameRaw: NVIDIA CMP 50HX
+    value: 18
   - gpuNameRaw: NVIDIA GeForce 940MX
     value: 11
   - gpuNameRaw: NVIDIA GeForce GT 1030
@@ -416,7 +418,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1080
     value: 104
   - gpuNameRaw: NVIDIA GeForce GTX 1080 Ti
-    value: 136
+    value: 135
   - gpuNameRaw: NVIDIA GeForce GTX 1650
     value: 40
   - gpuNameRaw: NVIDIA GeForce GTX 1650 SUPER
@@ -498,7 +500,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU
     value: 103
   - gpuNameRaw: NVIDIA GeForce RTX 3080
-    value: 139
+    value: 140
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
     value: 102
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti
@@ -538,7 +540,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
     value: 243
   - gpuNameRaw: NVIDIA GeForce RTX 5050
-    value: 129
+    value: 130
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU
     value: 126
   - gpuNameRaw: NVIDIA GeForce RTX 5060
@@ -554,7 +556,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti
     value: 302
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
-    value: 189
+    value: 190
   - gpuNameRaw: NVIDIA GeForce RTX 5080
     value: 391
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
@@ -564,7 +566,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2
     value: 559
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
-    value: 317
+    value: 311
   - gpuNameRaw: NVIDIA P104-100
     value: 59
   - gpuNameRaw: NVIDIA P106-100
