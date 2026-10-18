@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 224780
-updatedAt: 2026-10-17T08:03:36.125Z
+collectedSamples: 225882
+updatedAt: 2026-10-18T08:07:00.126Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -80,6 +80,8 @@ results:
     value: 53
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-ogc5.1.fc44.x86_64)
     value: 62
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-ogc3.1.fc44.x86_64)
+    value: 85
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 70
@@ -196,7 +198,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500XT
     value: 42
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 62
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 7.0.10-201.fc44.x86_64)
@@ -234,7 +236,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
     value: 95
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
-    value: 113
+    value: 112
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 125
   - gpuNameRaw: AMD Radeon RX 6750 XT (radeonsi navi22 ACO DRM 3.64
@@ -313,7 +315,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64 7.2.4-3-cachyos)
     value: 185
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 211
+    value: 210
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.0.0-28-generic)
     value: 194
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.0.0-38-generic)
@@ -490,7 +492,7 @@ results:
   - gpuNameRaw: AMD Radeon RX6500 XT
     value: 53
   - gpuNameRaw: AMD Radeon VII
-    value: 103
+    value: 102
   - gpuNameRaw: AMD Radeon(TM) 780M
     value: 18
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
@@ -607,7 +609,7 @@ results:
   - gpuNameRaw: GeForce RTX 3070/PCIe/SSE2
     value: 114
   - gpuNameRaw: GeForce RTX 3080/PCIe/SSE2
-    value: 141
+    value: 140
   - gpuNameRaw: Intel(R) Arc(TM) 130T GPU (12GB)
     value: 29
   - gpuNameRaw: Intel(R) Arc(TM) 130T GPU (15GB)
@@ -713,7 +715,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GT 710/PCIe/SSE2
     value: 2
   - gpuNameRaw: NVIDIA GeForce GT 730/PCIe/SSE2
-    value: 5
+    value: 6
   - gpuNameRaw: NVIDIA GeForce GTX 1050 Ti/PCIe/SSE2
     value: 22
   - gpuNameRaw: NVIDIA GeForce GTX 1050/PCIe/SSE2
@@ -851,7 +853,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 82
+    value: 83
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 128
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -885,7 +887,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080/PCIe/SSE2
     value: 260
   - gpuNameRaw: NVIDIA GeForce RTX 4090 D/PCIe/SSE2
-    value: 306
+    value: 305
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
     value: 184
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
@@ -1004,6 +1006,8 @@ results:
     value: 47
   - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 164
+  - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell/PCIe/SSE2
+    value: 307
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2
     value: 318
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2
@@ -1077,7 +1081,7 @@ results:
   - gpuNameRaw: Radeon 5
     value: 14
   - gpuNameRaw: Radeon 7
-    value: 16
+    value: 17
   - gpuNameRaw: Radeon Instinct MI60
     value: 97
   - gpuNameRaw: Radeon Pro 555

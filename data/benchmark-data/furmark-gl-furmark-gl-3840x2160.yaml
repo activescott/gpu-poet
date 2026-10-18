@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 57569
-updatedAt: 2026-10-17T08:03:36.130Z
+collectedSamples: 57840
+updatedAt: 2026-10-18T08:07:00.133Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -272,7 +272,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) Graphics
     value: 4
   - gpuNameRaw: AMD Radeon(TM) RX 6400
-    value: 14
+    value: 13
   - gpuNameRaw: AMD Radeon(TM) RX 6850M XT
     value: 51
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
@@ -348,7 +348,7 @@ results:
   - gpuNameRaw: Intel(R) Graphics
     value: 7
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
-    value: 5
+    value: 6
   - gpuNameRaw: Intel(R) UHD Graphics
     value: 4
   - gpuNameRaw: Intel(R) UHD Graphics 620
@@ -408,7 +408,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2
     value: 14
   - gpuNameRaw: NVIDIA GeForce GTX 1650 with Max-Q Design/PCIe/SSE2
-    value: 10
+    value: 11
   - gpuNameRaw: NVIDIA GeForce GTX 1650/PCIe/SSE2
     value: 15
   - gpuNameRaw: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
@@ -604,7 +604,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A2000 8GB Laptop GPU/PCIe/SSE2
     value: 19
   - gpuNameRaw: NVIDIA RTX A2000 Laptop GPU/PCIe/SSE2
-    value: 18
+    value: 19
   - gpuNameRaw: NVIDIA RTX A2000/PCIe/SSE2
     value: 21
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
@@ -634,7 +634,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell/PCIe/SSE2
     value: 82
   - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell/PCIe/SSE2
-    value: 172
+    value: 173
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Max-Q Workstation Edition/PCIe/SSE2
     value: 185
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2
