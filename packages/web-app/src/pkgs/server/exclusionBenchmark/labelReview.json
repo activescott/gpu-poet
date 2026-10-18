@@ -1,0 +1,957 @@
+[
+  {
+    "itemId": "B093LJRKC3",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "B096N2HQSK",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "B0CQPZTRL3",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4080 SUPER, filed under NVIDIA Geforce RTX 4080"
+  },
+  {
+    "itemId": "B0DCHMCFF6",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "B0DTHP39JF",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "B0F4YRNHSJ",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "B0F68R4M2Y",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|116933622830|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|116933631708|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|117436580466|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|117439016969|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|117448534340|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|117451893157|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|117457532345|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|125854360161|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|126517575782|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|127568831957|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|127568834440|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|127568983250|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|127795892077|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|127923058439|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|127941676073|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|128022124238|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|128084740719|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4070 TI, filed under NVIDIA Geforce RTX 4070"
+  },
+  {
+    "itemId": "v1|128119486156|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|137809936946|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|147606109092|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|156243971381|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|156898004412|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|157273679937|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|158358427015|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4080 SUPER, filed under NVIDIA Geforce RTX 4080"
+  },
+  {
+    "itemId": "v1|168688499567|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|168715293754|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|168778007364|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|178151778961|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|185576692006|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|187249843778|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|189034916107|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|195505780409|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|197633341632|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|198616971590|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|198699276796|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|198699276860|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276863|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276865|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276868|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276870|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276874|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276875|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276881|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276894|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276915|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276918|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|198699276941|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|198699276952|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|198699276972|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|198699276982|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|206464408358|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|206483684530|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|206612859941|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|206612882793|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|206612882797|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|206612882811|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|206612882812|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|206612882815|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|226664789727|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|226964377505|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|227335326251|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|227475424947|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|227533244455|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3090 TI, filed under NVIDIA GeForce RTX 3090"
+  },
+  {
+    "itemId": "v1|227545199778|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|236111403181|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4060 TI, filed under NVIDIA GeForce RTX 4060"
+  },
+  {
+    "itemId": "v1|236635442584|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|237074057718|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|255423312834|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|255447910271|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|257733972498|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|257771692781|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|277938420216|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|287630042198|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3090 TI, filed under NVIDIA GeForce RTX 3090"
+  },
+  {
+    "itemId": "v1|298073244889|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|298709810672|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|298721733378|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|298722471790|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|307172482446|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|307177431247|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|318599839033|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5080 TI, filed under NVIDIA GeForce RTX 5080"
+  },
+  {
+    "itemId": "v1|318746150759|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|318755315412|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|318893283709|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|327322132920|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|327375135390|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|327392398786|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|327396316698|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|336537030083|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336537077051|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336537231729|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|336537285463|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336537327950|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336537355387|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336537389833|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336537431769|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336543089193|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|336543449211|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336596073447|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|336625206850|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|336826236449|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|356690754756|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|356690755151|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|356690755269|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|357395606262|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3060 TI, filed under NVIDIA GeForce RTX 3060"
+  },
+  {
+    "itemId": "v1|358769862902|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|358881786187|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4080 SUPER, filed under NVIDIA Geforce RTX 4080"
+  },
+  {
+    "itemId": "v1|358911582397|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|365472081599|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|366674060758|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4080 SUPER, filed under NVIDIA Geforce RTX 4080"
+  },
+  {
+    "itemId": "v1|366717391526|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|366721612572|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|388385344802|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4070 TI, filed under NVIDIA Geforce RTX 4070"
+  },
+  {
+    "itemId": "v1|389448263364|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4070 TI, filed under NVIDIA Geforce RTX 4070"
+  },
+  {
+    "itemId": "v1|389801130564|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|398016670316|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|398172201008|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|398172369355|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|398172383877|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|398379481611|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|407216583487|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|407227628135|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|407227644594|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|407272310142|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|800677891240|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|820212517589|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|820213416346|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|820219194604|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|840003967793|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|840003991692|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9070 XT, filed under AMD Radeon RX 9070"
+  },
+  {
+    "itemId": "v1|840005146740|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4060 TI, filed under NVIDIA GeForce RTX 4060"
+  },
+  {
+    "itemId": "v1|860023820183|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3070 TI, filed under NVIDIA GeForce RTX 3070"
+  },
+  {
+    "itemId": "v1|860025642470|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|860026451164|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 9060 XT, filed under AMD Radeon RX 9060"
+  },
+  {
+    "itemId": "v1|860027716233|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3090 TI, filed under NVIDIA GeForce RTX 3090"
+  },
+  {
+    "itemId": "v1|900001326490|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6600 XT, filed under AMD Radeon RX 6600"
+  },
+  {
+    "itemId": "v1|920011120667|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 4070 SUPER, filed under NVIDIA Geforce RTX 4070"
+  },
+  {
+    "itemId": "v1|920011318714|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 6800 XT, filed under AMD Radeon RX 6800"
+  },
+  {
+    "itemId": "v1|920016131837|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|920021746129|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 5060 TI, filed under NVIDIA GeForce RTX 5060"
+  },
+  {
+    "itemId": "v1|960039416795|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: title is a 3090 TI, filed under NVIDIA GeForce RTX 3090"
+  },
+  {
+    "itemId": "v1|127815319645|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127815319661|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127815456959|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127815457032|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|206216277066|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|206216277070|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|336123435839|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127864774902|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127864774944|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127966057879|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127966275669|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|206405540572|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|336127884065|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|318028230581|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|127978020431|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|226710700873|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|206612882821|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|227111865684|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|389741134478|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|307149438099|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|327381730583|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|318877807976|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|366195602545|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|387179561286|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|820137269952|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|398281985753|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "v1|327342393013|0",
+    "suspectedLabel": "exclude",
+    "note": "bulk_sale: several GPUs in one listing"
+  },
+  {
+    "itemId": "B0HG8CZL33",
+    "suspectedLabel": "exclude",
+    "note": "other: a whole PC, not a card"
+  },
+  {
+    "itemId": "B0DJQDT1MW",
+    "suspectedLabel": "exclude",
+    "note": "other: a laptop; the excluded RTX 5090 laptop B0H4NKX21Q is the same case"
+  },
+  {
+    "itemId": "B0FVGKQPWR",
+    "suspectedLabel": "exclude",
+    "note": "other: GPU and PSU bundle, price covers both"
+  },
+  {
+    "itemId": "B0GKHW41PB",
+    "suspectedLabel": "exclude",
+    "note": "other: GPU and PSU bundle, price covers both"
+  },
+  {
+    "itemId": "v1|397616163301|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: MXM laptop module, not the desktop card"
+  },
+  {
+    "itemId": "v1|287594561332|0",
+    "suspectedLabel": "exclude",
+    "note": "mismatched_gpu: A100X with BlueField-2 DPU engineering sample, not an A100 PCIe"
+  },
+  {
+    "itemId": "v1|128111066413|0",
+    "suspectedLabel": "exclude",
+    "note": "for_parts: \"BAD HDMI\"; the excluded RTX 3060 Ti \"NO HDMI\" is the same case"
+  },
+  {
+    "itemId": "v1|127928160623|0",
+    "suspectedLabel": "exclude",
+    "note": "for_parts: title says \"ECC Error\""
+  },
+  {
+    "itemId": "v1|186085941462|0",
+    "suspectedLabel": "exclude",
+    "note": "other: $4207.92 for an RX 6600, not a real price"
+  },
+  {
+    "itemId": "v1|389807274096|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|389807274191|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|389807274299|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|389807274389|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|397482553265|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|398233557127|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|407175630282|0",
+    "suspectedLabel": "keep",
+    "note": "excluded as low_feedback, but stored feedback is 100.0% and the title is a normal card; check whether the exclusion still holds"
+  },
+  {
+    "itemId": "v1|335320364010|0",
+    "suspectedLabel": "exclude",
+    "note": "label is right, but a newer row for this itemId is live on the site now; the rules reject it, so the next cleanup run should exclude it again"
+  }
+]
