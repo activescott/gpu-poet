@@ -19,6 +19,20 @@ spec:
           ports:
             - containerPort: 3001
           env:
+            # DataImpulse sub-user. amazon-searcher reads PROXY_* first and
+            # falls back to OXYLABS_* while these keys are absent.
+            - name: PROXY_USERNAME
+              valueFrom:
+                secretKeyRef:
+                  name: app-creds
+                  key: PROXY_USERNAME
+                  optional: true
+            - name: PROXY_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: app-creds
+                  key: PROXY_PASSWORD
+                  optional: true
             - name: OXYLABS_USERNAME
               valueFrom:
                 secretKeyRef:
