@@ -25,6 +25,7 @@ RUN npm ci
 FROM base AS builder
 # Need canvas build deps for the build step (node_modules include native bindings)
 RUN apt-get update && apt-get install -y --no-install-recommends \
+    ca-certificates \
     libcairo2 \
     libpango-1.0-0 \
     libpangocairo-1.0-0 \

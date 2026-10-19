@@ -21,7 +21,12 @@ if [ -n "$api_key" ] && [ -n "$project_id" ]; then
   export POSTHOG_CLI_API_KEY="$api_key"
   export POSTHOG_CLI_PROJECT_ID="$project_id"
   export POSTHOG_CLI_HOST="${POSTHOG_CLI_HOST:-https://us.posthog.com}"
-  npx --yes @posthog/cli@0.18.10 sourcemap process --directory "$dir"
+  # An upload failure must never block a production deploy: warn and carry on.
+  rc=0
+  npx --yes @posthog/cli@0.18.10 sourcemap process --directory "$dir" || rc=$?
+  if [ "$rc" -ne 0 ]; then
+    echo "upload-sourcemaps: WARNING upload failed (exit code $rc); continuing without uploaded source maps"
+  fi
 else
   echo "upload-sourcemaps: POSTHOG_PERSONAL_API_KEY / POSTHOG_PROJECT_ID not set; skipping upload"
 fi
