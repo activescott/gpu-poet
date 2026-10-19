@@ -14,16 +14,16 @@ read_secret() {
 }
 
 api_key="$(read_secret POSTHOG_PERSONAL_API_KEY || true)"
-env_id="$(read_secret POSTHOG_ENV_ID || true)"
+project_id="$(read_secret POSTHOG_PROJECT_ID || true)"
 
-if [ -n "$api_key" ] && [ -n "$env_id" ]; then
+if [ -n "$api_key" ] && [ -n "$project_id" ]; then
   echo "upload-sourcemaps: uploading source maps from $dir to PostHog"
   export POSTHOG_CLI_API_KEY="$api_key"
-  export POSTHOG_CLI_ENV_ID="$env_id"
+  export POSTHOG_CLI_PROJECT_ID="$project_id"
   export POSTHOG_CLI_HOST="${POSTHOG_CLI_HOST:-https://us.posthog.com}"
-  npx --yes @posthog/cli@latest sourcemap process --directory "$dir"
+  npx --yes @posthog/cli@0.18.10 sourcemap process --directory "$dir"
 else
-  echo "upload-sourcemaps: POSTHOG_PERSONAL_API_KEY / POSTHOG_ENV_ID not set; skipping upload"
+  echo "upload-sourcemaps: POSTHOG_PERSONAL_API_KEY / POSTHOG_PROJECT_ID not set; skipping upload"
 fi
 
 find "$dir" -name '*.map' -type f -delete
