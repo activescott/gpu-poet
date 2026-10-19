@@ -48,6 +48,7 @@ k8s
 
 # Dev scripts (not needed in container)
 scripts
+!scripts/upload-sourcemaps.sh
 specs
 
 # Database backups (large files, not needed in container)
