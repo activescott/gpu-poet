@@ -4,6 +4,16 @@ import createMDX from "@next/mdx"
 const nextConfig = {
   poweredByHeader: false,
 
+  // Emit browser source maps so the build can upload them to PostHog error
+  // tracking (scripts/upload-sourcemaps.sh); that script deletes them from
+  // the output afterwards, so they are never served publicly.
+  productionBrowserSourceMaps: true,
+
+  // Add crossorigin="anonymous" to Next's own <script> tags. Same-origin today,
+  // but it keeps errors readable (no opaque "Script error.") if static assets
+  // move to a CDN via assetPrefix, provided the CDN sends CORS headers.
+  crossOrigin: "anonymous",
+
   // Transpile workspace packages that export TypeScript source files
   transpilePackages: ["@activescott/filter-items", "@activescott/ebay-client"],
 

@@ -47,6 +47,13 @@ RUN cd packages/web-app && npx prisma generate
 # Build the application using turbo (it will build dependencies first)
 RUN npm run build
 
+# Upload browser source maps to PostHog (error tracking), then delete them so
+# they are never served. Credentials are BuildKit secrets, never ARG/ENV, so
+# they do not end up in image layers. Skips cleanly when they are absent.
+RUN --mount=type=secret,id=POSTHOG_PERSONAL_API_KEY \
+    --mount=type=secret,id=POSTHOG_ENV_ID \
+    sh scripts/upload-sourcemaps.sh packages/web-app/.next/static
+
 # Production image, copy all the files and run next
 FROM base AS runner
 WORKDIR /app

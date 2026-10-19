@@ -105,5 +105,10 @@ jobs:
           build-args: |
             BUILD_COMMIT=${{ github.sha }}
             BUILD_DATE=${{ github.event.head_commit.timestamp }}
+          # Optional: absent on forks / until configured; the Dockerfile step
+          # then skips the PostHog source map upload.
+          secrets: |
+            POSTHOG_PERSONAL_API_KEY=${{ secrets.POSTHOG_PERSONAL_API_KEY }}
+            POSTHOG_ENV_ID=${{ secrets.POSTHOG_ENV_ID }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
