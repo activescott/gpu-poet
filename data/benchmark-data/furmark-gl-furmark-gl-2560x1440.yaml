@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 227087
-updatedAt: 2026-10-19T10:25:00.255Z
+collectedSamples: 228091
+updatedAt: 2026-10-20T10:13:33.121Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -198,7 +198,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500XT
     value: 42
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 69
+    value: 70
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 62
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 7.0.10-201.fc44.x86_64)
@@ -315,7 +315,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64 7.2.4-3-cachyos)
     value: 185
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 211
+    value: 210
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.0.0-28-generic)
     value: 194
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.0.0-38-generic)
@@ -335,6 +335,9 @@ results:
     value: 307
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 7.1.8-1-cachyos)
     value: 290
+  - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64
+      7.2.9-ogc3.1.fc44.x86_64)
+    value: 219
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.65
       7.2.4-valve1-1-neptune-72-g5ab4af5e2eb9)
     value: 315
@@ -419,7 +422,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.0-31-generic)
     value: 241
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.0-38-generic)
-    value: 231
+    value: 232
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.10-2-cachyos)
     value: 278
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
@@ -805,7 +808,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2
     value: 43
   - gpuNameRaw: NVIDIA GeForce RTX 2060/PCIe/SSE2
-    value: 72
+    value: 71
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
     value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
@@ -825,7 +828,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080 with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: NVIDIA GeForce RTX 2080/PCIe/SSE2
-    value: 101
+    value: 100
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU/PCIe/SSE2
     value: 24
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2
@@ -921,7 +924,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
     value: 393
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
-    value: 197
+    value: 198
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
     value: 395
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
@@ -971,7 +974,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A2000/PCIe/SSE2
     value: 40
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
-    value: 40
+    value: 38
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU/PCIe/SSE2
     value: 41
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
@@ -1015,7 +1018,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2
     value: 460
   - gpuNameRaw: NVIDIA RTX Spark N1X (6144-core Blackwell RTX GPU)/PCIe
-    value: 80
+    value: 85
   - gpuNameRaw: NVIDIA T1000 8GB/PCIe/SSE2
     value: 26
   - gpuNameRaw: NVIDIA T1000/PCIe/SSE2
@@ -1065,7 +1068,7 @@ results:
   - gpuNameRaw: Quadro P6000/PCIe/SSE2
     value: 95
   - gpuNameRaw: Quadro P620/PCIe/SSE2
-    value: 12
+    value: 13
   - gpuNameRaw: Quadro RTX 3000 with Max-Q Design/PCIe/SSE2
     value: 24
   - gpuNameRaw: Quadro RTX 3000/PCIe/SSE2
@@ -1077,7 +1080,7 @@ results:
   - gpuNameRaw: Radeon (TM) Pro WX 4100
     value: 13
   - gpuNameRaw: Radeon (TM) RX 470 Graphics
-    value: 36
+    value: 35
   - gpuNameRaw: Radeon (TM) RX 480 Graphics
     value: 41
   - gpuNameRaw: Radeon 5

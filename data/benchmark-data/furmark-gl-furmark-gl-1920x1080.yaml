@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 502225
-updatedAt: 2026-10-19T10:25:00.233Z
+collectedSamples: 504459
+updatedAt: 2026-10-20T10:13:33.048Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -147,7 +147,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-1.212-cachyos-bc250)
     value: 133
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
-    value: 120
+    value: 115
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-1-cachyos)
     value: 100
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-2-cachyos)
@@ -159,7 +159,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-2-cachyos)
     value: 136
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-ogc3.1.fc44.x86_64)
-    value: 100
+    value: 105
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.46-valve1-1-neptune-618-g2e13b4367b17)
     value: 130
@@ -426,7 +426,7 @@ results:
   - gpuNameRaw: AMD Radeon HD 7670M
     value: 7
   - gpuNameRaw: AMD Radeon HD 7700 Series
-    value: 14
+    value: 13
   - gpuNameRaw: AMD Radeon HD 7800 Series
     value: 27
   - gpuNameRaw: AMD Radeon HD 7800 Series (radeonsi pitcairn ACO DRM 3.64
@@ -472,7 +472,7 @@ results:
   - gpuNameRaw: AMD Radeon Pro VII
     value: 130
   - gpuNameRaw: AMD Radeon Pro W5500
-    value: 67
+    value: 66
   - gpuNameRaw: AMD Radeon Pro W5700
     value: 118
   - gpuNameRaw: AMD Radeon Pro W5700X
@@ -490,7 +490,7 @@ results:
   - gpuNameRaw: AMD Radeon Pro WX 2100 Graphics
     value: 12
   - gpuNameRaw: AMD Radeon Pro WX 3100
-    value: 17
+    value: 18
   - gpuNameRaw: AMD Radeon Pro WX 3200 Series
     value: 22
   - gpuNameRaw: AMD Radeon Pro WX3200 Graphics
@@ -569,7 +569,7 @@ results:
       6.17.7-ba25.fc43.x86_64)
     value: 73
   - gpuNameRaw: AMD Radeon RX 5600 OEM
-    value: 96
+    value: 97
   - gpuNameRaw: AMD Radeon RX 5600 XT
     value: 108
   - gpuNameRaw: AMD Radeon RX 5600 XT (radeonsi navi10 ACO DRM 3.64 6.17.0-20-generic)
@@ -777,7 +777,7 @@ results:
       6.18.9-1-cachyos-bore)
     value: 292
   - gpuNameRaw: AMD Radeon RX 6800M
-    value: 119
+    value: 120
   - gpuNameRaw: AMD Radeon RX 6800S
     value: 113
   - gpuNameRaw: AMD Radeon RX 6850M XT
@@ -859,7 +859,7 @@ results:
       6.17.7-ba25.fc43.x86_64)
     value: 211
   - gpuNameRaw: AMD Radeon RX 7800M
-    value: 125
+    value: 126
   - gpuNameRaw: AMD Radeon RX 7900 GRE
     value: 267
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64
@@ -932,7 +932,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9060 XT LP
     value: 174
   - gpuNameRaw: AMD Radeon RX 9070
-    value: 283
+    value: 284
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12-1-cachyos)
     value: 300
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12-x64v3-xanmod1)
@@ -1081,7 +1081,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 560 Series
     value: 24
   - gpuNameRaw: AMD Radeon(TM) RX 5600M Series
-    value: 71
+    value: 70
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 50
   - gpuNameRaw: AMD Radeon(TM) RX 6500 XT
@@ -1140,7 +1140,7 @@ results:
   - gpuNameRaw: ASUS Radeon RX 470 Series
     value: 43
   - gpuNameRaw: ATI FirePro V (FireGL V) Graphics Adapter
-    value: 9
+    value: 8
   - gpuNameRaw: ATI FirePro V4800 (FireGL) Graphics Adapter
     value: 7
   - gpuNameRaw: ATI Mobility Radeon HD 4670
@@ -1430,7 +1430,7 @@ results:
   - gpuNameRaw: GeForce RTX 2070 Super with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: GeForce RTX 2070 Super/PCIe/SSE2
-    value: 101
+    value: 99
   - gpuNameRaw: GeForce RTX 2070 SUPER/PCIe/SSE2
     value: 146
   - gpuNameRaw: GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
@@ -1560,7 +1560,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics
     value: 8
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics 640
-    value: 8
+    value: 9
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics 645
     value: 8
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics 650
@@ -1678,7 +1678,7 @@ results:
   - gpuNameRaw: NV132
     value: 10
   - gpuNameRaw: NV134
-    value: 7
+    value: 8
   - gpuNameRaw: NV136
     value: 6
   - gpuNameRaw: NV137
@@ -1756,7 +1756,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1080 with Max-Q Design/PCIe/SSE2
     value: 74
   - gpuNameRaw: NVIDIA GeForce GTX 1080/PCIe/SSE2
-    value: 100
+    value: 99
   - gpuNameRaw: NVIDIA GeForce GTX 1630/PCIe/SSE2
     value: 32
   - gpuNameRaw: NVIDIA GeForce GTX 1650 SUPER/PCIe/SSE2
@@ -1928,13 +1928,13 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 110
+    value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 160
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
     value: 140
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti/PCIe/SSE2
-    value: 256
+    value: 255
   - gpuNameRaw: NVIDIA GeForce RTX 3090/PCIe/SSE2
     value: 194
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU/PCIe/SSE2
@@ -1982,15 +1982,15 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU/PCIe/SSE2
     value: 180
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2
-    value: 286
+    value: 287
   - gpuNameRaw: NVIDIA GeForce RTX 5070/PCIe/SSE2
-    value: 282
+    value: 281
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU/PCIe/SSE2
     value: 230
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 362
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
-    value: 505
+    value: 504
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
     value: 500
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
@@ -2004,7 +2004,7 @@ results:
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA P106-090/PCIe/SSE2
-    value: 25
+    value: 26
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 57
   - gpuNameRaw: NVIDIA Quadro K6000/PCIe/SSE2
@@ -2020,11 +2020,11 @@ results:
   - gpuNameRaw: NVIDIA RTX 3500 Ada Generation Laptop GPU/PCIe/SSE2
     value: 168
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 187
+    value: 183
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation/PCIe/SSE2
     value: 178
   - gpuNameRaw: NVIDIA RTX 4000 SFF Ada Generation/PCIe/SSE2
-    value: 129
+    value: 130
   - gpuNameRaw: NVIDIA RTX 4500 Ada Generation/PCIe/SSE2
     value: 242
   - gpuNameRaw: NVIDIA RTX 500 Ada Generation Laptop GPU/PCIe/SSE2
@@ -2034,7 +2034,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 5000 Ada Generation/PCIe/SSE2
     value: 331
   - gpuNameRaw: NVIDIA RTX 6000 Ada Generation/PCIe/SSE2
-    value: 320
+    value: 319
   - gpuNameRaw: NVIDIA RTX A1000 6GB Laptop GPU/PCIe/SSE2
     value: 46
   - gpuNameRaw: NVIDIA RTX A1000 Laptop GPU/PCIe/SSE2
@@ -2296,7 +2296,7 @@ results:
   - gpuNameRaw: Radeon (TM) RX 550
     value: 11
   - gpuNameRaw: Radeon (TM) RX 550X
-    value: 8
+    value: 6
   - gpuNameRaw: Radeon (TM) RX 570 Graphics
     value: 59
   - gpuNameRaw: Radeon 5
@@ -2369,7 +2369,7 @@ results:
   - gpuNameRaw: Radeon RX 590 Series
     value: 64
   - gpuNameRaw: Radeon RX Vega
-    value: 93
+    value: 94
   - gpuNameRaw: Radeon RX Vega (radeonsi vega10 ACO DRM 3.64 6.17.0-29-generic)
     value: 101
   - gpuNameRaw: Radeon RX Vega 56 Series
@@ -2395,7 +2395,7 @@ results:
   - gpuNameRaw: Radeon(TM) RX 470 Graphics
     value: 50
   - gpuNameRaw: Radeon(TM) RX 480
-    value: 47
+    value: 49
   - gpuNameRaw: Radeon(TM) RX 550
     value: 14
   - gpuNameRaw: Radeon(TM) RX 580
@@ -2419,7 +2419,7 @@ results:
   - gpuNameRaw: Tesla M40 24GB/PCIe/SSE2
     value: 80
   - gpuNameRaw: Tesla M40/PCIe/SSE2
-    value: 71
+    value: 72
   - gpuNameRaw: Tesla P100-PCIE-16GB/PCIe/SSE2
     value: 145
   - gpuNameRaw: Tesla P4/PCIe/SSE2
@@ -2427,7 +2427,7 @@ results:
   - gpuNameRaw: Tesla P40/PCIe/SSE2
     value: 108
   - gpuNameRaw: Tesla T10/PCIe/SSE2
-    value: 100
+    value: 107
   - gpuNameRaw: Tesla T4/PCIe/SSE2
     value: 52
   - gpuNameRaw: Tesla V100-PCIE-16GB/PCIe/SSE2
@@ -2437,7 +2437,9 @@ results:
   - gpuNameRaw: Unknown AMD GPU
     value: 131
   - gpuNameRaw: unknown board/PCIe/SSE2
-    value: 44
+    value: 50
+  - gpuNameRaw: zink Vulkan 1.4(AMD BC-250 Graphics (MESA_RADV))
+    value: 42
   - gpuNameRaw: zink Vulkan 1.4(NVIDIA GeForce GTX 1650 (NVK TU117) (MESA_NVK))
     value: 30
   - gpuNameRaw: zink Vulkan 1.4(NVIDIA GeForce RTX 3060 (NVK GA106) (MESA_NVK))

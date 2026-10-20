@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 58135
-updatedAt: 2026-10-19T10:25:00.309Z
+collectedSamples: 58393
+updatedAt: 2026-10-20T10:13:33.126Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -117,7 +117,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6800 XT
     value: 90
   - gpuNameRaw: AMD Radeon RX 6900 XT
-    value: 105
+    value: 104
   - gpuNameRaw: AMD Radeon RX 6900 XT (radeonsi navi21 ACO DRM 3.64 7.0.0-34-generic)
     value: 98
   - gpuNameRaw: AMD Radeon RX 6950 XT
@@ -186,7 +186,7 @@ results:
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 97
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 96
+    value: 97
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 131
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
@@ -350,7 +350,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
     value: 6
   - gpuNameRaw: Intel(R) UHD Graphics
-    value: 4
+    value: 3
   - gpuNameRaw: Intel(R) UHD Graphics 620
     value: 1
   - gpuNameRaw: Intel(R) UHD Graphics 630
@@ -500,7 +500,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070/PCIe/SSE2
     value: 58
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
-    value: 43
+    value: 42
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
     value: 47
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
@@ -579,6 +579,8 @@ results:
     value: 24
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 20
+  - gpuNameRaw: NVIDIA Quadro RTX 4000/PCIe/SSE2
+    value: 31
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA RTX 3000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -592,7 +594,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 4500 Ada Generation/PCIe/SSE2
     value: 79
   - gpuNameRaw: NVIDIA RTX 5000 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 88
+    value: 87
   - gpuNameRaw: NVIDIA RTX A1000 6GB Laptop GPU/PCIe/SSE2
     value: 13
   - gpuNameRaw: NVIDIA RTX A1000 Laptop GPU/PCIe/SSE2
