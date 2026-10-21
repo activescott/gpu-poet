@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 24305
-updatedAt: 2026-10-20T10:33:26.734Z
+collectedSamples: 24386
+updatedAt: 2026-10-21T09:21:44.110Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 222
@@ -22,7 +22,7 @@ results:
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
     value: 120
   - gpuNameRaw: AMD BC-250 Graphics
-    value: 46
+    value: 47
   - gpuNameRaw: AMD Custom GPU 0405 (RADV VANGOGH)
     value: 18
   - gpuNameRaw: AMD Liverpool (PlayStation 4) (RADV LIVERPOOL)
@@ -48,7 +48,7 @@ results:
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
     value: 27
   - gpuNameRaw: AMD Radeon AI PRO R9700
-    value: 324
+    value: 323
   - gpuNameRaw: AMD Radeon Graphics
     value: 24
   - gpuNameRaw: AMD Radeon Graphics (RADV GFX1013)
@@ -176,7 +176,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
     value: 148
   - gpuNameRaw: AMD Radeon RX 6750 XT
-    value: 161
+    value: 160
   - gpuNameRaw: AMD Radeon RX 6750 XT (RADV NAVI22)
     value: 174
   - gpuNameRaw: AMD Radeon RX 6800
@@ -185,6 +185,8 @@ results:
     value: 210
   - gpuNameRaw: AMD Radeon RX 6800 XT
     value: 243
+  - gpuNameRaw: AMD Radeon RX 6800 XT (RADV NAVI21)
+    value: 263
   - gpuNameRaw: AMD Radeon RX 6800M
     value: 128
   - gpuNameRaw: AMD Radeon RX 6800M (RADV NAVI22)
@@ -232,7 +234,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XT (RADV NAVI31)
     value: 330
   - gpuNameRaw: AMD Radeon RX 7900 XTX
-    value: 344
+    value: 345
   - gpuNameRaw: AMD Radeon RX 7900 XTX (RADV NAVI31)
     value: 413
   - gpuNameRaw: AMD Radeon RX 9060
@@ -270,7 +272,7 @@ results:
   - gpuNameRaw: AMD Radeon VII (RADV VEGA20)
     value: 144
   - gpuNameRaw: AMD Radeon(TM) 610M
-    value: 8
+    value: 7
   - gpuNameRaw: AMD Radeon(TM) 780M
     value: 26
   - gpuNameRaw: AMD Radeon(TM) 8060S Graphics
@@ -424,7 +426,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1080 Ti
     value: 136
   - gpuNameRaw: NVIDIA GeForce GTX 1650
-    value: 40
+    value: 41
   - gpuNameRaw: NVIDIA GeForce GTX 1650 SUPER
     value: 49
   - gpuNameRaw: NVIDIA GeForce GTX 1650 Ti

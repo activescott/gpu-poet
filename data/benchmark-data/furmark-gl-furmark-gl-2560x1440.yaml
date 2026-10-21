@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 228091
-updatedAt: 2026-10-20T10:13:33.121Z
+collectedSamples: 229111
+updatedAt: 2026-10-21T09:02:41.938Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -115,7 +115,7 @@ results:
   - gpuNameRaw: AMD Radeon 740M Graphics
     value: 11
   - gpuNameRaw: AMD Radeon 760M Graphics
-    value: 11
+    value: 13
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 17
   - gpuNameRaw: AMD Radeon AI PRO R9700
@@ -315,7 +315,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64 7.2.4-3-cachyos)
     value: 185
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 210
+    value: 211
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.0.0-28-generic)
     value: 194
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.0.0-38-generic)
@@ -391,6 +391,8 @@ results:
     value: 190
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12)
     value: 249
+  - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.2.11-200.fc44.x86_64)
+    value: 191
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 LLVM 21.1.8 DRM 3.64
       6.19.5-200.nobara.fc43.x86_64)
     value: 199
@@ -574,7 +576,7 @@ results:
   - gpuNameRaw: GeForce GTX 670/PCIe/SSE2
     value: 22
   - gpuNameRaw: GeForce GTX 750 Ti/PCIe/SSE2
-    value: 11
+    value: 12
   - gpuNameRaw: GeForce GTX 760/PCIe/SSE2
     value: 21
   - gpuNameRaw: GeForce GTX 770/PCIe/SSE2
@@ -756,7 +758,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
     value: 55
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti with Max-Q Design/PCIe/SSE2
-    value: 29
+    value: 30
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti/PCIe/SSE2
     value: 54
   - gpuNameRaw: NVIDIA GeForce GTX 1660/PCIe/SSE2
@@ -858,7 +860,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 83
+    value: 84
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 128
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -956,7 +958,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 5000 Ada Generation Laptop GPU/PCIe/SSE2
     value: 161
   - gpuNameRaw: NVIDIA RTX 5000 Ada Generation/PCIe/SSE2
-    value: 237
+    value: 238
   - gpuNameRaw: NVIDIA RTX 6000 Ada Generation/PCIe/SSE2
     value: 226
   - gpuNameRaw: NVIDIA RTX A1000 6GB Laptop GPU/PCIe/SSE2
@@ -1072,7 +1074,7 @@ results:
   - gpuNameRaw: Quadro RTX 3000 with Max-Q Design/PCIe/SSE2
     value: 24
   - gpuNameRaw: Quadro RTX 3000/PCIe/SSE2
-    value: 43
+    value: 44
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 66
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
