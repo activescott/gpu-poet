@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 229111
-updatedAt: 2026-10-21T09:02:41.938Z
+collectedSamples: 230117
+updatedAt: 2026-10-22T08:56:43.454Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -260,7 +260,7 @@ results:
       6.18.7-2-cachyos)
     value: 167
   - gpuNameRaw: AMD Radeon RX 6800M
-    value: 77
+    value: 76
   - gpuNameRaw: AMD Radeon RX 6800S
     value: 67
   - gpuNameRaw: AMD Radeon RX 6900 XT
@@ -288,7 +288,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M
     value: 63
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 73
+    value: 74
   - gpuNameRaw: AMD Radeon RX 7650 GRE
     value: 104
   - gpuNameRaw: AMD Radeon RX 7700
@@ -556,7 +556,7 @@ results:
   - gpuNameRaw: GeForce GTX 1080 Ti/PCIe/SSE2
     value: 95
   - gpuNameRaw: GeForce GTX 1080/PCIe/SSE2
-    value: 70
+    value: 69
   - gpuNameRaw: GeForce GTX 1650/PCIe/SSE2
     value: 26
   - gpuNameRaw: GeForce GTX 1660 SUPER/PCIe/SSE2
@@ -592,7 +592,7 @@ results:
   - gpuNameRaw: GeForce RTX 2060 SUPER/PCIe/SSE2
     value: 84
   - gpuNameRaw: GeForce RTX 2060/PCIe/SSE2
-    value: 71
+    value: 72
   - gpuNameRaw: GeForce RTX 2070 SUPER/PCIe/SSE2
     value: 98
   - gpuNameRaw: GeForce RTX 2070/PCIe/SSE2
@@ -676,7 +676,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics
     value: 6
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
-    value: 11
+    value: 12
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
     value: 8
   - gpuNameRaw: Intel(R) UHD Graphics
@@ -814,7 +814,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
     value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
-    value: 98
+    value: 99
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: NVIDIA GeForce RTX 2070/PCIe/SSE2
@@ -830,7 +830,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080 with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: NVIDIA GeForce RTX 2080/PCIe/SSE2
-    value: 100
+    value: 101
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU/PCIe/SSE2
     value: 24
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2
@@ -842,7 +842,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2
     value: 45
   - gpuNameRaw: NVIDIA GeForce RTX 3050/PCIe/SSE2
-    value: 53
+    value: 52
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
     value: 67
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2
@@ -926,9 +926,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
     value: 393
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
-    value: 198
+    value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
-    value: 395
+    value: 396
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
     value: 121
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
@@ -948,7 +948,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation Laptop GPU/PCIe/SSE2
     value: 140
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation/PCIe/SSE2
-    value: 130
+    value: 127
   - gpuNameRaw: NVIDIA RTX 4000 SFF Ada Generation/PCIe/SSE2
     value: 83
   - gpuNameRaw: NVIDIA RTX 4500 Ada Generation/PCIe/SSE2
@@ -974,7 +974,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A2000 Laptop GPU/PCIe/SSE2
     value: 32
   - gpuNameRaw: NVIDIA RTX A2000/PCIe/SSE2
-    value: 40
+    value: 39
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
     value: 38
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU/PCIe/SSE2
@@ -996,7 +996,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A5500 Laptop GPU/PCIe/SSE2
     value: 33
   - gpuNameRaw: NVIDIA RTX A6000/PCIe/SSE2
-    value: 128
+    value: 129
   - gpuNameRaw: NVIDIA RTX PRO 2000 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 76
   - gpuNameRaw: NVIDIA RTX PRO 2000 Blackwell/PCIe/SSE2

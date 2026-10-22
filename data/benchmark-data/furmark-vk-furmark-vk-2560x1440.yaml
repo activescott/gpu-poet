@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 12095
-updatedAt: 2026-10-21T09:21:44.111Z
+collectedSamples: 12140
+updatedAt: 2026-10-22T09:14:53.018Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 165
@@ -120,7 +120,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800 XT (RADV NAVI32)
     value: 173
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 200
+    value: 199
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
     value: 183
   - gpuNameRaw: AMD Radeon RX 7900 XT
@@ -132,7 +132,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX (RADV NAVI31)
     value: 252
   - gpuNameRaw: AMD Radeon RX 9060 XT
-    value: 139
+    value: 138
   - gpuNameRaw: AMD Radeon RX 9060 XT (RADV GFX1200)
     value: 132
   - gpuNameRaw: AMD Radeon RX 9070
@@ -258,7 +258,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU
     value: 97
   - gpuNameRaw: NVIDIA GeForce RTX 3090
-    value: 143
+    value: 142
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti
     value: 163
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU
@@ -270,7 +270,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
     value: 120
   - gpuNameRaw: NVIDIA GeForce RTX 4070
-    value: 145
+    value: 144
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 115
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
@@ -286,7 +286,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
     value: 250
   - gpuNameRaw: NVIDIA GeForce RTX 4090
-    value: 340
+    value: 339
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
     value: 192
   - gpuNameRaw: NVIDIA GeForce RTX 5050
