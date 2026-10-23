@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 230117
-updatedAt: 2026-10-22T08:56:43.454Z
+collectedSamples: 231188
+updatedAt: 2026-10-23T08:48:34.435Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -176,7 +176,7 @@ results:
     value: 81
   - gpuNameRaw: AMD Radeon RX 5700 XT (radeonsi navi10 ACO DRM 3.64
       7.2.4-ogc3.1.fc44.x86_64)
-    value: 76
+    value: 73
   - gpuNameRaw: AMD Radeon RX 5700 XT 50th Anniversary
     value: 88
   - gpuNameRaw: AMD Radeon RX 580 2048SP
@@ -525,7 +525,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
     value: 8
   - gpuNameRaw: AMD Radeon(TM) Vega 8 Graphics
-    value: 4
+    value: 5
   - gpuNameRaw: AMD Steam Machine (radeonsi navi33 ACO DRM 3.64
       6.16.12-valve24.5-1-neptune-616-gb2f7cfe85e45)
     value: 77
@@ -592,7 +592,7 @@ results:
   - gpuNameRaw: GeForce RTX 2060 SUPER/PCIe/SSE2
     value: 84
   - gpuNameRaw: GeForce RTX 2060/PCIe/SSE2
-    value: 72
+    value: 71
   - gpuNameRaw: GeForce RTX 2070 SUPER/PCIe/SSE2
     value: 98
   - gpuNameRaw: GeForce RTX 2070/PCIe/SSE2
@@ -629,6 +629,8 @@ results:
     value: 22
   - gpuNameRaw: Intel(R) Arc(TM) 140T GPU (16GB)
     value: 28
+  - gpuNameRaw: Intel(R) Arc(TM) 140T GPU (32GB)
+    value: 22
   - gpuNameRaw: Intel(R) Arc(TM) 140T GPU (8GB)
     value: 27
   - gpuNameRaw: Intel(R) Arc(TM) 140V GPU (16GB)
@@ -670,6 +672,8 @@ results:
   - gpuNameRaw: Intel(R) Graphics
     value: 15
   - gpuNameRaw: Intel(R) HD Graphics 520
+    value: 3
+  - gpuNameRaw: Intel(R) HD Graphics 530
     value: 3
   - gpuNameRaw: Intel(R) HD Graphics 630
     value: 3
@@ -842,7 +846,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2
     value: 45
   - gpuNameRaw: NVIDIA GeForce RTX 3050/PCIe/SSE2
-    value: 52
+    value: 53
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
     value: 67
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2
@@ -1019,6 +1023,8 @@ results:
     value: 318
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2
     value: 460
+  - gpuNameRaw: NVIDIA RTX Spark N1X (5120-core Blackwell RTX GPU)/PCIe
+    value: 62
   - gpuNameRaw: NVIDIA RTX Spark N1X (6144-core Blackwell RTX GPU)/PCIe
     value: 85
   - gpuNameRaw: NVIDIA T1000 8GB/PCIe/SSE2
@@ -1028,7 +1034,7 @@ results:
   - gpuNameRaw: NVIDIA T1200 Laptop GPU/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA T400 4GB/PCIe/SSE2
-    value: 12
+    value: 11
   - gpuNameRaw: NVIDIA T550 Laptop GPU/PCIe/SSE2
     value: 8
   - gpuNameRaw: NVIDIA T600/PCIe/SSE2
