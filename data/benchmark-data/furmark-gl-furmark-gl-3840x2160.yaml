@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 59623
-updatedAt: 2026-10-25T09:32:08.749Z
+collectedSamples: 59909
+updatedAt: 2026-10-26T09:40:19.512Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -132,7 +132,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M XT
     value: 40
   - gpuNameRaw: AMD Radeon RX 7650 GRE
-    value: 48
+    value: 47
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 77
   - gpuNameRaw: AMD Radeon RX 7800 XT
@@ -155,7 +155,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE
     value: 104
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 110
+    value: 109
   - gpuNameRaw: AMD Radeon RX 7900 XTX
     value: 136
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.19.10-1-cachyos)
@@ -186,7 +186,7 @@ results:
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 97
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 97
+    value: 96
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 131
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
@@ -204,7 +204,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.0-31-generic)
     value: 136
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.0.0-38-generic)
-    value: 126
+    value: 127
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
       7.0.11-76070011-generic)
     value: 128
@@ -368,7 +368,7 @@ results:
   - gpuNameRaw: NVIDIA CMP 30HX/PCIe/SSE2
     value: 26
   - gpuNameRaw: NVIDIA CMP 40HX/PCIe/SSE2
-    value: 39
+    value: 38
   - gpuNameRaw: NVIDIA GeForce GT 1030/PCIe/SSE2
     value: 4
   - gpuNameRaw: NVIDIA GeForce GT 730/PCIe/SSE2
@@ -570,7 +570,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D V2/PCIe/SSE2
     value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
-    value: 238
+    value: 237
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
     value: 112
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
