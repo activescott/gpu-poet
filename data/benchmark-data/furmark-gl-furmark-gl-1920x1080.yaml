@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 521426
-updatedAt: 2026-10-27T10:28:21.846Z
+collectedSamples: 523713
+updatedAt: 2026-10-28T09:35:55.809Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -44,7 +44,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.17.7-ba28.fc43.x86_64)
     value: 102
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.17.7-ba29.fc43.bc250cu.x86_64)
-    value: 119
+    value: 120
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 108
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.17.7-ba29.hf_bc250.fc43.x86_64)
@@ -159,7 +159,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-1-cachyos)
     value: 100
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-2-cachyos)
-    value: 99
+    value: 114
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-ogc5.1.fc44.x86_64)
     value: 120
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-1-cachyos)
@@ -167,7 +167,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-2-cachyos)
     value: 136
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-ogc3.1.fc44.x86_64)
-    value: 105
+    value: 100
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.46-valve1-1-neptune-618-g2e13b4367b17)
     value: 130
@@ -255,7 +255,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) 780M Graphics
     value: 26
   - gpuNameRaw: AMD Radeon (TM) 860M Graphics
-    value: 25
+    value: 26
   - gpuNameRaw: AMD Radeon (TM) Graphics
     value: 12
   - gpuNameRaw: AMD Radeon (TM) Pro WX 3200 Graphics
@@ -331,7 +331,7 @@ results:
   - gpuNameRaw: AMD Radeon 760M Graphics (radeonsi phoenix ACO DRM 3.64 6.17.0-23-generic)
     value: 24
   - gpuNameRaw: AMD Radeon 780M
-    value: 16
+    value: 17
   - gpuNameRaw: AMD Radeon 780M (radeonsi phoenix LLVM 19.1.7 DRM 3.61 6.12.74deb131-amd64)
     value: 27
   - gpuNameRaw: AMD Radeon 780M Graphics
@@ -411,7 +411,7 @@ results:
   - gpuNameRaw: AMD Radeon HD 6570
     value: 5
   - gpuNameRaw: AMD Radeon HD 6670
-    value: 9
+    value: 8
   - gpuNameRaw: AMD Radeon HD 6700 Series
     value: 12
   - gpuNameRaw: AMD Radeon HD 6700M Series
@@ -489,7 +489,7 @@ results:
   - gpuNameRaw: AMD Radeon PRO Graphics
     value: 7
   - gpuNameRaw: AMD Radeon Pro v540
-    value: 111
+    value: 110
   - gpuNameRaw: AMD Radeon Pro VII
     value: 130
   - gpuNameRaw: AMD Radeon Pro W5500
@@ -531,7 +531,7 @@ results:
   - gpuNameRaw: AMD Radeon R7 250 Series
     value: 10
   - gpuNameRaw: AMD Radeon R7 350 Series
-    value: 12
+    value: 11
   - gpuNameRaw: AMD Radeon R7 430
     value: 7
   - gpuNameRaw: AMD Radeon R7 450
@@ -1188,12 +1188,16 @@ results:
     value: 4
   - gpuNameRaw: ATI Radeon HD 3800 Series
     value: 7
+  - gpuNameRaw: ATI Radeon HD 3850
+    value: 6
   - gpuNameRaw: ATI Radeon HD 4300/4500 Series
     value: 1
   - gpuNameRaw: ATI Radeon HD 4600 Series
     value: 4
   - gpuNameRaw: ATI Radeon HD 4800 Series
     value: 9
+  - gpuNameRaw: Barco MXRT 6700 (WDDM)
+    value: 20
   - gpuNameRaw: Barco MXRT 8700 (WDDM)
     value: 20
   - gpuNameRaw: D3D12 (Qualcomm(R) Adreno(TM) X1-45 GPU)
@@ -1234,6 +1238,8 @@ results:
     value: 6
   - gpuNameRaw: GeForce GT 1030/PCIe/SSE2
     value: 16
+  - gpuNameRaw: GeForce GT 220/PCIe/SSE2
+    value: 2
   - gpuNameRaw: GeForce GT 240/PCIe/SSE2
     value: 4
   - gpuNameRaw: GeForce GT 420/PCIe/SSE2
@@ -1415,7 +1421,7 @@ results:
   - gpuNameRaw: GeForce GTX 850M/PCIe/SSE2
     value: 13
   - gpuNameRaw: GeForce GTX 860M/PCIe/SSE2
-    value: 15
+    value: 17
   - gpuNameRaw: GeForce GTX 870M/PCIe/SSE2
     value: 25
   - gpuNameRaw: GeForce GTX 880M/PCIe/SSE2
@@ -2011,9 +2017,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 D/PCIe/SSE2
     value: 394
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
-    value: 248
+    value: 249
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
-    value: 420
+    value: 419
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
     value: 116
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
@@ -2152,6 +2158,8 @@ results:
     value: 308
   - gpuNameRaw: NVIDIA RTX PRO 6000 Blackwell Workstation Edition/PCIe/SSE2
     value: 610
+  - gpuNameRaw: NVIDIA RTX Spark N1X (6144-core Blackwell RTX GPU)/PCIe
+    value: 128
   - gpuNameRaw: NVIDIA T1000 8GB/PCIe/SSE2
     value: 37
   - gpuNameRaw: NVIDIA T1000/PCIe/SSE2
@@ -2388,7 +2396,7 @@ results:
   - gpuNameRaw: Radeon RX 460
     value: 24
   - gpuNameRaw: Radeon RX 470 Series
-    value: 50
+    value: 51
   - gpuNameRaw: Radeon RX 5300M
     value: 50
   - gpuNameRaw: Radeon RX 550
@@ -2470,7 +2478,7 @@ results:
   - gpuNameRaw: "SVGA3D build: RELEASE"
     value: 19
   - gpuNameRaw: "SVGA3D build: RELEASE  LLVM"
-    value: 122
+    value: 123
   - gpuNameRaw: T1000/PCIe/SSE2
     value: 39
   - gpuNameRaw: Tesla M40 24GB/PCIe/SSE2
@@ -2490,7 +2498,7 @@ results:
   - gpuNameRaw: Tesla V100-PCIE-16GB/PCIe/SSE2
     value: 146
   - gpuNameRaw: Tesla V100-SXM2-16GB/PCIe/SSE2
-    value: 174
+    value: 173
   - gpuNameRaw: Unknown AMD GPU
     value: 131
   - gpuNameRaw: unknown board/PCIe/SSE2

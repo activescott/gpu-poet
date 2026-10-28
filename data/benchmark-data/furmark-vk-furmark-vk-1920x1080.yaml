@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 25082
-updatedAt: 2026-10-27T10:50:55.433Z
+collectedSamples: 25187
+updatedAt: 2026-10-28T10:00:34.841Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 223
@@ -34,7 +34,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 46
   - gpuNameRaw: AMD Radeon (TM) R9 390 Series
-    value: 67
+    value: 66
   - gpuNameRaw: AMD Radeon (TM) RX 480
     value: 55
   - gpuNameRaw: AMD Radeon 680M (RADV REMBRANDT)
@@ -56,7 +56,7 @@ results:
   - gpuNameRaw: AMD Radeon Graphics (RADV GFX1200)
     value: 187
   - gpuNameRaw: AMD Radeon Graphics (RADV REMBRANDT)
-    value: 19
+    value: 13
   - gpuNameRaw: AMD Radeon Graphics (RADV RENOIR)
     value: 13
   - gpuNameRaw: AMD Radeon Graphics (RADV VEGA20)
@@ -132,7 +132,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 580 Series (RADV POLARIS10)
     value: 60
   - gpuNameRaw: AMD Radeon RX 590 Series (RADV POLARIS10)
-    value: 61
+    value: 62
   - gpuNameRaw: AMD Radeon RX 6400
     value: 49
   - gpuNameRaw: AMD Radeon RX 6400 (RADV NAVI24)
@@ -248,7 +248,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070
     value: 284
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
-    value: 294
+    value: 293
   - gpuNameRaw: AMD Radeon RX 9070 GRE
     value: 244
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
@@ -534,7 +534,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 156
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
-    value: 238
+    value: 237
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti
     value: 289
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER
@@ -542,7 +542,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080
     value: 355
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
-    value: 217
+    value: 219
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
     value: 361
   - gpuNameRaw: NVIDIA GeForce RTX 4090
