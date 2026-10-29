@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 236965
-updatedAt: 2026-10-28T09:35:55.833Z
+collectedSamples: 237959
+updatedAt: 2026-10-29T09:34:01.836Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -128,7 +128,7 @@ results:
   - gpuNameRaw: AMD Radeon Graphics (radeonsi gfx1201 ACO DRM 3.61 6.14.0-27-generic)
     value: 236
   - gpuNameRaw: AMD Radeon HD 7700 Series
-    value: 8
+    value: 9
   - gpuNameRaw: AMD Radeon HD 7800 Series
     value: 16
   - gpuNameRaw: AMD Radeon HD 7900 Series
@@ -198,7 +198,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500XT
     value: 42
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 62
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 7.0.10-201.fc44.x86_64)
@@ -225,6 +225,8 @@ results:
     value: 115
   - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 ACO DRM 3.64 7.0.0-22-generic)
     value: 116
+  - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 ACO DRM 3.64 7.3.0-2-cachyos-bore)
+    value: 109
   - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 LLVM 20.1.2 DRM 3.57
       6.8.0-110-generic)
     value: 111
@@ -260,7 +262,7 @@ results:
       6.18.7-2-cachyos)
     value: 167
   - gpuNameRaw: AMD Radeon RX 6800M
-    value: 76
+    value: 77
   - gpuNameRaw: AMD Radeon RX 6800S
     value: 67
   - gpuNameRaw: AMD Radeon RX 6900 XT
@@ -322,6 +324,9 @@ results:
     value: 212
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.1.4-204.fc44.x86_64)
     value: 254
+  - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64
+      7.2.11-ogc4.1.fc44.x86_64)
+    value: 106
   - gpuNameRaw: AMD Radeon RX 7900 XT (radeonsi navi31 ACO DRM 3.64 7.2.7-200.fc44.x86_64)
     value: 151
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -396,6 +401,8 @@ results:
     value: 209
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.0-28-generic)
     value: 190
+  - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.0-38-generic)
+    value: 174
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12)
     value: 249
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.2.11-200.fc44.x86_64)
@@ -880,7 +887,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 80
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 83
+    value: 84
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 128
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -954,7 +961,7 @@ results:
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
     value: 54
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
-    value: 40
+    value: 41
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU/PCIe/SSE2
     value: 50
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -996,7 +1003,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A2000/PCIe/SSE2
     value: 39
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU/PCIe/SSE2
-    value: 38
+    value: 41
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU/PCIe/SSE2
     value: 39
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
