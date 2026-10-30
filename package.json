@@ -20,7 +20,8 @@
   ],
   "packageManager": "npm@10.2.4",
   "devDependencies": {
-    "turbo": "^2.9.14"
+    "turbo": "^2.9.14",
+    "vite": "^6.4.4"
   },
   "dependencies": {},
   "overrides": {
