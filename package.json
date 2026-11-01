@@ -20,8 +20,17 @@
   ],
   "packageManager": "npm@10.2.4",
   "devDependencies": {
-    "turbo": "^2.3.3"
+    "canvas": "^2.11.2",
+    "turbo": "^2.9.14",
+    "vite": "^6.4.4"
   },
-  "dependencies": {
+  "dependencies": {},
+  "overrides": {
+    "next": {
+      "postcss": "^8.5.23"
+    },
+    "@prisma/config": {
+      "deepmerge-ts": "^8.0.0"
+    }
   }
 }
