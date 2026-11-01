@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 531104
-updatedAt: 2026-10-31T09:41:27.128Z
+collectedSamples: 533643
+updatedAt: 2026-11-01T09:31:58.844Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -133,7 +133,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.11-ogc3.1.fc45.x86_64)
     value: 138
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.11-ogc4.1.fc44.x86_64)
-    value: 125
+    value: 124
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.2-1-cachyos-deckify)
     value: 68
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.2-1-cachyos)
@@ -318,7 +318,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) RX 560
     value: 24
   - gpuNameRaw: AMD Radeon (TM) RX 570
-    value: 41
+    value: 42
   - gpuNameRaw: AMD Radeon (TM) RX 580
     value: 51
   - gpuNameRaw: AMD Radeon (TM) RX 640
@@ -725,7 +725,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500
     value: 49
   - gpuNameRaw: AMD Radeon RX 6500 XT
-    value: 85
+    value: 84
   - gpuNameRaw: AMD Radeon RX 6500 XT (radeonsi navi24 ACO DRM 3.64 7.0.1)
     value: 74
   - gpuNameRaw: AMD Radeon RX 6500M
@@ -819,7 +819,7 @@ results:
       6.18.9-1-cachyos-bore)
     value: 292
   - gpuNameRaw: AMD Radeon RX 6800M
-    value: 120
+    value: 121
   - gpuNameRaw: AMD Radeon RX 6800S
     value: 112
   - gpuNameRaw: AMD Radeon RX 6850M XT
@@ -837,7 +837,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7400
     value: 56
   - gpuNameRaw: AMD Radeon RX 7600
-    value: 142
+    value: 143
   - gpuNameRaw: AMD Radeon RX 7600 (radeonsi navi33 ACO DRM 3.64 6.17.0-35-generic)
     value: 140
   - gpuNameRaw: AMD Radeon RX 7600 (radeonsi navi33 ACO DRM 3.64 7.0.0-14-generic)
@@ -857,7 +857,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600 XT (radeonsi navi33 ACO DRM 3.64 7.2.4-1-cachyos)
     value: 149
   - gpuNameRaw: AMD Radeon RX 7600M
-    value: 36
+    value: 68
   - gpuNameRaw: AMD Radeon RX 7600M XT
     value: 104
   - gpuNameRaw: AMD Radeon RX 7600M XT (radeonsi navi33 ACO DRM 3.64 7.2.4-1-cachyos)
@@ -1107,7 +1107,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) 890M Graphics
     value: 30
   - gpuNameRaw: AMD Radeon(TM) Graphics
-    value: 12
+    value: 11
   - gpuNameRaw: AMD Radeon(TM) HD8490
     value: 2
   - gpuNameRaw: AMD Radeon(TM) HD8970M
@@ -1326,7 +1326,7 @@ results:
   - gpuNameRaw: GeForce GTX 1060 6GB/PCIe/SSE2
     value: 60
   - gpuNameRaw: GeForce GTX 1060 with Max-Q Design/PCIe/SSE2
-    value: 40
+    value: 42
   - gpuNameRaw: GeForce GTX 1060/PCIe/SSE2
     value: 47
   - gpuNameRaw: GeForce GTX 1070 Ti/PCIe/SSE2
@@ -1398,7 +1398,7 @@ results:
   - gpuNameRaw: GeForce GTX 660M/PCIe/SSE2
     value: 9
   - gpuNameRaw: GeForce GTX 670/PCIe/SSE2
-    value: 34
+    value: 33
   - gpuNameRaw: GeForce GTX 670M/PCIe/SSE2
     value: 14
   - gpuNameRaw: GeForce GTX 670MX/PCIe/SSE2
@@ -1838,7 +1838,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2
     value: 42
   - gpuNameRaw: NVIDIA GeForce GTX 1650 with Max-Q Design/PCIe/SSE2
-    value: 33
+    value: 34
   - gpuNameRaw: NVIDIA GeForce GTX 1650/PCIe/SSE2
     value: 43
   - gpuNameRaw: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
@@ -1948,7 +1948,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super with Max-Q Design/PCIe/SSE2
     value: 74
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
-    value: 99
+    value: 98
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
     value: 147
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
@@ -2056,9 +2056,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2
     value: 286
   - gpuNameRaw: NVIDIA GeForce RTX 5070/PCIe/SSE2
-    value: 281
+    value: 282
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU/PCIe/SSE2
-    value: 230
+    value: 231
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 362
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
@@ -2076,7 +2076,7 @@ results:
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA P106-090/PCIe/SSE2
-    value: 26
+    value: 27
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 57
   - gpuNameRaw: NVIDIA Quadro K6000/PCIe/SSE2
@@ -2196,7 +2196,7 @@ results:
   - gpuNameRaw: NVIDIA T550 Laptop GPU/PCIe/SSE2
     value: 20
   - gpuNameRaw: NVIDIA T600 Laptop GPU/PCIe/SSE2
-    value: 32
+    value: 31
   - gpuNameRaw: NVIDIA T600/PCIe/SSE2
     value: 29
   - gpuNameRaw: NVIDIA Tegra JMJWOA-Generic-GPU/PCIe
@@ -2328,7 +2328,7 @@ results:
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 91
   - gpuNameRaw: Quadro RTX 5000 with Max-Q Design/PCIe/SSE2
-    value: 62
+    value: 63
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
     value: 79
   - gpuNameRaw: Quadro RTX 6000/PCIe/SSE2
@@ -2336,7 +2336,7 @@ results:
   - gpuNameRaw: Quadro RTX 8000/PCIe/SSE2
     value: 174
   - gpuNameRaw: Quadro T1000 with Max-Q Design/PCIe/SSE2
-    value: 31
+    value: 32
   - gpuNameRaw: Quadro T1000/PCIe/SSE2
     value: 36
   - gpuNameRaw: Quadro T2000 with Max-Q Design/PCIe/SSE2
