@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 241357
-updatedAt: 2026-11-01T09:31:58.921Z
+collectedSamples: 242323
+updatedAt: 2026-11-02T04:12:50.620Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -83,7 +83,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-ogc5.1.fc44.x86_64)
     value: 62
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.9-ogc3.1.fc44.x86_64)
-    value: 86
+    value: 85
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 70
@@ -117,7 +117,7 @@ results:
   - gpuNameRaw: AMD Radeon 740M Graphics
     value: 11
   - gpuNameRaw: AMD Radeon 760M Graphics
-    value: 13
+    value: 14
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 17
   - gpuNameRaw: AMD Radeon AI PRO R9700
@@ -202,7 +202,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500XT
     value: 42
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 69
+    value: 70
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 62
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 7.0.10-201.fc44.x86_64)
@@ -295,6 +295,8 @@ results:
     value: 59
   - gpuNameRaw: AMD Radeon RX 7600M XT
     value: 73
+  - gpuNameRaw: AMD Radeon RX 7600S
+    value: 72
   - gpuNameRaw: AMD Radeon RX 7650 GRE
     value: 104
   - gpuNameRaw: AMD Radeon RX 7700
@@ -304,7 +306,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7700 XT (radeonsi navi32 ACO DRM 3.64 7.1.5-200.fc44.x86_64)
     value: 161
   - gpuNameRaw: AMD Radeon RX 7800 XT
-    value: 159
+    value: 158
   - gpuNameRaw: AMD Radeon RX 7800 XT (radeonsi navi32 ACO DRM 3.64
       6.17.7-ba29.fc43.x86_64)
     value: 154
@@ -549,7 +551,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
     value: 42
   - gpuNameRaw: AMD Radeon(TM) RX 6650M
-    value: 63
+    value: 66
   - gpuNameRaw: AMD Radeon(TM) RX 6650M XT
     value: 80
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
@@ -614,7 +616,7 @@ results:
   - gpuNameRaw: GeForce GTX 760/PCIe/SSE2
     value: 21
   - gpuNameRaw: GeForce GTX 770/PCIe/SSE2
-    value: 28
+    value: 27
   - gpuNameRaw: GeForce GTX 780 Ti/PCIe/SSE2
     value: 42
   - gpuNameRaw: GeForce GTX 780/PCIe/SSE2
@@ -736,7 +738,7 @@ results:
   - gpuNameRaw: Mesa Intel(R) Arc(tm) B570 Graphics (BMG G21)
     value: 86
   - gpuNameRaw: Mesa Intel(R) Arc(tm) B580 Graphics (BMG G21)
-    value: 104
+    value: 103
   - gpuNameRaw: Mesa Intel(R) Arc(tm) Pro B50 Graphics (BMG G21)
     value: 47
   - gpuNameRaw: Mesa Intel(R) Iris(R) Xe Graphics (ADL GT2)
@@ -938,7 +940,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
     value: 325
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
-    value: 84
+    value: 83
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
     value: 87
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2
@@ -1028,7 +1030,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A4500/PCIe/SSE2
     value: 98
   - gpuNameRaw: NVIDIA RTX A5000 Laptop GPU/PCIe/SSE2
-    value: 92
+    value: 87
   - gpuNameRaw: NVIDIA RTX A5000/PCIe/SSE2
     value: 112
   - gpuNameRaw: NVIDIA RTX A5500 Laptop GPU/PCIe/SSE2

@@ -17,7 +17,7 @@ profileVersion: 1.0.x
 publicResultsSince: 2024-02-17
 latestDataAsOf: 2025-07-14
 collectedSamples: 312
-updatedAt: 2026-11-01T08:23:05.920Z
+updatedAt: 2026-11-02T03:14:41.649Z
 results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX
     value: 95
