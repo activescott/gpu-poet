@@ -81,5 +81,11 @@ jobs:
           tags: |
             ghcr.io/${{ github.repository }}/indexnow-notifier:v${{ steps.timestamp.outputs.tag }}
             ghcr.io/${{ github.repository }}/indexnow-notifier:latest
+          # OCI labels link this container to the repo, enabling GitHub to send
+          # package webhook events to the repo when images are published to GHCR.
+          # Without these labels, webhooks (e.g., for Flux image automation) won't fire.
+          labels: |
+            org.opencontainers.image.source=https://github.com/${{ github.repository }}
+            org.opencontainers.image.revision=${{ github.sha }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
