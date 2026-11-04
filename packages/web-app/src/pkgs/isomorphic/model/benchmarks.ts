@@ -1,14 +1,12 @@
-import { z } from "zod"
-
 /**
- * Zod schema for GPU benchmark fields.
+ * GPU benchmark fields.
  * NOTE: Benchmark values are now stored in the GpuMetricValue table,
- * not directly on the gpu table. This schema is kept empty for backwards
+ * not directly on the gpu table. This type is kept empty for backwards
  * compatibility with the Gpu type which extends it.
  */
-const _GpuBenchmarksSchema = z.object({})
-
-type GpuBenchmarks = z.infer<typeof _GpuBenchmarksSchema>
+// zod 4 infers z.object({}) as Record<string, never> (keyof is string), so
+// the empty benchmark shape is typed directly.
+type GpuBenchmarks = Record<never, never>
 
 export type GpuBenchmarkKey = keyof GpuBenchmarks
 

@@ -78,7 +78,8 @@ export const NewsArticleSchema = z.object({
   updatedAt: z.union([z.date(), z.string()]).pipe(z.coerce.date()),
   publishedAt: z
     .union([z.date(), z.string(), z.null()])
-    .pipe(z.coerce.date().nullable()),
+    .transform((v) => (v === null ? null : new Date(v)))
+    .pipe(z.date().nullable()),
 })
 
 export type NewsArticle = z.infer<typeof NewsArticleSchema>
