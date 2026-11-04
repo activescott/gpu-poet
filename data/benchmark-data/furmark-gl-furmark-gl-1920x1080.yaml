@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 535700
-updatedAt: 2026-11-02T04:12:50.550Z
+collectedSamples: 538567
+updatedAt: 2026-11-03T11:10:42.497Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -903,7 +903,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800M
     value: 126
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 267
+    value: 268
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64
       6.19.10-203.nobara.fc43.x86_64)
     value: 297
@@ -979,9 +979,9 @@ results:
       6.17.7-ba29.fc43.x86_64)
     value: 200
   - gpuNameRaw: AMD Radeon RX 9060 XT LP
-    value: 174
+    value: 181
   - gpuNameRaw: AMD Radeon RX 9070
-    value: 284
+    value: 285
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12-1-cachyos)
     value: 300
   - gpuNameRaw: AMD Radeon RX 9070 (radeonsi gfx1201 ACO DRM 3.64 7.0.12-x64v3-xanmod1)
@@ -1137,7 +1137,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 560 Series
     value: 24
   - gpuNameRaw: AMD Radeon(TM) RX 5600M Series
-    value: 71
+    value: 70
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 50
   - gpuNameRaw: AMD Radeon(TM) RX 6500 XT
@@ -1194,7 +1194,7 @@ results:
   - gpuNameRaw: ASUS R9 280 Series
     value: 46
   - gpuNameRaw: ASUS Radeon RX 470 Series
-    value: 42
+    value: 41
   - gpuNameRaw: ATI FirePro V (FireGL V) Graphics Adapter
     value: 8
   - gpuNameRaw: ATI FirePro V4800 (FireGL) Graphics Adapter
@@ -1360,7 +1360,7 @@ results:
   - gpuNameRaw: GeForce GTX 1660 Ti with Max-Q Design/PCIe/SSE2
     value: 53
   - gpuNameRaw: GeForce GTX 1660 Ti/PCIe/SSE2
-    value: 69
+    value: 68
   - gpuNameRaw: GeForce GTX 1660/PCIe/SSE2
     value: 62
   - gpuNameRaw: GeForce GTX 260/PCIe/SSE2
@@ -1446,7 +1446,7 @@ results:
   - gpuNameRaw: GeForce GTX 880M/PCIe/SSE2
     value: 30
   - gpuNameRaw: GeForce GTX 950/PCIe/SSE2
-    value: 29
+    value: 30
   - gpuNameRaw: GeForce GTX 950M/PCIe/SSE2
     value: 13
   - gpuNameRaw: GeForce GTX 960/PCIe/SSE2
@@ -1454,7 +1454,7 @@ results:
   - gpuNameRaw: GeForce GTX 960M/PCIe/SSE2
     value: 21
   - gpuNameRaw: GeForce GTX 965M/PCIe/SSE2
-    value: 25
+    value: 23
   - gpuNameRaw: GeForce GTX 970/PCIe/SSE2
     value: 59
   - gpuNameRaw: GeForce GTX 970M/PCIe/SSE2
@@ -1504,7 +1504,7 @@ results:
   - gpuNameRaw: GeForce RTX 2070/PCIe/SSE2
     value: 111
   - gpuNameRaw: GeForce RTX 2080 Super with Max-Q Design/PCIe/SSE2
-    value: 92
+    value: 87
   - gpuNameRaw: GeForce RTX 2080 SUPER/PCIe/SSE2
     value: 161
   - gpuNameRaw: GeForce RTX 2080 Ti/PCIe/SSE2
@@ -1632,7 +1632,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics
     value: 8
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics 640
-    value: 9
+    value: 8
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics 645
     value: 8
   - gpuNameRaw: Intel(R) Iris(R) Plus Graphics 650
@@ -1723,6 +1723,8 @@ results:
     value: 16
   - gpuNameRaw: Mesa Intel(R) Iris(R) Xe Graphics (RPL-P)
     value: 18
+  - gpuNameRaw: Mesa Intel(R) Iris(R) Xe Graphics (RPL-U)
+    value: 14
   - gpuNameRaw: Mesa Intel(R) Iris(R) Xe Graphics (TGL GT2)
     value: 13
   - gpuNameRaw: Mesa Intel(R) UHD Graphics (CML GT2)
@@ -1757,6 +1759,8 @@ results:
     value: 6
   - gpuNameRaw: NV137
     value: 4
+  - gpuNameRaw: NV166
+    value: 74
   - gpuNameRaw: NV92
     value: 2
   - gpuNameRaw: NVE4
@@ -1784,7 +1788,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce 940M/PCIe/SSE2
     value: 6
   - gpuNameRaw: NVIDIA GeForce 940MX/PCIe/SSE2
-    value: 8
+    value: 9
   - gpuNameRaw: NVIDIA GeForce GPU/PCIe/SSE2
     value: 10
   - gpuNameRaw: NVIDIA GeForce GT 1030/PCIe/SSE2
@@ -2068,7 +2072,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
     value: 505
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
-    value: 501
+    value: 500
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
     value: 265
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
@@ -2092,7 +2096,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation/PCIe/SSE2
     value: 109
   - gpuNameRaw: NVIDIA RTX 3000 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 111
+    value: 108
   - gpuNameRaw: NVIDIA RTX 3500 Ada Generation Laptop GPU/PCIe/SSE2
     value: 169
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -2132,7 +2136,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A400/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU/PCIe/SSE2
-    value: 104
+    value: 105
   - gpuNameRaw: NVIDIA RTX A4000/PCIe/SSE2
     value: 96
   - gpuNameRaw: NVIDIA RTX A4000H/PCIe/SSE2
@@ -2280,7 +2284,7 @@ results:
   - gpuNameRaw: Quadro M5000/PCIe/SSE2
     value: 40
   - gpuNameRaw: Quadro M5000M/PCIe/SSE2
-    value: 37
+    value: 36
   - gpuNameRaw: Quadro M520/PCIe/SSE2
     value: 9
   - gpuNameRaw: Quadro M6000 24GB/PCIe/SSE2
@@ -2401,7 +2405,7 @@ results:
     value: 135
   - gpuNameRaw: Radeon 8060S Graphics (radeonsi gfx1151 LLVM 20.1.2 DRM 3.64
       7.0.0-42-generic)
-    value: 140
+    value: 141
   - gpuNameRaw: Radeon 8060S Graphics (radeonsi strix_halo ACO DRM 3.64
       6.17.7-ba29.fc43.x86_64)
     value: 139
@@ -2426,7 +2430,7 @@ results:
   - gpuNameRaw: Radeon RX 470 Series
     value: 51
   - gpuNameRaw: Radeon RX 5300M
-    value: 50
+    value: 51
   - gpuNameRaw: Radeon RX 550
     value: 19
   - gpuNameRaw: Radeon RX 550 Series
