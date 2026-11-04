@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 25891
-updatedAt: 2026-11-03T11:30:19.208Z
+collectedSamples: 26034
+updatedAt: 2026-11-04T12:40:42.261Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 222
@@ -210,13 +210,13 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600 XT (RADV NAVI33)
     value: 139
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 113
+    value: 108
   - gpuNameRaw: AMD Radeon RX 7600M XT (RADV NAVI33)
     value: 123
   - gpuNameRaw: AMD Radeon RX 7600S
     value: 100
   - gpuNameRaw: AMD Radeon RX 7650 GRE
-    value: 140
+    value: 141
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 192
   - gpuNameRaw: AMD Radeon RX 7700 XT (RADV NAVI32)
@@ -287,6 +287,8 @@ results:
     value: 28
   - gpuNameRaw: AMD Radeon(TM) Graphics
     value: 12
+  - gpuNameRaw: AMD Radeon(TM) RX 560 Series
+    value: 24
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 44
   - gpuNameRaw: AMD Radeon(TM) RX 6500M
@@ -417,6 +419,8 @@ results:
     value: 11
   - gpuNameRaw: NVIDIA GeForce GT 1030
     value: 14
+  - gpuNameRaw: NVIDIA GeForce GT 730
+    value: 7
   - gpuNameRaw: NVIDIA GeForce GTX 1050
     value: 25
   - gpuNameRaw: NVIDIA GeForce GTX 1050 Ti
@@ -434,7 +438,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti
     value: 83
   - gpuNameRaw: NVIDIA GeForce GTX 1080
-    value: 104
+    value: 106
   - gpuNameRaw: NVIDIA GeForce GTX 1080 Ti
     value: 135
   - gpuNameRaw: NVIDIA GeForce GTX 1650
@@ -518,9 +522,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti
     value: 193
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU
-    value: 100
+    value: 103
   - gpuNameRaw: NVIDIA GeForce RTX 3080
-    value: 140
+    value: 139
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
     value: 93
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti
@@ -576,7 +580,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti
     value: 302
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
-    value: 190
+    value: 189
   - gpuNameRaw: NVIDIA GeForce RTX 5080
     value: 391
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
@@ -662,7 +666,7 @@ results:
   - gpuNameRaw: Radeon RX 5500 XT
     value: 66
   - gpuNameRaw: Radeon RX 5500M
-    value: 57
+    value: 55
   - gpuNameRaw: Radeon RX 560 Series
     value: 26
   - gpuNameRaw: Radeon RX 560 XT
