@@ -74,9 +74,7 @@ export default async function November2026Report(): Promise<ReactNode> {
           The{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3060-ti">RTX 3060 Ti</Link>{" "}
           leads again at $1.20/FPS, up only 1% in a month when most cards rose.
-          It is still 8GB, like the{" "}
-          <Link href="/gpu/shop/amd-radeon-rx-7600">RX 7600</Link> behind it.
-          Last month I pointed to the{" "}
+          It is still 8GB. Last month I pointed to the{" "}
           <Link href="/gpu/shop/amd-radeon-rx-6800">RX 6800</Link> for 16GB. It
           rose 8% and the{" "}
           <Link href="/gpu/shop/amd-radeon-rx-6800-xt">RX 6800 XT</Link> rose
@@ -119,16 +117,13 @@ export default async function November2026Report(): Promise<ReactNode> {
       <ChartSection title="AI Inference Best Bang for Your Buck in November 2026">
         <p className="mb-4">
           The <Link href="/gpu/shop/intel-arc-b580">Arc B580</Link> takes the
-          top spot back from the B570, which rose 21%. The Intel catch has not
+          top spot back from the B570, which rose 16%. The Intel catch has not
           changed: far less of the open source AI stack assumes OneAPI than
           assumes CUDA. The cheapest CUDA card is still the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3080">RTX 3080</Link> at
-          $1.45, with 10GB. The first 16GB card, the{" "}
-          <Link href="/gpu/shop/amd-radeon-rx-9070-xt">RX 9070 XT</Link>, rose
-          12% and now ties the 12GB{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-3080-ti">RTX 3080 Ti</Link>.
-          If your models fit in 10GB, I would buy the 3080. If you need 12GB on
-          CUDA, the 3080 Ti.
+          $1.45, with 10GB, and the cheapest CUDA card with 12GB costs 30% more
+          per TOPS. If your models fit in 10GB, I would buy the 3080. If they
+          need 12GB and your stack runs on OneAPI, the B580.
         </p>
         <DollarsPerInt8TopChart dateRange={dateRange} />
         <div className="alert alert-info mt-3">
@@ -147,8 +142,6 @@ export default async function November2026Report(): Promise<ReactNode> {
           The <Link href="/gpu/shop/nvidia-tesla-p100">Tesla P100</Link> leads
           at $8.4/TFLOP, up from $6.9, and it is still a 2016 card with no
           tensor cores. Behind it, 12 of the next 14 cards are AMD. The{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-4080">RTX 4080</Link> I
-          picked last month rose 12% and fell out of the top 15. The{" "}
           <Link href="/gpu/shop/amd-radeon-rx-7900-xt">RX 7900 XT</Link> is
           second with 20GB, and the{" "}
           <Link href="/gpu/shop/amd-radeon-rx-7900-xtx">RX 7900 XTX</Link> adds
@@ -170,14 +163,15 @@ export default async function November2026Report(): Promise<ReactNode> {
       <ChartSection title="The RTX 5090 Is Up 89% Since July">
         <p className="mb-4">
           The <Link href="/gpu/shop/nvidia-geforce-rtx-5090">5090</Link>&apos;s
-          best resale deal was $3,173 in July and $5,986 in October. This is not
-          one odd listing. After a $5,450 &quot;sealed&quot; card from a seller
-          with one feedback, which I left out, the next nine cheapest in October
-          were all between $5,959 and $6,200. The{" "}
+          best resale deal was $3,173 in July and $5,986 in October. June plots
+          lower because of two cards at $2,662 and $2,901, each at least $700
+          under every other June listing, so I start from July. After a $5,450
+          &quot;sealed&quot; card from a one-feedback seller, which I left out,
+          October&apos;s next nine ran $5,959 to $6,200. The{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-4090">RTX 4090</Link> rose
-          38% over the same months, to 1.9 times its MSRP. My guess is that
-          buyers priced out of the 5090 are moving down a tier. If you were
-          waiting for either to come back down, both lines say otherwise.
+          38% since July, to 1.9 times MSRP, likely from buyers priced out of
+          the 5090. If you were waiting for either to drop, both lines say
+          otherwise.
         </p>
         <PriceHistoryChart
           dateRange={dateRange}
@@ -192,9 +186,8 @@ export default async function November2026Report(): Promise<ReactNode> {
 
       <ChartSection title="RTX 50 Premiums Over MSRP">
         <p className="mb-4">
-          The chart shows the six largest premiums, so the one missing is the{" "}
-          <Link href="/gpu/shop/nvidia-geforce-rtx-5060">RTX 5060</Link> at 13%
-          over. The one to watch is the{" "}
+          The <Link href="/gpu/shop/nvidia-geforce-rtx-5060">RTX 5060</Link>{" "}
+          (13%) is just off the chart. The one to watch is the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-5070">RTX 5070</Link>: 1%
           over MSRP in September, 22% now. New on Amazon still costs more than
           resale on every RTX 50 card with enough listings to compare. A retail
