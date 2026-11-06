@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 245780
-updatedAt: 2026-11-05T11:50:18.841Z
+collectedSamples: 246721
+updatedAt: 2026-11-06T12:04:54.887Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -121,7 +121,7 @@ results:
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 17
   - gpuNameRaw: AMD Radeon AI PRO R9700
-    value: 236
+    value: 237
   - gpuNameRaw: AMD Radeon Graphics
     value: 17
   - gpuNameRaw: AMD Radeon Graphics (radeonsi gfx1200 LLVM 20.1.2 DRM 3.64
@@ -135,6 +135,8 @@ results:
     value: 16
   - gpuNameRaw: AMD Radeon HD 7900 Series
     value: 21
+  - gpuNameRaw: AMD Radeon Pro 5300M
+    value: 28
   - gpuNameRaw: AMD Radeon Pro 5500M
     value: 24
   - gpuNameRaw: AMD Radeon Pro V620
@@ -268,7 +270,7 @@ results:
       6.18.7-2-cachyos)
     value: 167
   - gpuNameRaw: AMD Radeon RX 6800M
-    value: 77
+    value: 78
   - gpuNameRaw: AMD Radeon RX 6800S
     value: 67
   - gpuNameRaw: AMD Radeon RX 6900 XT
@@ -296,7 +298,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M
     value: 59
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 73
+    value: 74
   - gpuNameRaw: AMD Radeon RX 7600S
     value: 72
   - gpuNameRaw: AMD Radeon RX 7650 GRE
@@ -570,7 +572,7 @@ results:
   - gpuNameRaw: D3D12 (Qualcomm(R) Adreno(TM) X2-90 GPU)
     value: 43
   - gpuNameRaw: GeForce GT 710/PCIe/SSE2
-    value: 3
+    value: 2
   - gpuNameRaw: GeForce GT 730/PCIe/SSE2
     value: 6
   - gpuNameRaw: GeForce GT 740/PCIe/SSE2
@@ -700,7 +702,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) B580 Graphics
     value: 106
   - gpuNameRaw: Intel(R) Arc(TM) Graphics
-    value: 22
+    value: 23
   - gpuNameRaw: Intel(R) Arc(TM) Pro B50 Graphics
     value: 48
   - gpuNameRaw: Intel(R) Arc(TM) Pro B70 Graphics
@@ -841,6 +843,8 @@ results:
     value: 42
   - gpuNameRaw: NVIDIA GeForce GTX TITAN X/PCIe/SSE2
     value: 52
+  - gpuNameRaw: NVIDIA GeForce MX350/PCIe/SSE2
+    value: 11
   - gpuNameRaw: NVIDIA GeForce MX450/PCIe/SSE2
     value: 13
   - gpuNameRaw: NVIDIA GeForce MX550/PCIe/SSE2
@@ -852,7 +856,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2
     value: 43
   - gpuNameRaw: NVIDIA GeForce RTX 2060/PCIe/SSE2
-    value: 72
+    value: 71
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
     value: 66
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
@@ -924,7 +928,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER/PCIe/SSE2
     value: 171
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2
-    value: 211
+    value: 212
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti/PCIe/SSE2
     value: 213
   - gpuNameRaw: NVIDIA GeForce RTX 4070/PCIe/SSE2
@@ -970,11 +974,13 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
     value: 199
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
-    value: 396
+    value: 395
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
     value: 121
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
     value: 54
+  - gpuNameRaw: NVIDIA P106-090/PCIe/SSE2
+    value: 19
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
     value: 41
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -1052,7 +1058,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell/PCIe/SSE2
     value: 153
   - gpuNameRaw: NVIDIA RTX PRO 4500 Blackwell/PCIe/SSE2
-    value: 220
+    value: 223
   - gpuNameRaw: NVIDIA RTX PRO 500 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 47
   - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell Generation Laptop GPU/PCIe/SSE2
@@ -1066,7 +1072,7 @@ results:
   - gpuNameRaw: NVIDIA RTX Spark N1X (5120-core Blackwell RTX GPU)/PCIe
     value: 65
   - gpuNameRaw: NVIDIA RTX Spark N1X (6144-core Blackwell RTX GPU)/PCIe
-    value: 75
+    value: 72
   - gpuNameRaw: NVIDIA T1000 8GB/PCIe/SSE2
     value: 26
   - gpuNameRaw: NVIDIA T1000/PCIe/SSE2
@@ -1144,7 +1150,7 @@ results:
   - gpuNameRaw: Radeon Pro 560X
     value: 15
   - gpuNameRaw: Radeon RX 470 Series
-    value: 30
+    value: 33
   - gpuNameRaw: Radeon RX 5500
     value: 46
   - gpuNameRaw: Radeon RX 5500 XT
