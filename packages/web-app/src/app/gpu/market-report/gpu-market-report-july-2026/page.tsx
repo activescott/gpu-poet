@@ -65,7 +65,7 @@ export default async function July2026Report(): Promise<ReactNode> {
           <Link href="/gpu/shop/amd-radeon-rx-6800-xt">RX 6800 XT</Link> from
           $316 to $272). Two things came out of that. First, the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-5090">RTX 5090</Link> resale
-          premium cooled from 83% above MSRP in May to 52% in June. Second, used
+          premium cooled from 83% above MSRP in May to 68% in June. Second, used
           Ampere and RDNA2 cards hit their best value yet, led by the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3060-ti">RTX 3060 Ti</Link>{" "}
           at $1.13/FPS for 1440p. Below I break down the best bang for your buck
@@ -73,6 +73,15 @@ export default async function July2026Report(): Promise<ReactNode> {
           Amazon (average of the 3 cheapest listings).
         </p>
       </div>
+
+      <p className="small text-muted mb-5">
+        <strong>Correction, 2026-11-05:</strong> This report originally said the
+        RTX 5090 premium fell to 52% above MSRP in June. One June listing, a
+        $2,900.67 card from a seller with 4 feedback and a &quot;READ
+        DESCRIPTION&quot; title, was likely a scam and is now left out of the
+        figures. With it removed, June&apos;s 5090 best deal is $3,352, which is
+        68% above MSRP.
+      </p>
 
       <ChartSection title="1440p Gaming Best Bang for Your Buck in July 2026">
         <p className="mb-4">
@@ -221,7 +230,7 @@ export default async function July2026Report(): Promise<ReactNode> {
       <ChartSection title="RTX 50 Series: 5090 Premium Cools, Everything Else Near or Below MSRP">
         <p className="mb-4">
           The <Link href="/gpu/shop/nvidia-geforce-rtx-5090">5090</Link> premium
-          cooled from 83% above MSRP in May to 52% in June ($3,048 best deal).
+          cooled from 83% above MSRP in May to 68% in June ($3,352 best deal).
           It&apos;s still the one Blackwell card carrying a real scalper tax,
           but the direction is finally right. Everything else in the lineup is
           at or below sticker: the{" "}
