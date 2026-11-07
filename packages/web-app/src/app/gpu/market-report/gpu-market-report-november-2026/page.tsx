@@ -96,8 +96,8 @@ export default async function November2026Report(): Promise<ReactNode> {
       <ChartSection title="4K Gaming Best Bang for Your Buck in November 2026">
         <p className="mb-4">
           The <Link href="/gpu/shop/amd-radeon-rx-7600">RX 7600</Link> leads
-          again, and again it is an 8GB card that only ranks here because
-          Counter-Strike 2 barely touches memory at 4K. The{" "}
+          again — an 8GB card that only ranks here because Counter-Strike 2
+          barely touches memory at 4K. The{" "}
           <Link href="/gpu/shop/amd-radeon-rx-7900-xt">RX 7900 XT</Link> is 20
           cents per frame behind with 20GB, and still 34% below its original
           MSRP after a 5% rise. If you are buying for 4K, that is where I would
@@ -118,8 +118,8 @@ export default async function November2026Report(): Promise<ReactNode> {
         <p className="mb-4">
           The <Link href="/gpu/shop/intel-arc-b580">Arc B580</Link> takes the
           top spot back from the B570, which rose 16%. The Intel catch has not
-          changed: far less of the open source AI stack assumes OneAPI than
-          assumes CUDA. The cheapest CUDA card is still the{" "}
+          changed: far less of the open source AI stack supports OneAPI than
+          CUDA. The cheapest CUDA card is still the{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-3080">RTX 3080</Link> at
           $1.45, with 10GB, and the cheapest CUDA card with 12GB costs 30% more
           per TOPS. If your models fit in 10GB, I would buy the 3080. If they
@@ -164,8 +164,8 @@ export default async function November2026Report(): Promise<ReactNode> {
         <p className="mb-4">
           The <Link href="/gpu/shop/nvidia-geforce-rtx-5090">5090</Link>&apos;s
           best resale deal was $3,173 in July and $5,986 in October. June plots
-          lower because of two cards at $2,662 and $2,901, each at least $700
-          under every other June listing, so I start from July. After a $5,450
+          lower because of two cards, $2,662 and $2,901, each $700+ under every
+          other June listing — so the trend starts from July. After a $5,450
           &quot;sealed&quot; card from a one-feedback seller, which I left out,
           October&apos;s next nine ran $5,959 to $6,200. The{" "}
           <Link href="/gpu/shop/nvidia-geforce-rtx-4090">RTX 4090</Link> rose
