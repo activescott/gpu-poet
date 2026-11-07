@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 62830
-updatedAt: 2026-11-06T12:04:54.893Z
+collectedSamples: 63028
+updatedAt: 2026-11-07T09:51:34.340Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -153,7 +153,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800M
     value: 51
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 104
+    value: 105
   - gpuNameRaw: AMD Radeon RX 7900 XT
     value: 109
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -518,7 +518,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
     value: 70
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti/PCIe/SSE2
-    value: 90
+    value: 91
   - gpuNameRaw: NVIDIA GeForce RTX 3090/PCIe/SSE2
     value: 81
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU/PCIe/SSE2
@@ -574,7 +574,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 165
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
-    value: 235
+    value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D V2/PCIe/SSE2
     value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
@@ -692,7 +692,7 @@ results:
   - gpuNameRaw: Quadro P2000 with Max-Q Design/PCIe/SSE2
     value: 8
   - gpuNameRaw: Quadro P2000/PCIe/SSE2
-    value: 9
+    value: 10
   - gpuNameRaw: Quadro P2200/PCIe/SSE2
     value: 13
   - gpuNameRaw: Quadro P3000/PCIe/SSE2
