@@ -15,9 +15,9 @@ descriptionDollarsPer: Dollars per FPS in 3DMark Wild Life Extreme. Lower values
 category: gaming
 profileVersion: 1.0.x
 publicResultsSince: 2023-05-12
-latestDataAsOf: 2026-10-24
-collectedSamples: 637
-updatedAt: 2026-11-04T10:47:51.081Z
+latestDataAsOf: 2026-11-02
+collectedSamples: 638
+updatedAt: 2026-11-07T08:35:25.035Z
 results:
   - gpuNameRaw: AMD Phoenix1
     value: 88
