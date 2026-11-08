@@ -1,5 +1,8 @@
 import { Gpu, Listing } from "../../isomorphic/model"
-import { createFilterForGpu } from "../listingFilters"
+import {
+  createFilterForGpu,
+  createMedianPriceFloorFilter,
+} from "../listingFilters"
 import { BenchmarkGpu, BenchmarkListing } from "./dataset"
 import { Classifier, Verdict } from "./score"
 
@@ -12,7 +15,7 @@ export function createRulesClassifier(gpus: BenchmarkGpu[]): Classifier {
   return {
     name: "rules",
     async classify(listings: BenchmarkListing[]): Promise<Verdict[]> {
-      return listings.map((listing) => {
+      const verdicts: Verdict[] = listings.map((listing) => {
         const gpu = gpuByName.get(listing.gpuName)
         if (!gpu) throw new Error(`no gpu ${listing.gpuName} in dataset`)
         let reason: string | undefined
@@ -22,6 +25,20 @@ export function createRulesClassifier(gpus: BenchmarkGpu[]): Classifier {
         })
         return { exclude: !filter(toListing(listing, gpu)), reason }
       })
+      // Like cleanup: the price floor uses the median of each GPU's listings that pass the rest.
+      for (const gpuName of gpuByName.keys()) {
+        const passing = listings.filter(
+          (l, i) => l.gpuName === gpuName && !verdicts[i].exclude,
+        )
+        const priceFloor = createMedianPriceFloorFilter(passing)
+        for (const [i, l] of listings.entries()) {
+          if (l.gpuName !== gpuName || verdicts[i].exclude) continue
+          if (!priceFloor(l)) {
+            verdicts[i] = { exclude: true, reason: "medianPriceFloorFilter" }
+          }
+        }
+      }
+      return verdicts
     },
   }
 }

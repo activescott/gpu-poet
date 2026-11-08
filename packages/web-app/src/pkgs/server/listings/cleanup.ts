@@ -12,6 +12,8 @@ import {
 } from "@/pkgs/isomorphic/retry"
 import {
   createFilterForGpu,
+  createMedianPriceFloorFilter,
+  isAccessoryTitle,
   isBoxOnlyTitle,
   sellerFeedbackFilter,
 } from "../listingFilters"
@@ -106,13 +108,17 @@ async function processGpuListings(
   // All listings in this group have the same GPU
   const gpu = listings[0].gpu
   const filter = createFilterForGpu(gpu)
+  const passing = new Set(listings.filter((l) => filter(l)))
+  const priceFloor = createMedianPriceFloorFilter([...passing])
 
   let archivedCount = 0
 
   for (const listing of listings) {
     // Check if listing passes current filters
-    if (!filter(listing)) {
-      const excludeReason = detectExcludeReason(listing)
+    if (!passing.has(listing) || !priceFloor(listing)) {
+      const excludeReason = passing.has(listing)
+        ? EXCLUDE_REASONS.BELOW_MEDIAN_PRICE
+        : detectExcludeReason(listing)
       log.warn(
         `Excluding invalid listing: ${listing.itemId} - "${listing.title}" (GPU: ${gpuName}, reason: ${excludeReason})`,
       )
@@ -169,21 +175,7 @@ function detectExcludeReason(listing: CachedListing): ExcludeReason {
     return EXCLUDE_REASONS.FOR_PARTS
   }
 
-  // Check for accessory-related keywords
-  const accessoryKeywords = [
-    "bracket",
-    "fan attachment",
-    "fan adapter",
-    "shroud",
-    "blower fan",
-    "no gpu",
-    "fan kit",
-    "fan for",
-    "kit for",
-    "cooling fan",
-    "backplate for",
-  ]
-  if (accessoryKeywords.some((kw) => titleLower.includes(kw))) {
+  if (isAccessoryTitle(listing.title)) {
     return EXCLUDE_REASONS.ACCESSORY
   }
 

@@ -110,6 +110,8 @@ export const EXCLUDE_REASONS = {
   BULK_SALE: "bulk_sale",
   /** Incorrectly matched GPU (e.g. listing was for a GTX 980, and was matched as a T4) */
   MISMATCHED_GPU: "mismatched_gpu",
+  /** Priced under 25% of the GPU model's median listing price */
+  BELOW_MEDIAN_PRICE: "below_median_price",
   /** Other data quality issue */
   OTHER: "other",
 } as const

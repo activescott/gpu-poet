@@ -1,7 +1,13 @@
 import { loadGpuFromYaml } from "@/testing/gpuFiles"
 import { Listing } from "../isomorphic/model"
 import { chainAsync } from "irritable-iterable"
-import { createFilterForGpu, sellerFeedbackFilter } from "./listingFilters"
+import {
+  createFilterForGpu,
+  createMedianPriceFloorFilter,
+  isAccessoryTitle,
+  isBoxOnlyTitle,
+  sellerFeedbackFilter,
+} from "./listingFilters"
 import { arrayToAsyncIterable } from "../isomorphic/collection"
 
 it("should filter out backplate accessories but keep GPUs with backplate in name", async () => {
@@ -375,4 +381,71 @@ it("should filter out 'parts only' and 'for parts' title patterns", async () => 
   expect(filtered[0].title).toBe(
     "PowerColor Fighter AMD Radeon RX 7800 XT 16GB GDDR6",
   )
+})
+
+const isNotACard = (title: string) =>
+  isBoxOnlyTitle(title) || isAccessoryTitle(title)
+
+const pricedListing = (priceValue: string) => ({
+  itemId: priceValue,
+  title: "AMD Radeon RX 7800 XT 16GB",
+  priceValue,
+})
+
+describe("accessory and box titles (gpu-poet#122)", () => {
+  it.each([
+    // quoted in gpu-poet#122
+    "MSI NVIDIA GeForce RTX 5060 Ti 8G GAMING TRIO OC GPU Graphics Card White **BOX**",
+    "MSI NVIDIA GeForce RTX 4090 SUPRIM 24GB GDDR6X Liquid Cooler Block Only",
+    "PowerColor Fighter AMD Radeon RX 7800 XT 16GB GDDR6 Box Only",
+    // live on the site, unexcluded, at the time of the fix
+    "AMD Radeon RX 9070 XT Steel Legend 16GB Replacement Heatsink and Fans Only",
+    "NVIDIA Tesla P100 16GB HBM2 PCIe x16 GPU Accelerator CUDA, Heatsink Only",
+    "Nvidia Tesla P4 8GB M4 4GB T4 16GB GPU Card graphics Cooling fan",
+    "NVIDIA GeForce RTX 3090 24GB Replacement Fan",
+    "NVIDIA GeForce RTX 4090 24GB Founders Edition Cooler Only",
+  ])("rejects %s", (title) => {
+    expect(isNotACard(title)).toBe(true)
+  })
+
+  it.each([
+    // real cards from production that mention a cooler, fan or box
+    "Nvidia A10G 24GB GPU GDDR6 Graphics Card Passive Cooler Tensor Accelerator",
+    "Dell / Alienware OEM NVIDIA GeForce RTX 3090 24GB GDDR6X – Tested w/ Spare fan",
+    "ROG Astral LC GeForce RTX 5090 32GB GDDR7 OC Edition, NVIDIA, Graphics Card, for Desktop PC, HDMI 2.1b/DisplayPort 2.1b – 360mm AIO Cooler for Optimal Performance",
+    "AMD Radeon RX 6900 XT 16GB W/ HeatKiller Waterblock + Original Air cooler",
+    "ASUS AMD Radeon RX 9070 XT Prime OC Triple Fan 16GB Receipt includ for manuwarra",
+    "ASUS NVIDIA Dual GeForce RTX 4060 Ti 8GB GDDR6 Graphics Card-White-Very good-Box",
+    "ARKN INTEL ARC PRO B60 24GB GDDR6 GRAPHICS CARD Quad DP 8357-00128 (Brown box)",
+    "XFX Quicksilver AMD Radeon RX 9070 XT 16GB GDDR6 White Magnetic Air  [OPEN BOX]",
+  ])("keeps %s", (title) => {
+    expect(isNotACard(title)).toBe(false)
+  })
+})
+
+describe("createMedianPriceFloorFilter (gpu-poet#122)", () => {
+  it("drops listings under 25% of the median price", () => {
+    // gpu-poet#122: box-only listings at $5 and $25 among real cards
+    const listings = ["5", "25", "480", "500", "520", "540", "800"].map((p) =>
+      pricedListing(p),
+    )
+    const floor = createMedianPriceFloorFilter(listings)
+    // median 500, floor 125
+    expect(listings.filter((l) => floor(l)).map((l) => l.priceValue)).toEqual([
+      "480",
+      "500",
+      "520",
+      "540",
+      "800",
+    ])
+    expect(floor(pricedListing("125"))).toBe(true)
+    expect(floor(pricedListing("124.99"))).toBe(false)
+  })
+
+  it("keeps everything when there are too few listings for a median", () => {
+    const listings = ["5", "500"].map((p) => pricedListing(p))
+    expect(listings.filter(createMedianPriceFloorFilter(listings))).toEqual(
+      listings,
+    )
+  })
 })

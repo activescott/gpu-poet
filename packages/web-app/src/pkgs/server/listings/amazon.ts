@@ -10,7 +10,10 @@ import {
   archiveStaleListingsForGpu,
   recordSearchAttempt,
 } from "../db/ListingRepository"
-import { createFilterForGpu } from "../listingFilters"
+import {
+  createFilterForGpu,
+  createMedianPriceFloorFilter,
+} from "../listingFilters"
 import { createLogger } from "@/lib/logger"
 import { SERVER_CONFIG } from "@/pkgs/isomorphic/config"
 
@@ -77,6 +80,9 @@ export async function cacheAmazonListingsForGpu(
   // Use info-level logging for Amazon so filter rejections are visible in production
   const filter = createFilterForGpu(gpu, log.info.bind(log))
   listings = listings.filter((listing) => filter(listing))
+  listings = listings.filter(
+    createMedianPriceFloorFilter(listings, log.info.bind(log)),
+  )
 
   log.info(`After filtering: ${listings.length} Amazon listings for ${gpuName}`)
 
