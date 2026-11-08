@@ -14,6 +14,8 @@ interface GpuSelectorProps {
   gpuOptions: GpuOption[]
   selectedGpuSlug?: string
   otherSelectedSlug?: string
+  /** Slugs to leave out of the options (e.g. every GPU already on the page). */
+  excludeSlugs?: string[]
   placeholder?: string
   baseUrl?: string
   onSelect?: (slug: string) => void
@@ -30,6 +32,7 @@ export function GpuSelector({
   gpuOptions,
   selectedGpuSlug,
   otherSelectedSlug,
+  excludeSlugs = [],
   placeholder = "Search for a GPU...",
   baseUrl,
   onSelect,
@@ -45,7 +48,10 @@ export function GpuSelector({
 
   // Filter options: exclude the other selected GPU and filter by search
   const filteredOptions = gpuOptions
-    .filter((gpu) => gpu.name !== otherSelectedSlug)
+    .filter(
+      (gpu) =>
+        gpu.name !== otherSelectedSlug && !excludeSlugs.includes(gpu.name),
+    )
     .filter(
       (gpu) =>
         search.length >= MIN_SEARCH_LENGTH &&

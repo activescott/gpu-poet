@@ -8,9 +8,9 @@ import {
   GpuSpecKeys,
   GpuSpecsDescription,
 } from "@/pkgs/isomorphic/model/specs"
-import { BenchmarkPercentile } from "./GpuBenchmarksTable"
 import { GpuQuickInfo } from "./GpuQuickInfo"
 import { GpuSelector, GpuOption } from "./GpuSelector"
+import { AddThirdGpu } from "./AddThirdGpu"
 import { PercentileProgressBar, NoDataBar } from "./PercentileProgressBar"
 import { FormatCurrency } from "./FormatCurrency"
 import { BootstrapIcon } from "./BootstrapIcon"
@@ -22,10 +22,9 @@ interface ComparisonBenchmarkData {
   slug: string
   name: string
   unit: string
-  gpu1Value: number | undefined
-  gpu1Percentile: number | undefined
-  gpu2Value: number | undefined
-  gpu2Percentile: number | undefined
+  /** One entry per compared GPU, in the same order as `gpus`. */
+  values: (number | undefined)[]
+  percentiles: (number | undefined)[]
 }
 
 interface PriceStats {
@@ -34,67 +33,76 @@ interface PriceStats {
   activeListingCount: number
 }
 
+interface ComparedGpu {
+  gpu: Gpu
+  specPercentages: Record<GpuSpecKey, number>
+  priceStats: PriceStats
+}
+
 interface GpuComparisonViewProps {
-  gpu1: Gpu
-  gpu2: Gpu
-  gpu1SpecPercentages: Record<GpuSpecKey, number>
-  gpu2SpecPercentages: Record<GpuSpecKey, number>
-  gpu1Benchmarks: BenchmarkPercentile[]
-  gpu2Benchmarks: BenchmarkPercentile[]
+  /** Two or three GPUs, in URL (alphabetical) order. */
+  gpus: ComparedGpu[]
   benchmarkData: ComparisonBenchmarkData[]
-  gpu1PriceStats: PriceStats
-  gpu2PriceStats: PriceStats
   gpuOptions: GpuOption[]
 }
 
 const HIGHLIGHT_THRESHOLD = 0.05 // 5% difference to highlight winner
-const GPU1_WINS = 1
-const GPU2_WINS = 2
-const TIE = 0
+const MAX_GPUS = 3
+const GRID_COLUMNS = 12
+const PERCENT = 100
+const LABEL_COLUMN_PERCENT = 25
 
 /**
- * Determines which GPU is "winning" for a given metric
- * Returns GPU1_WINS if gpu1 wins, GPU2_WINS if gpu2 wins, TIE if tie
+ * Index of the GPU "winning" a metric: the highest value, if it beats every
+ * other present value by the highlight threshold. -1 means no winner.
  */
-function getWinner(
-  gpu1Value: number | undefined | null,
-  gpu2Value: number | undefined | null,
-): typeof TIE | typeof GPU1_WINS | typeof GPU2_WINS {
-  if (gpu1Value === undefined || gpu1Value === null) {
-    return gpu2Value !== undefined && gpu2Value !== null ? GPU2_WINS : TIE
+export function getWinner(values: (number | undefined | null)[]): number {
+  let best = -1
+  for (const [i, v] of values.entries()) {
+    if (v !== undefined && v !== null && (best < 0 || v > values[best]!)) {
+      best = i
+    }
   }
-  if (gpu2Value === undefined || gpu2Value === null) return GPU1_WINS
-
-  const diff = Math.abs(gpu1Value - gpu2Value) / Math.max(gpu1Value, gpu2Value)
-  if (diff < HIGHLIGHT_THRESHOLD) return TIE
-
-  return gpu1Value > gpu2Value ? GPU1_WINS : GPU2_WINS
+  if (best < 0) return -1
+  const bestValue = values[best]!
+  const clear = values.every(
+    (v, i) =>
+      i === best ||
+      v === undefined ||
+      v === null ||
+      (bestValue - v) / bestValue >= HIGHLIGHT_THRESHOLD,
+  )
+  return clear ? best : -1
 }
 
 /**
- * GPU comparison view with tabbed mobile interface and side-by-side desktop layout.
+ * GPU comparison view of two or three GPUs side by side. On narrow
+ * screens the cards stack and, for three GPUs, so do the table rows.
  */
 export function GpuComparisonView({
-  gpu1,
-  gpu2,
-  gpu1SpecPercentages,
-  gpu2SpecPercentages,
+  gpus,
   benchmarkData,
-  gpu1PriceStats,
-  gpu2PriceStats,
   gpuOptions,
 }: GpuComparisonViewProps): JSX.Element {
   const router = useRouter()
+  const slugs = gpus.map((g) => g.gpu.name)
+  const canAdd = gpus.length < MAX_GPUS
+  // Two columns share the width with the slim "+" strip, so they flex.
+  const colClass = canAdd ? "col-md" : `col-md-${GRID_COLUMNS / gpus.length}`
+  const labelWidth = `${LABEL_COLUMN_PERCENT}%`
+  const colWidth = `${(PERCENT - LABEL_COLUMN_PERCENT) / gpus.length}%`
+  // Three columns do not fit a phone, so below md each row stacks: the metric
+  // name, then one labelled bar per GPU. Two columns keep the plain table.
+  const stack = gpus.length === MAX_GPUS
+  const rowClass = stack ? "d-block d-md-table-row" : ""
+  const cellClass = stack ? "d-block d-md-table-cell" : ""
+  const headClass = stack ? "d-none d-md-table-header-group" : ""
 
-  const handleGpu1Change = (slug: string) => {
-    const [first, second] = [slug, gpu2.name].sort()
-    router.push(`/gpu/compare/${first}/vs/${second}`)
-  }
+  const goTo = (newSlugs: string[]) =>
+    router.push(`/gpu/compare/${[...newSlugs].sort().join("/vs/")}`)
 
-  const handleGpu2Change = (slug: string) => {
-    const [first, second] = [gpu1.name, slug].sort()
-    router.push(`/gpu/compare/${first}/vs/${second}`)
-  }
+  const handleChange = (index: number, slug: string) =>
+    goTo(slugs.map((s, i) => (i === index ? slug : s)))
 
   return (
     <div className="container-fluid px-0">
@@ -102,120 +110,118 @@ export function GpuComparisonView({
       <div className="row mb-4">
         <div className="col-12">
           <h1 className="h2 mb-3">
-            {gpu1.label} vs {gpu2.label}
+            {gpus.map((g) => g.gpu.label).join(" vs ")}
           </h1>
           <p className="text-muted">
-            Compare specifications, gaming benchmarks, and prices for these two
-            GPUs.
+            Compare specifications, gaming benchmarks, and prices for these{" "}
+            {gpus.length === MAX_GPUS ? "three" : "two"} GPUs.
           </p>
         </div>
       </div>
 
-      {/* GPU Selectors */}
-      <div className="row mb-4 g-3">
-        <div className="col-md-6">
-          <label className="form-label fw-bold">{gpu1.label}</label>
-          <GpuSelector
-            gpuOptions={gpuOptions}
-            selectedGpuSlug={gpu1.name}
-            otherSelectedSlug={gpu2.name}
-            placeholder="Change GPU 1..."
-            onSelect={handleGpu1Change}
-          />
+      {/* Two GPUs: a slim "+" strip at the far right (md+) adds a third */}
+      <div className={canAdd ? "d-md-flex gap-3 align-items-stretch" : ""}>
+        <div className="flex-grow-1 min-w-0">
+          {/* GPU Selectors */}
+          <div className="row mb-4 g-3">
+            {gpus.map(({ gpu }, i) => (
+              <div className={colClass} key={gpu.name}>
+                <label className="form-label fw-bold">{gpu.label}</label>
+                <GpuSelector
+                  gpuOptions={gpuOptions}
+                  selectedGpuSlug={gpu.name}
+                  excludeSlugs={slugs.filter((s) => s !== gpu.name)}
+                  placeholder={`Change GPU ${i + 1}...`}
+                  onSelect={(slug) => handleChange(i, slug)}
+                />
+              </div>
+            ))}
+          </div>
+
+          {/* Quick Info Comparison */}
+          <div className="row mb-4 g-3">
+            {gpus.map(({ gpu, priceStats }) => (
+              <div className={colClass} key={gpu.name}>
+                <div className="card h-100">
+                  <div className="card-header bg-primary text-white">
+                    <h3 className="h5 mb-0">{gpu.label}</h3>
+                  </div>
+                  <div className="card-body">
+                    <GpuQuickInfo gpu={gpu} />
+                    <PricingInfo gpu={gpu} priceStats={priceStats} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-        <div className="col-md-6">
-          <label className="form-label fw-bold">{gpu2.label}</label>
-          <GpuSelector
-            gpuOptions={gpuOptions}
-            selectedGpuSlug={gpu2.name}
-            otherSelectedSlug={gpu1.name}
-            placeholder="Change GPU 2..."
-            onSelect={handleGpu2Change}
-          />
-        </div>
+        {canAdd && (
+          <div className="d-none d-md-block pb-4">
+            <div className="h-100 position-relative">
+              <AddThirdGpu
+                variant="strip"
+                gpuOptions={gpuOptions}
+                excludeSlugs={slugs}
+                onSelect={(slug) => goTo([...slugs, slug])}
+              />
+            </div>
+          </div>
+        )}
       </div>
+      {canAdd && (
+        <AddThirdGpu
+          variant="bar"
+          gpuOptions={gpuOptions}
+          excludeSlugs={slugs}
+          onSelect={(slug) => goTo([...slugs, slug])}
+        />
+      )}
 
-      {/* Side-by-side comparison */}
       <div>
-        {/* Quick Info Comparison */}
-        <div className="row mb-4">
-          <div className="col-md-6">
-            <div className="card h-100">
-              <div className="card-header bg-primary text-white">
-                <h3 className="h5 mb-0">{gpu1.label}</h3>
-              </div>
-              <div className="card-body">
-                <GpuQuickInfo gpu={gpu1} />
-                <PricingInfo gpu={gpu1} priceStats={gpu1PriceStats} />
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6">
-            <div className="card h-100">
-              <div className="card-header bg-primary text-white">
-                <h3 className="h5 mb-0">{gpu2.label}</h3>
-              </div>
-              <div className="card-body">
-                <GpuQuickInfo gpu={gpu2} />
-                <PricingInfo gpu={gpu2} priceStats={gpu2PriceStats} />
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* Specs Comparison Table */}
         <h2 className="h4 mt-4">Specifications Comparison</h2>
         <div className="table-responsive">
           <table className="table table-hover">
-            <thead>
+            <thead className={headClass}>
               <tr>
-                <th style={{ width: "25%" }}>Specification</th>
-                <th style={{ width: "37.5%" }}>{gpu1.label}</th>
-                <th style={{ width: "37.5%" }}>{gpu2.label}</th>
+                <th style={{ width: labelWidth }}>Specification</th>
+                {gpus.map(({ gpu }) => (
+                  <th key={gpu.name} style={{ width: colWidth }}>
+                    {gpu.label}
+                  </th>
+                ))}
               </tr>
             </thead>
             <tbody>
               {GpuSpecKeys.map((key) => {
-                const spec1Value = gpu1[key]
-                const spec2Value = gpu2[key]
-                const percentile1 = gpu1SpecPercentages[key]
-                const percentile2 = gpu2SpecPercentages[key]
                 const specDesc = GpuSpecsDescription[key]
-                const winner = getWinner(spec1Value, spec2Value)
+                const winner = getWinner(gpus.map(({ gpu }) => gpu[key]))
 
                 return (
-                  <tr key={key}>
-                    <td className="fw-bold">{specDesc.label}</td>
-                    <td>
-                      {spec1Value !== null &&
-                      spec1Value !== undefined &&
-                      percentile1 !== null &&
-                      percentile1 !== undefined ? (
-                        <PercentileProgressBar
-                          percentile={percentile1}
-                          value={spec1Value}
-                          unit={specDesc.unitShortest}
-                          isWinner={winner === GPU1_WINS}
-                        />
-                      ) : (
-                        <NoDataBar />
-                      )}
-                    </td>
-                    <td>
-                      {spec2Value !== null &&
-                      spec2Value !== undefined &&
-                      percentile2 !== null &&
-                      percentile2 !== undefined ? (
-                        <PercentileProgressBar
-                          percentile={percentile2}
-                          value={spec2Value}
-                          unit={specDesc.unitShortest}
-                          isWinner={winner === GPU2_WINS}
-                        />
-                      ) : (
-                        <NoDataBar />
-                      )}
-                    </td>
+                  <tr key={key} className={rowClass}>
+                    <td className={`fw-bold ${cellClass}`}>{specDesc.label}</td>
+                    {gpus.map(({ gpu, specPercentages }, i) => {
+                      const value = gpu[key]
+                      const percentile = specPercentages[key]
+                      return (
+                        <td key={gpu.name} className={cellClass}>
+                          <GpuNameOnPhone gpu={gpu} show={stack} />
+                          {value !== null &&
+                          value !== undefined &&
+                          percentile !== null &&
+                          percentile !== undefined ? (
+                            <PercentileProgressBar
+                              percentile={percentile}
+                              value={value}
+                              unit={specDesc.unitShortest}
+                              isWinner={winner === i}
+                            />
+                          ) : (
+                            <NoDataBar />
+                          )}
+                        </td>
+                      )
+                    })}
                   </tr>
                 )
               })}
@@ -229,49 +235,45 @@ export function GpuComparisonView({
             <h2 className="h4 mt-4">Gaming Benchmarks Comparison</h2>
             <div className="table-responsive">
               <table className="table table-hover">
-                <thead>
+                <thead className={headClass}>
                   <tr>
-                    <th style={{ width: "25%" }}>Benchmark</th>
-                    <th style={{ width: "37.5%" }}>{gpu1.label}</th>
-                    <th style={{ width: "37.5%" }}>{gpu2.label}</th>
+                    <th style={{ width: labelWidth }}>Benchmark</th>
+                    {gpus.map(({ gpu }) => (
+                      <th key={gpu.name} style={{ width: colWidth }}>
+                        {gpu.label}
+                      </th>
+                    ))}
                   </tr>
                 </thead>
                 <tbody>
                   {benchmarkData.map((benchmark) => {
-                    const winner = getWinner(
-                      benchmark.gpu1Value,
-                      benchmark.gpu2Value,
-                    )
+                    const winner = getWinner(benchmark.values)
 
                     return (
-                      <tr key={benchmark.slug}>
-                        <td className="fw-bold">{benchmark.name}</td>
-                        <td>
-                          {benchmark.gpu1Value !== undefined &&
-                          benchmark.gpu1Percentile !== undefined ? (
-                            <PercentileProgressBar
-                              percentile={benchmark.gpu1Percentile}
-                              value={benchmark.gpu1Value}
-                              unit={benchmark.unit}
-                              isWinner={winner === GPU1_WINS}
-                            />
-                          ) : (
-                            <NoDataBar />
-                          )}
+                      <tr key={benchmark.slug} className={rowClass}>
+                        <td className={`fw-bold ${cellClass}`}>
+                          {benchmark.name}
                         </td>
-                        <td>
-                          {benchmark.gpu2Value !== undefined &&
-                          benchmark.gpu2Percentile !== undefined ? (
-                            <PercentileProgressBar
-                              percentile={benchmark.gpu2Percentile}
-                              value={benchmark.gpu2Value}
-                              unit={benchmark.unit}
-                              isWinner={winner === GPU2_WINS}
-                            />
-                          ) : (
-                            <NoDataBar />
-                          )}
-                        </td>
+                        {gpus.map(({ gpu }, i) => {
+                          const value = benchmark.values[i]
+                          const percentile = benchmark.percentiles[i]
+                          return (
+                            <td key={gpu.name} className={cellClass}>
+                              <GpuNameOnPhone gpu={gpu} show={stack} />
+                              {value !== undefined &&
+                              percentile !== undefined ? (
+                                <PercentileProgressBar
+                                  percentile={percentile}
+                                  value={value}
+                                  unit={benchmark.unit}
+                                  isWinner={winner === i}
+                                />
+                              ) : (
+                                <NoDataBar />
+                              )}
+                            </td>
+                          )
+                        })}
                       </tr>
                     )
                   })}
@@ -283,6 +285,19 @@ export function GpuComparisonView({
       </div>
     </div>
   )
+}
+
+/** Column header replacement for the stacked phone layout. */
+function GpuNameOnPhone({
+  gpu,
+  show,
+}: {
+  gpu: Gpu
+  show: boolean
+}): JSX.Element | null {
+  return show ? (
+    <div className="d-md-none small text-muted mb-1">{gpu.label}</div>
+  ) : null
 }
 
 /**
