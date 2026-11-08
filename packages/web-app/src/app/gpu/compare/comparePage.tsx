@@ -89,7 +89,7 @@ export async function compareMetadata(slugs: string[]) {
     title: `${labels.join(" vs ")} - GPU Comparison | GPU Poet`,
     description: `Compare ${listFormat.format(labels)} specs, gaming benchmarks, and prices. Find out which GPU is better for gaming and AI/ML workloads.`,
     alternates: {
-      canonical: `https://gpupoet.com${compareUrl(canonical.length === slugs.length ? slugs : canonical)}`,
+      canonical: `https://gpupoet.com${compareUrl(canonical)}`,
     },
   }
 }

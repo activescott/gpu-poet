@@ -93,4 +93,59 @@ test.describe("GPU Comparison Page", () => {
     expect(structuredData["@type"]).toBe("WebPage");
     expect(structuredData.mainEntity).toHaveLength(2);
   });
+
+  test("should offer to add a third GPU and compare three", async ({
+    page,
+  }) => {
+    await page.goto(`/gpu/compare/${GPU_2_SLUG}/vs/${GPU_1_SLUG}`);
+    await expect(page.getByText("Add a third GPU")).toBeVisible();
+
+    const adder = page.getByPlaceholder("Add a third GPU...");
+    await adder.click();
+    // GPUs already on the page are not offered
+    await expect(page.getByRole("option", { name: /RTX 4090/ })).toHaveCount(0);
+    await adder.fill("RTX 4070");
+    await page
+      .getByRole("option", { name: /RTX 4070/ })
+      .first()
+      .click();
+
+    await expect(page).toHaveURL(/\/vs\/[^/]+\/vs\/[^/]+$/);
+    await expect(page.locator("h1").first()).toContainText(/vs.*vs/);
+    await expect(page.locator(".form-label")).toHaveCount(3);
+    await expect(page.getByText("Add a third GPU")).toHaveCount(0);
+  });
+
+  test("should show three GPUs without horizontal scroll on mobile", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(
+      `/gpu/compare/${GPU_2_SLUG}/vs/${GPU_1_SLUG}/vs/nvidia-geforce-rtx-4070`,
+    );
+    await expect(
+      page.getByRole("heading", { name: /Specifications Comparison/i }),
+    ).toBeVisible();
+    const noOverflow = await page.evaluate(() =>
+      [...document.querySelectorAll(".table-responsive")].every(
+        (el) => el.scrollWidth <= el.clientWidth,
+      ),
+    );
+    expect(noOverflow).toBe(true);
+  });
+
+  test("should redirect permuted three-GPU URLs to canonical form", async ({
+    page,
+  }) => {
+    await page.goto(
+      `/gpu/compare/${GPU_1_SLUG}/vs/nvidia-geforce-rtx-4070/vs/${GPU_2_SLUG}`,
+    );
+    await expect(page).toHaveURL(
+      /compare\/nvidia-geforce-rtx-4070\/vs\/nvidia-geforce-rtx-4080\/vs\/nvidia-geforce-rtx-4090/,
+    );
+    const ld = JSON.parse(
+      (await page.locator('script[type="application/ld+json"]').textContent())!,
+    );
+    expect(ld.mainEntity).toHaveLength(3);
+  });
 });

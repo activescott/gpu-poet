@@ -1,4 +1,4 @@
-import Page from "./page"
+import Page, { generateMetadata } from "./page"
 import { findGpu } from "../../../../../../../../pkgs/server/db/GpuRepository"
 
 jest.mock("../../../../../../../../pkgs/server/db/GpuRepository")
@@ -22,5 +22,24 @@ describe("/gpu/compare/[gpu1Slug]/vs/[gpu2Slug]/vs/[gpu3Slug]", () => {
     await expect(Page(props("a", "b", "c"))).rejects.toMatchObject({
       digest: "NEXT_HTTP_ERROR_FALLBACK;404",
     })
+  })
+
+  it("builds three-way metadata with a sorted canonical for any order", async () => {
+    mockFindGpu.mockImplementation(
+      async (slug: string) =>
+        ({ name: slug, label: slug.toUpperCase() }) as never,
+    )
+    const meta = await generateMetadata(props("c", "a", "b"))
+    expect(meta.title).toBe("C vs A vs B - GPU Comparison | GPU Poet")
+    expect(meta.description).toContain("C, A, and B")
+    expect(meta.alternates?.canonical).toBe(
+      "https://gpupoet.com/gpu/compare/a/vs/b/vs/c",
+    )
+  })
+
+  it("falls back to the generic description for an unknown slug", async () => {
+    mockFindGpu.mockResolvedValue(null)
+    const meta = await generateMetadata(props("a", "b", "c"))
+    expect(meta.description).toBe("Compare three GPUs side-by-side.")
   })
 })
