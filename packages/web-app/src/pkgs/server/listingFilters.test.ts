@@ -448,4 +448,40 @@ describe("createMedianPriceFloorFilter (gpu-poet#122)", () => {
       listings,
     )
   })
+
+  it("takes the median from eBay listings only, so Amazon laptops do not raise it", () => {
+    // RX 7700S: Framework modules on eBay, whole laptops on Amazon
+    const ebay = ["200", "250", "280", "345"].map((p) => ({
+      ...pricedListing(p),
+      source: "ebay" as const,
+    }))
+    const amazon = ["1289", "1349", "1479", "1499", "1839"].map((p) => ({
+      ...pricedListing(p),
+      source: "amazon" as const,
+    }))
+    const floor = createMedianPriceFloorFilter([...ebay, ...amazon])
+    expect(ebay.every((l) => floor(l))).toBe(true)
+    expect(amazon.every((l) => floor(l))).toBe(true)
+    // the same eBay median applies to an Amazon listing far below it
+    expect(floor(pricedListing("50"))).toBe(false)
+  })
+
+  it("needs exactly 3 eBay listings and averages the middle two for an even count", () => {
+    const three = ["100", "200", "300"].map((p) => pricedListing(p))
+    expect(createMedianPriceFloorFilter(three)(pricedListing("49"))).toBe(false)
+    expect(createMedianPriceFloorFilter(three)(pricedListing("50"))).toBe(true)
+    const four = ["100", "200", "300", "400"].map((p) => pricedListing(p))
+    // median 250, floor 62.5
+    expect(createMedianPriceFloorFilter(four)(pricedListing("62"))).toBe(false)
+    expect(createMedianPriceFloorFilter(four)(pricedListing("63"))).toBe(true)
+  })
+
+  it("ignores non-numeric prices in the reference and rejects them as items", () => {
+    const listings = ["", "n/a", "100", "100", "100"].map((p) =>
+      pricedListing(p),
+    )
+    const floor = createMedianPriceFloorFilter(listings)
+    expect(floor(pricedListing("30"))).toBe(true)
+    expect(floor(pricedListing("n/a"))).toBe(false)
+  })
 })

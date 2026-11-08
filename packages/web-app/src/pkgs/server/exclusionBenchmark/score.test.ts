@@ -81,5 +81,40 @@ it("loads the fixture and scores it with the rules", async () => {
   )
   const result = score(dataset.listings, verdicts, reviews)
   expect(result.total).toBe(dataset.listings.length)
+  expect(result.falseRejects).toEqual([])
   expect(result.suspectedLabelErrors).toHaveLength(reviews.length)
+})
+
+it("keeps cheap eBay modules when Amazon laptops share the model (gpu-poet#122)", async () => {
+  const gpus = [
+    {
+      name: "amd-radeon-rx-7700s",
+      label: "AMD Radeon RX 7700S",
+      memoryCapacityGB: 8,
+    },
+  ]
+  const make = (
+    itemId: string,
+    source: "ebay" | "amazon",
+    priceValue: string,
+    title: string,
+  ): BenchmarkListing => ({
+    ...listing(itemId, "keep"),
+    source,
+    gpuName: "amd-radeon-rx-7700s",
+    title,
+    priceValue,
+  })
+  const module = "Framework Laptop 16 Graphics Module AMD Radeon RX 7700S 8GB"
+  const laptop = "ASUS TUF Gaming A16 Laptop AMD Radeon RX 7700S 8GB"
+  const listings = [
+    ...["200", "250", "275", "280", "345"].map((p, i) =>
+      make(`m${i}`, "ebay", p, module),
+    ),
+    ...["1289", "1349", "1479", "1499", "1839"].map((p, i) =>
+      make(`l${i}`, "amazon", p, laptop),
+    ),
+  ]
+  const verdicts = await createRulesClassifier(gpus).classify(listings)
+  expect(verdicts.map((v) => v.exclude)).toEqual(listings.map(() => false))
 })

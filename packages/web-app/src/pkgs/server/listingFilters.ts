@@ -248,13 +248,20 @@ export function median(sorted: number[]): number | null {
 
 /**
  * Rejects listings priced under 25% of the median price of `listings`, which should be the
- * current listings for one GPU model that pass the other filters.
+ * current listings for one GPU model that pass the other filters. Only the eBay ones count toward the
+ * median, so every call site gets the same reference whatever mix of sources it passes in.
  */
 export function createMedianPriceFloorFilter(
-  listings: Pick<Listing, "priceValue">[],
+  listings: Pick<Listing, "priceValue" | "source">[],
   logFn: LogFn = log.debug.bind(log),
 ): (item: Pick<Listing, "itemId" | "title" | "priceValue">) => boolean {
-  const prices = listings.map((l) => Number(l.priceValue)).sort((a, b) => a - b)
+  // Only eBay listings set the reference. Amazon results for mobile and workstation GPUs are
+  // mostly whole laptops and PCs, which pull the median far above the real cards and modules.
+  const prices = listings
+    .filter((l) => !l.source || l.source === "ebay")
+    .map((l) => Number(l.priceValue))
+    .filter((p) => Number.isFinite(p))
+    .sort((a, b) => a - b)
   const medianPrice =
     prices.length >= MIN_LISTINGS_FOR_MEDIAN ? median(prices) : null
   if (medianPrice === null) return () => true
