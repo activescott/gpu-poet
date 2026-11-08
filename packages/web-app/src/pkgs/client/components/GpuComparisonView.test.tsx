@@ -13,18 +13,35 @@ describe("GpuComparisonView MSRP footnote", () => {
     const gpu = gpuWithNotes([NOTE])
     const html = renderToStaticMarkup(
       <GpuComparisonView
-        gpu1={gpu}
-        gpu2={gpu}
-        gpu1SpecPercentages={{} as never}
-        gpu2SpecPercentages={{} as never}
-        gpu1Benchmarks={[]}
-        gpu2Benchmarks={[]}
+        gpus={[
+          { gpu, specPercentages: {} as never, priceStats: stats },
+          { gpu, specPercentages: {} as never, priceStats: stats },
+        ]}
         benchmarkData={[]}
-        gpu1PriceStats={stats}
-        gpu2PriceStats={stats}
         gpuOptions={[]}
       />,
     )
     expect(html.split(`† ${NOTE}`)).toHaveLength(3)
+  })
+})
+
+const named = (name: string) => ({ ...gpuWithNotes([]), name, label: name })
+
+describe("GpuComparisonView with three GPUs", () => {
+  it("renders a column per GPU and no add-GPU selector", () => {
+    const html = renderToStaticMarkup(
+      <GpuComparisonView
+        gpus={["aa", "bb", "cc"].map((n) => ({
+          gpu: named(n),
+          specPercentages: {} as never,
+          priceStats: stats,
+        }))}
+        benchmarkData={[]}
+        gpuOptions={[]}
+      />,
+    )
+    expect(html).toContain("aa vs bb vs cc")
+    expect(html.match(/col-md-4/g)).toHaveLength(6)
+    expect(html).not.toContain("Add a third GPU")
   })
 })
