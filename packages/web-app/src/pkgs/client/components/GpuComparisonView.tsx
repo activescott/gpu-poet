@@ -10,6 +10,7 @@ import {
 } from "@/pkgs/isomorphic/model/specs"
 import { GpuQuickInfo } from "./GpuQuickInfo"
 import { GpuSelector, GpuOption } from "./GpuSelector"
+import { AddThirdGpu } from "./AddThirdGpu"
 import { PercentileProgressBar, NoDataBar } from "./PercentileProgressBar"
 import { FormatCurrency } from "./FormatCurrency"
 import { BootstrapIcon } from "./BootstrapIcon"
@@ -85,7 +86,9 @@ export function GpuComparisonView({
 }: GpuComparisonViewProps): JSX.Element {
   const router = useRouter()
   const slugs = gpus.map((g) => g.gpu.name)
-  const colClass = `col-md-${GRID_COLUMNS / gpus.length}`
+  const canAdd = gpus.length < MAX_GPUS
+  // Two columns share the width with the slim "+" strip, so they flex.
+  const colClass = canAdd ? "col-md" : `col-md-${GRID_COLUMNS / gpus.length}`
   const labelWidth = `${LABEL_COLUMN_PERCENT}%`
   const colWidth = `${(PERCENT - LABEL_COLUMN_PERCENT) / gpus.length}%`
   // Three columns do not fit a phone, so below md each row stacks: the metric
@@ -116,52 +119,65 @@ export function GpuComparisonView({
         </div>
       </div>
 
-      {/* GPU Selectors */}
-      <div className="row mb-4 g-3">
-        {gpus.map(({ gpu }, i) => (
-          <div className={colClass} key={gpu.name}>
-            <label className="form-label fw-bold">{gpu.label}</label>
-            <GpuSelector
-              gpuOptions={gpuOptions}
-              selectedGpuSlug={gpu.name}
-              excludeSlugs={slugs.filter((s) => s !== gpu.name)}
-              placeholder={`Change GPU ${i + 1}...`}
-              onSelect={(slug) => handleChange(i, slug)}
-            />
+      {/* Two GPUs: a slim "+" strip at the far right (md+) adds a third */}
+      <div className={canAdd ? "d-md-flex gap-3 align-items-stretch" : ""}>
+        <div className="flex-grow-1 min-w-0">
+          {/* GPU Selectors */}
+          <div className="row mb-4 g-3">
+            {gpus.map(({ gpu }, i) => (
+              <div className={colClass} key={gpu.name}>
+                <label className="form-label fw-bold">{gpu.label}</label>
+                <GpuSelector
+                  gpuOptions={gpuOptions}
+                  selectedGpuSlug={gpu.name}
+                  excludeSlugs={slugs.filter((s) => s !== gpu.name)}
+                  placeholder={`Change GPU ${i + 1}...`}
+                  onSelect={(slug) => handleChange(i, slug)}
+                />
+              </div>
+            ))}
           </div>
-        ))}
-        {gpus.length < MAX_GPUS && (
-          <div className={colClass}>
-            <label className="fw-bold mb-2">Add a third GPU</label>
-            <GpuSelector
-              gpuOptions={gpuOptions}
-              excludeSlugs={slugs}
-              placeholder="Add a third GPU..."
-              onSelect={(slug) => goTo([...slugs, slug])}
-            />
+
+          {/* Quick Info Comparison */}
+          <div className="row mb-4 g-3">
+            {gpus.map(({ gpu, priceStats }) => (
+              <div className={colClass} key={gpu.name}>
+                <div className="card h-100">
+                  <div className="card-header bg-primary text-white">
+                    <h3 className="h5 mb-0">{gpu.label}</h3>
+                  </div>
+                  <div className="card-body">
+                    <GpuQuickInfo gpu={gpu} />
+                    <PricingInfo gpu={gpu} priceStats={priceStats} />
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+        {canAdd && (
+          <div className="d-none d-md-block pb-4">
+            <div className="h-100 position-relative">
+              <AddThirdGpu
+                variant="strip"
+                gpuOptions={gpuOptions}
+                excludeSlugs={slugs}
+                onSelect={(slug) => goTo([...slugs, slug])}
+              />
+            </div>
           </div>
         )}
       </div>
+      {canAdd && (
+        <AddThirdGpu
+          variant="bar"
+          gpuOptions={gpuOptions}
+          excludeSlugs={slugs}
+          onSelect={(slug) => goTo([...slugs, slug])}
+        />
+      )}
 
-      {/* Side-by-side comparison */}
       <div>
-        {/* Quick Info Comparison */}
-        <div className="row mb-4 g-3">
-          {gpus.map(({ gpu, priceStats }) => (
-            <div className={colClass} key={gpu.name}>
-              <div className="card h-100">
-                <div className="card-header bg-primary text-white">
-                  <h3 className="h5 mb-0">{gpu.label}</h3>
-                </div>
-                <div className="card-body">
-                  <GpuQuickInfo gpu={gpu} />
-                  <PricingInfo gpu={gpu} priceStats={priceStats} />
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-
         {/* Specs Comparison Table */}
         <h2 className="h4 mt-4">Specifications Comparison</h2>
         <div className="table-responsive">

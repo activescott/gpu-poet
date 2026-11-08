@@ -1,4 +1,4 @@
-import { test, expect } from "@playwright/test";
+import { test, expect, type Page } from "@playwright/test";
 
 test.describe("GPU Comparison Page", () => {
   // Use two commonly available GPUs that are unlikely to be removed from the dataset
@@ -94,26 +94,56 @@ test.describe("GPU Comparison Page", () => {
     expect(structuredData.mainEntity).toHaveLength(2);
   });
 
-  test("should offer to add a third GPU and compare three", async ({
-    page,
-  }) => {
-    await page.goto(`/gpu/compare/${GPU_2_SLUG}/vs/${GPU_1_SLUG}`);
-    await expect(page.getByText("Add a third GPU")).toBeVisible();
-
-    const adder = page.getByPlaceholder("Add a third GPU...");
-    await adder.click();
+  const pickFourthAndExpectThree = async (page: Page) => {
+    const search = page.getByPlaceholder("Add a third GPU...");
+    await expect(search).toBeVisible();
+    await search.click();
     // GPUs already on the page are not offered
     await expect(page.getByRole("option", { name: /RTX 4090/ })).toHaveCount(0);
-    await adder.fill("RTX 4070");
+    await search.fill("RTX 4070");
     await page
-      .getByRole("option", { name: /RTX 4070/ })
+      .getByRole("option", { name: /RTX 4070$/ })
       .first()
       .click();
 
-    await expect(page).toHaveURL(/\/vs\/[^/]+\/vs\/[^/]+$/);
+    await expect(page).toHaveURL(
+      /\/compare\/nvidia-geforce-rtx-4070\/vs\/nvidia-geforce-rtx-4080\/vs\/nvidia-geforce-rtx-4090$/,
+    );
     await expect(page.locator("h1").first()).toContainText(/vs.*vs/);
     await expect(page.locator(".form-label")).toHaveCount(3);
-    await expect(page.getByText("Add a third GPU")).toHaveCount(0);
+    await expect(page.getByLabel("Add a third GPU")).toHaveCount(0);
+  };
+
+  test("desktop: slim + control adds a third GPU", async ({ page }) => {
+    await page.setViewportSize({ width: 1280, height: 800 });
+    await page.goto(`/gpu/compare/${GPU_2_SLUG}/vs/${GPU_1_SLUG}`);
+    const plus = page.getByRole("button", { name: "Add a third GPU" });
+    await expect(plus).toBeVisible();
+    await expect(plus).toHaveAttribute("title", "Add a third GPU");
+    // slim: nowhere near a third column's width
+    const box = (await plus.boundingBox())!;
+    expect(box.width).toBeLessThan(80);
+    // no full-width selector until the + is used
+    await expect(page.getByPlaceholder("Add a third GPU...")).toHaveCount(0);
+    await plus.focus();
+    await page.keyboard.press("Enter");
+    await pickFourthAndExpectThree(page);
+  });
+
+  test("mobile: full-width button adds a third GPU, no sideways scroll", async ({
+    page,
+  }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto(`/gpu/compare/${GPU_2_SLUG}/vs/${GPU_1_SLUG}`);
+    const bar = page.getByRole("button", { name: "Add a third GPU" });
+    await expect(bar).toBeVisible();
+    await expect(bar).toContainText("Add a third GPU");
+    const fits = await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    );
+    expect(fits).toBe(true);
+    await bar.click();
+    await pickFourthAndExpectThree(page);
   });
 
   test("should show three GPUs without horizontal scroll on mobile", async ({

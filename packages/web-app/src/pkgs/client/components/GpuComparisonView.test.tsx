@@ -1,4 +1,5 @@
 import { renderToStaticMarkup } from "react-dom/server"
+import { AddThirdGpu } from "./AddThirdGpu"
 import { GpuComparisonView, getWinner } from "./GpuComparisonView"
 import { gpuWithNotes } from "@/testing/gpuFixture"
 
@@ -66,11 +67,14 @@ describe("GpuComparisonView add-third selector", () => {
         gpuOptions={[]}
       />,
     )
-    expect(html).toContain("Add a third GPU")
-    const add = selectorProps.find(
-      (p) => p.placeholder === "Add a third GPU...",
-    )
-    expect(add?.excludeSlugs).toEqual(["aa", "bb"])
+    expect(html).toContain('aria-label="Add a third GPU"')
+    expect(html).toContain('title="Add a third GPU"')
+    // slim strip for md+, full-width bar for phones; no always-open selector
+    expect(html).toContain("d-none d-md-block")
+    expect(html).toContain("d-md-none")
+    expect(
+      selectorProps.some((p) => p.placeholder === "Add a third GPU..."),
+    ).toBe(false)
     const change = selectorProps.find(
       (p) => p.placeholder === "Change GPU 1...",
     )
@@ -90,4 +94,37 @@ describe("getWinner", () => {
     expect(getWinner([undefined, 100, 50])).toBe(1)
     expect(getWinner([undefined, undefined, undefined])).toBe(-1)
   })
+})
+
+describe("AddThirdGpu", () => {
+  const render = (variant: "strip" | "bar", defaultOpen: boolean) => {
+    selectorProps.length = 0
+    return renderToStaticMarkup(
+      <AddThirdGpu
+        variant={variant}
+        defaultOpen={defaultOpen}
+        gpuOptions={[]}
+        excludeSlugs={["aa", "bb"]}
+        onSelect={jest.fn()}
+      />,
+    )
+  }
+  it.each(["strip", "bar"] as const)("%s is a labelled button, closed", (v) => {
+    const html = render(v, false)
+    expect(html).toContain('aria-label="Add a third GPU"')
+    expect(html).toContain('title="Add a third GPU"')
+    expect(html).toContain('aria-expanded="false"')
+    expect(selectorProps).toHaveLength(0)
+  })
+  it("bar shows visible text; strip only the +", () => {
+    expect(render("bar", false)).toContain("+</span><span")
+    expect(render("strip", false)).not.toContain("ms-1")
+  })
+  it.each(["strip", "bar"] as const)(
+    "%s opens the selector excluding page GPUs",
+    (v) => {
+      render(v, true)
+      expect(selectorProps[0]?.excludeSlugs).toEqual(["aa", "bb"])
+    },
+  )
 })
