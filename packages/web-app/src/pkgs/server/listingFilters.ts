@@ -127,26 +127,42 @@ function escapeRegExp(str: string): string {
   return str.replaceAll(/[$()*+.?[\\\]^{|}]/g, "\\$&")
 }
 
-const nonGpuKeywords = [
+const accessoryKeywords = [
   "bracket",
   "fan attachment",
   "fan adapter",
   "shroud",
   "blower fan",
-  "NO GPU",
+  "no gpu",
   "fan kit",
   "fan for",
   "kit for",
+  // e.g. "For Nvidia Tesla P4 8GB M4 4GB T4 16GB L4 24GB A2 GPU Card graphics Cooling fan"
+  "cooling fan",
+  // e.g. "OEM Backplate For EVGA NVIDIA GeForce RTX 3060 XC 12GB Gaming Card" - $4.99 accessory
+  "backplate for",
+]
+
+// A cooling part sold on its own: "Replacement Heatsink and Fans Only", "Heatsink Only" (gpu-poet#122).
+// Bare "cooler"/"fan" is not enough: real cards say "Passive Cooler", "Triple Fan", "w/ Spare fan".
+const accessoryOnlyPattern =
+  /\b(?:fans?|coolers?|heat\s?sinks?|backplate|housing)\s+only\b|\breplacement\s+(?:fans?|coolers?|heat\s?sinks?|shroud|backplate)\b/i
+
+export function isAccessoryTitle(title: string): boolean {
+  const lower = title.toLowerCase()
+  return (
+    accessoryKeywords.some((keyword) => lower.includes(keyword)) ||
+    accessoryOnlyPattern.test(lower)
+  )
+}
+
+const nonGpuKeywords = [
   // Filtering out SXM sockets because people usually are going to want PCIe
   "SXM",
   // surprisingly, many people misspell SXM as SMX in listing titles:
   "SMX",
   // I've seen some cards in china that read "neutered 4GB" apparently indicating that the card has been modified to have less memory than it originally had:
   "neutered",
-  // e.g. "For Nvidia Tesla P4 8GB M4 4GB T4 16GB L4 24GB A2 GPU Card graphics Cooling fan"
-  "Cooling fan",
-  // e.g. "OEM Backplate For EVGA NVIDIA GeForce RTX 3060 XC 12GB Gaming Card" - $4.99 accessory
-  "Backplate For",
   // Sellers sometimes list non-working cards with normal conditionId but flag "PARTS ONLY" / "for parts" in the title
   "parts only",
   "for parts",
@@ -172,7 +188,7 @@ const boxOnlyKeywords = [
 // box-only listing that slips through still shows a telltale low price, while a real card
 // rejected here disappears from the site with nothing to point at it.
 const trailingBoxOnlyPattern =
-  /\b(?:white|black|brown|empty)\s+box\s*[!"'*.-]*$/i
+  /\b(?:white|black|brown|empty)\s+[!"'*-]*box\s*[!"'*.-]*$/i
 
 export function isBoxOnlyTitle(title: string): boolean {
   const lower = title.toLowerCase()
@@ -191,6 +207,14 @@ function gpuAccessoryFilter(item: Listing, logFn: LogFn): boolean {
     )
     return false
   }
+  if (isAccessoryTitle(item.title)) {
+    logFn(
+      "item %s rejected by gpuAccessoryFilter: accessory title. Title: %s",
+      item.itemId,
+      item.title,
+    )
+    return false
+  }
   const matched = nonGpuKeywords.find((keyword) =>
     item.title.toLowerCase().includes(keyword),
   )
@@ -204,6 +228,56 @@ function gpuAccessoryFilter(item: Listing, logFn: LogFn): boolean {
     return false
   }
   return true
+}
+
+// Under this share of the model's median price a listing is a box, an accessory or a scam, not the card (gpu-poet#122).
+const MIN_PRICE_TO_MEDIAN_RATIO = 0.25
+// shortcut: the median of current listings stands in for the market price and means little with
+// fewer listings than this; switch to a historical reference price if thin markets keep leaking junk.
+const MIN_LISTINGS_FOR_MEDIAN = 3
+
+const HALF = 2
+
+export function median(sorted: number[]): number | null {
+  if (sorted.length === 0) return null
+  const mid = Math.floor(sorted.length / HALF)
+  return sorted.length % HALF
+    ? sorted[mid]
+    : (sorted[mid - 1] + sorted[mid]) / HALF
+}
+
+/**
+ * Rejects listings priced under 25% of the median price of `listings`, which should be the
+ * current listings for one GPU model that pass the other filters. Only the eBay ones count toward the
+ * median, so every call site gets the same reference whatever mix of sources it passes in.
+ */
+export function createMedianPriceFloorFilter(
+  listings: Pick<Listing, "priceValue" | "source">[],
+  logFn: LogFn = log.debug.bind(log),
+): (item: Pick<Listing, "itemId" | "title" | "priceValue">) => boolean {
+  // Only eBay listings set the reference. Amazon results for mobile and workstation GPUs are
+  // mostly whole laptops and PCs, which pull the median far above the real cards and modules.
+  const prices = listings
+    .filter((l) => !l.source || l.source === "ebay")
+    .map((l) => Number(l.priceValue))
+    .filter((p) => Number.isFinite(p))
+    .sort((a, b) => a - b)
+  const medianPrice =
+    prices.length >= MIN_LISTINGS_FOR_MEDIAN ? median(prices) : null
+  if (medianPrice === null) return () => true
+  const floor = medianPrice * MIN_PRICE_TO_MEDIAN_RATIO
+  return (item) => {
+    if (Number(item.priceValue) >= floor) return true
+    logFn(
+      "item %s rejected by medianPriceFloorFilter: price %s under %s (25%% of median %s). Title: %s",
+      item.itemId,
+      item.priceValue,
+      floor,
+      medianPrice,
+      item.title,
+    )
+    return false
+  }
 }
 
 /**

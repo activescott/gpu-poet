@@ -1,3 +1,4 @@
+import { median } from "../listingFilters"
 import { BenchmarkListing } from "./dataset"
 
 export interface PriceRank {
@@ -18,16 +19,6 @@ interface PriceRankSummary {
   ranked: number
   inTop: number
   underMedianFraction: number
-}
-
-const HALF = 2
-
-function median(sorted: number[]): number | null {
-  if (sorted.length === 0) return null
-  const mid = Math.floor(sorted.length / HALF)
-  return sorted.length % HALF
-    ? sorted[mid]
-    : (sorted[mid - 1] + sorted[mid]) / HALF
 }
 
 /**

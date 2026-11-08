@@ -21,7 +21,10 @@ import { createLogger } from "@/lib/logger"
 import { chainAsync } from "irritable-iterable"
 import fs from "fs"
 import EBAY_US from "@activescott/ebay-client/categories/US_EBAY"
-import { createFilterForGpu } from "../listingFilters"
+import {
+  createFilterForGpu,
+  createMedianPriceFloorFilter,
+} from "../listingFilters"
 import { Integer } from "type-fest"
 import path from "path"
 import { appRoot } from "../path"
@@ -56,6 +59,7 @@ export async function cacheEbayListingsForGpu(
       originalListingCount - collected.length
     } duplicate listings from eBay for ${gpuName}`,
   )
+  collected = collected.filter(createMedianPriceFloorFilter(collected))
 
   await addOrRefreshListingsForGpu(collected, gpuName, prisma)
   await archiveStaleListingsForGpu(gpuName, prisma)
