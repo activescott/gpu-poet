@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=./gpu-spec.schema.json
+name: nvidia-tesla-p40
+label: NVIDIA Tesla P40
+category: datacenter
+msrpUSD: 7358
+fp32TFLOPS: 12
+fp16TFLOPS: 0.183
+int8TOPS: 47
+fp8TFLOPS: null
+fp4TFLOPS: null
+memoryCapacityGB: 24
+memoryBandwidthGBs: 346
+maxTDPWatts: 250
+gpuArchitecture: pascal
+supportedHardwareOperations: []
+supportedCUDAComputeCapability: 6.1
+releaseDate: "2016-09-13"
+lastModified: "2026-11-08T00:00:00Z"
+
+summary: The NVIDIA Tesla P40 is a passively cooled, dual-slot PCIe inference
+  accelerator announced in September 2016. It is built on the Pascal GP102 GPU
+  with 3,840 CUDA cores and 24 GB of GDDR5 on a 384-bit bus. It has no Tensor
+  Cores, and its FP16 runs at 1/64 the FP32 rate, so it suits FP32 and INT8
+  (DP4A) work. Used cards are a common low-cost way to get 24 GB of VRAM for
+  running LLMs at home.
+
+manufacturerIdentifiers:
+  - type: gpu_chip
+    value: "GP102-895"
+
+thirdPartyProducts:
+  - company: HP
+    productName: "HP NVIDIA Tesla P40 24GB GDDR5 Graphics Card"
+    identifier: Q0V80A
+    identifierType: part_number
+
+references:
+  - https://images.nvidia.com/content/pdf/tesla/184427-Tesla-P40-Datasheet-NV-Final-Letter-Web.pdf
+  - https://videocardz.net/nvidia-tesla-p40
+  - https://www.nextplatform.com/ai/2018/03/05/tesla-gpu-accelerator-bang-for-the-buck-kepler-to-volta/1645835
+  - https://www.ebay.com/p/27032254618
+
+notes:
+  - "fp32TFLOPS of 12 is the single-precision figure in the NVIDIA Tesla P40 datasheet (CUDA cores, no TF32 path on Pascal). memoryCapacityGB 24, memoryBandwidthGBs 346, maxTDPWatts 250 and the 2016 date are from the same datasheet."
+  - "fp16TFLOPS of 0.183 is FP16 vector throughput at 1/64 of FP32 (about 11.76 TFLOPS at boost clock / 64, as third-party databases give it). The datasheet does not list FP16; the 1/64 rate is a GP102 property and is not in the NVIDIA documents cited here, so treat it as unverified against NVIDIA. Unlike the P100, the P40 has no 2x FP16 path, so validate-specs.ts has a GP102-specific ratio range."
+  - "int8TOPS of 47 is the datasheet INT8 figure. It is the DP4A ALU instruction (a CUDA-core path), the same convention as the V100, so INT8 stays out of supportedHardwareOperations. fp8TFLOPS and fp4TFLOPS are null because Pascal predates both."
+  - "supportedHardwareOperations is an empty array: Pascal has no matrix or tensor-core path. DP4A is an ALU instruction, not a tensor path (see gpu-researcher.md)."
+  - "Estimated MSRP of $7,358 USD. This is an OEM configurator price, not an NVIDIA MSRP, and it dates from about 9 months after the 2016-09-13 launch. The Next Platform (\"Tesla GPU Accelerator Bang For The Buck, Kepler To Volta\", 2018-03-05) says NVIDIA published no list or suggested street prices for Tesla cards, and that Dell's PowerEdge R730 configurator in June 2017 priced the Tesla P40 at $7,358 (P4 $2,402, P100 PCIe 16 GB $7,278, 12 GB $5,780). An earlier figure of $5,699 from aggregators had no traceable source and was dropped."
+  - "supportedCUDAComputeCapability 6.1 is the GP102 compute capability (the P100's GP100 is 6.0)."
+  - "Third-party part number Q0V80A is from the eBay product page (the listing names HP as the maker). It is the only source for that part number."

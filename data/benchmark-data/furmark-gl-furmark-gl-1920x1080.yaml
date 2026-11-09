@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 550013
-updatedAt: 2026-11-08T09:58:25.747Z
+collectedSamples: 552482
+updatedAt: 2026-11-09T11:43:57.142Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -25,7 +25,7 @@ results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 219
   - gpuNameRaw: AMD 15D8:C8
-    value: 11
+    value: 10
   - gpuNameRaw: AMD 15D8:C9
     value: 10
   - gpuNameRaw: AMD BC-160
@@ -161,7 +161,7 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-1.212-cachyos-bc250)
     value: 133
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.7-ogc1.1.fc44.x86_64)
-    value: 115
+    value: 120
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-1-cachyos)
     value: 100
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.2.8-2-cachyos)
@@ -406,6 +406,8 @@ results:
     value: 12
   - gpuNameRaw: AMD Radeon Graphics (radeonsi renoir ACO DRM 3.64 7.1.13-200.fc44.x86_64)
     value: 8
+  - gpuNameRaw: AMD Radeon Graphics (radeonsi renoir ACO DRM 3.64 7.1.3-200.fc44.x86_64)
+    value: 17
   - gpuNameRaw: AMD Radeon Graphics (radeonsi renoir ACO DRM 3.64 7.2.9-ogc3.1.fc44.x86_64)
     value: 15
   - gpuNameRaw: AMD Radeon HD 5450
@@ -683,7 +685,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 580 2048SP (radeonsi polaris10 ACO DRM 3.64 7.0.0-38-generic)
     value: 48
   - gpuNameRaw: AMD Radeon RX 580 2048SP (radeonsi polaris10 ACO DRM 3.64 7.0.0-42-generic)
-    value: 41
+    value: 43
   - gpuNameRaw: AMD Radeon RX 580 2048SP (radeonsi polaris10 ACO DRM 3.64 7.1.6-1-cachyos)
     value: 54
   - gpuNameRaw: AMD Radeon RX 580 2048SP (radeonsi polaris10 ACO DRM 3.64
@@ -730,6 +732,9 @@ results:
     value: 26
   - gpuNameRaw: AMD Radeon RX 640
     value: 21
+  - gpuNameRaw: AMD Radeon RX 640 (radeonsi polaris12 ACO DRM 3.64
+      7.2.10-200.nobara.fc44.x86_64)
+    value: 19
   - gpuNameRaw: AMD Radeon RX 640 Series
     value: 12
   - gpuNameRaw: AMD Radeon RX 6400
@@ -746,7 +751,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500M
     value: 49
   - gpuNameRaw: AMD Radeon RX 6500XT
-    value: 70
+    value: 71
   - gpuNameRaw: AMD Radeon RX 6550M
     value: 69
   - gpuNameRaw: AMD Radeon RX 6600
@@ -874,7 +879,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M
     value: 72
   - gpuNameRaw: AMD Radeon RX 7600M XT
-    value: 105
+    value: 103
   - gpuNameRaw: AMD Radeon RX 7600M XT (radeonsi navi33 ACO DRM 3.64 7.2.4-1-cachyos)
     value: 127
   - gpuNameRaw: AMD Radeon RX 7600M XT (radeonsi navi33 LLVM 20.1.2 DRM 3.64
@@ -939,7 +944,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.19.10-arch1-1)
     value: 391
   - gpuNameRaw: AMD Radeon RX 9050
-    value: 107
+    value: 109
   - gpuNameRaw: AMD Radeon RX 9060
     value: 167
   - gpuNameRaw: AMD Radeon RX 9060 XT
@@ -963,7 +968,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64 7.0.0-31-generic)
     value: 180
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64 7.0.0-38-generic)
-    value: 187
+    value: 186
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64 7.0.1-1-cachyos)
     value: 182
   - gpuNameRaw: AMD Radeon RX 9060 XT (radeonsi gfx1200 ACO DRM 3.64
@@ -1486,7 +1491,7 @@ results:
   - gpuNameRaw: GeForce GTX 970M/PCIe/SSE2
     value: 33
   - gpuNameRaw: GeForce GTX 980 Ti/PCIe/SSE2
-    value: 86
+    value: 85
   - gpuNameRaw: GeForce GTX 980/PCIe/SSE2
     value: 64
   - gpuNameRaw: GeForce GTX 980M/PCIe/SSE2
@@ -1578,7 +1583,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) 140T GPU (32GB)
     value: 34
   - gpuNameRaw: Intel(R) Arc(TM) 140T GPU (8GB)
-    value: 30
+    value: 33
   - gpuNameRaw: Intel(R) Arc(TM) 140V GPU (16GB)
     value: 37
   - gpuNameRaw: Intel(R) Arc(TM) 140V GPU (8GB)
@@ -1962,7 +1967,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce MX250/PCIe/SSE2
     value: 15
   - gpuNameRaw: NVIDIA GeForce MX330/PCIe/SSE2
-    value: 16
+    value: 15
   - gpuNameRaw: NVIDIA GeForce MX350/PCIe/SSE2
     value: 15
   - gpuNameRaw: NVIDIA GeForce MX450/PCIe/SSE2
@@ -2074,7 +2079,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU/PCIe/SSE2
     value: 247
   - gpuNameRaw: NVIDIA GeForce RTX 4090/PCIe/SSE2
-    value: 419
+    value: 420
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU/PCIe/SSE2
     value: 117
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
@@ -2244,7 +2249,7 @@ results:
   - gpuNameRaw: NVIDIA TITAN X (Pascal)/PCIe/SSE2
     value: 144
   - gpuNameRaw: NVIDIA TITAN Xp COLLECTORS EDITION/PCIe/SSE2
-    value: 152
+    value: 153
   - gpuNameRaw: NVIDIA TITAN Xp/PCIe/SSE2
     value: 153
   - gpuNameRaw: P106-090/PCIe/SSE2
@@ -2416,7 +2421,7 @@ results:
   - gpuNameRaw: Radeon (TM) RX 570 Graphics
     value: 60
   - gpuNameRaw: Radeon 5
-    value: 14
+    value: 15
   - gpuNameRaw: Radeon 500 Series
     value: 11
   - gpuNameRaw: Radeon 520
@@ -2520,7 +2525,7 @@ results:
   - gpuNameRaw: Radeon(TM) RX 460 Graphics
     value: 26
   - gpuNameRaw: Radeon(TM) RX 470 Graphics
-    value: 48
+    value: 47
   - gpuNameRaw: Radeon(TM) RX 480
     value: 49
   - gpuNameRaw: Radeon(TM) RX 550

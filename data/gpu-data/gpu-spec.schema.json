@@ -55,12 +55,12 @@
     },
     "fp16TFLOPS": {
       "type": "number",
-      "description": "FP16 throughput on the highest-rate path the hardware has, in TFLOPS. NVIDIA Volta and later: FP16 Tensor Core with 2:4 structured sparsity, as NVIDIA publishes it (for GeForce, the FP16-accumulate figure; for consumer Blackwell, which publishes only AI TOPS, AI TOPS / 4); Volta and Turing have no sparsity, so their dense figure. NVIDIA Pascal and older: FP16 vector (P100 is 2x FP32). AMD RDNA 3 and RDNA 4: FP16 Matrix (WMMA) without sparsity, as AMD publishes it, never the FP16 Vector figure. AMD RDNA 2 and GCN: packed FP16 vector (2x FP32 where Rapid Packed Math exists, otherwise 1x). Intel Arc: FP16 XMX as Intel publishes it. NVIDIA sparse versus AMD RDNA dense is a deliberate asymmetry (2026-06-03): each vendor's headline figure is kept, and RDNA 3 has no hardware sparsity. Use int8TOPS for a like-for-like comparison.",
+      "description": "FP16 throughput on the highest-rate path the hardware has, in TFLOPS. NVIDIA Volta and later: FP16 Tensor Core with 2:4 structured sparsity, as NVIDIA publishes it (for GeForce, the FP16-accumulate figure; for consumer Blackwell, which publishes only AI TOPS, AI TOPS / 4); Volta and Turing have no sparsity, so their dense figure. NVIDIA Pascal and older: FP16 vector (P100 is 2x FP32; GP102 parts such as the Tesla P40 run FP16 at 1/64 of FP32). AMD RDNA 3 and RDNA 4: FP16 Matrix (WMMA) without sparsity, as AMD publishes it, never the FP16 Vector figure. AMD RDNA 2 and GCN: packed FP16 vector (2x FP32 where Rapid Packed Math exists, otherwise 1x). Intel Arc: FP16 XMX as Intel publishes it. NVIDIA sparse versus AMD RDNA dense is a deliberate asymmetry (2026-06-03): each vendor's headline figure is kept, and RDNA 3 has no hardware sparsity. Use int8TOPS for a like-for-like comparison.",
       "minimum": 0
     },
     "int8TOPS": {
       "type": ["number", "null"],
-      "description": "INT8 throughput on the highest-rate path the hardware has (Tensor Core, Matrix Core, WMMA, XMX; the DP4A ALU instruction on Volta), without sparsity, in TOPS, for every vendor. NVIDIA Ampere and later publish the 2:4 sparse figure as the headline; store half of it. NVIDIA Volta and Turing, AMD and Intel publish dense figures. Null if the part has no INT8 rate.",
+      "description": "INT8 throughput on the highest-rate path the hardware has (Tensor Core, Matrix Core, WMMA, XMX; the DP4A ALU instruction on Volta and Pascal GP102, e.g. the Tesla P40's 47 TOPS; Pascal GP100 has no DP4A), without sparsity, in TOPS, for every vendor. NVIDIA Ampere and later publish the 2:4 sparse figure as the headline; store half of it. NVIDIA Volta and Turing, AMD and Intel publish dense figures. Null if the part has no INT8 rate.",
       "minimum": 0
     },
     "fp8TFLOPS": {
