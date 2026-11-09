@@ -6,6 +6,7 @@ import {
   AnalyticsPageView,
   AnalyticsProvider,
 } from "@/pkgs/client/analytics/provider"
+import { ChunkReload } from "@/pkgs/client/analytics/ChunkReload"
 import { SiteHeader } from "@/pkgs/client/components/SiteHeader"
 import { Alert } from "@/pkgs/client/components/Alert"
 import { AffiliateDisclosureBar } from "@/pkgs/client/components/AffiliateDisclosure"
@@ -114,6 +115,7 @@ export default function RootLayout({
           </div>
         </AnalyticsProvider>
         <AnalyticsPageView />
+        <ChunkReload />
         {/*
         10/11/25: A lighthouse review was to remove unused JavaScript and Google Tag
         Manager had an estimated 83.0 KiB unused. We're not using it at all and

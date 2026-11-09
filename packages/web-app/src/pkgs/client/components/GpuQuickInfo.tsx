@@ -18,6 +18,7 @@ function formatReleaseDate(dateString: string): string {
     year: "numeric",
     month: "long",
     day: "numeric",
+    timeZone: "UTC", // the date string parses as UTC midnight; format it the same on server and client
   })
 }
 
@@ -25,7 +26,7 @@ function formatReleaseDate(dateString: string): string {
  * Formats MSRP as a currency string with USD suffix.
  */
 function formatMsrp(msrpUSD: number): string {
-  return `$${msrpUSD.toLocaleString()} USD`
+  return `$${msrpUSD.toLocaleString("en-US")} USD`
 }
 
 /**

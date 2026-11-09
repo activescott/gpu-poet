@@ -4,6 +4,7 @@ import { PostHogProvider } from "posthog-js/react"
 import { usePathname, useSearchParams } from "next/navigation"
 import { Suspense, useEffect, useState, type JSX } from "react"
 import { useConfigApi } from "@/pkgs/client/hooks/useConfigApi"
+import { dropNoiseExceptions } from "./exceptionFilter"
 import { createClientLogger } from "@/lib/clientLogger"
 
 const log = createClientLogger("analytics:provider")
@@ -62,6 +63,7 @@ export function AnalyticsProvider({ children }: { children: React.ReactNode }) {
         posthog.init(config.posthogKey, {
           api_host: config.posthogHost,
           capture_pageview: false, // Disable automatic pageview capture, as we capture manually
+          before_send: dropNoiseExceptions,
         })
         setPosthogInitialized(true)
         log.debug("PostHog initialized with config from API")

@@ -347,7 +347,7 @@ function PricingInfo({
       )}
       {gpu.msrpUSD && (
         <p className="mb-0 mt-2 small text-muted">
-          MSRP: ${gpu.msrpUSD.toLocaleString()}
+          MSRP: ${gpu.msrpUSD.toLocaleString("en-US")}
           {estimatedMsrpNote && <sup>†</sup>}
         </p>
       )}
