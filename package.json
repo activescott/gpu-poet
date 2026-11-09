@@ -18,7 +18,7 @@
   "workspaces": [
     "packages/*"
   ],
-  "packageManager": "npm@10.2.4",
+  "packageManager": "npm@10.9.10",
   "devDependencies": {
     "canvas": "^3.2.0",
     "turbo": "^2.9.14",
