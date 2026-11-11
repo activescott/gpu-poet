@@ -72,7 +72,7 @@
     "zod": "^4.6.7"
   },
   "devDependencies": {
-    "@activescott/eslint-config": "^2.3.6",
+    "@activescott/eslint-config": "^3.0.0",
     "@types/common-tags": "^1.8.4",
     "@types/jest": "^29.5.10",
     "@types/node": "^20",

@@ -45,7 +45,7 @@
   ],
   "license": "AGPL-3.0",
   "devDependencies": {
-    "@activescott/eslint-config": "^2.3.6",
+    "@activescott/eslint-config": "^3.0.0",
     "@types/async-retry": "^1.4.9",
     "@types/jest": "^29.5.10",
     "@types/lodash-es": "^4.17.12",
