@@ -21,7 +21,7 @@ jobs:
 
     steps:
       # https://github.com/actions/checkout
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           # Fetch full git history so sitemap generation can use accurate
           # git timestamps for lastModified dates in sitemap.xml
@@ -61,7 +61,7 @@ jobs:
       packages: write
     steps:
       - name: Checkout 🛎️
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
