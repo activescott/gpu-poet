@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 27490
-updatedAt: 2026-11-13T13:30:33.338Z
+collectedSamples: 27653
+updatedAt: 2026-11-14T12:36:17.540Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -46,7 +46,7 @@ results:
   - gpuNameRaw: AMD Radeon 760M Graphics
     value: 20
   - gpuNameRaw: AMD Radeon 780M Graphics
-    value: 28
+    value: 27
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
     value: 27
   - gpuNameRaw: AMD Radeon AI PRO R9700
@@ -172,7 +172,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 153
   - gpuNameRaw: AMD Radeon RX 6700 XT (RADV NAVI22)
-    value: 164
+    value: 165
   - gpuNameRaw: AMD Radeon RX 6700M
     value: 100
   - gpuNameRaw: AMD Radeon RX 6700S
@@ -220,7 +220,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600S
     value: 100
   - gpuNameRaw: AMD Radeon RX 7650 GRE
-    value: 140
+    value: 141
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 192
   - gpuNameRaw: AMD Radeon RX 7700 XT (RADV NAVI32)
@@ -228,7 +228,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7700S
     value: 125
   - gpuNameRaw: AMD Radeon RX 7800 XT
-    value: 210
+    value: 209
   - gpuNameRaw: AMD Radeon RX 7800 XT (RADV NAVI32)
     value: 230
   - gpuNameRaw: AMD Radeon RX 7900 GRE
@@ -256,7 +256,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
     value: 292
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 246
+    value: 247
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
     value: 245
   - gpuNameRaw: AMD Radeon RX 9070 XT
@@ -270,7 +270,7 @@ results:
   - gpuNameRaw: AMD Radeon RX6500 XT
     value: 78
   - gpuNameRaw: AMD Radeon Vega 11 Graphics (RADV RAVEN)
-    value: 13
+    value: 14
   - gpuNameRaw: AMD Radeon Vega 8 Graphics (RADV RAVEN)
     value: 8
   - gpuNameRaw: AMD Radeon VII
@@ -299,6 +299,8 @@ results:
     value: 59
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
     value: 60
+  - gpuNameRaw: AMD Radeon(TM) RX 7700S
+    value: 122
   - gpuNameRaw: AMD Radeon(TM) RX Vega 10 Graphics
     value: 9
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
@@ -315,6 +317,8 @@ results:
     value: 3
   - gpuNameRaw: GeForce GTX 1050
     value: 25
+  - gpuNameRaw: GeForce GTX 1050 Ti
+    value: 30
   - gpuNameRaw: GeForce GTX 1060
     value: 43
   - gpuNameRaw: GeForce GTX 1070
@@ -400,7 +404,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics (TGL GT2)
     value: 12
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
-    value: 6
+    value: 9
   - gpuNameRaw: Intel(R) UHD Graphics
     value: 12
   - gpuNameRaw: Intel(R) UHD Graphics 620
@@ -582,7 +586,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4090
     value: 449
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
-    value: 248
+    value: 252
   - gpuNameRaw: NVIDIA GeForce RTX 5050
     value: 130
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU
@@ -596,7 +600,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070
     value: 291
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Laptop GPU
-    value: 159
+    value: 158
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti
     value: 302
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
@@ -614,17 +618,17 @@ results:
   - gpuNameRaw: NVIDIA P104-100
     value: 59
   - gpuNameRaw: NVIDIA P106-100
-    value: 58
+    value: 59
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU
     value: 67
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation Laptop GPU
     value: 93
   - gpuNameRaw: NVIDIA RTX 500 Ada Generation Laptop GPU
-    value: 62
+    value: 66
   - gpuNameRaw: NVIDIA RTX A1000 Laptop GPU
     value: 36
   - gpuNameRaw: NVIDIA RTX A2000
-    value: 53
+    value: 54
   - gpuNameRaw: NVIDIA RTX A2000 12GB
     value: 54
   - gpuNameRaw: NVIDIA RTX A2000 Laptop GPU
@@ -655,6 +659,8 @@ results:
     value: 59
   - gpuNameRaw: Quadro P1000
     value: 24
+  - gpuNameRaw: Quadro P2000
+    value: 29
   - gpuNameRaw: Quadro RTX 3000
     value: 55
   - gpuNameRaw: Quadro RTX 4000

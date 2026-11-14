@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 64630
-updatedAt: 2026-11-13T13:27:08.957Z
+collectedSamples: 64861
+updatedAt: 2026-11-14T12:31:45.864Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -119,7 +119,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6800 XT
     value: 90
   - gpuNameRaw: AMD Radeon RX 6900 XT
-    value: 104
+    value: 105
   - gpuNameRaw: AMD Radeon RX 6900 XT (radeonsi navi21 ACO DRM 3.64 7.0.0-34-generic)
     value: 98
   - gpuNameRaw: AMD Radeon RX 6950 XT
@@ -157,7 +157,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE
     value: 105
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 110
+    value: 109
   - gpuNameRaw: AMD Radeon RX 7900 XTX
     value: 136
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.19.10-1-cachyos)
@@ -188,7 +188,7 @@ results:
       6.18.50-valve2-1-neptune-618-gc7289a96b14d)
     value: 97
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 96
+    value: 97
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 132
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64
@@ -309,7 +309,7 @@ results:
   - gpuNameRaw: GeForce GTX 1650/PCIe/SSE2
     value: 13
   - gpuNameRaw: GeForce GTX 1660 SUPER/PCIe/SSE2
-    value: 29
+    value: 28
   - gpuNameRaw: GeForce GTX 1660 Ti/PCIe/SSE2
     value: 28
   - gpuNameRaw: GeForce GTX 760/PCIe/SSE2
@@ -451,7 +451,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 960M/PCIe/SSE2
     value: 6
   - gpuNameRaw: NVIDIA GeForce GTX 970/PCIe/SSE2
-    value: 18
+    value: 17
   - gpuNameRaw: NVIDIA GeForce GTX 970M/PCIe/SSE2
     value: 10
   - gpuNameRaw: NVIDIA GeForce GTX 980 Ti/PCIe/SSE2
@@ -521,7 +521,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 43
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 47
+    value: 48
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 77
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -549,7 +549,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070/PCIe/SSE2
     value: 69
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU/PCIe/SSE2
-    value: 83
+    value: 82
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER/PCIe/SSE2
     value: 136
   - gpuNameRaw: NVIDIA GeForce RTX 4080/PCIe/SSE2

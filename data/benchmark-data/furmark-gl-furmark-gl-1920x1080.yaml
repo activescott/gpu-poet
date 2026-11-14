@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 561574
-updatedAt: 2026-11-13T13:27:08.835Z
+collectedSamples: 563930
+updatedAt: 2026-11-14T12:31:45.767Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -178,6 +178,8 @@ results:
     value: 91
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.3.1-1-cachyos)
     value: 114
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.3.3-ogc1.1.fc45.x86_64)
+    value: 133
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.46-valve1-1-neptune-618-g2e13b4367b17)
     value: 130
@@ -364,6 +366,8 @@ results:
     value: 165
   - gpuNameRaw: AMD Radeon AI PRO R9700
     value: 329
+  - gpuNameRaw: AMD Radeon Embedded E9390
+    value: 28
   - gpuNameRaw: AMD Radeon Graphics
     value: 26
   - gpuNameRaw: AMD Radeon Graphics (radeonsi gfx1013 ACO DRM 3.61 6.14.6-200.fc41.x86_64)
@@ -1175,7 +1179,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 50
   - gpuNameRaw: AMD Radeon(TM) RX 6500 XT
-    value: 84
+    value: 85
   - gpuNameRaw: AMD Radeon(TM) RX 6500M
     value: 49
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
@@ -1231,7 +1235,7 @@ results:
   - gpuNameRaw: ASUS R9 280 Series
     value: 46
   - gpuNameRaw: ASUS Radeon RX 470 Series
-    value: 41
+    value: 42
   - gpuNameRaw: ATI FirePro V (FireGL V) Graphics Adapter
     value: 7
   - gpuNameRaw: ATI FirePro V4800 (FireGL) Graphics Adapter
@@ -1387,7 +1391,7 @@ results:
   - gpuNameRaw: GeForce GTX 1650 SUPER/PCIe/SSE2
     value: 53
   - gpuNameRaw: GeForce GTX 1650 Ti with Max-Q Design/PCIe/SSE2
-    value: 34
+    value: 35
   - gpuNameRaw: GeForce GTX 1650 Ti/PCIe/SSE2
     value: 42
   - gpuNameRaw: GeForce GTX 1650 with Max-Q Design/PCIe/SSE2
@@ -1405,7 +1409,7 @@ results:
   - gpuNameRaw: GeForce GTX 260/PCIe/SSE2
     value: 10
   - gpuNameRaw: GeForce GTX 460 SE/PCIe/SSE2
-    value: 13
+    value: 12
   - gpuNameRaw: GeForce GTX 460 v2/PCIe/SSE2
     value: 18
   - gpuNameRaw: GeForce GTX 460/PCIe/SSE2
@@ -1985,15 +1989,15 @@ results:
   - gpuNameRaw: NVIDIA GeForce MX350/PCIe/SSE2
     value: 15
   - gpuNameRaw: NVIDIA GeForce MX450/PCIe/SSE2
-    value: 20
+    value: 21
   - gpuNameRaw: NVIDIA GeForce MX550/PCIe/SSE2
-    value: 22
+    value: 23
   - gpuNameRaw: NVIDIA GeForce MX570 A/PCIe/SSE2
     value: 30
   - gpuNameRaw: NVIDIA GeForce MX570/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA GeForce RTX 2050/PCIe/SSE2
-    value: 40
+    value: 41
   - gpuNameRaw: NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2
     value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design/PCIe/SSE2
@@ -2053,7 +2057,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070/PCIe/SSE2
     value: 154
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
-    value: 110
+    value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
     value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
@@ -2241,7 +2245,7 @@ results:
   - gpuNameRaw: NVIDIA T1000/PCIe/SSE2
     value: 38
   - gpuNameRaw: NVIDIA T1200 Laptop GPU/PCIe/SSE2
-    value: 37
+    value: 38
   - gpuNameRaw: NVIDIA T400 4GB/PCIe/SSE2
     value: 19
   - gpuNameRaw: NVIDIA T400/PCIe/SSE2
@@ -2437,7 +2441,7 @@ results:
   - gpuNameRaw: Radeon (TM) RX 570 Graphics
     value: 60
   - gpuNameRaw: Radeon 5
-    value: 15
+    value: 14
   - gpuNameRaw: Radeon 500 Series
     value: 11
   - gpuNameRaw: Radeon 520
@@ -2575,7 +2579,7 @@ results:
   - gpuNameRaw: Tesla P40/PCIe/SSE2
     value: 113
   - gpuNameRaw: Tesla T10/PCIe/SSE2
-    value: 112
+    value: 107
   - gpuNameRaw: Tesla T4/PCIe/SSE2
     value: 52
   - gpuNameRaw: Tesla V100-PCIE-16GB/PCIe/SSE2

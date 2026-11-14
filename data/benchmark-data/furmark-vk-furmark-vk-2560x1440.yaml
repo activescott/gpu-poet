@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 13511
-updatedAt: 2026-11-13T13:30:33.342Z
+collectedSamples: 13593
+updatedAt: 2026-11-14T12:36:17.542Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 164
@@ -64,7 +64,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600M
     value: 53
   - gpuNameRaw: AMD Radeon RX 6650 XT
-    value: 86
+    value: 87
   - gpuNameRaw: AMD Radeon RX 6650 XT (RADV NAVI23)
     value: 83
   - gpuNameRaw: AMD Radeon RX 6700
@@ -110,7 +110,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M XT (RADV NAVI33)
     value: 82
   - gpuNameRaw: AMD Radeon RX 7650 GRE
-    value: 100
+    value: 99
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 141
   - gpuNameRaw: AMD Radeon RX 7700 XT (RADV NAVI32)
@@ -142,7 +142,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
     value: 202
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 169
+    value: 172
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
     value: 179
   - gpuNameRaw: AMD Radeon RX 9070 XT
@@ -218,7 +218,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060
     value: 65
   - gpuNameRaw: NVIDIA GeForce RTX 2060 SUPER
-    value: 73
+    value: 72
   - gpuNameRaw: NVIDIA GeForce RTX 2070
     value: 71
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER
@@ -298,7 +298,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU
     value: 82
   - gpuNameRaw: NVIDIA GeForce RTX 5060
-    value: 108
+    value: 109
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU
     value: 98
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Ti
@@ -316,7 +316,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
     value: 173
   - gpuNameRaw: NVIDIA GeForce RTX 5090
-    value: 440
+    value: 438
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2
     value: 432
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
