@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 255116
-updatedAt: 2026-11-14T12:31:45.858Z
+collectedSamples: 256378
+updatedAt: 2026-11-15T12:53:06.554Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -206,7 +206,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6500XT
     value: 42
   - gpuNameRaw: AMD Radeon RX 6600
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 6.17.7-ba29.fc43.x86_64)
     value: 62
   - gpuNameRaw: AMD Radeon RX 6600 (radeonsi navi23 ACO DRM 3.64 7.0.10-201.fc44.x86_64)
@@ -246,7 +246,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
     value: 95
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
-    value: 112
+    value: 113
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 125
   - gpuNameRaw: AMD Radeon RX 6750 XT (radeonsi navi22 ACO DRM 3.64
@@ -514,7 +514,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.3.3-1-cachyos)
     value: 232
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.3.4-1-cachyos)
-    value: 175
+    value: 176
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 LLVM 20.1.2 DRM 3.64
       7.0.0-28-generic)
     value: 257
@@ -848,7 +848,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 960/PCIe/SSE2
     value: 23
   - gpuNameRaw: NVIDIA GeForce GTX 970/PCIe/SSE2
-    value: 37
+    value: 36
   - gpuNameRaw: NVIDIA GeForce GTX 980 Ti/PCIe/SSE2
     value: 56
   - gpuNameRaw: NVIDIA GeForce GTX 980/PCIe/SSE2
@@ -860,7 +860,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce MX450/PCIe/SSE2
     value: 13
   - gpuNameRaw: NVIDIA GeForce MX550/PCIe/SSE2
-    value: 13
+    value: 15
   - gpuNameRaw: NVIDIA GeForce RTX 2050/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA GeForce RTX 2060 SUPER/PCIe/SSE2
@@ -872,7 +872,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super/PCIe/SSE2
     value: 66
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER/PCIe/SSE2
-    value: 98
+    value: 99
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design/PCIe/SSE2
     value: 51
   - gpuNameRaw: NVIDIA GeForce RTX 2070/PCIe/SSE2
@@ -994,7 +994,7 @@ results:
   - gpuNameRaw: NVIDIA P106-090/PCIe/SSE2
     value: 19
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
-    value: 41
+    value: 40
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU/PCIe/SSE2
     value: 50
   - gpuNameRaw: NVIDIA RTX 2000 Ada Generation Laptop GPU/PCIe/SSE2
@@ -1074,7 +1074,7 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 4500 Blackwell/PCIe/SSE2
     value: 220
   - gpuNameRaw: NVIDIA RTX PRO 500 Blackwell Generation Laptop GPU/PCIe/SSE2
-    value: 47
+    value: 46
   - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 164
   - gpuNameRaw: NVIDIA RTX PRO 5000 Blackwell/PCIe/SSE2
@@ -1138,7 +1138,7 @@ results:
   - gpuNameRaw: Quadro P620/PCIe/SSE2
     value: 13
   - gpuNameRaw: Quadro RTX 3000 with Max-Q Design/PCIe/SSE2
-    value: 24
+    value: 25
   - gpuNameRaw: Quadro RTX 3000/PCIe/SSE2
     value: 43
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
@@ -1207,5 +1207,7 @@ results:
     value: 132
   - gpuNameRaw: unknown board/PCIe/SSE2
     value: 42
+  - gpuNameRaw: zink Vulkan 1.4(AMD BC-250 (RADV GFX1013) (MESA_RADV))
+    value: 58
   - gpuNameRaw: zink Vulkan 1.4(NVIDIA GeForce RTX 3060 (NVK GA106) (MESA_NVK))
     value: 60
