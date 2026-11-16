@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 27829
-updatedAt: 2026-11-15T12:57:45.358Z
+collectedSamples: 27974
+updatedAt: 2026-11-16T14:14:26.754Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -240,7 +240,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
     value: 295
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 284
+    value: 285
   - gpuNameRaw: AMD Radeon RX 7900 XT (RADV NAVI31)
     value: 330
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -272,7 +272,7 @@ results:
   - gpuNameRaw: AMD Radeon RX590 GME
     value: 59
   - gpuNameRaw: AMD Radeon RX6500 XT
-    value: 78
+    value: 77
   - gpuNameRaw: AMD Radeon Vega 11 Graphics (RADV RAVEN)
     value: 14
   - gpuNameRaw: AMD Radeon Vega 8 Graphics (RADV RAVEN)
@@ -308,7 +308,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX Vega 10 Graphics
     value: 9
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
-    value: 11
+    value: 10
   - gpuNameRaw: AMD Radeon(TM) Vega 11 Graphics
     value: 11
   - gpuNameRaw: AMD Radeon(TM) Vega 3 Graphics
@@ -516,7 +516,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design
     value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2080
-    value: 148
+    value: 147
   - gpuNameRaw: NVIDIA GeForce RTX 2080 SUPER
     value: 166
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super with Max-Q Design
@@ -594,7 +594,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5050
     value: 130
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU
-    value: 124
+    value: 123
   - gpuNameRaw: NVIDIA GeForce RTX 5060
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU
@@ -620,7 +620,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
     value: 331
   - gpuNameRaw: NVIDIA P104-100
-    value: 59
+    value: 71
   - gpuNameRaw: NVIDIA P106-100
     value: 59
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU
@@ -637,6 +637,8 @@ results:
     value: 54
   - gpuNameRaw: NVIDIA RTX A2000 Laptop GPU
     value: 44
+  - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU
+    value: 100
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU
     value: 84
   - gpuNameRaw: NVIDIA RTX A4000
@@ -656,7 +658,7 @@ results:
   - gpuNameRaw: NVIDIA T1000 8GB
     value: 35
   - gpuNameRaw: NVIDIA T1200 Laptop GPU
-    value: 38
+    value: 37
   - gpuNameRaw: NVIDIA TITAN RTX
     value: 186
   - gpuNameRaw: P104-100
@@ -700,7 +702,7 @@ results:
   - gpuNameRaw: Radeon RX 5500 XT
     value: 66
   - gpuNameRaw: Radeon RX 5500M
-    value: 53
+    value: 51
   - gpuNameRaw: Radeon RX 560 Series
     value: 26
   - gpuNameRaw: Radeon RX 560 XT
@@ -716,10 +718,12 @@ results:
   - gpuNameRaw: Radeon RX 590 Series
     value: 62
   - gpuNameRaw: Radeon RX Vega
-    value: 95
+    value: 96
   - gpuNameRaw: Radeon RX550/550 Series
     value: 17
   - gpuNameRaw: Radeon(TM) RX 460 Graphics
     value: 25
   - gpuNameRaw: Tesla V100-SXM2-16GB
     value: 179
+  - gpuNameRaw: Unknown AMD GPU
+    value: 123
