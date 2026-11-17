@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 27974
-updatedAt: 2026-11-16T14:14:26.754Z
+collectedSamples: 28137
+updatedAt: 2026-11-17T15:00:05.498Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -366,7 +366,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) A770M Graphics
     value: 118
   - gpuNameRaw: Intel(R) Arc(TM) B390 GPU
-    value: 67
+    value: 68
   - gpuNameRaw: Intel(R) Arc(TM) B570 Graphics
     value: 127
   - gpuNameRaw: Intel(R) Arc(tm) B570 Graphics (BMG G21)
@@ -425,6 +425,8 @@ results:
     value: 9
   - gpuNameRaw: Intel(R) UHD Graphics 770
     value: 11
+  - gpuNameRaw: Moore Threads MTT S80
+    value: 64
   - gpuNameRaw: NVIDIA CMP 30HX
     value: 74
   - gpuNameRaw: NVIDIA CMP 40HX
@@ -483,6 +485,8 @@ results:
     value: 19
   - gpuNameRaw: NVIDIA GeForce GTX 760
     value: 26
+  - gpuNameRaw: NVIDIA GeForce GTX 860M
+    value: 16
   - gpuNameRaw: NVIDIA GeForce GTX 950
     value: 23
   - gpuNameRaw: NVIDIA GeForce GTX 950M
@@ -490,9 +494,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 960
     value: 34
   - gpuNameRaw: NVIDIA GeForce GTX 970
-    value: 52
+    value: 53
   - gpuNameRaw: NVIDIA GeForce GTX 980
     value: 62
+  - gpuNameRaw: NVIDIA GeForce MX130
+    value: 9
   - gpuNameRaw: NVIDIA GeForce MX250
     value: 13
   - gpuNameRaw: NVIDIA GeForce MX450
@@ -576,7 +582,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU
     value: 159
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER
-    value: 236
+    value: 237
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti
     value: 289
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER
@@ -598,7 +604,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5060
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU
-    value: 140
+    value: 141
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Ti
     value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5070
@@ -640,7 +646,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A3000 12GB Laptop GPU
     value: 100
   - gpuNameRaw: NVIDIA RTX A3000 Laptop GPU
-    value: 84
+    value: 80
   - gpuNameRaw: NVIDIA RTX A4000
     value: 100
   - gpuNameRaw: NVIDIA RTX A4000 Laptop GPU
@@ -664,13 +670,13 @@ results:
   - gpuNameRaw: P104-100
     value: 59
   - gpuNameRaw: Quadro P1000
-    value: 24
+    value: 22
   - gpuNameRaw: Quadro P2000
-    value: 29
+    value: 31
   - gpuNameRaw: Quadro RTX 3000
     value: 55
   - gpuNameRaw: Quadro RTX 4000
-    value: 84
+    value: 82
   - gpuNameRaw: Quadro RTX 4000 with Max-Q Design
     value: 76
   - gpuNameRaw: Quadro RTX 5000
@@ -700,7 +706,7 @@ results:
   - gpuNameRaw: Radeon RX 5500
     value: 52
   - gpuNameRaw: Radeon RX 5500 XT
-    value: 66
+    value: 65
   - gpuNameRaw: Radeon RX 5500M
     value: 51
   - gpuNameRaw: Radeon RX 560 Series

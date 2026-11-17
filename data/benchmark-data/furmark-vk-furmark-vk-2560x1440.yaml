@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 13749
-updatedAt: 2026-11-16T14:14:26.755Z
+collectedSamples: 13808
+updatedAt: 2026-11-17T15:00:05.499Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 164
@@ -22,7 +22,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 29
   - gpuNameRaw: AMD Radeon (TM) R9 390 Series
-    value: 43
+    value: 44
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 17
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
@@ -96,7 +96,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6900 XT
     value: 180
   - gpuNameRaw: AMD Radeon RX 6900 XT (RADV NAVI21)
-    value: 197
+    value: 189
   - gpuNameRaw: AMD Radeon RX 6950 XT
     value: 193
   - gpuNameRaw: AMD Radeon RX 6950 XT (RADV NAVI21)
@@ -144,13 +144,13 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
     value: 202
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 176
+    value: 177
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
     value: 179
   - gpuNameRaw: AMD Radeon RX 9070 XT
     value: 243
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
-    value: 244
+    value: 243
   - gpuNameRaw: AMD Radeon RX Vega (RADV VEGA10)
     value: 57
   - gpuNameRaw: AMD Radeon RX590 GME
@@ -260,7 +260,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
     value: 80
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti
-    value: 126
+    value: 125
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU
     value: 96
   - gpuNameRaw: NVIDIA GeForce RTX 3090
@@ -318,7 +318,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
     value: 173
   - gpuNameRaw: NVIDIA GeForce RTX 5090
-    value: 438
+    value: 437
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2
     value: 432
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU

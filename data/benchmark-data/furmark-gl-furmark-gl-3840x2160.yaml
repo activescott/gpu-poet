@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 65363
-updatedAt: 2026-11-16T14:13:05.278Z
+collectedSamples: 65649
+updatedAt: 2026-11-17T14:56:49.309Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -155,7 +155,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800M
     value: 51
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 105
+    value: 106
   - gpuNameRaw: AMD Radeon RX 7900 XT
     value: 110
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -236,6 +236,8 @@ results:
     value: 127
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.3.0-1-default)
     value: 113
+  - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.3.3-1-cachyos)
+    value: 130
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 LLVM 20.1.8 DRM 3.64
       6.16.12-valve24.4-1-neptune-616-gfe145653a794)
     value: 140
@@ -357,7 +359,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) Graphics
     value: 10
   - gpuNameRaw: Intel(R) Arc(TM) Pro B50 Graphics
-    value: 23
+    value: 24
   - gpuNameRaw: Intel(R) Arc(TM) Pro B70 Graphics
     value: 68
   - gpuNameRaw: Intel(R) Graphics
@@ -505,7 +507,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050/PCIe/SSE2
     value: 27
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU/PCIe/SSE2
-    value: 33
+    value: 34
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti/PCIe/SSE2
     value: 52
   - gpuNameRaw: NVIDIA GeForce RTX 3060/PCIe/SSE2

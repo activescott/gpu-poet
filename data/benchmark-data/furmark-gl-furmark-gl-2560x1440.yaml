@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 257548
-updatedAt: 2026-11-16T14:13:05.272Z
+collectedSamples: 258545
+updatedAt: 2026-11-17T14:56:49.302Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -117,7 +117,7 @@ results:
   - gpuNameRaw: AMD Radeon 740M Graphics
     value: 11
   - gpuNameRaw: AMD Radeon 760M Graphics
-    value: 13
+    value: 14
   - gpuNameRaw: AMD Radeon 780M Graphics
     value: 17
   - gpuNameRaw: AMD Radeon AI PRO R9700
@@ -235,6 +235,9 @@ results:
     value: 116
   - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 ACO DRM 3.64 7.3.0-2-cachyos-bore)
     value: 109
+  - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 ACO DRM 3.64
+      7.3.4-ogc8.1.fc45.x86_64)
+    value: 109
   - gpuNameRaw: AMD Radeon RX 6700 XT (radeonsi navi22 LLVM 20.1.2 DRM 3.57
       6.8.0-110-generic)
     value: 111
@@ -325,7 +328,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800M
     value: 106
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 199
+    value: 200
   - gpuNameRaw: AMD Radeon RX 7900 GRE (radeonsi navi31 ACO DRM 3.64 7.2.4-3-cachyos)
     value: 185
   - gpuNameRaw: AMD Radeon RX 7900 XT
@@ -990,7 +993,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
     value: 395
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
-    value: 126
+    value: 131
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
     value: 55
   - gpuNameRaw: NVIDIA P106-090/PCIe/SSE2
