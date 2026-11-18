@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 258545
-updatedAt: 2026-11-17T14:56:49.302Z
+collectedSamples: 259537
+updatedAt: 2026-11-18T14:43:41.368Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -156,7 +156,7 @@ results:
   - gpuNameRaw: AMD Radeon R9 200 / HD 7900 Series
     value: 34
   - gpuNameRaw: AMD Radeon R9 200 Series
-    value: 36
+    value: 37
   - gpuNameRaw: AMD Radeon R9 270 1024SP
     value: 16
   - gpuNameRaw: AMD RADEON R9 M395
@@ -164,6 +164,8 @@ results:
   - gpuNameRaw: AMD Radeon RX 480 Graphics (radeonsi polaris10 ACO DRM 3.64
       6.17.7-ba29.fc43.x86_64)
     value: 28
+  - gpuNameRaw: AMD Radeon RX 5500 XT (radeonsi navi14 ACO DRM 3.64 7.0.0-43-generic)
+    value: 43
   - gpuNameRaw: AMD Radeon RX 5600 OEM
     value: 61
   - gpuNameRaw: AMD Radeon RX 5600 XT
@@ -305,7 +307,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M XT
     value: 73
   - gpuNameRaw: AMD Radeon RX 7600S
-    value: 72
+    value: 75
   - gpuNameRaw: AMD Radeon RX 7650 GRE
     value: 104
   - gpuNameRaw: AMD Radeon RX 7700
@@ -568,7 +570,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
     value: 42
   - gpuNameRaw: AMD Radeon(TM) RX 6650M
-    value: 66
+    value: 65
   - gpuNameRaw: AMD Radeon(TM) RX 6650M XT
     value: 80
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
@@ -633,7 +635,7 @@ results:
   - gpuNameRaw: GeForce GTX 760/PCIe/SSE2
     value: 21
   - gpuNameRaw: GeForce GTX 770/PCIe/SSE2
-    value: 27
+    value: 28
   - gpuNameRaw: GeForce GTX 780 Ti/PCIe/SSE2
     value: 42
   - gpuNameRaw: GeForce GTX 780/PCIe/SSE2
@@ -993,9 +995,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090/PCIe/SSE2
     value: 395
   - gpuNameRaw: NVIDIA Graphics Device/PCIe/SSE2
-    value: 131
+    value: 135
   - gpuNameRaw: NVIDIA P104-100/PCIe/SSE2
-    value: 55
+    value: 54
   - gpuNameRaw: NVIDIA P106-090/PCIe/SSE2
     value: 19
   - gpuNameRaw: NVIDIA P106-100/PCIe/SSE2
