@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 573726
-updatedAt: 2026-11-18T14:43:41.344Z
+collectedSamples: 575891
+updatedAt: 2026-11-19T14:37:34.089Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -53,7 +53,7 @@ results:
       6.18.38-valve1-1-neptune-618-g9d69246eb796)
     value: 106
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.18.55-2-cachyos-lts)
-    value: 128
+    value: 125
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.19.14-ogc2.1.fc44.x86_64)
     value: 90
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 6.19.14-ogc5.1.fc44.x86_64)
@@ -531,7 +531,7 @@ results:
   - gpuNameRaw: AMD Radeon Pro W5500
     value: 67
   - gpuNameRaw: AMD Radeon Pro W5700
-    value: 119
+    value: 118
   - gpuNameRaw: AMD Radeon Pro W5700X
     value: 103
   - gpuNameRaw: AMD Radeon Pro W6400
@@ -670,7 +670,7 @@ results:
       7.2.9-ogc3.1.fc44.x86_64)
     value: 60
   - gpuNameRaw: AMD Radeon RX 5700
-    value: 120
+    value: 119
   - gpuNameRaw: AMD Radeon RX 5700 (radeonsi navi10 LLVM 21.1.8 DRM 3.64
       6.17.7-ba25.fc43.x86_64)
     value: 99
@@ -792,7 +792,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6600 LE
     value: 105
   - gpuNameRaw: AMD Radeon RX 6600 XT
-    value: 142
+    value: 143
   - gpuNameRaw: AMD Radeon RX 6600 XT (radeonsi navi23 ACO DRM 3.64 7.1.7-zen1-1-zen)
     value: 140
   - gpuNameRaw: AMD Radeon RX 6600 XT (radeonsi navi23 ACO DRM 3.64
@@ -872,7 +872,7 @@ results:
       7.2.4-ogc3.1.fc44.x86_64)
     value: 294
   - gpuNameRaw: AMD Radeon RX 6950 XT
-    value: 292
+    value: 291
   - gpuNameRaw: AMD Radeon RX 6950 XT (radeonsi navi21 ACO DRM 3.64
       7.0.9-ogc3.2.fc44.x86_64)
     value: 293
@@ -964,7 +964,7 @@ results:
       7.2.9-ogc3.1.fc44.x86_64)
     value: 365
   - gpuNameRaw: AMD Radeon RX 7900 XTX
-    value: 360
+    value: 359
   - gpuNameRaw: AMD Radeon RX 7900 XTX (radeonsi navi31 ACO DRM 3.64 6.19.10-arch1-1)
     value: 391
   - gpuNameRaw: AMD Radeon RX 9050
@@ -1294,6 +1294,8 @@ results:
   - gpuNameRaw: GeForce 830M/PCIe/SSE2
     value: 6
   - gpuNameRaw: GeForce 840M/PCIe/SSE2
+    value: 6
+  - gpuNameRaw: GeForce 920A/PCIe/SSE2
     value: 6
   - gpuNameRaw: GeForce 920M/PCIe/SSE2
     value: 5
@@ -2124,7 +2126,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5050/PCIe/SSE2
     value: 126
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU/PCIe/SSE2
-    value: 138
+    value: 139
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Ti/PCIe/SSE2
     value: 190
   - gpuNameRaw: NVIDIA GeForce RTX 5060/PCIe/SSE2
@@ -2170,7 +2172,7 @@ results:
   - gpuNameRaw: NVIDIA RTX 3000 Ada Generation Laptop GPU/PCIe/SSE2
     value: 108
   - gpuNameRaw: NVIDIA RTX 3500 Ada Generation Laptop GPU/PCIe/SSE2
-    value: 168
+    value: 169
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation Laptop GPU/PCIe/SSE2
     value: 186
   - gpuNameRaw: NVIDIA RTX 4000 Ada Generation/PCIe/SSE2
@@ -2238,13 +2240,13 @@ results:
   - gpuNameRaw: NVIDIA RTX PRO 3000 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 177
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell Generation Laptop GPU/PCIe/SSE2
-    value: 208
+    value: 207
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell SFF Edition/PCIe/SSE2
     value: 142
   - gpuNameRaw: NVIDIA RTX PRO 4000 Blackwell/PCIe/SSE2
     value: 211
   - gpuNameRaw: NVIDIA RTX PRO 4500 Blackwell/PCIe/SSE2
-    value: 291
+    value: 294
   - gpuNameRaw: NVIDIA RTX PRO 500 Blackwell Generation Laptop GPU/PCIe/SSE2
     value: 76
   - gpuNameRaw: NVIDIA RTX PRO 5000 72GB Blackwell/PCIe/SSE2

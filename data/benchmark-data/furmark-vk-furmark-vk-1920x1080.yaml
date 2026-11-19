@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 28265
-updatedAt: 2026-11-18T14:45:00.466Z
+collectedSamples: 28393
+updatedAt: 2026-11-19T14:42:03.415Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -52,7 +52,7 @@ results:
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
     value: 27
   - gpuNameRaw: AMD Radeon AI PRO R9700
-    value: 323
+    value: 322
   - gpuNameRaw: AMD Radeon Graphics
     value: 24
   - gpuNameRaw: AMD Radeon Graphics (RADV GFX1013)
@@ -142,7 +142,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 590 Series (RADV POLARIS10)
     value: 61
   - gpuNameRaw: AMD Radeon RX 6400
-    value: 49
+    value: 50
   - gpuNameRaw: AMD Radeon RX 6400 (RADV NAVI24)
     value: 46
   - gpuNameRaw: AMD Radeon RX 6500 XT
@@ -188,7 +188,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 XT (RADV NAVI22)
     value: 176
   - gpuNameRaw: AMD Radeon RX 6800
-    value: 180
+    value: 179
   - gpuNameRaw: AMD Radeon RX 6800 (RADV NAVI21)
     value: 210
   - gpuNameRaw: AMD Radeon RX 6800 XT
@@ -264,7 +264,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
     value: 245
   - gpuNameRaw: AMD Radeon RX 9070 XT
-    value: 338
+    value: 337
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
     value: 353
   - gpuNameRaw: AMD Radeon RX Vega (RADV VEGA10)
@@ -335,6 +335,8 @@ results:
     value: 40
   - gpuNameRaw: GeForce GTX 1660 SUPER
     value: 76
+  - gpuNameRaw: GeForce GTX 1660 Ti
+    value: 54
   - gpuNameRaw: Intel(R) Arc(TM) 130T GPU (16GB)
     value: 44
   - gpuNameRaw: Intel(R) Arc(TM) 130V GPU (8GB)
@@ -446,7 +448,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060
     value: 46
   - gpuNameRaw: NVIDIA GeForce GTX 1060 3GB
-    value: 55
+    value: 56
   - gpuNameRaw: NVIDIA GeForce GTX 1060 5GB
     value: 56
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB
@@ -504,7 +506,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce MX250
     value: 13
   - gpuNameRaw: NVIDIA GeForce MX450
-    value: 25
+    value: 24
   - gpuNameRaw: NVIDIA GeForce MX550
     value: 24
   - gpuNameRaw: NVIDIA GeForce RTX 2050
@@ -530,7 +532,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super with Max-Q Design
     value: 87
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Ti
-    value: 166
+    value: 167
   - gpuNameRaw: NVIDIA GeForce RTX 2080 with Max-Q Design
     value: 68
   - gpuNameRaw: NVIDIA GeForce RTX 3050
@@ -572,9 +574,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti
     value: 257
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU
-    value: 112
+    value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 4060
-    value: 114
+    value: 115
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Laptop GPU
     value: 137
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
@@ -678,7 +680,7 @@ results:
   - gpuNameRaw: Quadro RTX 3000
     value: 55
   - gpuNameRaw: Quadro RTX 4000
-    value: 82
+    value: 85
   - gpuNameRaw: Quadro RTX 4000 with Max-Q Design
     value: 76
   - gpuNameRaw: Quadro RTX 5000
