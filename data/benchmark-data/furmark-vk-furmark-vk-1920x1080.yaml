@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 28393
-updatedAt: 2026-11-19T14:42:03.415Z
+collectedSamples: 28547
+updatedAt: 2026-11-20T14:29:02.370Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -78,7 +78,7 @@ results:
   - gpuNameRaw: AMD Radeon Pro v540
     value: 90
   - gpuNameRaw: AMD Radeon Pro VII
-    value: 121
+    value: 122
   - gpuNameRaw: AMD Radeon Pro VII (RADV VEGA20)
     value: 131
   - gpuNameRaw: AMD Radeon Pro W5700
@@ -90,7 +90,7 @@ results:
   - gpuNameRaw: AMD Radeon R5 M445 Series (RADV ICELAND)
     value: 6
   - gpuNameRaw: AMD Radeon R7 200 Series
-    value: 11
+    value: 15
   - gpuNameRaw: AMD Radeon R7 350 Series
     value: 11
   - gpuNameRaw: AMD Radeon R9 200 / HD 7900 Series
@@ -212,7 +212,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600
     value: 140
   - gpuNameRaw: AMD Radeon RX 7600 (RADV NAVI33)
-    value: 135
+    value: 134
   - gpuNameRaw: AMD Radeon RX 7600 XT
     value: 140
   - gpuNameRaw: AMD Radeon RX 7600 XT (RADV NAVI33)
@@ -236,7 +236,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800 XT (RADV NAVI32)
     value: 230
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 259
+    value: 260
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
     value: 295
   - gpuNameRaw: AMD Radeon RX 7900 XT
@@ -270,7 +270,7 @@ results:
   - gpuNameRaw: AMD Radeon RX Vega (RADV VEGA10)
     value: 105
   - gpuNameRaw: AMD Radeon RX590 GME
-    value: 59
+    value: 58
   - gpuNameRaw: AMD Radeon RX6500 XT
     value: 77
   - gpuNameRaw: AMD Radeon Vega 11 Graphics (RADV RAVEN)
@@ -308,7 +308,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX Vega 10 Graphics
     value: 9
   - gpuNameRaw: AMD Radeon(TM) RX Vega 11 Graphics
-    value: 10
+    value: 11
   - gpuNameRaw: AMD Radeon(TM) Vega 11 Graphics
     value: 11
   - gpuNameRaw: AMD Radeon(TM) Vega 3 Graphics
@@ -328,7 +328,7 @@ results:
   - gpuNameRaw: GeForce GTX 1070
     value: 74
   - gpuNameRaw: GeForce GTX 1080 Ti
-    value: 132
+    value: 133
   - gpuNameRaw: GeForce GTX 1650
     value: 39
   - gpuNameRaw: GeForce GTX 1650 Ti
@@ -418,7 +418,7 @@ results:
   - gpuNameRaw: Intel(R) UHD Graphics 620 (KBL GT2)
     value: 4
   - gpuNameRaw: Intel(R) UHD Graphics 630
-    value: 6
+    value: 5
   - gpuNameRaw: Intel(R) UHD Graphics 630 (CFL GT2)
     value: 4
   - gpuNameRaw: Intel(R) UHD Graphics 730
@@ -448,7 +448,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060
     value: 46
   - gpuNameRaw: NVIDIA GeForce GTX 1060 3GB
-    value: 56
+    value: 55
   - gpuNameRaw: NVIDIA GeForce GTX 1060 5GB
     value: 56
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB
@@ -501,10 +501,14 @@ results:
     value: 62
   - gpuNameRaw: NVIDIA GeForce GTX 980 Ti
     value: 75
+  - gpuNameRaw: NVIDIA GeForce GTX TITAN X
+    value: 66
   - gpuNameRaw: NVIDIA GeForce MX130
     value: 9
   - gpuNameRaw: NVIDIA GeForce MX250
     value: 13
+  - gpuNameRaw: NVIDIA GeForce MX330
+    value: 14
   - gpuNameRaw: NVIDIA GeForce MX450
     value: 24
   - gpuNameRaw: NVIDIA GeForce MX550
@@ -526,7 +530,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070 with Max-Q Design
     value: 63
   - gpuNameRaw: NVIDIA GeForce RTX 2080
-    value: 147
+    value: 148
   - gpuNameRaw: NVIDIA GeForce RTX 2080 SUPER
     value: 166
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super with Max-Q Design
@@ -540,7 +544,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU
     value: 31
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU
-    value: 55
+    value: 56
   - gpuNameRaw: NVIDIA GeForce RTX 3050 Laptop GPU
     value: 59
   - gpuNameRaw: NVIDIA GeForce RTX 3050 OEM
@@ -576,7 +580,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU
     value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 4060
-    value: 115
+    value: 114
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Laptop GPU
     value: 137
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
@@ -604,7 +608,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5050
     value: 130
   - gpuNameRaw: NVIDIA GeForce RTX 5050 Laptop GPU
-    value: 124
+    value: 125
   - gpuNameRaw: NVIDIA GeForce RTX 5060
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU
@@ -670,7 +674,7 @@ results:
   - gpuNameRaw: NVIDIA T1200 Laptop GPU
     value: 37
   - gpuNameRaw: NVIDIA TITAN RTX
-    value: 186
+    value: 193
   - gpuNameRaw: P104-100
     value: 59
   - gpuNameRaw: Quadro P1000
