@@ -15,12 +15,12 @@ descriptionDollarsPer: Dollars per FPS in 3DMark Wild Life Extreme. Lower values
 category: gaming
 profileVersion: 1.0.x
 publicResultsSince: 2023-05-12
-latestDataAsOf: 2026-08-06
-collectedSamples: 533
-updatedAt: 2026-11-09T19:05:43.546Z
+latestDataAsOf: 2026-11-18
+collectedSamples: 537
+updatedAt: 2026-11-22T10:22:28.621Z
 results:
   - gpuNameRaw: AMD Radeon 8060S
-    value: 116
+    value: 118
   - gpuNameRaw: AMD Radeon 890M
     value: 36
   - gpuNameRaw: AMD Radeon Pro W7700

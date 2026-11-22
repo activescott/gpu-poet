@@ -13,15 +13,15 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 580361
-updatedAt: 2026-11-21T13:37:13.114Z
+collectedSamples: 582485
+updatedAt: 2026-11-22T11:46:05.942Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
   - gpuNameRaw: 67EF:CF
     value: 25
   - gpuNameRaw: 6FDF:FF
-    value: 62
+    value: 60
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 219
   - gpuNameRaw: AMD 15D8:C8
@@ -185,7 +185,9 @@ results:
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.3.4-1-cachyos)
     value: 68
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.3.4-ogc8.1.fc45.x86_64)
-    value: 136
+    value: 135
+  - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.64 7.3.5-2-cachyos)
+    value: 83
   - gpuNameRaw: AMD BC-250 (radeonsi gfx1013 ACO DRM 3.65
       6.18.46-valve1-1-neptune-618-g2e13b4367b17)
     value: 130
@@ -483,7 +485,7 @@ results:
   - gpuNameRaw: AMD Radeon HD 7670M
     value: 7
   - gpuNameRaw: AMD Radeon HD 7700 Series
-    value: 14
+    value: 13
   - gpuNameRaw: AMD Radeon HD 7800 Series
     value: 27
   - gpuNameRaw: AMD Radeon HD 7800 Series (radeonsi pitcairn ACO DRM 3.64
@@ -531,7 +533,7 @@ results:
   - gpuNameRaw: AMD Radeon Pro W5500
     value: 67
   - gpuNameRaw: AMD Radeon Pro W5700
-    value: 118
+    value: 117
   - gpuNameRaw: AMD Radeon Pro W5700X
     value: 103
   - gpuNameRaw: AMD Radeon Pro W6400
@@ -683,6 +685,9 @@ results:
     value: 127
   - gpuNameRaw: AMD Radeon RX 5700 XT (radeonsi navi10 ACO DRM 3.64 7.2.6-pikaos)
     value: 127
+  - gpuNameRaw: AMD Radeon RX 5700 XT (radeonsi navi10 ACO DRM 3.65
+      7.2.7-valve2-2-neptune-72-g31504582a073)
+    value: 98
   - gpuNameRaw: AMD Radeon RX 5700 XT (radeonsi navi10 LLVM 21.1.8 DRM 3.42
       5.15.0-171-generic)
     value: 101
@@ -738,6 +743,8 @@ results:
   - gpuNameRaw: AMD Radeon RX 580 Series (radeonsi polaris10 ACO DRM 3.64 7.0.0-38-generic)
     value: 61
   - gpuNameRaw: AMD Radeon RX 580 Series (radeonsi polaris10 ACO DRM 3.64 7.0.0-42-generic)
+    value: 64
+  - gpuNameRaw: AMD Radeon RX 580 Series (radeonsi polaris10 ACO DRM 3.64 7.0.0-43-generic)
     value: 64
   - gpuNameRaw: AMD Radeon RX 580 Series (radeonsi polaris10 ACO DRM 3.64 7.0.1-1-cachyos)
     value: 65
@@ -1586,7 +1593,7 @@ results:
   - gpuNameRaw: GeForce RTX 3050 Ti Laptop GPU/PCIe/SSE2
     value: 60
   - gpuNameRaw: GeForce RTX 3060 Laptop GPU/PCIe/SSE2
-    value: 62
+    value: 61
   - gpuNameRaw: GeForce RTX 3060 Ti/PCIe/SSE2
     value: 134
   - gpuNameRaw: GeForce RTX 3060/PCIe/SSE2
@@ -2042,7 +2049,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2070/PCIe/SSE2
     value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super with Max-Q Design/PCIe/SSE2
-    value: 75
+    value: 76
   - gpuNameRaw: NVIDIA GeForce RTX 2080 Super/PCIe/SSE2
     value: 131
   - gpuNameRaw: NVIDIA GeForce RTX 2080 SUPER/PCIe/SSE2
@@ -2054,7 +2061,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2080/PCIe/SSE2
     value: 149
   - gpuNameRaw: NVIDIA GeForce RTX 3050 4GB Laptop GPU/PCIe/SSE2
-    value: 34
+    value: 35
   - gpuNameRaw: NVIDIA GeForce RTX 3050 6GB Laptop GPU/PCIe/SSE2
     value: 54
   - gpuNameRaw: NVIDIA GeForce RTX 3050 A Laptop GPU/PCIe/SSE2
@@ -2150,7 +2157,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 362
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
-    value: 504
+    value: 505
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
     value: 500
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU/PCIe/SSE2
@@ -2428,7 +2435,7 @@ results:
   - gpuNameRaw: Quadro RTX 8000/PCIe/SSE2
     value: 174
   - gpuNameRaw: Quadro T1000 with Max-Q Design/PCIe/SSE2
-    value: 32
+    value: 31
   - gpuNameRaw: Quadro T1000/PCIe/SSE2
     value: 36
   - gpuNameRaw: Quadro T2000 with Max-Q Design/PCIe/SSE2

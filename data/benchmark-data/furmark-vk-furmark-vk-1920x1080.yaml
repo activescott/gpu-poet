@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 28716
-updatedAt: 2026-11-21T13:43:29.028Z
+collectedSamples: 28884
+updatedAt: 2026-11-22T12:50:31.092Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -68,9 +68,9 @@ results:
   - gpuNameRaw: AMD Radeon Graphics (RADV VEGA20)
     value: 128
   - gpuNameRaw: AMD Radeon HD 7700 Series
-    value: 7
+    value: 11
   - gpuNameRaw: AMD Radeon HD 7800 Series
-    value: 25
+    value: 27
   - gpuNameRaw: AMD Radeon HD 7900 Series
     value: 28
   - gpuNameRaw: AMD Radeon Pro 5500M
@@ -186,7 +186,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 160
   - gpuNameRaw: AMD Radeon RX 6750 XT (RADV NAVI22)
-    value: 176
+    value: 174
   - gpuNameRaw: AMD Radeon RX 6800
     value: 179
   - gpuNameRaw: AMD Radeon RX 6800 (RADV NAVI21)
@@ -202,7 +202,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6850M XT
     value: 120
   - gpuNameRaw: AMD Radeon RX 6900 XT
-    value: 258
+    value: 259
   - gpuNameRaw: AMD Radeon RX 6900 XT (RADV NAVI21)
     value: 270
   - gpuNameRaw: AMD Radeon RX 6950 XT
@@ -260,7 +260,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
     value: 291
   - gpuNameRaw: AMD Radeon RX 9070 GRE
-    value: 248
+    value: 247
   - gpuNameRaw: AMD Radeon RX 9070 GRE (RADV GFX1201)
     value: 245
   - gpuNameRaw: AMD Radeon RX 9070 XT
@@ -410,7 +410,7 @@ results:
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics (TGL GT2)
     value: 12
   - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
-    value: 9
+    value: 6
   - gpuNameRaw: Intel(R) UHD Graphics
     value: 12
   - gpuNameRaw: Intel(R) UHD Graphics 620
@@ -454,13 +454,13 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB
     value: 62
   - gpuNameRaw: NVIDIA GeForce GTX 1070
-    value: 84
+    value: 83
   - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti
     value: 84
   - gpuNameRaw: NVIDIA GeForce GTX 1080
     value: 106
   - gpuNameRaw: NVIDIA GeForce GTX 1080 Ti
-    value: 136
+    value: 135
   - gpuNameRaw: NVIDIA GeForce GTX 1630
     value: 31
   - gpuNameRaw: NVIDIA GeForce GTX 1650
@@ -468,7 +468,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1650 SUPER
     value: 49
   - gpuNameRaw: NVIDIA GeForce GTX 1650 Ti
-    value: 41
+    value: 42
   - gpuNameRaw: NVIDIA GeForce GTX 1650 with Max-Q Design
     value: 30
   - gpuNameRaw: NVIDIA GeForce GTX 1660
@@ -496,7 +496,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 950M
     value: 12
   - gpuNameRaw: NVIDIA GeForce GTX 960
-    value: 34
+    value: 33
   - gpuNameRaw: NVIDIA GeForce GTX 970
     value: 53
   - gpuNameRaw: NVIDIA GeForce GTX 980
@@ -624,7 +624,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti
     value: 302
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
-    value: 190
+    value: 189
   - gpuNameRaw: NVIDIA GeForce RTX 5080
     value: 391
   - gpuNameRaw: NVIDIA GeForce RTX 5080 Laptop GPU
@@ -675,6 +675,8 @@ results:
     value: 35
   - gpuNameRaw: NVIDIA T1200 Laptop GPU
     value: 37
+  - gpuNameRaw: NVIDIA T600 Laptop GPU
+    value: 28
   - gpuNameRaw: NVIDIA TITAN RTX
     value: 193
   - gpuNameRaw: P104-100
