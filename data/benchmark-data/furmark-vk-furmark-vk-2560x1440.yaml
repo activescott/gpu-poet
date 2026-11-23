@@ -12,13 +12,13 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 14161
-updatedAt: 2026-11-22T12:50:31.093Z
+collectedSamples: 14256
+updatedAt: 2026-11-23T15:44:10.713Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 164
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
-    value: 83
+    value: 82
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
     value: 29
   - gpuNameRaw: AMD Radeon (TM) R9 390 Series
@@ -27,6 +27,8 @@ results:
     value: 17
   - gpuNameRaw: AMD Radeon 780M Graphics (RADV PHOENIX)
     value: 20
+  - gpuNameRaw: AMD Radeon 8060S Graphics (RADV STRIX_HALO)
+    value: 129
   - gpuNameRaw: AMD Radeon AI PRO R9700
     value: 191
   - gpuNameRaw: AMD Radeon Graphics (RADV REMBRANDT)
@@ -42,7 +44,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 570 Series (RADV POLARIS10)
     value: 37
   - gpuNameRaw: AMD Radeon RX 5700
-    value: 70
+    value: 69
   - gpuNameRaw: AMD Radeon RX 5700 XT
     value: 83
   - gpuNameRaw: AMD Radeon RX 5700 XT (RADV NAVI10)
@@ -50,7 +52,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 5700 XT 50th Anniversary
     value: 83
   - gpuNameRaw: AMD Radeon RX 580 2048SP
-    value: 34
+    value: 33
   - gpuNameRaw: AMD Radeon RX 580 Series (RADV POLARIS10)
     value: 37
   - gpuNameRaw: AMD Radeon RX 6500 XT
@@ -112,7 +114,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7600M XT (RADV NAVI33)
     value: 82
   - gpuNameRaw: AMD Radeon RX 7650 GRE
-    value: 99
+    value: 98
   - gpuNameRaw: AMD Radeon RX 7700 XT
     value: 142
   - gpuNameRaw: AMD Radeon RX 7700 XT (RADV NAVI32)
@@ -122,7 +124,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800 XT
     value: 152
   - gpuNameRaw: AMD Radeon RX 7800 XT (RADV NAVI32)
-    value: 172
+    value: 170
   - gpuNameRaw: AMD Radeon RX 7900 GRE
     value: 198
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
@@ -140,7 +142,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9060 XT (RADV GFX1200)
     value: 132
   - gpuNameRaw: AMD Radeon RX 9070
-    value: 199
+    value: 200
   - gpuNameRaw: AMD Radeon RX 9070 (RADV GFX1201)
     value: 202
   - gpuNameRaw: AMD Radeon RX 9070 GRE
@@ -152,7 +154,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 9070 XT (RADV GFX1201)
     value: 243
   - gpuNameRaw: AMD Radeon RX Vega (RADV VEGA10)
-    value: 57
+    value: 47
   - gpuNameRaw: AMD Radeon RX590 GME
     value: 35
   - gpuNameRaw: AMD Radeon VII
@@ -178,7 +180,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) B580 Graphics
     value: 108
   - gpuNameRaw: Intel(R) Arc(tm) B580 Graphics (BMG G21)
-    value: 95
+    value: 96
   - gpuNameRaw: Intel(R) Arc(TM) Graphics
     value: 22
   - gpuNameRaw: Intel(R) Arc(TM) Pro B70 Graphics
@@ -199,6 +201,8 @@ results:
     value: 37
   - gpuNameRaw: NVIDIA GeForce GTX 1070
     value: 55
+  - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti
+    value: 56
   - gpuNameRaw: NVIDIA GeForce GTX 1080
     value: 66
   - gpuNameRaw: NVIDIA GeForce GTX 1080 Ti
@@ -244,7 +248,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3060 (NVK GA106)
     value: 48
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Laptop GPU
-    value: 67
+    value: 66
   - gpuNameRaw: NVIDIA GeForce RTX 3060 Ti
     value: 98
   - gpuNameRaw: NVIDIA GeForce RTX 3070
@@ -286,9 +290,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER
     value: 207
   - gpuNameRaw: NVIDIA GeForce RTX 4080
-    value: 249
+    value: 248
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
-    value: 165
+    value: 166
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
     value: 251
   - gpuNameRaw: NVIDIA GeForce RTX 4090

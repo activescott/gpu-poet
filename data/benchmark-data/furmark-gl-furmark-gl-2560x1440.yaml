@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 263445
-updatedAt: 2026-11-22T11:46:06.038Z
+collectedSamples: 264585
+updatedAt: 2026-11-23T15:01:41.735Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 167
@@ -172,7 +172,7 @@ results:
     value: 72
   - gpuNameRaw: AMD Radeon RX 570 Series (radeonsi polaris10 ACO DRM 3.61
       6.14.0-37-generic)
-    value: 33
+    value: 35
   - gpuNameRaw: AMD Radeon RX 570 Series (radeonsi polaris10 ACO DRM 3.64
       6.17.0-20-generic)
     value: 38
@@ -254,7 +254,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
     value: 95
   - gpuNameRaw: AMD Radeon RX 6750 GRE 12GB
-    value: 112
+    value: 113
   - gpuNameRaw: AMD Radeon RX 6750 XT
     value: 125
   - gpuNameRaw: AMD Radeon RX 6750 XT (radeonsi navi22 ACO DRM 3.64
@@ -585,6 +585,8 @@ results:
   - gpuNameRaw: AMD Steam Machine (radeonsi navi33 ACO DRM 3.64
       6.16.12-valve24.5-1-neptune-616-gb2f7cfe85e45)
     value: 77
+  - gpuNameRaw: D3D12 (Qualcomm(R) Adreno(TM) X1-45 GPU)
+    value: 6
   - gpuNameRaw: D3D12 (Qualcomm(R) Adreno(TM) X1-85 GPU)
     value: 13
   - gpuNameRaw: D3D12 (Qualcomm(R) Adreno(TM) X2-90 GPU)
@@ -818,7 +820,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1650 with Max-Q Design/PCIe/SSE2
     value: 21
   - gpuNameRaw: NVIDIA GeForce GTX 1650/PCIe/SSE2
-    value: 31
+    value: 30
   - gpuNameRaw: NVIDIA GeForce GTX 1660 SUPER/PCIe/SSE2
     value: 55
   - gpuNameRaw: NVIDIA GeForce GTX 1660 Ti with Max-Q Design/PCIe/SSE2
