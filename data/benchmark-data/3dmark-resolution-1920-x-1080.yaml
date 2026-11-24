@@ -17,7 +17,7 @@ profileVersion: 1.0.x
 publicResultsSince: 2023-05-12
 latestDataAsOf: 2026-11-20
 collectedSamples: 639
-updatedAt: 2026-11-23T13:36:14.538Z
+updatedAt: 2026-11-24T11:48:31.914Z
 results:
   - gpuNameRaw: AMD Phoenix1
     value: 88

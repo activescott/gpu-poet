@@ -17,7 +17,7 @@ profileVersion: 1.0.x
 publicResultsSince: 2024-02-17
 latestDataAsOf: 2025-07-21
 collectedSamples: 273
-updatedAt: 2026-11-23T13:22:36.567Z
+updatedAt: 2026-11-24T11:36:41.216Z
 results:
   - gpuNameRaw: AMD Navi 48
     value: 265

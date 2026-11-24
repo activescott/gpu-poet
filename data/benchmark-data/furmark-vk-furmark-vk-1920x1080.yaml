@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 29053
-updatedAt: 2026-11-23T15:44:10.712Z
+collectedSamples: 29194
+updatedAt: 2026-11-24T13:30:36.698Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -68,7 +68,7 @@ results:
   - gpuNameRaw: AMD Radeon Graphics (RADV VEGA20)
     value: 128
   - gpuNameRaw: AMD Radeon HD 7700 Series
-    value: 11
+    value: 9
   - gpuNameRaw: AMD Radeon HD 7800 Series
     value: 27
   - gpuNameRaw: AMD Radeon HD 7900 Series
@@ -90,7 +90,7 @@ results:
   - gpuNameRaw: AMD Radeon R5 M445 Series (RADV ICELAND)
     value: 6
   - gpuNameRaw: AMD Radeon R7 200 Series
-    value: 18
+    value: 15
   - gpuNameRaw: AMD Radeon R7 350 Series
     value: 11
   - gpuNameRaw: AMD Radeon R9 200 / HD 7900 Series
@@ -130,7 +130,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 5700 XT
     value: 127
   - gpuNameRaw: AMD Radeon RX 5700 XT (RADV NAVI10)
-    value: 123
+    value: 122
   - gpuNameRaw: AMD Radeon RX 5700 XT 50th Anniversary
     value: 128
   - gpuNameRaw: AMD Radeon RX 580 2048SP
@@ -520,7 +520,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060
     value: 101
   - gpuNameRaw: NVIDIA GeForce RTX 2060 SUPER
-    value: 112
+    value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design
     value: 61
   - gpuNameRaw: NVIDIA GeForce RTX 2070
@@ -570,7 +570,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080
     value: 140
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
-    value: 94
+    value: 95
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti
     value: 161
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU
@@ -578,11 +578,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3090
     value: 198
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti
-    value: 257
+    value: 260
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU
     value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 4060
-    value: 114
+    value: 115
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Laptop GPU
     value: 137
   - gpuNameRaw: NVIDIA GeForce RTX 4060 Ti
@@ -600,7 +600,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080
     value: 356
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
-    value: 231
+    value: 229
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
     value: 361
   - gpuNameRaw: NVIDIA GeForce RTX 4090
@@ -694,7 +694,7 @@ results:
   - gpuNameRaw: Quadro RTX 5000
     value: 119
   - gpuNameRaw: Quadro T1000
-    value: 37
+    value: 35
   - gpuNameRaw: Quadro T2000
     value: 36
   - gpuNameRaw: Quadro T2000 with Max-Q Design
@@ -702,7 +702,7 @@ results:
   - gpuNameRaw: Radeon (TM) Pro WX 9100
     value: 77
   - gpuNameRaw: Radeon (TM) RX 470 Graphics
-    value: 50
+    value: 51
   - gpuNameRaw: Radeon (TM) RX 480 Graphics
     value: 57
   - gpuNameRaw: Radeon 5
