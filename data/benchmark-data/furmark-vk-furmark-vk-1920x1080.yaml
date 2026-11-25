@@ -12,8 +12,8 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 29194
-updatedAt: 2026-11-24T13:30:36.698Z
+collectedSamples: 29365
+updatedAt: 2026-11-25T15:32:04.554Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
@@ -36,7 +36,7 @@ results:
   - gpuNameRaw: AMD Radeon (TM) R7 360 Series
     value: 21
   - gpuNameRaw: AMD Radeon (TM) R9 380 Series
-    value: 46
+    value: 47
   - gpuNameRaw: AMD Radeon (TM) R9 390 Series
     value: 66
   - gpuNameRaw: AMD Radeon (TM) RX 480
@@ -90,7 +90,7 @@ results:
   - gpuNameRaw: AMD Radeon R5 M445 Series (RADV ICELAND)
     value: 6
   - gpuNameRaw: AMD Radeon R7 200 Series
-    value: 15
+    value: 18
   - gpuNameRaw: AMD Radeon R7 350 Series
     value: 11
   - gpuNameRaw: AMD Radeon R9 200 / HD 7900 Series
@@ -126,7 +126,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 5700
     value: 112
   - gpuNameRaw: AMD Radeon RX 5700 (RADV NAVI10)
-    value: 98
+    value: 100
   - gpuNameRaw: AMD Radeon RX 5700 XT
     value: 127
   - gpuNameRaw: AMD Radeon RX 5700 XT (RADV NAVI10)
@@ -174,9 +174,9 @@ results:
   - gpuNameRaw: AMD Radeon RX 6700 XT
     value: 153
   - gpuNameRaw: AMD Radeon RX 6700 XT (RADV NAVI22)
-    value: 165
+    value: 164
   - gpuNameRaw: AMD Radeon RX 6700M
-    value: 100
+    value: 99
   - gpuNameRaw: AMD Radeon RX 6700S
     value: 97
   - gpuNameRaw: AMD Radeon RX 6750 GRE 10GB
@@ -358,7 +358,7 @@ results:
   - gpuNameRaw: Intel(R) Arc(TM) A580 Graphics
     value: 125
   - gpuNameRaw: Intel(R) Arc(TM) A750 Graphics
-    value: 159
+    value: 158
   - gpuNameRaw: Intel(R) Arc(tm) A750 Graphics (DG2)
     value: 131
   - gpuNameRaw: Intel(R) Arc(TM) A770 Graphics
@@ -468,7 +468,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1650 SUPER
     value: 49
   - gpuNameRaw: NVIDIA GeForce GTX 1650 Ti
-    value: 42
+    value: 41
   - gpuNameRaw: NVIDIA GeForce GTX 1650 with Max-Q Design
     value: 30
   - gpuNameRaw: NVIDIA GeForce GTX 1660
@@ -576,7 +576,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU
     value: 113
   - gpuNameRaw: NVIDIA GeForce RTX 3090
-    value: 198
+    value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 3090 Ti
     value: 260
   - gpuNameRaw: NVIDIA GeForce RTX 4050 Laptop GPU
@@ -602,7 +602,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4080 Laptop GPU
     value: 229
   - gpuNameRaw: NVIDIA GeForce RTX 4080 SUPER
-    value: 361
+    value: 360
   - gpuNameRaw: NVIDIA GeForce RTX 4090
     value: 449
   - gpuNameRaw: NVIDIA GeForce RTX 4090 Laptop GPU
@@ -614,7 +614,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5060
     value: 155
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Laptop GPU
-    value: 140
+    value: 141
   - gpuNameRaw: NVIDIA GeForce RTX 5060 Ti
     value: 197
   - gpuNameRaw: NVIDIA GeForce RTX 5070

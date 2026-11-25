@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 67271
-updatedAt: 2026-11-24T12:56:42.840Z
+collectedSamples: 67532
+updatedAt: 2026-11-25T14:40:07.170Z
 results:
   - gpuNameRaw: AMD  Radeon RX 7800 XT
     value: 87
@@ -280,7 +280,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) 880M Graphics
     value: 10
   - gpuNameRaw: AMD Radeon(TM) 890M Graphics
-    value: 9
+    value: 8
   - gpuNameRaw: AMD Radeon(TM) Graphics
     value: 4
   - gpuNameRaw: AMD Radeon(TM) RX 6400
@@ -371,6 +371,8 @@ results:
     value: 7
   - gpuNameRaw: Intel(R) Iris(R) Xe Graphics
     value: 6
+  - gpuNameRaw: Intel(R) RaptorLake-S Mobile Graphics Controller
+    value: 3
   - gpuNameRaw: Intel(R) UHD Graphics
     value: 3
   - gpuNameRaw: Intel(R) UHD Graphics 620
@@ -408,7 +410,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce GTX 1060 6GB/PCIe/SSE2
     value: 21
   - gpuNameRaw: NVIDIA GeForce GTX 1060 with Max-Q Design/PCIe/SSE2
-    value: 13
+    value: 14
   - gpuNameRaw: NVIDIA GeForce GTX 1060/PCIe/SSE2
     value: 16
   - gpuNameRaw: NVIDIA GeForce GTX 1070 Ti/PCIe/SSE2
@@ -590,7 +592,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5080/PCIe/SSE2
     value: 165
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2/PCIe/SSE2
-    value: 235
+    value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D V2/PCIe/SSE2
     value: 234
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D/PCIe/SSE2
