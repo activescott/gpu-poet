@@ -13,8 +13,8 @@ description: Median FPS in FurMark 2 (OpenGL), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (OpenGL). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 589576
-updatedAt: 2026-11-25T14:40:07.083Z
+collectedSamples: 591697
+updatedAt: 2026-11-26T12:57:11.120Z
 results:
   - gpuNameRaw: /PCIe/SSE2
     value: 76
@@ -1085,6 +1085,8 @@ results:
     value: 347
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.2.9-2-cachyos)
     value: 334
+  - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.64 7.3.5-arch1-1)
+    value: 337
   - gpuNameRaw: AMD Radeon RX 9070 XT (radeonsi gfx1201 ACO DRM 3.65
       7.2.7-valve2-2-neptune-72-g31504582a073)
     value: 324
@@ -1213,7 +1215,7 @@ results:
   - gpuNameRaw: AMD Radeon(TM) RX 6400
     value: 50
   - gpuNameRaw: AMD Radeon(TM) RX 6500 XT
-    value: 84
+    value: 85
   - gpuNameRaw: AMD Radeon(TM) RX 6500M
     value: 49
   - gpuNameRaw: AMD Radeon(TM) RX 6550M
@@ -2041,7 +2043,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce MX550/PCIe/SSE2
     value: 23
   - gpuNameRaw: NVIDIA GeForce MX570 A/PCIe/SSE2
-    value: 30
+    value: 29
   - gpuNameRaw: NVIDIA GeForce MX570/PCIe/SSE2
     value: 28
   - gpuNameRaw: NVIDIA GeForce RTX 2050/PCIe/SSE2
@@ -2107,7 +2109,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU/PCIe/SSE2
     value: 111
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU/PCIe/SSE2
-    value: 113
+    value: 112
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti/PCIe/SSE2
     value: 160
   - gpuNameRaw: NVIDIA GeForce RTX 3080/PCIe/SSE2
@@ -2127,7 +2129,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 4060/PCIe/SSE2
     value: 121
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Laptop GPU/PCIe/SSE2
-    value: 149
+    value: 148
   - gpuNameRaw: NVIDIA GeForce RTX 4070 SUPER/PCIe/SSE2
     value: 245
   - gpuNameRaw: NVIDIA GeForce RTX 4070 Ti SUPER/PCIe/SSE2
@@ -2159,7 +2161,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5060/PCIe/SSE2
     value: 151
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Laptop GPU/PCIe/SSE2
-    value: 153
+    value: 152
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU/PCIe/SSE2
     value: 180
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti/PCIe/SSE2
@@ -2251,7 +2253,7 @@ results:
   - gpuNameRaw: NVIDIA RTX A5000 Laptop GPU/PCIe/SSE2
     value: 97
   - gpuNameRaw: NVIDIA RTX A5000/PCIe/SSE2
-    value: 155
+    value: 156
   - gpuNameRaw: NVIDIA RTX A5500 Laptop GPU/PCIe/SSE2
     value: 67
   - gpuNameRaw: NVIDIA RTX A5500/PCIe/SSE2
@@ -2311,7 +2313,7 @@ results:
   - gpuNameRaw: NVIDIA Tegra JMJWOA-Generic-GPU/PCIe
     value: 53
   - gpuNameRaw: NVIDIA TITAN RTX/PCIe/SSE2
-    value: 190
+    value: 192
   - gpuNameRaw: NVIDIA TITAN V/PCIe/SSE2
     value: 163
   - gpuNameRaw: NVIDIA TITAN X (Pascal)/PCIe/SSE2
@@ -2441,7 +2443,7 @@ results:
   - gpuNameRaw: Quadro RTX 4000/PCIe/SSE2
     value: 91
   - gpuNameRaw: Quadro RTX 5000 with Max-Q Design/PCIe/SSE2
-    value: 63
+    value: 64
   - gpuNameRaw: Quadro RTX 5000/PCIe/SSE2
     value: 79
   - gpuNameRaw: Quadro RTX 6000/PCIe/SSE2
@@ -2577,7 +2579,7 @@ results:
   - gpuNameRaw: Radeon RX Vega M GH Graphics
     value: 47
   - gpuNameRaw: Radeon RX Vega M GL Graphics
-    value: 28
+    value: 29
   - gpuNameRaw: Radeon RX480
     value: 50
   - gpuNameRaw: Radeon RX550/550 Series

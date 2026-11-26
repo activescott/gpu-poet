@@ -12,17 +12,17 @@ description: Median FPS in FurMark 2 (Vulkan), a GPU stress test and benchmark
 descriptionDollarsPer: Dollars per FPS in FurMark 2 (Vulkan). Lower values
   indicate better cost efficiency for GPU compute-heavy rendering.
 category: gaming
-collectedSamples: 29365
-updatedAt: 2026-11-25T15:32:04.554Z
+collectedSamples: 29517
+updatedAt: 2026-11-26T13:31:03.888Z
 results:
   - gpuNameRaw: Adreno (TM) 830
     value: 17
   - gpuNameRaw: AMD  Radeon RX 7800 XT
-    value: 222
+    value: 221
   - gpuNameRaw: AMD BC-160
     value: 71
   - gpuNameRaw: AMD BC-250 (RADV GFX1013)
-    value: 121
+    value: 122
   - gpuNameRaw: AMD BC-250 Graphics
     value: 47
   - gpuNameRaw: AMD Custom GPU 0405 (RADV VANGOGH)
@@ -68,7 +68,7 @@ results:
   - gpuNameRaw: AMD Radeon Graphics (RADV VEGA20)
     value: 128
   - gpuNameRaw: AMD Radeon HD 7700 Series
-    value: 9
+    value: 11
   - gpuNameRaw: AMD Radeon HD 7800 Series
     value: 27
   - gpuNameRaw: AMD Radeon HD 7900 Series
@@ -194,7 +194,7 @@ results:
   - gpuNameRaw: AMD Radeon RX 6800 XT
     value: 243
   - gpuNameRaw: AMD Radeon RX 6800 XT (RADV NAVI21)
-    value: 263
+    value: 255
   - gpuNameRaw: AMD Radeon RX 6800M
     value: 127
   - gpuNameRaw: AMD Radeon RX 6800M (RADV NAVI22)
@@ -236,11 +236,11 @@ results:
   - gpuNameRaw: AMD Radeon RX 7800 XT (RADV NAVI32)
     value: 230
   - gpuNameRaw: AMD Radeon RX 7900 GRE
-    value: 260
+    value: 261
   - gpuNameRaw: AMD Radeon RX 7900 GRE (RADV NAVI31)
     value: 295
   - gpuNameRaw: AMD Radeon RX 7900 XT
-    value: 285
+    value: 284
   - gpuNameRaw: AMD Radeon RX 7900 XT (RADV NAVI31)
     value: 330
   - gpuNameRaw: AMD Radeon RX 7900 XTX
@@ -520,11 +520,11 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 2060
     value: 101
   - gpuNameRaw: NVIDIA GeForce RTX 2060 SUPER
-    value: 113
+    value: 112
   - gpuNameRaw: NVIDIA GeForce RTX 2060 with Max-Q Design
     value: 61
   - gpuNameRaw: NVIDIA GeForce RTX 2070
-    value: 110
+    value: 109
   - gpuNameRaw: NVIDIA GeForce RTX 2070 Super
     value: 34
   - gpuNameRaw: NVIDIA GeForce RTX 2070 SUPER
@@ -562,7 +562,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3070
     value: 171
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Laptop GPU
-    value: 116
+    value: 117
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti
     value: 193
   - gpuNameRaw: NVIDIA GeForce RTX 3070 Ti Laptop GPU
@@ -570,7 +570,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 3080
     value: 140
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Laptop GPU
-    value: 95
+    value: 94
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti
     value: 161
   - gpuNameRaw: NVIDIA GeForce RTX 3080 Ti Laptop GPU
@@ -620,7 +620,7 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5070
     value: 291
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Laptop GPU
-    value: 159
+    value: 158
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti
     value: 302
   - gpuNameRaw: NVIDIA GeForce RTX 5070 Ti Laptop GPU
@@ -634,9 +634,9 @@ results:
   - gpuNameRaw: NVIDIA GeForce RTX 5090 D v2
     value: 559
   - gpuNameRaw: NVIDIA GeForce RTX 5090 Laptop GPU
-    value: 331
+    value: 330
   - gpuNameRaw: NVIDIA P104-100
-    value: 83
+    value: 71
   - gpuNameRaw: NVIDIA P106-100
     value: 59
   - gpuNameRaw: NVIDIA RTX 1000 Ada Generation Laptop GPU
@@ -682,7 +682,7 @@ results:
   - gpuNameRaw: P104-100
     value: 59
   - gpuNameRaw: Quadro P1000
-    value: 22
+    value: 20
   - gpuNameRaw: Quadro P2000
     value: 31
   - gpuNameRaw: Quadro RTX 3000
@@ -698,7 +698,7 @@ results:
   - gpuNameRaw: Quadro T2000
     value: 36
   - gpuNameRaw: Quadro T2000 with Max-Q Design
-    value: 38
+    value: 37
   - gpuNameRaw: Radeon (TM) Pro WX 9100
     value: 77
   - gpuNameRaw: Radeon (TM) RX 470 Graphics
